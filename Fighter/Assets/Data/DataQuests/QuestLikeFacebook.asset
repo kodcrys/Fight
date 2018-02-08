@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Name: QuestLikeFacebook
   m_EditorClassIdentifier: 
   idQuest: 1
+  icon: {fileID: 0}
   content: Like facebook
   requirement: 1
   doing: 0
-  reward: 200
+  rewardGold: 20
+  rewardExp: 10

@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Name: QuestShare
   m_EditorClassIdentifier: 
   idQuest: 8
+  icon: {fileID: 0}
   content: Share the game
   requirement: 1
   doing: 0
-  reward: 900
+  rewardGold: 90
+  rewardExp: 45
