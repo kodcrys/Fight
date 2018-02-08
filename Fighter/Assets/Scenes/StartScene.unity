@@ -110,6 +110,59 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &895438943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 895438944}
+  - component: {fileID: 895438945}
+  m_Layer: 0
+  m_Name: QuestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &895438944
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 895438943}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &895438945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 895438943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4058a54af528c4addbfb7e11a473ecb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amountShuffle: 3
+  questList:
+  - {fileID: 11400000, guid: e94f93c1b1452496698223e73524716e, type: 2}
+  - {fileID: 11400000, guid: fafed9258b107404a8f5e7630c32a8d8, type: 2}
+  - {fileID: 11400000, guid: c9c07a78828044af1a0e02b148db34e0, type: 2}
+  - {fileID: 11400000, guid: c39cf0f0ac4b145dd958a1cf4371b9f6, type: 2}
+  - {fileID: 11400000, guid: 1ed38cd1d0bed436b9e12735fd232a03, type: 2}
+  - {fileID: 11400000, guid: 028e02b23835d4a13ae7a77655043695, type: 2}
+  - {fileID: 11400000, guid: 32e680f7a6ca64735a9e86ce8fc8a737, type: 2}
+  - {fileID: 11400000, guid: 53550736a4ace4959876a051d83e3e56, type: 2}
+  - {fileID: 11400000, guid: f5ba36572635043448bab0a8cb9e233f, type: 2}
+  - {fileID: 11400000, guid: 1fd32887fe0064eab9a71069bc428960, type: 2}
+  - {fileID: 11400000, guid: 20e077e52d6d84e0ba837a5557b82f1f, type: 2}
 --- !u!1 &1707542384
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +180,7 @@ GameObject:
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!81 &1707542385
 AudioListener:
@@ -159,7 +212,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
