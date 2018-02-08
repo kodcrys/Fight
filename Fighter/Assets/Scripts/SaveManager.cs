@@ -40,27 +40,7 @@ public class SaveManager : MonoBehaviour {
 		}
 	}
 
-/*	public bool IsCharacterOwned(int index){
-		return(state.character & (1 << index)) != 0;
-	}
-
-	public void UnlockCharacter(int index){
-		state.character |= 1 << index;
-	}
-		
-	public bool BuyCharacter(int index, int cost){
-		if (state.coin >= cost) {
-			state.coin -= cost;
-			UnlockCharacter (index);
-			Save ();
-			return true;
-		} else {
-			return false;
-		}
-	}*/
-
 	public void ResetSave(){
-//		PlayerPrefs.DeleteKey ("save");
 		PlayerPrefs.DeleteAll ();
 	}
 

@@ -1,3 +1,3 @@
 ﻿public class SaveState {
-	public bool fadeInOut = false;
+	public bool haveInternet;
 }
