@@ -15,3 +15,4 @@ MonoBehaviour:
   content: Play 2 player game 3 times
   requirement: 3
   doing: 0
+  reward: 400

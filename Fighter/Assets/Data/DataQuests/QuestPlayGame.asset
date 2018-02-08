@@ -15,3 +15,4 @@ MonoBehaviour:
   content: Play any game 5 times
   requirement: 5
   doing: 0
+  reward: 600

@@ -15,3 +15,4 @@ MonoBehaviour:
   content: Win AI game 3 times
   requirement: 3
   doing: 0
+  reward: 1100

@@ -15,3 +15,4 @@ MonoBehaviour:
   content: Play any mini game 3 times
   requirement: 3
   doing: 0
+  reward: 300
