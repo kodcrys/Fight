@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Name: QuestRewardAds
   m_EditorClassIdentifier: 
   idQuest: 7
+  icon: {fileID: 0}
   content: Watch reward ads 5 times
   requirement: 5
   doing: 0
+  rewardGold: 80
+  rewardExp: 40

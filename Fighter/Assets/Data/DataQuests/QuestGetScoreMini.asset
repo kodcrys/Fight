@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Name: QuestGetScoreMini
   m_EditorClassIdentifier: 
   idQuest: 0
+  icon: {fileID: 0}
   content: Play mini game and get 10 score
   requirement: 10
   doing: 0
+  rewardGold: 10
+  rewardExp: 5

@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Name: QuestPlayGame
   m_EditorClassIdentifier: 
   idQuest: 5
+  icon: {fileID: 0}
   content: Play any game 5 times
   requirement: 5
   doing: 0
+  rewardGold: 60
+  rewardExp: 30

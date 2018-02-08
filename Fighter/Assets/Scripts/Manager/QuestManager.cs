@@ -19,11 +19,27 @@ public class QuestManager : MonoBehaviour {
 
 	private List<DataQuests> questTempList = new List<DataQuests>();
 
-	//void Start(){
-	//	ShuffleQuest (questList.Count, amountShuffle);
-	//}
+	// Calculate countDown refresh quest
+	public void CalculateTimeRefreshQuest(string startTime, string endTime, Text timeTxt, List<DataQuests> lstStoreQuest){
+		TimeSpan start = TimeSpan.Parse(startTime);
+		TimeSpan end = TimeSpan.Parse(endTime);
 
-	public List<DataQuests> ShuffleQuest(int questMax, int amountShuffle) {
+		TimeSpan curr = TimeSpan.Parse (System.DateTime.Now.ToString ("HH:mm:ss"));
+		TimeSpan result = new TimeSpan ();
+
+		if (curr >= start && curr <= end) {
+			result = end.Subtract(curr);
+			timeTxt.text = "Restart in: " + GetRemainingTime (result.TotalMilliseconds);
+		}
+
+		int curDay = GetDay ();
+		if (SaveManager.instance.state.oldDay != curDay) {
+			lstStoreQuest = ShuffleQuest (questList.Count, amountShuffle);
+			SetDay (curDay);
+		}
+	}
+		
+	private List<DataQuests> ShuffleQuest(int questMax, int amountShuffle) {
 
 		// Create list store daily quest random
 		List<DataQuests> questShuffle = new List<DataQuests> ();
@@ -53,26 +69,43 @@ public class QuestManager : MonoBehaviour {
 		return value;
 	}
 
-	// Calculate countDown resfresh quest
-	public void CalculateTimeCountDown(TimeSpan curr, string startTime, string endTime, Text timeTxt){
-		TimeSpan start = TimeSpan.Parse(startTime);
-		TimeSpan end = TimeSpan.Parse(endTime);
-
-		TimeSpan result = new TimeSpan ();
-
-		if (curr >= start && curr <= end) {
-			result = end.Subtract(curr);
-			timeTxt.text = "Restart in: " + GetRemainingTime (result.TotalMilliseconds);
-		}
-	}
-
-	public string GetRemainingTime(double x) {
+	private string GetRemainingTime(double x) {
 		TimeSpan tempB = TimeSpan.FromMilliseconds(x);
 		string Timeformat = string.Format("{0:D2}:{1:D2}:{2:D2}", tempB.Hours, tempB.Minutes, tempB.Seconds);
 		return Timeformat;
 	}
 
-	public void ReadData() {
-		
+	private int GetDay() {
+		return SaveManager.instance.state.oldDay;
+	}
+
+	private void SetDay(int day) {
+		SaveManager.instance.state.oldDay = day;
+		SaveManager.instance.Save ();
+	}
+
+	private void ReadData(SpriteRenderer iconQuest, Text contentQuest, Text doing, Text rewardGold, Text rewardExp, DataQuests quest) {
+		iconQuest.sprite = quest.icon;
+		contentQuest.text = quest.content;
+		doing.text = quest.doing + " / " + quest.requirement;
+		rewardExp.text = quest.rewardExp.ToString ();
+		rewardGold.text = quest.rewardGold.ToString ();
+	}
+
+	public void LoadData(List<Transform> lstTransform, List<DataQuests> lstStoreQuest) {
+
+		int indexQuest = 0;
+
+		foreach (Transform t in lstTransform) {
+			SpriteRenderer iconQuest = t.GetChild (0).GetComponent<SpriteRenderer> ();
+			Text contentQuest = t.GetChild (1).GetComponent<Text> ();
+			Text doing = t.GetChild (2).GetComponent<Text> ();
+			Text rewardGold = t.GetChild (3).GetComponent<Text> ();
+			Text rewardExp = t.GetChild (4).GetComponent<Text> ();
+
+			ReadData (iconQuest, contentQuest, doing, rewardGold, rewardExp, lstStoreQuest [indexQuest]);
+
+			indexQuest++;
+		}
 	}
 }

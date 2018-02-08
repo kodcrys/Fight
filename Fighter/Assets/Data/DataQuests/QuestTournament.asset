@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Name: QuestTournament
   m_EditorClassIdentifier: 
   idQuest: 9
+  icon: {fileID: 0}
   content: Play tournament game 1 time
   requirement: 1
   doing: 0
+  rewardGold: 100
+  rewardExp: 50
