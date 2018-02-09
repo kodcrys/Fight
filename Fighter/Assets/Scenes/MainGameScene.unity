@@ -314,7 +314,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 408478865}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.27, y: 3.77, z: 0}
+  m_LocalPosition: {x: 0.25, y: 1.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1540023911}
@@ -350,9 +350,11 @@ MonoBehaviour:
   fingerAction: 0
   changeScale: 0
   time: 0
-  timeInter: 0.2
-  fingerRight: {fileID: 0}
-  fingerLeft: {fileID: 0}
+  timeInter: 0.6
+  finger:
+  - {fileID: 408478865}
+  - {fileID: 1576644765}
+  speedScale: 0.2
 --- !u!4 &434639906
 Transform:
   m_ObjectHideFlags: 0
@@ -782,7 +784,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1576644765}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 4.1, z: 0}
+  m_LocalPosition: {x: -1, y: 1.71, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1169754931}
