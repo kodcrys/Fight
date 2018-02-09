@@ -6,6 +6,8 @@ using System;
 
 public class QuestManager : MonoBehaviour {
 
+	public static QuestManager Intance;
+
 	[Header("Amount shuffle")]
 	[SerializeField]
 	int amountShuffle;
@@ -19,8 +21,13 @@ public class QuestManager : MonoBehaviour {
 
 	private List<DataQuests> questTempList = new List<DataQuests>();
 
+	void Awake() {
+		if (Intance == null)
+			Intance = this;
+	}
+
 	// Calculate countDown refresh quest
-	public void CalculateTimeRefreshQuest(string startTime, string endTime, Text timeTxt, List<DataQuests> lstStoreQuest){
+	public List<DataQuests> CalculateTimeRefreshQuest(string startTime, string endTime, Text timeTxt, List<DataQuests> lstStoreQuest){
 		TimeSpan start = TimeSpan.Parse(startTime);
 		TimeSpan end = TimeSpan.Parse(endTime);
 
@@ -33,10 +40,19 @@ public class QuestManager : MonoBehaviour {
 		}
 
 		int curDay = GetDay ();
-		if (SaveManager.instance.state.oldDay != curDay) {
+
+		if (SaveManager.instance.state.isFirstPlay || SaveManager.instance.state.oldDay != curDay) {
 			lstStoreQuest = ShuffleQuest (questList.Count, amountShuffle);
+
 			SetDay (curDay);
+
+			if (SaveManager.instance.state.isFirstPlay) {
+				SaveManager.instance.state.isFirstPlay = false;
+				SaveManager.instance.Save ();
+			}
 		}
+
+		return lstStoreQuest;
 	}
 		
 	private List<DataQuests> ShuffleQuest(int questMax, int amountShuffle) {
@@ -55,6 +71,9 @@ public class QuestManager : MonoBehaviour {
 		// Generate value daily quest of questShuffle
 		for (var i = 0; i < amountShuffle; i++)
 			questShuffle.Add (questList[PickNumber (dailyIndexLst)]);
+
+		for (int i = 0; i < questShuffle.Count; i++)
+			Debug.Log (questShuffle [i].idQuest);
 
 		return questShuffle;
 	}
@@ -76,7 +95,7 @@ public class QuestManager : MonoBehaviour {
 	}
 
 	private int GetDay() {
-		return SaveManager.instance.state.oldDay;
+		return DateTime.Now.Day;
 	}
 
 	private void SetDay(int day) {
@@ -84,7 +103,7 @@ public class QuestManager : MonoBehaviour {
 		SaveManager.instance.Save ();
 	}
 
-	private void ReadData(SpriteRenderer iconQuest, Text contentQuest, Text doing, Text rewardGold, Text rewardExp, DataQuests quest) {
+	private void ReadData(Image iconQuest, Text contentQuest, Text doing, Text rewardGold, Text rewardExp, DataQuests quest) {
 		iconQuest.sprite = quest.icon;
 		contentQuest.text = quest.content;
 		doing.text = quest.doing + " / " + quest.requirement;
@@ -92,12 +111,12 @@ public class QuestManager : MonoBehaviour {
 		rewardGold.text = quest.rewardGold.ToString ();
 	}
 
-	public void LoadData(List<Transform> lstTransform, List<DataQuests> lstStoreQuest) {
+	public void LoadData(Transform lstTransform, List<DataQuests> lstStoreQuest) {
 
 		int indexQuest = 0;
 
 		foreach (Transform t in lstTransform) {
-			SpriteRenderer iconQuest = t.GetChild (0).GetComponent<SpriteRenderer> ();
+			Image iconQuest = t.GetChild (0).GetComponent<Image> ();
 			Text contentQuest = t.GetChild (1).GetComponent<Text> ();
 			Text doing = t.GetChild (2).GetComponent<Text> ();
 			Text rewardGold = t.GetChild (3).GetComponent<Text> ();
