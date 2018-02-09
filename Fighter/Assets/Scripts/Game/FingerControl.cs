@@ -15,7 +15,7 @@ public class FingerControl : MonoBehaviour {
 	float time, timeInter = 0;
 
 	[SerializeField]
-	GameObject finger;
+	GameObject finger, fingerAtk;
 
 	[SerializeField]
 	float speedScale;
@@ -56,7 +56,7 @@ public class FingerControl : MonoBehaviour {
 		}
 	}
 
-	void Do Atk(){
+	void DoAtk(){
 		
 	}
 		
