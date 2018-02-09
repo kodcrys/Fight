@@ -12,15 +12,15 @@ public class FingerControl : MonoBehaviour {
 	int changeScale = 0;
 
 	[SerializeField]
-	float time, timeInter;
+	float time, timeInter = 0;
 
 	[SerializeField]
-	GameObject fingerRight, fingerLeft;
+	GameObject finger, fingerAtk;
+
+	[SerializeField]
+	float speedScale;
 
 
-	void Start(){
-		
-	}
 	// Update is called once per frame
 	void Update () {
 		if (time >= timeInter) {
@@ -43,17 +43,29 @@ public class FingerControl : MonoBehaviour {
 
 	void DoIdel(){
 		if (time >= timeInter) {
-			if (changeScale == 0) {
-				fingerRight.transform.localScale = new Vector3 (1, 1, 1);
-				fingerRight.transform.position = new Vector3 (0.27f, 3.77f, 0);
+			if (changeScale == 0)
 				changeScale = 1;
-			} else if (changeScale == 1) {
-				fingerRight.transform.localScale = new Vector3 (1, 1.1f, 1);
-				changeScale = 2;
-			} else {
-				fingerRight.transform.localScale = new Vector3 (1, 0.9f, 1);
-				changeScale = 1;
-			}
+			else
+				changeScale = 0;
+		}
+
+		if (changeScale == 0) {
+			finger.transform.localScale = Vector3.MoveTowards (finger.transform.localScale, new Vector3 (1, 1, 1), Time.deltaTime * speedScale);
+		} else if (changeScale == 1) {
+			finger.transform.localScale = Vector3.MoveTowards (finger.transform.localScale, new Vector3 (1f, 0.9f, 1), Time.deltaTime * speedScale);
 		}
 	}
+
+	void DoAtk(){
+		
+	}
+		
+	public void ClickAtk(){
+		fingerAction = FingerState.Atk;
+	}
+
+	public void UnClickAtk(){
+		fingerAction = FingerState.Idel;
+	}
 }
+
