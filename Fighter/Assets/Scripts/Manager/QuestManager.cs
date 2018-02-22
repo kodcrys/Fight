@@ -23,13 +23,22 @@ public class QuestManager : MonoBehaviour {
 
 	private List<DataQuests> questTempList = new List<DataQuests>();
 
-	[Header("")]
+	[Header("Claim reward Button")]
 	[SerializeField]
 	Button[] BtnsClaimReward;
+
+	[Header("Progress claim daily bonus")]
+	[SerializeField]
+	Image progressBonus;
+
+	[Header("Var allow load Data quest")]
+	public bool isCanLoadData;
 
 	void Awake() {
 		if (Intance == null)
 			Intance = this;
+
+		isCanLoadData = true;
 	}
 
 	// Calculate countDown refresh quest
@@ -58,16 +67,17 @@ public class QuestManager : MonoBehaviour {
 				SaveManager.instance.Save ();
 			}
 
-		} else {
+		} else
 			lstStoreQuest = LoadQuest ();
-		}
 
 		return lstStoreQuest;
 	}
 
 	// Refresh quest when time change time of new day
 	private List<DataQuests> RefeshQuestNewDay(List<DataQuests> lstStoreQuest) {
+		RefreshDoingAllQuest ();
 		lstStoreQuest = ShuffleQuest (questList.Count, amountShuffle);
+
 		return lstStoreQuest;
 	}
 
@@ -112,9 +122,10 @@ public class QuestManager : MonoBehaviour {
 	// Check day in save is same current day
 	public bool isSameDay() {
 		int curDay = GetDay ();
-		if (SaveManager.instance.state.oldDay != curDay)
+		if (SaveManager.instance.state.oldDay != curDay) {
+			isCanLoadData = true;
 			return false;
-		else
+		} else
 			return true;
 	}
 
@@ -130,12 +141,17 @@ public class QuestManager : MonoBehaviour {
 	}
 
 	// Read data in ScriptableObject
-	private void ReadData(Image iconQuest, Text contentQuest, Text doing, Text rewardGold, Text rewardExp, DataQuests quest) {
+	private void ReadData(Image iconQuest, Text contentQuest, Text doing, Text rewardGold, Text rewardExp, DataQuests quest, Button btnReward) {
 		iconQuest.sprite = quest.icon;
 		contentQuest.text = quest.content;
 		doing.text = quest.doing + " / " + quest.requirement;
 		rewardExp.text = quest.rewardExp.ToString ();
 		rewardGold.text = quest.rewardGold.ToString ();
+
+
+		btnReward.onClick.AddListener (() => {
+			ClaimReward (quest);
+		});
 	}
 
 	// Load data in ScriptableObject
@@ -144,13 +160,15 @@ public class QuestManager : MonoBehaviour {
 		int indexQuest = 0;
 
 		foreach (Transform t in lstTransform) {
+			Button btnReward = t.GetComponent<Button> ();
+
 			Image iconQuest = t.GetChild (0).GetComponent<Image> ();
 			Text contentQuest = t.GetChild (1).GetComponent<Text> ();
 			Text doing = t.GetChild (2).GetComponent<Text> ();
 			Text rewardGold = t.GetChild (3).GetComponent<Text> ();
 			Text rewardExp = t.GetChild (4).GetComponent<Text> ();
 
-			ReadData (iconQuest, contentQuest, doing, rewardGold, rewardExp, lstStoreQuest [indexQuest]);
+			ReadData (iconQuest, contentQuest, doing, rewardGold, rewardExp, lstStoreQuest [indexQuest], btnReward);
 
 			indexQuest++;
 		}
@@ -174,24 +192,43 @@ public class QuestManager : MonoBehaviour {
 	}
 
 	public void DoneQuest(List<DataQuests> lstStoreQuest) {
+		
 		for (int i = 0; i < lstStoreQuest.Count; i++) {
 			if (lstStoreQuest [i].doing == lstStoreQuest [i].requirement) {
 				BtnsClaimReward [i].enabled = true;
-				BtnsClaimReward [i].onClick.AddListener (delegate {
-					ClaimReward (lstStoreQuest [i]);
-				});
 			}
 			else
 				BtnsClaimReward [i].enabled = false;
 		}
 	}
 
-	void ClaimReward(DataQuests quest) {
-		SaveManager.instance.state.TotalGold += quest.rewardGold;
-		SaveManager.instance.state.CurExp += quest.rewardExp;
+	public void ClaimReward(DataQuests quest) {
+		Debug.Log ("asdad " + quest);
+		//UpdateProgressDaily ();
+		quest.isDone = true;
+		//SaveManager.instance.state.TotalGold += quest.rewardGold;
+		//SaveManager.instance.state.CurExp += quest.rewardExp;
+		//SaveManager.instance.Save ();
 	}
 
-	public void UpdateProgressDaily(List<DataQuests> lstStoreQuest) {
-		
+	// For test
+	public void AutoDone(List<DataQuests> lstStoreQuest){
+		for (int i = 0; i < lstStoreQuest.Count; i++)
+			lstStoreQuest [i].doing = lstStoreQuest [i].requirement;
+	}
+
+	int curProgressMax = 0;
+	public void UpdateProgressDaily() {
+		Debug.Log ("asda");
+		curProgressMax += 0.335f;
+
+		progressBonus.fillAmount += 0.335f;
+	}
+
+	void RefreshDoingAllQuest() {
+		for (int i = 0; i < questList.Count; i++) {
+			questList [i].doing = 0;
+			questList [i].isDone = false;
+		}
 	}
 }
