@@ -18,7 +18,7 @@ public class BirdController : MonoBehaviour {
 
 	private bool isAlive;
 	private bool didFlap;
-	private int time;
+	private float time;
 	private GameObject spawner;
 
 	public float flag = 0;

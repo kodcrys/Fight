@@ -217,7 +217,7 @@ public class QuestManager : MonoBehaviour {
 			lstStoreQuest [i].doing = lstStoreQuest [i].requirement;
 	}
 
-	int curProgressMax = 0;
+	float curProgressMax = 0;
 	public void UpdateProgressDaily() {
 		Debug.Log ("asda");
 		curProgressMax += 0.335f;
