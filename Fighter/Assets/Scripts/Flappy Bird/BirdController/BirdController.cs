@@ -18,7 +18,7 @@ public class BirdController : MonoBehaviour {
 
 	private bool isAlive;
 	private bool didFlap;
-
+	private int time;
 	private GameObject spawner;
 
 	public float flag = 0;
@@ -47,14 +47,31 @@ public class BirdController : MonoBehaviour {
 		_BirdMoveMent ();
 	}
 
+	float tempx = 100, tempy = 200;
 	void _BirdMoveMent(){
 
 		if (isAlive) 
 		{
-			if (didFlap) {
-				didFlap = false;
-				myBody.velocity = new Vector2 (myBody.velocity.x/2, bounceForce);
+			if (didFlap) 
+			{
+				if (time <= 0.5f) 
+				{
+					tempx -= 12.5f;
+					tempx -= 25f;
+					myBody.AddForce (new Vector2 (tempx, tempy));
+				}
+				time = 0f;
+				myBody.AddForce (new Vector2 (100, 200));
+
+			//	myBody.velocity = new Vector2 (20 ,40);
 				audioSource.PlayOneShot (flyClip);
+				didFlap = false;
+			} 
+			else 
+			{ 
+				time += Time.deltaTime;
+				myBody.AddForce (new Vector2 (-5f, -10f));
+				//myBody.velocity = new Vector2 (-1.5f - Time.deltaTime * 3 , -3f - Time.deltaTime * 3);
 			}
 		}
 		if (myBody.velocity.y > 0) 
