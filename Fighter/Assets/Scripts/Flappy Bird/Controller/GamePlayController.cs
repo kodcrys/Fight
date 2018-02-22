@@ -51,7 +51,7 @@ public class GamePlayController : MonoBehaviour {
 	}
 
 	public void _RestartGameButton(){
-		Application.LoadLevel ("GamePlay");
+		Application.LoadLevel ("FlappyThumb");
 		//Application.LoadLevel (Application.loadedLevel);
 	}
 

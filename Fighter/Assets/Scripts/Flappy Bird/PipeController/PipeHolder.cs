@@ -23,7 +23,7 @@ public class PipeHolder : MonoBehaviour {
 	void _PipeMovement(){
 		Vector3 temp = transform.position;
 		temp.x -= speed * Time.deltaTime;
-		temp.y += speed * Time.deltaTime * 0.37f;
+		temp.y += speed * Time.deltaTime * 0.2f;
 		transform.position = temp;
 	}
 

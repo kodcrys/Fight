@@ -12,7 +12,7 @@ public class SpawnerPipe : MonoBehaviour {
 	}
 	
 	IEnumerator Spawner(){
-		yield return new WaitForSeconds (1.4f);
+		yield return new WaitForSeconds (1.5f);
 		Vector3 temp = pipeHolder.transform.position;
 		temp.y = Random.Range (-1.5f, 1.5f);
 		Instantiate (pipeHolder, temp, pipeHolder.transform.rotation);
