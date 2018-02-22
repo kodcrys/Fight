@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Name: QuestPlayAI
   m_EditorClassIdentifier: 
   idQuest: 4
-  icon: {fileID: 0}
+  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   content: Play AI games 3 times
   requirement: 3
   doing: 0
   rewardGold: 50
   rewardExp: 25
+  isDone: 0

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 public class QuestManager : MonoBehaviour {
 
@@ -20,6 +22,10 @@ public class QuestManager : MonoBehaviour {
 	private List<DataQuests> questList = new List<DataQuests>();
 
 	private List<DataQuests> questTempList = new List<DataQuests>();
+
+	[Header("")]
+	[SerializeField]
+	Button[] BtnsClaimReward;
 
 	void Awake() {
 		if (Intance == null)
@@ -39,22 +45,33 @@ public class QuestManager : MonoBehaviour {
 			timeTxt.text = "Restart in: " + GetRemainingTime (result.TotalMilliseconds);
 		}
 
-		int curDay = GetDay ();
+		if (SaveManager.instance.state.isFirstPlay || isSameDay () == false) {
+			
+			lstStoreQuest = RefeshQuestNewDay (lstStoreQuest);
 
-		if (SaveManager.instance.state.isFirstPlay || SaveManager.instance.state.oldDay != curDay) {
-			lstStoreQuest = ShuffleQuest (questList.Count, amountShuffle);
+			SaveQuest (lstStoreQuest);
 
-			SetDay (curDay);
+			SetDay (GetDay ());
 
 			if (SaveManager.instance.state.isFirstPlay) {
 				SaveManager.instance.state.isFirstPlay = false;
 				SaveManager.instance.Save ();
 			}
+
+		} else {
+			lstStoreQuest = LoadQuest ();
 		}
 
 		return lstStoreQuest;
 	}
-		
+
+	// Refresh quest when time change time of new day
+	private List<DataQuests> RefeshQuestNewDay(List<DataQuests> lstStoreQuest) {
+		lstStoreQuest = ShuffleQuest (questList.Count, amountShuffle);
+		return lstStoreQuest;
+	}
+
+	// 
 	private List<DataQuests> ShuffleQuest(int questMax, int amountShuffle) {
 
 		// Create list store daily quest random
@@ -70,10 +87,7 @@ public class QuestManager : MonoBehaviour {
 
 		// Generate value daily quest of questShuffle
 		for (var i = 0; i < amountShuffle; i++)
-			questShuffle.Add (questList[PickNumber (dailyIndexLst)]);
-
-		for (int i = 0; i < questShuffle.Count; i++)
-			Debug.Log (questShuffle [i].idQuest);
+			questShuffle.Add (questList [PickNumber (dailyIndexLst)]);
 
 		return questShuffle;
 	}
@@ -88,21 +102,34 @@ public class QuestManager : MonoBehaviour {
 		return value;
 	}
 
+	// Conver time to string 
 	private string GetRemainingTime(double x) {
 		TimeSpan tempB = TimeSpan.FromMilliseconds(x);
 		string Timeformat = string.Format("{0:D2}:{1:D2}:{2:D2}", tempB.Hours, tempB.Minutes, tempB.Seconds);
 		return Timeformat;
 	}
 
+	// Check day in save is same current day
+	public bool isSameDay() {
+		int curDay = GetDay ();
+		if (SaveManager.instance.state.oldDay != curDay)
+			return false;
+		else
+			return true;
+	}
+
+	// Get current day
 	private int GetDay() {
 		return DateTime.Now.Day;
 	}
 
+	// Set day with identifine day
 	private void SetDay(int day) {
 		SaveManager.instance.state.oldDay = day;
 		SaveManager.instance.Save ();
 	}
 
+	// Read data in ScriptableObject
 	private void ReadData(Image iconQuest, Text contentQuest, Text doing, Text rewardGold, Text rewardExp, DataQuests quest) {
 		iconQuest.sprite = quest.icon;
 		contentQuest.text = quest.content;
@@ -111,6 +138,7 @@ public class QuestManager : MonoBehaviour {
 		rewardGold.text = quest.rewardGold.ToString ();
 	}
 
+	// Load data in ScriptableObject
 	public void LoadData(Transform lstTransform, List<DataQuests> lstStoreQuest) {
 
 		int indexQuest = 0;
@@ -126,5 +154,44 @@ public class QuestManager : MonoBehaviour {
 
 			indexQuest++;
 		}
+	}
+
+	private void SaveQuest(List<DataQuests> lstQuest){
+		for (int i = 0; i < lstQuest.Count; i++)
+			PlayerPrefs.SetInt ("quest" + i, lstQuest [i].idQuest);
+	}
+
+	private List<DataQuests> LoadQuest() {
+		List<DataQuests> lstQuests = new List<DataQuests> ();
+		int[] idQuest = new int[3];
+		for (int i = 0; i < 3; i++)
+			idQuest [i] = PlayerPrefs.GetInt ("quest" + i, 0);
+
+		for (int i = 0; i < 3; i++)
+			lstQuests.Add (questList [idQuest [i]]);
+
+		return lstQuests;
+	}
+
+	public void DoneQuest(List<DataQuests> lstStoreQuest) {
+		for (int i = 0; i < lstStoreQuest.Count; i++) {
+			if (lstStoreQuest [i].doing == lstStoreQuest [i].requirement) {
+				BtnsClaimReward [i].enabled = true;
+				BtnsClaimReward [i].onClick.AddListener (delegate {
+					ClaimReward (lstStoreQuest [i]);
+				});
+			}
+			else
+				BtnsClaimReward [i].enabled = false;
+		}
+	}
+
+	void ClaimReward(DataQuests quest) {
+		SaveManager.instance.state.TotalGold += quest.rewardGold;
+		SaveManager.instance.state.CurExp += quest.rewardExp;
+	}
+
+	public void UpdateProgressDaily(List<DataQuests> lstStoreQuest) {
+		
 	}
 }

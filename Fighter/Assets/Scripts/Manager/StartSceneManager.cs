@@ -17,11 +17,6 @@ public class StartSceneManager : MonoBehaviour {
 	GameObject dailyQuestObject;
 
 	List<DataQuests> lstQuest = new List<DataQuests> ();
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -30,5 +25,9 @@ public class StartSceneManager : MonoBehaviour {
 			if(lstQuest.Count > 0)
 				QuestManager.Intance.LoadData (quests, lstQuest);
 		}
+	}
+
+	void ShowDailyQuest() {
+		dailyQuestObject.SetActive (true);
 	}
 }

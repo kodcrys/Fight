@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Name: QuestWinGame
   m_EditorClassIdentifier: 
   idQuest: 10
-  icon: {fileID: 0}
+  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   content: Win AI game 3 times
   requirement: 3
   doing: 0
   rewardGold: 110
   rewardExp: 55
+  isDone: 0

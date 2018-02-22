@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Name: QuestRate
   m_EditorClassIdentifier: 
   idQuest: 6
-  icon: {fileID: 0}
+  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   content: Rate the game
   requirement: 1
   doing: 0
   rewardGold: 70
   rewardExp: 35
+  isDone: 0

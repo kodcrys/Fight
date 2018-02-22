@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Name: QuestPlay2Player
   m_EditorClassIdentifier: 
   idQuest: 3
-  icon: {fileID: 0}
+  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   content: Play 2 player game 3 times
   requirement: 3
   doing: 0
   rewardGold: 40
   rewardExp: 20
+  isDone: 0

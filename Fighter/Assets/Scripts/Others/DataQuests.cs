@@ -9,4 +9,9 @@ public class DataQuests : ScriptableObject {
 	public int doing = 0;
 	public int rewardGold = 0;
 	public int rewardExp = 0;
+
+	// Show btn can claim reward
+	public bool isDone = false;
+
+
 }
