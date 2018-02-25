@@ -36,9 +36,9 @@ public class UpDownPipe : MonoBehaviour {
 		// Move up and down the pipe.
 		Vector3 temp = transform.position;
 		if (MoveUp)
-			temp.y += Time.deltaTime * 0.5f;
+			temp.y += randSpeed;
 		else
-			temp.y -= Time.deltaTime * 0.5f;
+			temp.y -= randSpeed;
 		transform.position = temp;
 	}
 }

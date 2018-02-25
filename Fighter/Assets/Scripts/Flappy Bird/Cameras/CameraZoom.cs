@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraZoom : MonoBehaviour {
-
+	[SerializeField]
+	private float maxSizeCamera = 11f, minSizeCamera = 10f;
 	bool zoomIn;
 	float sizeCamera;
 	// Use this for initialization
@@ -14,24 +15,21 @@ public class CameraZoom : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (sizeCamera <= 10)
+		if (sizeCamera <= minSizeCamera)
 			zoomIn = false;
 
-		if (sizeCamera >= 11)
+		if (sizeCamera >= maxSizeCamera)
 			zoomIn = true;
 		
 		if (zoomIn) 
 		{
-			Debug.Log ("ZoomIN");
-			sizeCamera -= Time.deltaTime * 10f;
+			sizeCamera -= 0.01f;
 		} 
 		else 
 		{
-			Debug.Log ("ZoomOUT");
-			sizeCamera += Time.deltaTime * 10f;
+			sizeCamera += 0.01f;
 		}
-
-		Debug.Log (sizeCamera);
+			
 		transform.GetComponent<Camera> ().orthographicSize = sizeCamera;
 	}
 }
