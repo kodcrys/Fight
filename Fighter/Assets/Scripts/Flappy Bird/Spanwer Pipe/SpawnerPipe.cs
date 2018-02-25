@@ -17,7 +17,7 @@ public class SpawnerPipe : MonoBehaviour {
 		Vector3 temp = pipeHolder.transform.position;
 		temp.y = Random.Range (-1.5f, 1.5f);
 		Instantiate (pipeHolder, temp, pipeHolder.transform.rotation);
-		Debug.Log (temp);
+
 		//Instantiate (pipeHolder, temp, Quaternion.identity);
 		StartCoroutine (Spawner ());
 	}

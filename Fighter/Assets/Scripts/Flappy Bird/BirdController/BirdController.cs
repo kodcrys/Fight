@@ -47,7 +47,7 @@ public class BirdController : MonoBehaviour {
 		_BirdMoveMent ();
 	}
 
-	float tempx = 100, tempy = 200;
+	float tempx = 125, tempy = 250;
 	void _BirdMoveMent(){
 
 		if (isAlive) 
@@ -56,12 +56,24 @@ public class BirdController : MonoBehaviour {
 			{
 				if (time <= 0.5f) 
 				{
-					tempx -= 12.5f;
 					tempx -= 25f;
-					myBody.AddForce (new Vector2 (tempx, tempy));
+					tempy -= 50f;
 				}
+				else 
+				{
+					tempx = 125;
+					tempy = 250;
+				}
+
+				if (tempx <= 75) 
+				{
+					tempx = 75;
+					tempy = 150;
+				}
+
 				time = 0f;
-				myBody.AddForce (new Vector2 (100, 200));
+				Debug.Log (tempx + " " + tempy);
+				myBody.AddForce (new Vector2 (tempx, tempy));
 
 			//	myBody.velocity = new Vector2 (20 ,40);
 				audioSource.PlayOneShot (flyClip);
