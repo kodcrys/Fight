@@ -34,11 +34,21 @@ public class QuestManager : MonoBehaviour {
 	[Header("Var allow load Data quest")]
 	public bool isCanLoadData;
 
+	[Header("Progress handle slider bar claim bonus reward")]
+	[SerializeField]
+	private Stat claimBonus;
+
 	void Awake() {
 		if (Intance == null)
 			Intance = this;
 
 		isCanLoadData = true;
+	}
+
+	void Start() {
+		claimBonus.bar.isChange = false;
+		claimBonus.MaxVal = 3;
+		claimBonus.CurrentVal = SaveManager.instance.state.curProgressInDay;
 	}
 
 	// Calculate countDown refresh quest
@@ -67,8 +77,15 @@ public class QuestManager : MonoBehaviour {
 				SaveManager.instance.Save ();
 			}
 
-		} else
+			if (SaveManager.instance.state.oldDay != DateTime.Now.Day) {
+				Debug.Log ("1243546436");
+				// Change var in dailyreward
+				SaveManager.instance.state.isClaimedDailyReward = -1;
+				SaveManager.instance.Save ();
+			}
+		} else {
 			lstStoreQuest = LoadQuest ();
+		}
 
 		return lstStoreQuest;
 	}
@@ -134,6 +151,10 @@ public class QuestManager : MonoBehaviour {
 		return DateTime.Now.Day;
 	}
 
+	public DayOfWeek GetDate() {
+		return DateTime.Now.DayOfWeek;
+	}
+
 	// Set day with identifine day
 	private void SetDay(int day) {
 		SaveManager.instance.state.oldDay = day;
@@ -148,9 +169,13 @@ public class QuestManager : MonoBehaviour {
 		rewardExp.text = quest.rewardExp.ToString ();
 		rewardGold.text = quest.rewardGold.ToString ();
 
+		if (quest.isDone == false)
+			btnReward.interactable = true;
+		else
+			btnReward.interactable = false;
 
 		btnReward.onClick.AddListener (() => {
-			ClaimReward (quest);
+			ClaimReward (quest, btnReward);
 		});
 	}
 
@@ -202,13 +227,21 @@ public class QuestManager : MonoBehaviour {
 		}
 	}
 
-	public void ClaimReward(DataQuests quest) {
-		Debug.Log ("asdad " + quest);
-		//UpdateProgressDaily ();
+	public void ClaimReward(DataQuests quest, Button claimBtn) {
+		UpdateProgressDaily ();
 		quest.isDone = true;
-		//SaveManager.instance.state.TotalGold += quest.rewardGold;
-		//SaveManager.instance.state.CurExp += quest.rewardExp;
-		//SaveManager.instance.Save ();
+
+		claimBonus.bar.isChange = true;
+		SaveManager.instance.state.curProgressInDay += 1;
+		SaveManager.instance.Save ();
+		claimBonus.MaxVal = 3;
+		claimBonus.CurrentVal = SaveManager.instance.state.curProgressInDay;
+
+		claimBtn.interactable = false;
+
+		SaveManager.instance.state.TotalGold += quest.rewardGold;
+		SaveManager.instance.state.CurExp += quest.rewardExp;
+		SaveManager.instance.Save ();
 	}
 
 	// For test
@@ -219,7 +252,6 @@ public class QuestManager : MonoBehaviour {
 
 	float curProgressMax = 0;
 	public void UpdateProgressDaily() {
-		Debug.Log ("asda");
 		curProgressMax += 0.335f;
 
 		progressBonus.fillAmount += 0.335f;
@@ -229,6 +261,9 @@ public class QuestManager : MonoBehaviour {
 		for (int i = 0; i < questList.Count; i++) {
 			questList [i].doing = 0;
 			questList [i].isDone = false;
+
+			SaveManager.instance.state.curProgressInDay = 0;
+			SaveManager.instance.Save ();
 		}
 	}
 }

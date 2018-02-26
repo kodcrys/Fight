@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Quest", menuName = "Quest")]
+[CreateAssetMenu(fileName = "New Quest", menuName = "Data/Quest")]
 public class DataQuests : ScriptableObject {
 	new public int idQuest = 0;
 	public Sprite icon;
