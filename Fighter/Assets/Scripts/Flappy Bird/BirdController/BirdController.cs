@@ -47,7 +47,7 @@ public class BirdController : MonoBehaviour {
 		_BirdMoveMent ();
 	}
 
-	float tempx = 125, tempy = 250;
+	float tempx = 150, tempy = 300;
 	void _BirdMoveMent(){
 
 		if (isAlive) 
@@ -61,21 +61,20 @@ public class BirdController : MonoBehaviour {
 				}
 				else 
 				{
-					tempx = 125;
-					tempy = 250;
+					tempx = 150;
+					tempy = 300;
 				}
 
-				if (tempx <= 75) 
+				if (tempx <= 100) 
 				{
-					tempx = 75;
-					tempy = 150;
+					tempx = 100;
+					tempy = 200;
 				}
 
 				time = 0f;
-				Debug.Log (tempx + " " + tempy);
+	
 				myBody.AddForce (new Vector2 (tempx, tempy));
 
-			//	myBody.velocity = new Vector2 (20 ,40);
 				audioSource.PlayOneShot (flyClip);
 				didFlap = false;
 			} 
@@ -83,7 +82,6 @@ public class BirdController : MonoBehaviour {
 			{ 
 				time += Time.deltaTime;
 				myBody.AddForce (new Vector2 (-5f, -10f));
-				//myBody.velocity = new Vector2 (-1.5f - Time.deltaTime * 3 , -3f - Time.deltaTime * 3);
 			}
 		}
 		if (myBody.velocity.y > 0) 
@@ -100,9 +98,9 @@ public class BirdController : MonoBehaviour {
 			else 
 				if (myBody.velocity.y < 0) 
 				{
-				float angel = 0;
-				angel = Mathf.Lerp (0, -90, -myBody.velocity.y / 7);
-				transform.rotation = Quaternion.Euler (0, 0, angel);
+					float angel = 0;
+					angel = Mathf.Lerp (0, -90, -myBody.velocity.y / 7);
+					transform.rotation = Quaternion.Euler (0, 0, angel);
 				}
 	}
 
@@ -110,29 +108,38 @@ public class BirdController : MonoBehaviour {
 		didFlap = true;
 	}
 
-	void OnTriggerEnter2D(Collider2D target){
-		if (target.tag == "PipeHolder") {
+	void OnTriggerEnter2D(Collider2D target)
+	{
+		if (target.tag == "PipeHolder") 
+		{
 			score++;
-			if (GamePlayController.instance != null) {
+			if (GamePlayController.instance != null) 
+			{
 				GamePlayController.instance._SetScore (score);
 			}
 			audioSource.PlayOneShot (pingClip);
 		}
 	}
 
-	void OnCollisionEnter2D(Collision2D target){
-		if (target.gameObject.tag == "Pipe" || target.gameObject.tag == "Ground") {
+	/* void OnCollisionEnter2D(Collision2D target)
+	{
+		if (target.gameObject.tag == "Pipe" || target.gameObject.tag == "Ground") 
+		{
 			flag = 1;
-			if (isAlive) {
+			if (isAlive) 
+			{
 				isAlive = false;
 				Destroy (spawner);
 				audioSource.PlayOneShot (diedClip);
 				anim.SetTrigger ("Died");
 				myBody.velocity = Vector2.zero;
 			}
-			if (GamePlayController.instance != null) {
+
+			if (GamePlayController.instance != null) 
+			{
 				GamePlayController.instance._BirdDiedShowPanel (score);
 			}
 		}
 	}
+	*/
 }

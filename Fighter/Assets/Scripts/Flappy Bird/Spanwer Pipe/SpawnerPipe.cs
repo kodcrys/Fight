@@ -3,9 +3,6 @@ using System.Collections;
 
 public class SpawnerPipe : MonoBehaviour {
 
-	[SerializeField]
-	private GameObject pipeHolder;
-
 	// Use this for initialization
 	void Start () {
 		StartCoroutine (Spawner ());
@@ -13,12 +10,21 @@ public class SpawnerPipe : MonoBehaviour {
 	
 	IEnumerator Spawner()
 	{
-		yield return new WaitForSeconds (1.5f);
-		Vector3 temp = pipeHolder.transform.position;
-		temp.y = Random.Range (-1.5f, 1.5f);
-		Instantiate (pipeHolder, temp, pipeHolder.transform.rotation);
+		int numberPipe = Mathf.RoundToInt(BirdController.instance.score / 10);
 
-		//Instantiate (pipeHolder, temp, Quaternion.identity);
+		yield return new WaitForSeconds (1.7f);
+
+		int randomPipe = Random.Range (0, numberPipe);
+	
+		Vector3 temp = Vector3.zero;
+		temp.y = Random.Range (-PoolManager.Intance.listRandomPos[randomPipe], PoolManager.Intance.listRandomPos[randomPipe]);
+		Debug.Log (PoolManager.Intance.listRandomPos [randomPipe]);
+
+		PoolManager.Intance.lstPool [randomPipe].getindex ();
+		PoolManager.Intance.lstPool [randomPipe].GetPoolObject ().transform.position = transform.position + temp;
+		PoolManager.Intance.lstPool [randomPipe].GetPoolObject ().transform.rotation = transform.rotation;
+		PoolManager.Intance.lstPool [randomPipe].GetPoolObject ().SetActive (true);
+
 		StartCoroutine (Spawner ());
 	}
 }
