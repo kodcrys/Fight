@@ -6,62 +6,68 @@ public class GamePlayController : MonoBehaviour {
 
 	public static GamePlayController instance;
 
+	// Tap to play button.
 	[SerializeField]
 	private Button instructionButton;
 
+	// The text which shows the score.
 	[SerializeField]
-	private Text scoreText,endScoreText,bestScoreText;
+	private Text scoreText;
 
-	[SerializeField]
-	private GameObject gameOverPanel, pausePanel;
-
-	void Awake(){
+	/// <summary>
+	/// Awake this instance.
+	/// </summary>
+	void Awake()
+	{
 		Time.timeScale = 0;
 		_MakeInstance ();
 	}
 
-	void _MakeInstance(){
-		if (instance == null) {
+	/// <summary>
+	/// Makes the instance.
+	/// </summary>
+	void _MakeInstance()
+	{
+		if (instance == null) 
+		{
 			instance = this;
 		}
 	}
 
+	/// <summary>
+	/// Tap to play button to play the game.
+	/// </summary>
 	public void _InstructionButton(){
 		Time.timeScale = 1;
 		instructionButton.gameObject.SetActive (false);
 	}
 
+	/// <summary>
+	/// Set the score.
+	/// </summary>
+	/// <param name="score">Score.</param>
 	public void _SetScore(int score){
 		scoreText.text = "" + score;
 	}
 
+	/// <summary>
+	/// Birds the died show panel.
+	/// </summary>
+	/// <param name="score">Score.</param>
 	public void _BirdDiedShowPanel(int score){
-		gameOverPanel.SetActive (true);
-
-		endScoreText.text = "" + score;
-		//if (score > GameManager.instance.GetHighScore ()) {
-			//GameManager.instance.SetHighScore (score);
-		//}
-		//bestScoreText.text = "" + GameManager.instance.GetHighScore();
-
 	}
 
+	/// <summary>
+	/// Home button.
+	/// </summary>
 	public void _MenuButton(){
 		Application.LoadLevel ("MainMenu");
 	}
 
+	/// <summary>
+	/// Restart button.
+	/// </summary>
 	public void _RestartGameButton(){
 		Application.LoadLevel ("FlappyThumb");
-		//Application.LoadLevel (Application.loadedLevel);
-	}
-
-	public void _PauseButton(){
-		Time.timeScale = 0;
-		pausePanel.SetActive (true);
-	}
-
-	public void _ResumeButton(){
-		Time.timeScale = 1;
-		pausePanel.SetActive (false);
 	}
 }

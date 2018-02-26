@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FollowBird : MonoBehaviour {
+	
 	private GameObject Player;
+
 	[SerializeField]
 	float maxTime, minTime, speed;
 
@@ -20,14 +22,21 @@ public class FollowBird : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		Debug.Log (transform.position.x + " " + Player.transform.position.x + " ");
+		PipeFollowBird ();
+	}
+
+	/// <summary>
+	/// If the position of the pipe == position of the bird, the pipe will move follow the bird in ranndom time.
+	/// </summary>
+	void PipeFollowBird ()
+	{
+		// Check the position of the pipe and the bird.
 		if (transform.position.x <= Player.transform.position.x) 
 		{
-			
 			checkIdle = true;
-
 		}
 
+		// Countdown the time the pipe follow the bird.
 		if (checkIdle)
 			randomTime -= Time.deltaTime;
 
@@ -40,6 +49,5 @@ public class FollowBird : MonoBehaviour {
 		} 
 		else
 			checkIdle = false;
-				
 	}
 }

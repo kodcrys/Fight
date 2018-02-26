@@ -18,6 +18,9 @@ public class PipeHolder : MonoBehaviour {
 		_PipeMovement ();
 	}
 
+	/// <summary>
+	/// Pipes the movement.
+	/// </summary>
 	void _PipeMovement()
 	{
 		Vector3 temp = transform.position;
@@ -26,6 +29,10 @@ public class PipeHolder : MonoBehaviour {
 		transform.position = temp;
 	}
 
+	/// <summary>
+	/// When the pipe hit the destroybox, the pipe will invisible.
+	/// </summary>
+	/// <param name="target">Target.</param>
 	void OnTriggerEnter2D(Collider2D target)
 	{
 		if (target.tag == "Destroy") 

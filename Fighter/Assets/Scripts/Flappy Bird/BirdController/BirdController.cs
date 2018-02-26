@@ -121,7 +121,7 @@ public class BirdController : MonoBehaviour {
 		}
 	}
 
-	/* void OnCollisionEnter2D(Collision2D target)
+	void OnCollisionEnter2D(Collision2D target)
 	{
 		if (target.gameObject.tag == "Pipe" || target.gameObject.tag == "Ground") 
 		{
@@ -141,5 +141,4 @@ public class BirdController : MonoBehaviour {
 			}
 		}
 	}
-	*/
 }
