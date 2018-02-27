@@ -21,9 +21,6 @@ public class BarScript : MonoBehaviour {
 
 	public bool isChange;
 
-	//[SerializeField]
-	//bool isClaimBonus;
-
 	public float Value{
 		set{
 			if (valueText != null)
@@ -41,6 +38,7 @@ public class BarScript : MonoBehaviour {
 
 	void HandleBar(){
 		if (isChange) {
+			//Debug.Log ("fillAmount: " + fillAmount + " content.fillAmount: " + content.fillAmount);
 			if (fillAmount > content.fillAmount) {
 				content.fillAmount = Mathf.Lerp (content.fillAmount, fillAmount, Time.deltaTime * lerpSpeed);
 			}
