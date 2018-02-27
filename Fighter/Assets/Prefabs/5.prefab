@@ -10,6 +10,7 @@ GameObject:
   - component: {fileID: 408702}
   - component: {fileID: 21204986}
   - component: {fileID: 6132332}
+  - component: {fileID: 114252590074827750}
   m_Layer: 0
   m_Name: Green Pipe Top
   m_TagString: Pipe
@@ -27,6 +28,7 @@ GameObject:
   - component: {fileID: 400670}
   - component: {fileID: 21262788}
   - component: {fileID: 6102898}
+  - component: {fileID: 114091926291071610}
   m_Layer: 0
   m_Name: Green Pipe Bottom
   m_TagString: Pipe
@@ -45,7 +47,7 @@ GameObject:
   - component: {fileID: 6144296}
   - component: {fileID: 11487828}
   m_Layer: 0
-  m_Name: 1
+  m_Name: 5
   m_TagString: PipeHolder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +61,7 @@ Transform:
   m_GameObject: {fileID: 161414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.08, y: -7.59, z: 0}
-  m_LocalScale: {x: 2, y: 1.4, z: 1}
+  m_LocalScale: {x: 2, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 453808}
   m_RootOrder: 0
@@ -72,7 +74,7 @@ Transform:
   m_GameObject: {fileID: 147212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.04, y: 7.57, z: 0}
-  m_LocalScale: {x: 2, y: -1.4, z: 1}
+  m_LocalScale: {x: 2, y: -1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 453808}
   m_RootOrder: 1
@@ -274,3 +276,37 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 169492}
   m_IsPrefabParent: 1
+--- !u!114 &114091926291071610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 735c5cb244bc04b02b41d957fde0d386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 0.03
+  minSpeed: 0.03
+  MaxRange: 1.1
+  minRange: 1.1
+  tempx: -0.27
+  MoveUp: 1
+--- !u!114 &114252590074827750
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 735c5cb244bc04b02b41d957fde0d386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 0.03
+  minSpeed: 0.03
+  MaxRange: 1.1
+  minRange: 1.1
+  tempx: 0.27
+  MoveUp: 0

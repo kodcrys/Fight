@@ -5,11 +5,14 @@ using UnityEngine;
 public class UpDownPipe : MonoBehaviour {
 	
 	[SerializeField]
-	private float maxSpeed, minSpeed, MaxRange, minRange;
+	private float maxSpeed, minSpeed, MaxRange, minRange, tempx = 0f;
+	[SerializeField]
+	private bool MoveUp;
+
 
 	float randSpeed, randPos;
 	Vector3 startPos;
-	bool MoveUp;
+
 
 	// Use this for initialization
 	void OnEnable ()
@@ -20,8 +23,6 @@ public class UpDownPipe : MonoBehaviour {
 		randPos = Random.Range (minRange, MaxRange);
 		// Save the start position of the pipe.
 		startPos = transform.position;
-		// At first, the pipe will move up.
-		MoveUp = true;
 	}
 	
 	// Update is called once per frame
@@ -35,10 +36,16 @@ public class UpDownPipe : MonoBehaviour {
 
 		// Move up and down the pipe.
 		Vector3 temp = transform.position;
-		if (MoveUp)
-			temp.y += Time.deltaTime * 0.5f;
-		else
-			temp.y -= Time.deltaTime * 0.5f;
+		if (MoveUp) 
+		{
+			temp.y += randSpeed;
+			temp.x += Time.deltaTime * tempx;
+		} 
+		else 
+		{
+			temp.y -= randSpeed;
+			temp.x -= Time.deltaTime * tempx;
+		}
 		transform.position = temp;
 	}
 }
