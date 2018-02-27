@@ -13,7 +13,7 @@ public class FingerControl : FingerBase {
 
 
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		switch (fingerAction) {
 		case FingerState.none:
 			fingerAction = FingerState.Idel;
@@ -53,22 +53,44 @@ public class FingerControl : FingerBase {
 		}
 
 		finger.SetActive (true);
+		fingerDown.SetActive (false);
 		fingerAtk.SetActive (false);
+
+		if (!doingAtk)
+			firstAtk = false;
 	}
 
 	public override void DoAtk(){
 		finger.SetActive (false);
-		fingerAtk.SetActive (true);
+		if (enemy.firstAtk) {
+			fingerAtk.SetActive (true);
+			fingerDown.SetActive (false);
+		} else {
+			fingerDown.SetActive (true);
+			fingerAtk.SetActive (false);
+		}
 	}
 		
 	public void ClickAtk(){
 		fingerAction = FingerState.Atk;
 		FingerBase.changeAnim = true;
+		doingAtk = true;
+		if (!enemy.firstAtk)
+			firstAtk = true;
+		else
+			firstAtk = false;
 	}
 
 	public void UnClickAtk(){
 		fingerAction = FingerState.Idel;
 		FingerBase.changeAnim = false;
+		doingAtk = false;
+		if (firstAtk && enemy.doingAtk) {
+			firstAtk = false;
+			enemy.firstAtk = true;
+		} else {
+			firstAtk = false;
+		}
 	}
 }
 
