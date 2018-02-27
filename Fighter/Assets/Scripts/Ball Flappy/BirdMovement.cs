@@ -47,6 +47,7 @@ public class BirdMovement : MonoBehaviour {
 	float timeWaitDead;
 	// Do Graphic & Input updates here
 	void Update() {
+		Debug.Log (dead);
 		if(dead) 
 		{
 			x.SetActive (true);
@@ -122,7 +123,7 @@ public class BirdMovement : MonoBehaviour {
 				isCorrect = false;
 				indexPipe++;
 				SoundManager.scoreS.Play ();
-				coll.transform.parent.parent.GetChild (7).gameObject.SetActive (true);
+				coll.transform.parent.parent.GetChild (4).gameObject.SetActive (true);
 			} 
 			else 
 			{
