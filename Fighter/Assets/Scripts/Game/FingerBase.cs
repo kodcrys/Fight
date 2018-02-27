@@ -5,7 +5,7 @@ using UnityEngine;
 public class FingerBase : MonoBehaviour {
 
 	[Header("GameObject")]
-	public GameObject finger;
+	public GameObject finger, fingerAtk;
 
 	[Header("Finger Status")]
 	public int health, defend, atk;
@@ -21,7 +21,13 @@ public class FingerBase : MonoBehaviour {
 
 	public float pos1, pos2;
 
+	public static bool changeAnim;
+
 	public virtual void DoIdel(){
+		
+	}
+
+	public virtual void DoAtk(){
 		
 	}
 

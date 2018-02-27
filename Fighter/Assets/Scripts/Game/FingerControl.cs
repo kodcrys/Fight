@@ -14,25 +14,27 @@ public class FingerControl : FingerBase {
 
 	// Update is called once per frame
 	void Update () {
+		switch (fingerAction) {
+		case FingerState.none:
+			fingerAction = FingerState.Idel;
+			break;
+		case FingerState.Idel:
+			if (!FingerBase.changeAnim)
+				DoIdel ();
+			break;
+		case FingerState.Atk:
+			DoAtk ();
+			break;
+		}
+	}
+
+	public override void DoIdel(){
 		if (time >= timeInter) {
 			time = 0;
 		} else {
 			time += Time.deltaTime;
 		}
 
-		switch (fingerAction) {
-		case FingerState.none:
-			fingerAction = FingerState.Idel;
-			break;
-		case FingerState.Idel:
-			DoIdel ();
-			break;
-		case FingerState.Atk:
-			break;
-		}
-	}
-
-	public override void DoIdel(){
 		if (time >= timeInter) {
 			if (changeScale == 0)
 				changeScale = 1;
@@ -49,18 +51,24 @@ public class FingerControl : FingerBase {
 			finger.transform.Rotate (finger.transform.localRotation.x, finger.transform.localRotation.y, rot2);
 			finger.transform.localPosition = Vector3.MoveTowards (finger.transform.localPosition, new Vector3 (finger.transform.localPosition.x - pos2, finger.transform.localPosition.y, finger.transform.localPosition.z), Time.deltaTime * speedScale);
 		}
+
+		finger.SetActive (true);
+		fingerAtk.SetActive (false);
 	}
 
-	void DoAtk(){
-		
+	public override void DoAtk(){
+		finger.SetActive (false);
+		fingerAtk.SetActive (true);
 	}
 		
 	public void ClickAtk(){
 		fingerAction = FingerState.Atk;
+		FingerBase.changeAnim = true;
 	}
 
 	public void UnClickAtk(){
 		fingerAction = FingerState.Idel;
+		FingerBase.changeAnim = false;
 	}
 }
 
