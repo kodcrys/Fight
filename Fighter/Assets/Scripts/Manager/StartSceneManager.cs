@@ -23,6 +23,10 @@ public class StartSceneManager : MonoBehaviour {
 	[SerializeField]
 	List<DailyReward> btnsClaimRewardDaily;
 
+	[Header("Lv stat Manager")]
+	[SerializeField]
+	LevelStatManager lvStatManager;
+
 	void Awake() {
 		DisplayClaimRewardDaily ();
 	}

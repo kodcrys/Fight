@@ -18,6 +18,7 @@ public class DailyReward : MonoBehaviour {
 
 	public GameObject claimedSymbol;
 
+
 	// Use this for initialization
 	void Start () {
 		icon.sprite = data.iconReward;

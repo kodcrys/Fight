@@ -17,6 +17,7 @@ public class Stat {
 		set{
 			this.currentVal = Mathf.Clamp (value, 0, MaxVal);
 			bar.Value = currentVal;
+
 		}
 	}
 

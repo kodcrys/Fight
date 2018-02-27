@@ -77,12 +77,12 @@ public class QuestManager : MonoBehaviour {
 				SaveManager.instance.Save ();
 			}
 
-			if (SaveManager.instance.state.oldDay != DateTime.Now.Day) {
+			/*if (SaveManager.instance.state.oldDay != DateTime.Now.Day) {
 				Debug.Log ("1243546436");
 				// Change var in dailyreward
 				SaveManager.instance.state.isClaimedDailyReward = -1;
 				SaveManager.instance.Save ();
-			}
+			}*/
 		} else {
 			lstStoreQuest = LoadQuest ();
 		}
@@ -228,7 +228,6 @@ public class QuestManager : MonoBehaviour {
 	}
 
 	public void ClaimReward(DataQuests quest, Button claimBtn) {
-		UpdateProgressDaily ();
 		quest.isDone = true;
 
 		claimBonus.bar.isChange = true;
@@ -248,13 +247,6 @@ public class QuestManager : MonoBehaviour {
 	public void AutoDone(List<DataQuests> lstStoreQuest){
 		for (int i = 0; i < lstStoreQuest.Count; i++)
 			lstStoreQuest [i].doing = lstStoreQuest [i].requirement;
-	}
-
-	float curProgressMax = 0;
-	public void UpdateProgressDaily() {
-		curProgressMax += 0.335f;
-
-		progressBonus.fillAmount += 0.335f;
 	}
 
 	void RefreshDoingAllQuest() {
