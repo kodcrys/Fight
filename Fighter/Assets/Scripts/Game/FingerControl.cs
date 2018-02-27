@@ -55,11 +55,14 @@ public class FingerControl : FingerBase {
 		finger.SetActive (true);
 		fingerDown.SetActive (false);
 		fingerAtk.SetActive (false);
+
+		if (!doingAtk)
+			firstAtk = false;
 	}
 
 	public override void DoAtk(){
 		finger.SetActive (false);
-		if (enemy.doingAtk && enemy.firstAtk) {
+		if (enemy.firstAtk) {
 			fingerAtk.SetActive (true);
 			fingerDown.SetActive (false);
 		} else {
@@ -82,9 +85,11 @@ public class FingerControl : FingerBase {
 		fingerAction = FingerState.Idel;
 		FingerBase.changeAnim = false;
 		doingAtk = false;
-		if (firstAtk) {
+		if (firstAtk && enemy.doingAtk) {
 			firstAtk = false;
 			enemy.firstAtk = true;
+		} else {
+			firstAtk = false;
 		}
 	}
 }

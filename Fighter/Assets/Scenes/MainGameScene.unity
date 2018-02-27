@@ -1107,6 +1107,7 @@ MonoBehaviour:
   pos1: -0.005
   pos2: -0.005
   doingAtk: 0
+  firstAtk: 0
   fingerAction: 0
   time: 0
   timeInter: 0.45
@@ -1432,6 +1433,7 @@ MonoBehaviour:
   pos1: 0.005
   pos2: 0.005
   doingAtk: 0
+  firstAtk: 0
   fingerAction: 0
   time: 0
   timeInter: 0.45
