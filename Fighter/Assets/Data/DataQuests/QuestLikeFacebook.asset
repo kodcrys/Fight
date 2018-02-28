@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idQuest: 1
   icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  content: Like facebook
+  content: Like or visit facebook
   requirement: 1
   doing: 0
   rewardGold: 20
