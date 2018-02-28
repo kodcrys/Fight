@@ -5,6 +5,7 @@ using System;
 
 public class StartSceneManager : MonoBehaviour {
 
+	// part daily Quest
 	[Header("Daily Quest UI")]
 	[SerializeField]
 	string startTime;
@@ -19,13 +20,23 @@ public class StartSceneManager : MonoBehaviour {
 
 	List<DataQuests> lstQuest = new List<DataQuests> ();
 
+	// part reward login;
 	[Header("Daily reward")]
 	[SerializeField]
 	List<DailyReward> btnsClaimRewardDaily;
 
-	[Header("Lv stat Manager")]
+	// part library
+	[Header("Scroll view")]
 	[SerializeField]
-	LevelStatManager lvStatManager;
+	GameObject libraryObj;
+	[SerializeField]
+	GameObject scrollSkin;
+	[SerializeField]
+	GameObject scrollEquipment;
+
+	//[Header("Display value gold & diamond")]
+	//[SerializeField]
+	//UnityEngine.UI.Text 
 
 	void Awake() {
 		DisplayClaimRewardDaily ();
@@ -33,7 +44,8 @@ public class StartSceneManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		
+
+		// get list form questManager
 		lstQuest = QuestManager.Intance.CalculateTimeRefreshQuest (startTime, endTime, countDownRefresh, lstQuest);
 
 		if (dailyQuestObject.activeSelf) {
@@ -47,14 +59,17 @@ public class StartSceneManager : MonoBehaviour {
 			QuestManager.Intance.isCanLoadData = true;
 	}
 
+	// daily quest
 	public void ShowDailyQuest() {
 		dailyQuestObject.SetActive (true);
 	}
 
+	// test
 	public void AutoDone() {
 		QuestManager.Intance.AutoDone (lstQuest);
 	}
 
+	// login reward when click button showDaily
 	public void DisplayClaimRewardDaily () {
 		for (int i = 0; i < btnsClaimRewardDaily.Count; i++) {
 			if (btnsClaimRewardDaily [i].dayOfweek < QuestManager.Intance.GetDate ()) {
@@ -76,4 +91,25 @@ public class StartSceneManager : MonoBehaviour {
 			}
 		}
 	}
+	#region Library
+	public void OpenLibrary() {
+		if (libraryObj != null)
+			libraryObj.SetActive (true);
+	}
+
+	public void CloseLibrary() {
+		if (libraryObj != null)
+			libraryObj.SetActive (false);
+	}
+
+	public void OpenScrollSkin() {
+		scrollSkin.SetActive (true);
+		scrollEquipment.SetActive (false);
+	}
+
+	public void OpenScrollEquipment() {
+		scrollSkin.SetActive (false);
+		scrollEquipment.SetActive (true);
+	}
+	#endregion
 }
