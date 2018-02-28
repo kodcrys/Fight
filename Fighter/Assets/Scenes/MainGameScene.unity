@@ -507,7 +507,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 434639904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1df07f44b50459fbd7759330d4b6c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e7f876b8a02a4951baaeb171e267779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   whoAnim: 1
@@ -1098,6 +1098,7 @@ MonoBehaviour:
   health: 0
   defend: 0
   atk: 0
+  stamina: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 1
@@ -1106,11 +1107,12 @@ MonoBehaviour:
   rot2: -0.2
   pos1: -0.005
   pos2: -0.005
-  doingAtk: 0
   firstAtk: 0
-  fingerAction: 0
+  lastAtk: 0
+  doingAtk: 0
   time: 0
   timeInter: 0.45
+  fingerAction: 0
 --- !u!1 &1238121525
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,6 +1426,7 @@ MonoBehaviour:
   health: 0
   defend: 0
   atk: 0
+  stamina: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 1
@@ -1432,11 +1435,12 @@ MonoBehaviour:
   rot2: 0.2
   pos1: 0.005
   pos2: 0.005
-  doingAtk: 0
   firstAtk: 0
-  fingerAction: 0
+  lastAtk: 0
+  doingAtk: 0
   time: 0
   timeInter: 0.45
+  fingerAction: 0
 --- !u!1 &1576644765
 GameObject:
   m_ObjectHideFlags: 0

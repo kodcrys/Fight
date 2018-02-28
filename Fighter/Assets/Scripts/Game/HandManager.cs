@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnotherAnimation : MonoBehaviour {
+public class HandManager : MonoBehaviour {
 
 	enum AnimationState {none, twoHand, head}
 	[SerializeField]
