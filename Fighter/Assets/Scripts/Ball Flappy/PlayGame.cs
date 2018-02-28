@@ -5,13 +5,15 @@ using UnityEngine;
 public class PlayGame : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		Time.timeScale = 0;
 		gameObject.SetActive (true);
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	// Play the game.
+	void Update () 
+	{
 		if (Input.GetMouseButtonDown (0)) 
 		{
 			Time.timeScale = 1;

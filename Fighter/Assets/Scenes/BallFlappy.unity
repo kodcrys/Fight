@@ -962,10 +962,6 @@ MonoBehaviour:
   pos1: {fileID: 1392760156}
   pos2: {fileID: 1624358506}
   pos: {fileID: 1341297043}
-  coin:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &223943568
 GameObject:
   m_ObjectHideFlags: 0
@@ -1283,10 +1279,6 @@ MonoBehaviour:
   pos1: {fileID: 460706538}
   pos2: {fileID: 1469619096}
   pos: {fileID: 729061970}
-  coin:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &360414365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,10 +1448,6 @@ MonoBehaviour:
   pos1: {fileID: 1025748738}
   pos2: {fileID: 1157876006}
   pos: {fileID: 2142416335}
-  coin:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &460706537
 GameObject:
   m_ObjectHideFlags: 0
@@ -1947,10 +1935,6 @@ MonoBehaviour:
   pos1: {fileID: 409644765}
   pos2: {fileID: 90853853}
   pos: {fileID: 1690459603}
-  coin:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &671061235
 GameObject:
   m_ObjectHideFlags: 0
@@ -3696,10 +3680,6 @@ MonoBehaviour:
   pos1: {fileID: 1105225562}
   pos2: {fileID: 1558530172}
   pos: {fileID: 992302245}
-  coin:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &1325930352
 GameObject:
   m_ObjectHideFlags: 0
@@ -3855,10 +3835,6 @@ MonoBehaviour:
   pos1: {fileID: 584258134}
   pos2: {fileID: 1603429568}
   pos: {fileID: 704768452}
-  coin:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &1392760155
 GameObject:
   m_ObjectHideFlags: 0
@@ -5052,7 +5028,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1694114728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8959892, y: 0.82, z: -10}
+  m_LocalPosition: {x: 0, y: 0.82, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 232007515}

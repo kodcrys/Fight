@@ -5,29 +5,34 @@ using UnityEngine;
 public class Pipe : MonoBehaviour {
 
 	public int indexPipe;
-	bool movePos1, movePos2;
+	bool movePos2;
 	public Transform pos1, pos2, pos;
 
+	
 	// Update is called once per frame
 	void Update () {
-				
-		if (indexPipe == 0) 
-		{
+
+		Debug.Log (indexPipe + " " + movePos2);
+		if (indexPipe == 0) {
 			movePos2 = false; 
-			movePos1 = false;
 			transform.position = pos.position;
 		}
 		if (indexPipe == 1) {
 						
-			if (transform.position == pos1.position) {
-				movePos2 = true; movePos1 = false;
+			if (transform.position == pos1.position) 
+			{
+				movePos2 = true; 
 			}
-			if (transform.position == pos2.position) {
-				movePos2 = false; movePos1 = true;
+
+			if (transform.position == pos2.position) 
+			{
+				movePos2 = false;
 			}
 								
-			if (movePos2) transform.position = Vector3.MoveTowards (transform.position, pos2.position, Time.deltaTime / 3);
-			else transform.position = Vector3.MoveTowards (transform.position, pos1.position, Time.deltaTime / 3);
+			if (movePos2) 
+				transform.position = Vector3.MoveTowards (transform.position, pos2.position, Time.deltaTime / 3);
+			else
+				transform.position = Vector3.MoveTowards (transform.position, pos1.position, Time.deltaTime / 3);
 		}
 	}
 }
