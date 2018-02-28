@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class BirdMovement : MonoBehaviour {
-	public float flapSpeed    = 100f;
+	public float flapSpeed = 0f;
 	public float forwardSpeed = 1f;
 
 	bool didFlap = false;
@@ -33,7 +33,7 @@ public class BirdMovement : MonoBehaviour {
 		int index = PlayerPrefs.GetInt ("indexChar", 0);
 		character.sprite = characters [index];
 		x.SetActive (false);
-		indexMaxPipe = 6;
+		indexMaxPipe = 2;
 		dead = false;
 		timeWaitDead = 0;
 		isCdTime = false;
@@ -77,7 +77,7 @@ public class BirdMovement : MonoBehaviour {
 		if(dead)
 			return;
 
-		rigid.AddForce( Vector2.right * forwardSpeed);
+		//rigid.AddForce (Vector2.right * forwardSpeed);
 		if(didFlap) 
 		{
 			rigid.AddForce( Vector2.up * flapSpeed );
@@ -92,14 +92,12 @@ public class BirdMovement : MonoBehaviour {
 	{
 		if (coll.tag == "Pipe") 
 		{
-			if (coll.name == indexPipe.ToString ()) 
-			{
-			} 
-			else 
+			if (coll.name != indexPipe.ToString ()) 
 			{
 				dead = true;
-			}
+			} 
 		}
+
 		if (coll.tag == "Goal") 
 		{
 			if (isScoreBox == false)
@@ -122,7 +120,7 @@ public class BirdMovement : MonoBehaviour {
 				isCorrect = false;
 				indexPipe++;
 				SoundManager.scoreS.Play ();
-				coll.transform.parent.parent.GetChild (7).gameObject.SetActive (true);
+				coll.transform.parent.parent.GetChild (4).gameObject.SetActive (true);
 			} 
 			else 
 			{
@@ -134,15 +132,10 @@ public class BirdMovement : MonoBehaviour {
 	bool isCdTime;
 	void OnCollisionEnter2D(Collision2D collision) 
 	{
-		if (collision.gameObject.name == "bgGround1") 
+		if (collision.gameObject.name == "bgGround1" || collision.gameObject.name == "SkyKill") 
 		{
 			dead = true;
 			isCdTime = true;
-			SoundManager.deathS.Play ();
-		}
-		if (collision.gameObject.name == "SkyKill") 
-		{
-			dead = true;
 			SoundManager.deathS.Play ();
 		}
 	}

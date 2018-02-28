@@ -11,7 +11,8 @@ public class SoundManager : MonoBehaviour {
 	public static AudioSource scoreS;
 	public static AudioSource deathS;
 	public static AudioSource clickS;
-	// Use this for initialization
+
+	// Insert the new audio source for game.
 	void Start () {
 		flyS = fly;
 		scoreS = score;
