@@ -11,8 +11,6 @@ public class Pipe : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-		Debug.Log (indexPipe + " " + movePos2);
 		if (indexPipe == 0) {
 			movePos2 = false; 
 			transform.position = pos.position;
@@ -30,9 +28,9 @@ public class Pipe : MonoBehaviour {
 			}
 								
 			if (movePos2) 
-				transform.position = Vector3.MoveTowards (transform.position, pos2.position, Time.deltaTime / 3);
+				transform.position = Vector3.MoveTowards (transform.position, pos2.position, Time.deltaTime);
 			else
-				transform.position = Vector3.MoveTowards (transform.position, pos1.position, Time.deltaTime / 3);
+				transform.position = Vector3.MoveTowards (transform.position, pos1.position, Time.deltaTime);
 		}
 	}
 }
