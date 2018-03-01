@@ -36,9 +36,12 @@ public class FingerControl : FingerBase {
 
 	public override void DoIdel(){
 		doingAtk = false;
-
-		if (atk < 100) {
-			atk += 1;
+		if (firstAtk)
+			firstAtk = false;
+		if (lastAtk)
+			lastAtk = false;
+		if (atk < 100 && !enemy.doingAtk) {
+			atk++;
 		} else if(atk >= 100) {
 			atk = 100;
 		}
@@ -70,20 +73,44 @@ public class FingerControl : FingerBase {
 	}
 
 	public override void DoAtk(){
-		atk -= 1;
+		if (!enemy.doingAtk) {
+			if (enemy.atk > 2)
+				enemy.atk--;
+			else if (enemy.atk == 2)
+				enemy.atk = 2;
+		} else {
+			atk--;
+		}
 		if (atk > 0) {
 			doingAtk = true;
 		} else {
-			UnClickAtk ();
+			if (lastAtk) {
+				GameplayBase.instance.isAtk = false;
+				UnClickAtk ();
+			}
+			if (firstAtk) {
+				if (!GameplayBase.instance.isAtk) {
+					UnClickAtk ();
+				}
+			}
 		}
 
 		finger.SetActive (false);
-		if (enemy.doingAtk) {
-			fingerDown.SetActive (false);
-			fingerAtk.SetActive (true);
+		if (!enemy.doingAtk) {
+			if (!enemy.firstAtk) {
+				fingerDown.SetActive (true);
+				fingerAtk.SetActive (false);
+				firstAtk = true;
+				lastAtk = false;
+			}
 		} else {
-			fingerDown.SetActive (true);
-			fingerAtk.SetActive (false);
+			if (enemy.firstAtk) {
+				GameplayBase.instance.isAtk = true;
+				fingerDown.SetActive (false);
+				fingerAtk.SetActive (true);
+				lastAtk = true;
+				firstAtk = false;
+			}
 		}
 	}
 		
