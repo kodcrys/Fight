@@ -28,6 +28,9 @@ public class BirdMovement : MonoBehaviour {
 	public static int indexMaxPipe;
 	public static int indexChar;
 
+	float tempx = 20, tempy = 200;
+	float time = 0f;
+
 	// Use this for initialization
 	void Start () {
 		int index = PlayerPrefs.GetInt ("indexChar", 0);
@@ -77,13 +80,39 @@ public class BirdMovement : MonoBehaviour {
 		if(dead)
 			return;
 
-		//rigid.AddForce (Vector2.right * forwardSpeed);
-		if(didFlap) 
+
+		if (didFlap) 
 		{
-			rigid.AddForce( Vector2.up * flapSpeed );
+			if (time <= 0.5f) 
+			{
+				tempx -= 2;
+				tempy -= 20;
+			}
+			else 
+			{
+				tempx = 20;
+				tempy = 200;
+			}
+
+			if (tempx <= 50) 
+			{
+				tempx = 5;
+				tempy = 50;
+			}
+
+			time = 0f;
+
+			rigid.AddForce (new Vector2 (tempx, tempy));
+
 			SoundManager.flyS.Play ();
 			didFlap = false;
+		} 
+		else 
+		{ 
+			time += Time.deltaTime;
+			rigid.AddForce (new Vector2 (-20f, -2f));
 		}
+
 	}
 	UIManager ui;
 	bool isCorrect;
