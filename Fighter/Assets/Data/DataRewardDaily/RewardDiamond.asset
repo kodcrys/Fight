@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Name: RewardDiamond
   m_EditorClassIdentifier: 
   typeReward: 1
-  iconReward: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  iconReward: {fileID: 21300000, guid: b319ecebe5ff24036b796217d3f48f0c, type: 3}
+  iconRewardClaim: {fileID: 21300000, guid: 26de69d55f0e349939aecc80fa7e24ad, type: 3}
+  effCur: {fileID: 21300000, guid: 7b750ed2363b74f6aa38b8a048a7d9ca, type: 3}
   reward: 10

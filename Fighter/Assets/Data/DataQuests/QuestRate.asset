@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: QuestRate
   m_EditorClassIdentifier: 
   idQuest: 6
-  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  icon: {fileID: 21300000, guid: 7485d2dafeafb47c1b4ae294816bf2a6, type: 3}
   content: Rate the game
   requirement: 1
   doing: 0

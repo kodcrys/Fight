@@ -187,11 +187,11 @@ public class QuestManager : MonoBehaviour {
 		foreach (Transform t in lstTransform) {
 			Button btnReward = t.GetComponent<Button> ();
 
-			Image iconQuest = t.GetChild (0).GetComponent<Image> ();
+			Image iconQuest = t.GetChild (0).GetChild(0).GetComponent<Image> ();
 			Text contentQuest = t.GetChild (1).GetComponent<Text> ();
 			Text doing = t.GetChild (2).GetComponent<Text> ();
-			Text rewardGold = t.GetChild (3).GetComponent<Text> ();
-			Text rewardExp = t.GetChild (4).GetComponent<Text> ();
+			Text rewardGold = t.GetChild (3).GetChild(0).GetComponent<Text> ();
+			Text rewardExp = t.GetChild (4).GetChild(0).GetComponent<Text> ();
 
 			ReadData (iconQuest, contentQuest, doing, rewardGold, rewardExp, lstStoreQuest [indexQuest], btnReward);
 

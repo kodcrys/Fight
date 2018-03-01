@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: QuestRewardAds
   m_EditorClassIdentifier: 
   idQuest: 7
-  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  icon: {fileID: 21300000, guid: d7c5923adb2c640cf96b4f6506483a55, type: 3}
   content: Watch reward ads 5 times
   requirement: 5
   doing: 0

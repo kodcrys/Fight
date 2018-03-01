@@ -24,6 +24,8 @@ public class StartSceneManager : MonoBehaviour {
 	[Header("Daily reward")]
 	[SerializeField]
 	List<DailyReward> btnsClaimRewardDaily;
+	[SerializeField]
+	GameObject EffDailyReward;
 
 	// part library
 	[Header("Scroll view")]
@@ -34,11 +36,26 @@ public class StartSceneManager : MonoBehaviour {
 	[SerializeField]
 	GameObject scrollEquipment;
 
-	//[Header("Display value gold & diamond")]
-	//[SerializeField]
-	//UnityEngine.UI.Text 
+	[Header("Display value gold & diamond")]
+	[SerializeField]
+	UnityEngine.UI.Text totalGoldTxt;
+	[SerializeField]
+	UnityEngine.UI.Text totalDiamondTxt;
+
+	[Header("UI Animations")]
+	[SerializeField]
+	UIAnimations soundUI;
+	[SerializeField]
+	UIAnimations musicUI;
+	[SerializeField]
+	UIAnimations voiceUI;
+	[SerializeField]
+	UIAnimations ringUI;
 
 	void Awake() {
+		DisplayGold (totalGoldTxt);
+		DisplayDiamond (totalDiamondTxt);
+		CheckSetting ();
 		DisplayClaimRewardDaily ();
 	}
 
@@ -72,21 +89,33 @@ public class StartSceneManager : MonoBehaviour {
 	// login reward when click button showDaily
 	public void DisplayClaimRewardDaily () {
 		for (int i = 0; i < btnsClaimRewardDaily.Count; i++) {
+			//Button truoc ngay nhan reward
 			if (btnsClaimRewardDaily [i].dayOfweek < QuestManager.Intance.GetDate ()) {
 				btnsClaimRewardDaily [i].claimBtn.interactable = false;
 				btnsClaimRewardDaily [i].claimedSymbol.SetActive (true);
+				btnsClaimRewardDaily [i].GetComponent<Image> ().sprite = btnsClaimRewardDaily [i].GetComponent<DailyReward> ().data.iconRewardClaim;
+				//EffDailyReward.SetActive (false);
 			}
+			// Button sau ngay nhan reward
 			if (btnsClaimRewardDaily [i].dayOfweek > QuestManager.Intance.GetDate ()) {
 				btnsClaimRewardDaily [i].claimBtn.interactable = false;
 				btnsClaimRewardDaily [i].claimedSymbol.SetActive (false);
+				btnsClaimRewardDaily [i].GetComponent<Image> ().sprite = btnsClaimRewardDaily [i].GetComponent<DailyReward> ().data.iconReward;
+				//EffDailyReward.SetActive (false);
 			}
+			// Button ngay nhan reward
 			if (btnsClaimRewardDaily [i].dayOfweek == QuestManager.Intance.GetDate ()) {
 				if (SaveManager.instance.state.isClaimedDailyReward == i) {
 					btnsClaimRewardDaily [i].claimBtn.interactable = false;
 					btnsClaimRewardDaily [i].claimedSymbol.SetActive (true);
+					btnsClaimRewardDaily [i].GetComponent<Image> ().sprite = btnsClaimRewardDaily [i].GetComponent<DailyReward> ().data.iconRewardClaim;
+					//EffDailyReward.SetActive (false);
 				} else {
 					btnsClaimRewardDaily [i].claimBtn.interactable = true;
 					btnsClaimRewardDaily [i].claimedSymbol.SetActive (false);
+					btnsClaimRewardDaily [i].GetComponent<Image> ().sprite = btnsClaimRewardDaily [i].GetComponent<DailyReward> ().data.iconReward;
+					EffDailyReward.transform.position = btnsClaimRewardDaily [i].transform.position;
+					EffDailyReward.SetActive (true);
 				}
 			}
 		}
@@ -112,4 +141,19 @@ public class StartSceneManager : MonoBehaviour {
 		scrollEquipment.SetActive (true);
 	}
 	#endregion
+
+	public void DisplayGold(UnityEngine.UI.Text txtGold) {
+		txtGold.text = SaveManager.instance.state.TotalGold.ToString ();
+	}
+
+	public void DisplayDiamond(UnityEngine.UI.Text txtDiamond) {
+		txtDiamond.text = SaveManager.instance.state.TotalDiamond.ToString ();
+	}
+
+	void CheckSetting() {
+		soundUI.CheckSound ();
+		musicUI.CheckMusic ();
+		voiceUI.CheckVoice ();
+		ringUI.CheckRing ();
+	}
 }

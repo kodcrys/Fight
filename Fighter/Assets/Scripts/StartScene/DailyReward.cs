@@ -6,8 +6,7 @@ public class DailyReward : MonoBehaviour {
 	[SerializeField]
 	int idDaily;
 
-	[SerializeField]
-	DataRewardsDaily data;
+	public DataRewardsDaily data;
 
 	[SerializeField]
 	UnityEngine.UI.Image icon;
@@ -18,10 +17,11 @@ public class DailyReward : MonoBehaviour {
 
 	public GameObject claimedSymbol;
 
+	public GameObject effDaily;
 
 	// Use this for initialization
 	void Start () {
-		icon.sprite = data.iconReward;
+		//icon.sprite = data.iconReward;
 	}
 
 	public void ClaimReward() {
@@ -46,6 +46,9 @@ public class DailyReward : MonoBehaviour {
 
 		SaveManager.instance.state.isClaimedDailyReward = idDaily;
 		SaveManager.instance.Save ();
+
+		icon.sprite = data.iconRewardClaim;
+		effDaily.SetActive (false);
 
 		transform.GetChild (1).gameObject.SetActive (true);
 

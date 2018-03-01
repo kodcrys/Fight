@@ -20,4 +20,12 @@ public class SaveState {
 	public int curProgressInDay = 0;
 
 	public int isClaimedDailyReward = -1;
+
+	public bool isOnSound = true;
+
+	public bool isOnMusic = true;
+
+	public bool isOnVoice = true;
+
+	public bool isOnRing = true;
 }
