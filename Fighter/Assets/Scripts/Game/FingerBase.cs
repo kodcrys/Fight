@@ -26,7 +26,7 @@ public class FingerBase : MonoBehaviour {
 
 	public static bool changeAnim;
 
-	public bool firstAtk, lastAtk, doingAtk;
+	public bool firstAtk, lastAtk, doingSomething;
 
 	public float time, timeInter;
 
@@ -35,8 +35,19 @@ public class FingerBase : MonoBehaviour {
 		
 	}
 
-	public virtual void DoAtk(){
+	public virtual void DoFirstAtk(){
+
+	}
+
+	public virtual void DoLastAtk(){
 		
 	}
 
+	public virtual void DoDown(){
+
+	}
+
+	public virtual void Dead(){
+
+	}
 }

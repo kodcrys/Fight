@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FingerControl : FingerBase {
 
-	enum FingerState {none, Idel, Atk}
+	enum FingerState {none, Idel, First, Atk, Down, Death}
 	[SerializeField]
 	FingerState fingerAction = FingerState.none;
 
@@ -22,29 +22,38 @@ public class FingerControl : FingerBase {
 		case FingerState.Idel:
 			DoIdel ();
 			break;
+		case FingerState.First:
+			DoFirstAtk ();
+			break;
 		case FingerState.Atk:
-			DoAtk ();
+			DoLastAtk ();
+			break;
+		case FingerState.Down:
+
+			break;
+		case FingerState.Death:
+
 			break;
 		}
 
-		if (!doingAtk) {
-			finger.SetActive (true);
-			fingerDown.SetActive (false);
-			fingerAtk.SetActive (false);
+		if (!doingSomething) {
+			fingerAction = FingerState.Idel;
+		} else {
+			if (!firstAtk && !enemy.firstAtk)
+				fingerAction = FingerState.First;
+			else if (enemy.firstAtk) {
+				fingerAction = FingerState.Atk;
+			}
 		}
 	}
 
 	public override void DoIdel(){
-		doingAtk = false;
-		if (firstAtk)
-			firstAtk = false;
-		if (lastAtk)
-			lastAtk = false;
-		if (atk < 100 && !enemy.doingAtk) {
-			atk++;
-		} else if(atk >= 100) {
-			atk = 100;
-		}
+		finger.SetActive (true);
+		fingerDown.SetActive (false);
+		fingerAtk.SetActive (false);
+
+		firstAtk = false;
+		lastAtk = false;
 
 		if (!FingerBase.changeAnim) {
 			if (time >= timeInter) {
@@ -72,55 +81,39 @@ public class FingerControl : FingerBase {
 		}
 	}
 
-	public override void DoAtk(){
-		if (!enemy.doingAtk) {
-			if (enemy.atk > 2)
-				enemy.atk--;
-			else if (enemy.atk == 2)
-				enemy.atk = 2;
-		} else {
+	public override void DoFirstAtk(){
+		firstAtk = true;
+		lastAtk = false;
+		finger.SetActive (false);
+		fingerDown.SetActive (true);
+		fingerAtk.SetActive (false);
+	}
+
+	public override void DoLastAtk(){
+		lastAtk = true;
+		firstAtk = false;
+		finger.SetActive (false);
+		fingerDown.SetActive (false);
+		fingerAtk.SetActive (true);
+	}
+
+	public override void DoDown(){
+		if (lastAtk) {
 			atk--;
 		}
-		if (atk > 0) {
-			doingAtk = true;
-		} else {
-			if (lastAtk) {
-				GameplayBase.instance.isAtk = false;
-				UnClickAtk ();
-			}
-			if (firstAtk) {
-				if (!GameplayBase.instance.isAtk) {
-					UnClickAtk ();
-				}
-			}
-		}
+	}
 
-		finger.SetActive (false);
-		if (!enemy.doingAtk) {
-			if (!enemy.firstAtk) {
-				fingerDown.SetActive (true);
-				fingerAtk.SetActive (false);
-				firstAtk = true;
-				lastAtk = false;
-			}
-		} else {
-			if (enemy.firstAtk) {
-				GameplayBase.instance.isAtk = true;
-				fingerDown.SetActive (false);
-				fingerAtk.SetActive (true);
-				lastAtk = true;
-				firstAtk = false;
-			}
-		}
+	public override void Dead(){
+		
 	}
 		
 	public void ClickAtk(){
-		fingerAction = FingerState.Atk;
+		doingSomething = true;
 		FingerBase.changeAnim = true;
 	}
 
 	public void UnClickAtk(){
-		fingerAction = FingerState.Idel;
+		doingSomething = false;
 		FingerBase.changeAnim = false;
 	}
 }

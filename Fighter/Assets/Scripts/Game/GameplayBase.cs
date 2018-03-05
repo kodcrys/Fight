@@ -8,6 +8,10 @@ public class GameplayBase : MonoBehaviour {
 
 	public bool isAtk;
 
+	public bool firstAtk;
+
+	public bool lastAtk;
+
 	public void Start(){
 		instance = this;
 	}
