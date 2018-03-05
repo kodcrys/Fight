@@ -14,6 +14,8 @@ public class FingerBase : MonoBehaviour {
 	public int health, defend, atk;
 
 	[Header("Status Animation")]
+	public bool fingerRight, fingerLeft;
+
 	public int changeScale = 0;
 
 	public float speedScale;
@@ -26,9 +28,13 @@ public class FingerBase : MonoBehaviour {
 
 	public static bool changeAnim;
 
-	public bool firstAtk, lastAtk, doingSomething;
+	public bool firstAtk, lastAtk, doingSomething, isAtk;
+
+	public bool touch;
 
 	public float time, timeInter;
+
+	public UnityEngine.UI.Text atkText;
 
 
 	public virtual void DoIdel(){

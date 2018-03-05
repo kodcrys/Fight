@@ -15,6 +15,8 @@ public class FingerControl : FingerBase {
 
 	// Update is called once per frame
 	void FixedUpdate () {
+		atkText.text = atk.ToString ();
+
 		switch (fingerAction) {
 		case FingerState.none:
 			fingerAction = FingerState.Idel;
@@ -29,7 +31,7 @@ public class FingerControl : FingerBase {
 			DoLastAtk ();
 			break;
 		case FingerState.Down:
-
+			DoDown ();
 			break;
 		case FingerState.Death:
 
@@ -37,12 +39,23 @@ public class FingerControl : FingerBase {
 		}
 
 		if (!doingSomething) {
-			fingerAction = FingerState.Idel;
+			if (!isAtk) {
+				touch = true;
+				fingerAction = FingerState.Idel;
+			}
 		} else {
-			if (!firstAtk && !enemy.firstAtk)
-				fingerAction = FingerState.First;
-			else if (enemy.firstAtk) {
-				fingerAction = FingerState.Atk;
+			if (touch) {
+				if (!firstAtk && !enemy.firstAtk || !enemy.firstAtk && lastAtk) {
+					fingerAction = FingerState.First;
+				} else if (enemy.firstAtk && !lastAtk) {
+					fingerAction = FingerState.Atk;
+				} else if (firstAtk && enemy.lastAtk || enemy.firstAtk && lastAtk) {
+					fingerAction = FingerState.Down;
+				}
+			} else {
+				if (!enemy.firstAtk) {
+					fingerAction = FingerState.First;
+				}
 			}
 		}
 	}
@@ -54,6 +67,15 @@ public class FingerControl : FingerBase {
 
 		firstAtk = false;
 		lastAtk = false;
+		isAtk = false;
+
+		if (!enemy.firstAtk) {
+			if (atk < 100 && atk >= 0) {
+				atk++;
+			} else {
+				atk = 100;
+			}
+		}
 
 		if (!FingerBase.changeAnim) {
 			if (time >= timeInter) {
@@ -82,24 +104,50 @@ public class FingerControl : FingerBase {
 	}
 
 	public override void DoFirstAtk(){
+		isAtk = false;
+		if (enemy.atk > 1) {
+			enemy.atk--;
+		}
+
+		if (atk < 100 && atk >= 0) {
+			atk++;
+		} else {
+			atk = 100;
+		}
 		firstAtk = true;
 		lastAtk = false;
 		finger.SetActive (false);
 		fingerDown.SetActive (true);
 		fingerAtk.SetActive (false);
+		if (enemy.lastAtk)
+			fingerAction = FingerState.Down;
 	}
 
 	public override void DoLastAtk(){
+		isAtk = false;
 		lastAtk = true;
 		firstAtk = false;
 		finger.SetActive (false);
 		fingerDown.SetActive (false);
 		fingerAtk.SetActive (true);
+		if (enemy.firstAtk)
+			fingerAction = FingerState.Down;
 	}
 
 	public override void DoDown(){
+		Debug.Log (1);
+		isAtk = true;
 		if (lastAtk) {
-			atk--;
+			Debug.Log (2);
+			if (atk > 0)
+				atk--;
+		}
+
+		if (atk == 0) {
+			Debug.Log (3);
+			isAtk = false;
+			touch = false;
+			enemy.fingerAction = FingerState.Idel;
 		}
 	}
 
@@ -109,11 +157,13 @@ public class FingerControl : FingerBase {
 		
 	public void ClickAtk(){
 		doingSomething = true;
+
 		FingerBase.changeAnim = true;
 	}
 
 	public void UnClickAtk(){
 		doingSomething = false;
+
 		FingerBase.changeAnim = false;
 	}
 }
