@@ -28,4 +28,6 @@ public class SaveState {
 	public bool isOnVoice = true;
 
 	public bool isOnRing = true;
+
+	public bool isRewardBonus = false;
 }

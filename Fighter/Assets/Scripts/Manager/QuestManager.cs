@@ -37,6 +37,8 @@ public class QuestManager : MonoBehaviour {
 	[Header("Progress handle slider bar claim bonus reward")]
 	[SerializeField]
 	private Stat claimBonus;
+	[SerializeField]
+	private GameObject effectReward;
 
 	void Awake() {
 		if (Intance == null)
@@ -217,13 +219,14 @@ public class QuestManager : MonoBehaviour {
 	}
 
 	public void DoneQuest(List<DataQuests> lstStoreQuest) {
-		
 		for (int i = 0; i < lstStoreQuest.Count; i++) {
-			if (lstStoreQuest [i].doing == lstStoreQuest [i].requirement) {
+			if (lstStoreQuest [i].doing >= lstStoreQuest [i].requirement && SaveManager.instance.state.isRewardBonus == false) {
 				BtnsClaimReward [i].enabled = true;
-			}
-			else
+				effectReward.SetActive (true);
+			} else {
 				BtnsClaimReward [i].enabled = false;
+				effectReward.SetActive (false);
+			}
 		}
 	}
 
@@ -243,6 +246,11 @@ public class QuestManager : MonoBehaviour {
 		SaveManager.instance.Save ();
 	}
 
+	public void ClaimRewardBonus() {
+		SaveManager.instance.state.isRewardBonus = true;
+		SaveManager.instance.Save ();
+	}
+
 	// For test
 	public void AutoDone(List<DataQuests> lstStoreQuest){
 		for (int i = 0; i < lstStoreQuest.Count; i++)
@@ -254,6 +262,7 @@ public class QuestManager : MonoBehaviour {
 			questList [i].doing = 0;
 			questList [i].isDone = false;
 
+			SaveManager.instance.state.isRewardBonus = false;
 			SaveManager.instance.state.curProgressInDay = 0;
 			SaveManager.instance.Save ();
 		}

@@ -17,6 +17,9 @@ public class StartSceneManager : MonoBehaviour {
 	Transform quests;
 	[SerializeField]
 	GameObject dailyQuestObject;
+	[SerializeField]
+	UIAnimations aniOfDailyQuest;
+	bool isShowDailyQuest;
 
 	List<DataQuests> lstQuest = new List<DataQuests> ();
 
@@ -51,6 +54,12 @@ public class StartSceneManager : MonoBehaviour {
 	UIAnimations voiceUI;
 	[SerializeField]
 	UIAnimations ringUI;
+	[SerializeField]
+	UIAnimations topBar;
+	[SerializeField]
+	UIAnimations botBar;
+	[SerializeField]
+	UIAnimations midBar;
 
 	void Awake() {
 		DisplayGold (totalGoldTxt);
@@ -75,10 +84,22 @@ public class StartSceneManager : MonoBehaviour {
 		} else
 			QuestManager.Intance.isCanLoadData = true;
 	}
-
+		
 	// daily quest
 	public void ShowDailyQuest() {
-		dailyQuestObject.SetActive (true);
+		if (isShowDailyQuest) {
+			botBar.isRunMoveAni = true;
+			midBar.isRunScaleAni = true;
+			isShowDailyQuest = !isShowDailyQuest;
+			aniOfDailyQuest.isRunSeqAni = false;
+			//aniOfDailyQuest.ReturnPosHideQuest ();
+		} else {
+			botBar.isRunMoveAni = false;
+			midBar.isRunScaleAni = false;
+			isShowDailyQuest = true;
+			aniOfDailyQuest.isRunSeqAni = true;
+		}
+		//dailyQuestObject.SetActive (isShowDailyQuest);
 	}
 
 	// test
