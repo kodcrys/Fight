@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class LevelStatManager : MonoBehaviour {
 
+	public static LevelStatManager intance;
+
 	[SerializeField]
 	Stat expBar;
 
@@ -33,6 +35,11 @@ public class LevelStatManager : MonoBehaviour {
 	public UnityEngine.UI.Text newAtk;
 	[SerializeField]
 	public UnityEngine.UI.Text newDef;
+
+	void Awake() {
+		if (intance == null)
+			intance = this;
+	}
 
 	public void Start() {
 		expBar.Initialze();

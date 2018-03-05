@@ -17,7 +17,7 @@ public class LightScript : MonoBehaviour {
 
 	void Update() {
 		transform.position += new Vector3 (direction * 0.2f, 0, 0);
-		Debug.Log (isRunAlpha);
+
 		float t = target.fillAmount;
 		if (isRunAlpha) {
 			t -= 0.06f;

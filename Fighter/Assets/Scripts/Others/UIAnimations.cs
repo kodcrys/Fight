@@ -111,10 +111,19 @@ public class UIAnimations : MonoBehaviour {
 	[SerializeField]
 	GameObject progressBar;
 
+	[Header("Ani Shake")]
+	public bool isRunShakeAni;
+	[SerializeField]
+	bool isShakeAni;
+	[SerializeField]
+	float timeInterShake;
+	float timeShake;
+
 	void OnEnable() {
 		if (contentTxt != null)
 			contentTxt.text = btnContent [indexMode];
 
+		timeShake = 0;
 		isLeft = isRight = changeLeft1 = changeLeft2 = changeRight1 = changeRight2 = false;
 		changeDes1 = changeDes2 = changeDes3 = false;
 		changeScale1 = changeScale2 = false;
@@ -374,6 +383,19 @@ public class UIAnimations : MonoBehaviour {
 		progressBar.SetActive (false);
 	}
 
+	void AniShake() {
+		if (timeShake >= timeInterShake) {
+			timeInterShake = 0.2f;
+			timeShake = 0;
+		} else
+			timeShake += Time.deltaTime;
+
+		target.Rotate (0, 0, speed);
+		if (timeShake >= timeInterShake) {
+			speed *= -1;
+		}
+	}
+
 	IEnumerator RunAni(){
 		while (true) {
 			if (isRunChangeColorAni)
@@ -394,6 +416,10 @@ public class UIAnimations : MonoBehaviour {
 				AniSequenceMoveGo ();
 			else if(isSequence)
 				AniSequenceMoveBack ();
+			if (isRunShakeAni)
+				AniShake ();
+			else if (isShakeAni)
+				target.eulerAngles = new Vector3 (0, 0, 0);
 			yield return new WaitForSeconds (0.02f);
 		}
 	}

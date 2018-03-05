@@ -26,6 +26,10 @@ public class QuestManager : MonoBehaviour {
 	[Header("Claim reward Button")]
 	[SerializeField]
 	Button[] BtnsClaimReward;
+	[SerializeField]
+	GameObject coinEffect;
+	[SerializeField]
+	GameObject canvas;
 
 	[Header("Progress claim daily bonus")]
 	[SerializeField]
@@ -39,6 +43,18 @@ public class QuestManager : MonoBehaviour {
 	private Stat claimBonus;
 	[SerializeField]
 	private GameObject effectReward;
+	[SerializeField]
+	private Image imgEffectReward;
+	[SerializeField]
+	private Sprite[] sprEffectReward;
+	[SerializeField]
+	private UIAnimations aniRewardBonus;
+
+	[Header("UI")]
+	[SerializeField]
+	private Text goldTxt;
+	[SerializeField]
+	private Text diaTxt;
 
 	void Awake() {
 		if (Intance == null)
@@ -220,13 +236,10 @@ public class QuestManager : MonoBehaviour {
 
 	public void DoneQuest(List<DataQuests> lstStoreQuest) {
 		for (int i = 0; i < lstStoreQuest.Count; i++) {
-			if (lstStoreQuest [i].doing >= lstStoreQuest [i].requirement && SaveManager.instance.state.isRewardBonus == false) {
+			if (lstStoreQuest [i].doing >= lstStoreQuest [i].requirement)
 				BtnsClaimReward [i].enabled = true;
-				effectReward.SetActive (true);
-			} else {
+			else
 				BtnsClaimReward [i].enabled = false;
-				effectReward.SetActive (false);
-			}
 		}
 	}
 
@@ -241,14 +254,56 @@ public class QuestManager : MonoBehaviour {
 
 		claimBtn.interactable = false;
 
+		GameObject goldText = claimBtn.transform.GetChild (3).gameObject;
+		GameObject coinEff = Instantiate (coinEffect, goldText.transform.position, Quaternion.identity, canvas.transform) as GameObject;
+
+		foreach (Transform coins in coinEff.transform) {
+			coins.GetComponent<MagnetField> ().isMove = true;
+		}
+
+		if (SaveManager.instance.state.curProgressInDay >= 3 && SaveManager.instance.state.isRewardBonus == false) {
+			effectReward.SetActive (true);
+			aniRewardBonus.isRunShakeAni = true;
+			//imgEffectReward.sprite = sprEffectReward [1];
+		} else {
+			effectReward.SetActive (false);
+			aniRewardBonus.isRunShakeAni = false;
+			//imgEffectReward.sprite = sprEffectReward [0];
+		}
+
+		/*if(SaveManager.instance.state.curProgressInDay >= 3 && SaveManager.instance.state.isRewardBonus)
+			imgEffectReward.sprite = sprEffectReward [1];
+		else
+			imgEffectReward.sprite = sprEffectReward [0];*/
+		
 		SaveManager.instance.state.TotalGold += quest.rewardGold;
+		//UpdateDisplayUI (goldTxt);
 		SaveManager.instance.state.CurExp += quest.rewardExp;
+
 		SaveManager.instance.Save ();
+
+		LevelStatManager.intance.IncreaseExp (quest.rewardExp);
 	}
 
 	public void ClaimRewardBonus() {
 		SaveManager.instance.state.isRewardBonus = true;
 		SaveManager.instance.Save ();
+
+		imgEffectReward.sprite = sprEffectReward [1];
+		effectReward.SetActive (false);
+		aniRewardBonus.isRunShakeAni = false;
+	}
+
+	public void LoadStatusRewardBonus() {
+		if (SaveManager.instance.state.isRewardBonus) {
+			imgEffectReward.sprite = sprEffectReward [1];
+		} else {
+			imgEffectReward.sprite = sprEffectReward [0];
+		}
+	}
+
+	public void UpdateDisplayUI() {
+		goldTxt.text = SaveManager.instance.state.TotalGold.ToString ();
 	}
 
 	// For test

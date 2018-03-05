@@ -5,6 +5,8 @@ using System;
 
 public class StartSceneManager : MonoBehaviour {
 
+	public static StartSceneManager instance;
+
 	// part daily Quest
 	[Header("Daily Quest UI")]
 	[SerializeField]
@@ -62,8 +64,11 @@ public class StartSceneManager : MonoBehaviour {
 	UIAnimations midBar;
 
 	void Awake() {
-		DisplayGold (totalGoldTxt);
-		DisplayDiamond (totalDiamondTxt);
+		if (instance != null)
+			instance = this;
+
+		DisplayGold ();
+		DisplayDiamond ();
 		CheckSetting ();
 		DisplayClaimRewardDaily ();
 	}
@@ -92,6 +97,12 @@ public class StartSceneManager : MonoBehaviour {
 			midBar.isRunScaleAni = true;
 			isShowDailyQuest = !isShowDailyQuest;
 			aniOfDailyQuest.isRunSeqAni = false;
+			if (SaveManager.instance.state.isRewardBonus == false) {
+				
+			} else {
+				
+			}
+			QuestManager.Intance.LoadStatusRewardBonus ();
 			//aniOfDailyQuest.ReturnPosHideQuest ();
 		} else {
 			botBar.isRunMoveAni = false;
@@ -163,12 +174,12 @@ public class StartSceneManager : MonoBehaviour {
 	}
 	#endregion
 
-	public void DisplayGold(UnityEngine.UI.Text txtGold) {
-		txtGold.text = SaveManager.instance.state.TotalGold.ToString ();
+	public void DisplayGold() {
+		totalGoldTxt.text = SaveManager.instance.state.TotalGold.ToString ();
 	}
 
-	public void DisplayDiamond(UnityEngine.UI.Text txtDiamond) {
-		txtDiamond.text = SaveManager.instance.state.TotalDiamond.ToString ();
+	public void DisplayDiamond() {
+		totalDiamondTxt.text = SaveManager.instance.state.TotalDiamond.ToString ();
 	}
 
 	void CheckSetting() {
