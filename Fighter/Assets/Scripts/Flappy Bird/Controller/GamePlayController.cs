@@ -6,10 +6,6 @@ public class GamePlayController : MonoBehaviour {
 
 	public static GamePlayController instance;
 
-	// Tap to play button.
-	[SerializeField]
-	private Button instructionButton;
-
 	// The text which shows the score.
 	[SerializeField]
 	private Text scoreText;
@@ -32,14 +28,6 @@ public class GamePlayController : MonoBehaviour {
 		{
 			instance = this;
 		}
-	}
-
-	/// <summary>
-	/// Tap to play button to play the game.
-	/// </summary>
-	public void _InstructionButton(){
-		Time.timeScale = 1;
-		instructionButton.gameObject.SetActive (false);
 	}
 
 	/// <summary>

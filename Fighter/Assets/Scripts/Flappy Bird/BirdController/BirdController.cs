@@ -47,28 +47,28 @@ public class BirdController : MonoBehaviour {
 		_BirdMoveMent ();
 	}
 
-	float tempx = 150, tempy = 300;
-	void _BirdMoveMent(){
-
+	float tempx = 120	, tempy = 300;
+	void _BirdMoveMent()
+	{
 		if (isAlive) 
 		{
 			if (didFlap) 
 			{
 				if (time <= 0.5f) 
 				{
-					tempx -= 25f;
+					tempx -= 20f;
 					tempy -= 50f;
 				}
 				else 
 				{
-					tempx = 150;
+					tempx = 120;
 					tempy = 300;
 				}
 
 				if (tempx <= 100) 
 				{
-					tempx = 100;
-					tempy = 200;
+					tempx = 60;
+					tempy = 150;
 				}
 
 				time = 0f;
@@ -81,7 +81,7 @@ public class BirdController : MonoBehaviour {
 			else 
 			{ 
 				time += Time.deltaTime;
-				myBody.AddForce (new Vector2 (-5f, -10f));
+				myBody.AddForce (new Vector2 (-2f, -5f));
 			}
 		}
 		if (myBody.velocity.y > 0) 
@@ -141,4 +141,5 @@ public class BirdController : MonoBehaviour {
 			}
 		}
 	}
+
 }

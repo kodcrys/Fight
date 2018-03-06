@@ -23,11 +23,11 @@ public class CameraZoom : MonoBehaviour {
 		
 		if (zoomIn) 
 		{
-			sizeCamera -= 0.01f;
+			sizeCamera -= 0.005f;
 		} 
 		else 
 		{
-			sizeCamera += 0.01f;
+			sizeCamera += 0.005f;
 		}
 			
 		transform.GetComponent<Camera> ().orthographicSize = sizeCamera;

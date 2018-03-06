@@ -28,7 +28,7 @@ public class BirdMovement : MonoBehaviour {
 	public static int indexMaxPipe;
 	public static int indexChar;
 
-	float tempx = 20, tempy = 200;
+
 	float time = 0f;
 
 	// Use this for initialization
@@ -56,12 +56,15 @@ public class BirdMovement : MonoBehaviour {
 			if (isCdTime) 
 			{
 				timeWaitDead += Time.deltaTime;
-				if (timeWaitDead > 2f) 
+				if (timeWaitDead > 2.2f) 
 				{
+					Time.timeScale = 0f;
 					//UnityEngine.SceneManagement.SceneManager.LoadScene ("StartGame");
 					timeWaitDead = 0;
 					isCdTime = false;
 				}
+				else
+					rigid.AddForce (new Vector2 (-0.54f, -3.6f));
 			}
 		}
 		else 
@@ -73,31 +76,33 @@ public class BirdMovement : MonoBehaviour {
 		}
 	}
 
-	
+	float tempx = 18, tempy = 120;
 	// Do physics engine updates here
 	void FixedUpdate () 
 	{
-		if(dead)
+		if (dead) 
+		{
 			return;
+		}
 
 
 		if (didFlap) 
 		{
 			if (time <= 0.5f) 
 			{
-				tempx -= 2;
-				tempy -= 20;
+				tempx -= 1.8f;
+				tempy -= 12;
 			}
 			else 
 			{
-				tempx = 20;
-				tempy = 200;
+				tempx = 18;
+				tempy = 120;
 			}
 
 			if (tempx <= 50) 
 			{
-				tempx = 5;
-				tempy = 50;
+				tempx = 10;
+				tempy = 66;
 			}
 
 			time = 0f;
@@ -110,7 +115,7 @@ public class BirdMovement : MonoBehaviour {
 		else 
 		{ 
 			time += Time.deltaTime;
-			rigid.AddForce (new Vector2 (-20f, -2f));
+			rigid.AddForce (new Vector2 (-0.18f, -1.2f));
 		}
 
 	}
