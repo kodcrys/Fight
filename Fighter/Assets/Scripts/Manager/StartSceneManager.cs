@@ -21,6 +21,12 @@ public class StartSceneManager : MonoBehaviour {
 	GameObject dailyQuestObject;
 	[SerializeField]
 	UIAnimations aniOfDailyQuest;
+	[SerializeField]
+	BarScript progress;
+	[SerializeField]
+	UIAnimations aniOfRewardBonus;
+	[SerializeField]
+	GameObject effectRewardBonus;
 	bool isShowDailyQuest;
 
 	List<DataQuests> lstQuest = new List<DataQuests> ();
@@ -92,25 +98,29 @@ public class StartSceneManager : MonoBehaviour {
 		
 	// daily quest
 	public void ShowDailyQuest() {
+		if (progress.fillAmount == 1 && SaveManager.instance.state.isRewardBonus == false) {
+			aniOfRewardBonus.isRunShakeAni = true;
+			effectRewardBonus.SetActive (true);
+		} else {
+			aniOfRewardBonus.isRunShakeAni = false;
+			effectRewardBonus.SetActive (false);
+
+		}
+		if (SaveManager.instance.state.isRewardBonus)
+			QuestManager.Intance.ChangeSpriteClaimedRewardBonus ();
+		else
+			QuestManager.Intance.ChangeSpriteRewardBonus ();
 		if (isShowDailyQuest) {
 			botBar.isRunMoveAni = true;
 			midBar.isRunScaleAni = true;
 			isShowDailyQuest = !isShowDailyQuest;
 			aniOfDailyQuest.isRunSeqAni = false;
-			if (SaveManager.instance.state.isRewardBonus == false) {
-				
-			} else {
-				
-			}
-			QuestManager.Intance.LoadStatusRewardBonus ();
-			//aniOfDailyQuest.ReturnPosHideQuest ();
 		} else {
 			botBar.isRunMoveAni = false;
 			midBar.isRunScaleAni = false;
 			isShowDailyQuest = true;
 			aniOfDailyQuest.isRunSeqAni = true;
 		}
-		//dailyQuestObject.SetActive (isShowDailyQuest);
 	}
 
 	// test

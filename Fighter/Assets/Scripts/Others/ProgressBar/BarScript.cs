@@ -2,8 +2,7 @@
 
 public class BarScript : MonoBehaviour {
 
-	[SerializeField]
-	private float fillAmount = 0;
+	public float fillAmount = 0;
 
 	[SerializeField]
 	UnityEngine.UI.Image content;
@@ -37,6 +36,10 @@ public class BarScript : MonoBehaviour {
 	}
 
 	void HandleBar(){
+		if (fillAmount == 1) {
+			if(btnReward != null)
+				btnReward.enabled = true;
+		}
 		if (isChange) {
 			//Debug.Log ("fillAmount: " + fillAmount + " content.fillAmount: " + content.fillAmount);
 			if (fillAmount > content.fillAmount) {
@@ -47,11 +50,6 @@ public class BarScript : MonoBehaviour {
 				if (content.fillAmount >= 0.95f && content.fillAmount <= 1f) {
 					content.fillAmount = Mathf.Lerp (0, fillAmount, Time.deltaTime * lerpSpeed);
 				}
-			}
-
-			if (fillAmount == 1) {
-				if(btnReward != null)
-					btnReward.enabled = true;
 			}
 
 			if (fillAmount == content.fillAmount)

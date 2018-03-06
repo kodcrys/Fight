@@ -94,16 +94,8 @@ public class QuestManager : MonoBehaviour {
 				SaveManager.instance.state.isFirstPlay = false;
 				SaveManager.instance.Save ();
 			}
-
-			/*if (SaveManager.instance.state.oldDay != DateTime.Now.Day) {
-				Debug.Log ("1243546436");
-				// Change var in dailyreward
-				SaveManager.instance.state.isClaimedDailyReward = -1;
-				SaveManager.instance.Save ();
-			}*/
-		} else {
+		} else
 			lstStoreQuest = LoadQuest ();
-		}
 
 		return lstStoreQuest;
 	}
@@ -257,50 +249,48 @@ public class QuestManager : MonoBehaviour {
 		GameObject goldText = claimBtn.transform.GetChild (3).gameObject;
 		GameObject coinEff = Instantiate (coinEffect, goldText.transform.position, Quaternion.identity, canvas.transform) as GameObject;
 
-		foreach (Transform coins in coinEff.transform) {
+		foreach (Transform coins in coinEff.transform)
 			coins.GetComponent<MagnetField> ().isMove = true;
-		}
+		
+		LoadStatusRewardBonus ();
 
-		if (SaveManager.instance.state.curProgressInDay >= 3 && SaveManager.instance.state.isRewardBonus == false) {
-			effectReward.SetActive (true);
-			aniRewardBonus.isRunShakeAni = true;
-			//imgEffectReward.sprite = sprEffectReward [1];
-		} else {
-			effectReward.SetActive (false);
-			aniRewardBonus.isRunShakeAni = false;
-			//imgEffectReward.sprite = sprEffectReward [0];
-		}
-
-		/*if(SaveManager.instance.state.curProgressInDay >= 3 && SaveManager.instance.state.isRewardBonus)
-			imgEffectReward.sprite = sprEffectReward [1];
-		else
-			imgEffectReward.sprite = sprEffectReward [0];*/
 		
 		SaveManager.instance.state.TotalGold += quest.rewardGold;
-		//UpdateDisplayUI (goldTxt);
 		SaveManager.instance.state.CurExp += quest.rewardExp;
-
 		SaveManager.instance.Save ();
 
 		LevelStatManager.intance.IncreaseExp (quest.rewardExp);
 	}
 
-	public void ClaimRewardBonus() {
-		SaveManager.instance.state.isRewardBonus = true;
-		SaveManager.instance.Save ();
-
-		imgEffectReward.sprite = sprEffectReward [1];
-		effectReward.SetActive (false);
-		aniRewardBonus.isRunShakeAni = false;
-	}
-
-	public void LoadStatusRewardBonus() {
-		if (SaveManager.instance.state.isRewardBonus) {
-			imgEffectReward.sprite = sprEffectReward [1];
+	void LoadStatusRewardBonus() {
+		if (SaveManager.instance.state.curProgressInDay >= 3 && SaveManager.instance.state.isRewardBonus == false) {
+			effectReward.SetActive (true);
+			aniRewardBonus.isRunShakeAni = true;
 		} else {
-			imgEffectReward.sprite = sprEffectReward [0];
+			effectReward.SetActive (false);
+			aniRewardBonus.isRunShakeAni = false;
 		}
 	}
+
+	public void ChangeSpriteRewardBonus () { 
+		imgEffectReward.sprite = sprEffectReward [0];
+	}
+
+	public void ChangeSpriteClaimedRewardBonus() {
+		imgEffectReward.sprite = sprEffectReward [1];
+	}
+
+	public void ClaimRewardBonus() {
+		if (SaveManager.instance.state.isRewardBonus == false) {
+			SaveManager.instance.state.isRewardBonus = true;
+			SaveManager.instance.Save ();
+
+			imgEffectReward.sprite = sprEffectReward [1];
+			effectReward.SetActive (false);
+			aniRewardBonus.isRunShakeAni = false;
+		}
+	}
+
 
 	public void UpdateDisplayUI() {
 		goldTxt.text = SaveManager.instance.state.TotalGold.ToString ();
