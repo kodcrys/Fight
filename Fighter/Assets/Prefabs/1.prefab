@@ -43,7 +43,7 @@ GameObject:
   m_Component:
   - component: {fileID: 453808}
   - component: {fileID: 11487828}
-  - component: {fileID: 60856180817275676}
+  - component: {fileID: 61816019224156586}
   m_Layer: 0
   m_Name: 1
   m_TagString: PipeHolder
@@ -57,41 +57,41 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161414}
-  m_LocalRotation: {x: -0, y: -0, z: 0.028330293, w: 0.9995987}
-  m_LocalPosition: {x: -2.91, y: -6.35, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.03, y: -10.74, z: 1.16}
   m_LocalScale: {x: 2, y: 1.4, z: 1}
   m_Children: []
   m_Father: {fileID: 453808}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.2470002}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &408702
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 147212}
-  m_LocalRotation: {x: -0, y: -0, z: 0.037585165, w: 0.99929345}
-  m_LocalPosition: {x: 4.78, y: 5.99, z: 0}
-  m_LocalScale: {x: 2, y: 1.4, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.04, y: 5.43, z: 0.05}
+  m_LocalScale: {x: 2, y: -1.4, z: 1}
   m_Children: []
   m_Father: {fileID: 453808}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 4.308}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &453808
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169492}
-  m_LocalRotation: {x: 0.13870189, y: 0.045884196, z: -0.049019534, w: 0.9880554}
-  m_LocalPosition: {x: 11.56, y: 0.39, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.19080894, w: 0.9816273}
+  m_LocalPosition: {x: 14.36, y: 3.09, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children:
   - {fileID: 400670}
   - {fileID: 408702}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 16.176, y: 4.603, z: -5.026}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -22}
 --- !u!114 &11487828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,8 +135,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 32bfcf39befa4480e982c6c1b41185d4, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 21e7900443a5446568587c35b230bd66, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -177,8 +177,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: d8a01aee61a8b47c5845a897d2fbd1de, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 21e7900443a5446568587c35b230bd66, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -215,7 +215,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.17, y: 4.62}
+    oldSize: {x: 0.77, y: 6.95}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -223,28 +223,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.35066605, y: -0.074973784}
-      - {x: 1.0698318, y: 1.2725673}
-      - {x: 1.5410633, y: 2.1857462}
-      - {x: 1.5783291, y: 2.2427433}
-      - {x: 1.5378838, y: 2.2557693}
-      - {x: 1.2232094, y: 2.2821043}
-      - {x: 0.84508324, y: 2.3073726}
-      - {x: 0.23521042, y: 1.0634329}
-      - {x: -0.3957939, y: -0.16828673}
-      - {x: -0.70544624, y: -0.7710717}
-      - {x: -1.2113628, y: -1.7747096}
-      - {x: -1.345911, y: -1.7556003}
-      - {x: -1.4809055, y: -2.057563}
-      - {x: -1.5649891, y: -2.222617}
-      - {x: -1.5599899, y: -2.223271}
-      - {x: -1.579998, y: -2.220654}
-      - {x: -1.5686188, y: -2.2305243}
-      - {x: -1.5731716, y: -2.2314148}
-      - {x: -0.8827152, y: -2.2729611}
-      - {x: -0.62955475, y: -2.2995827}
-      - {x: -0.39137077, y: -1.846551}
-      - {x: -0.5717583, y: -1.842341}
+    - - {x: -0.385, y: 3.475}
+      - {x: -0.385, y: -3.3149998}
+      - {x: -0.305, y: -3.475}
+      - {x: 0.385, y: -3.475}
+      - {x: 0.385, y: 3.475}
 --- !u!60 &60498963325053394
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -261,7 +244,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.17, y: 4.62}
+    oldSize: {x: 0.77, y: 6.95}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -269,31 +252,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.2247896, y: 1.7779247}
-      - {x: 1.3519678, y: 1.7403966}
-      - {x: 1.3467398, y: 1.7541776}
-      - {x: 1.5201254, y: 2.0963109}
-      - {x: 1.5676489, y: 2.2253659}
-      - {x: 1.5648737, y: 2.2220724}
-      - {x: 1.5669985, y: 2.2404878}
-      - {x: 0.91608906, y: 2.2792978}
-      - {x: 0.6297426, y: 2.2969449}
-      - {x: 0.49220562, y: 2.0328796}
-      - {x: 0.41417408, y: 1.8780775}
-      - {x: 0.5913811, y: 1.8209568}
-      - {x: -0.49182892, y: -0.16302925}
-      - {x: -0.9564457, y: -1.0637344}
-      - {x: -1.3265429, y: -1.7738286}
-      - {x: -1.5464077, y: -2.2041593}
-      - {x: -1.5849999, y: -2.26}
-      - {x: -1.5577421, y: -2.256349}
-      - {x: -1.2185526, y: -2.2789865}
-      - {x: -0.825, y: -2.31}
-      - {x: -0.815, y: -2.3}
-      - {x: 0.37401485, y: 0.08274487}
-      - {x: 0.9876566, y: 1.3136523}
---- !u!60 &60856180817275676
-PolygonCollider2D:
+    - - {x: -0.385, y: 3.475}
+      - {x: -0.385, y: -3.3149998}
+      - {x: -0.305, y: -3.475}
+      - {x: 0.385, y: -3.475}
+      - {x: 0.385, y: 3.475}
+--- !u!61 &61816019224156586
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -304,7 +269,7 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -2.5190601}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -314,10 +279,6 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 2.1820645, y: 2.6683302}
-      - {x: 3.0052404, y: 2.6162667}
-      - {x: -0.35998267, y: -2.930056}
-      - {x: -1.265275, y: -3.038967}
-      - {x: 0.77307045, y: 0.3870196}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 5.730051}
+  m_EdgeRadius: 0
