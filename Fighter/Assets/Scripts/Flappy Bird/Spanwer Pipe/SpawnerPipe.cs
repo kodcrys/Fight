@@ -5,21 +5,31 @@ public class SpawnerPipe : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		StartCoroutine (Spawner ());
+		timeCountdown = 0f;
 	}
 
+	float timeCountdown;
+
+	void Update ()
+	{
+		if (BirdController.touchOnScreen)
+			timeCountdown += Time.deltaTime;
+		
+		if (timeCountdown >= 1.7f) 
+		{
+			timeCountdown = 0f;
+			Spawner ();
+		}
+	}
 	/// <summary>
 	/// Spawner the pipes.
 	/// </summary>
-	IEnumerator Spawner()
+	public void  Spawner()
 	{
 		// The number of pipe depend on the score. Every 10 score will unlock 1 new pipes
 		int numberPipe = Mathf.RoundToInt(BirdController.instance.score / 10);
 		if (numberPipe > 5)
 			numberPipe = 5;
-
-		// Every 1.7s the pipe will be created automatic.
-		yield return new WaitForSeconds (1.7f);
 
 		// Random pipe on the number of pipe you got.
 		int randomPipe = Random.Range (0, numberPipe);
@@ -34,7 +44,5 @@ public class SpawnerPipe : MonoBehaviour {
 		PoolManager.Intance.lstPool [randomPipe].GetPoolObject ().transform.rotation = transform.rotation;
 		PoolManager.Intance.lstPool [randomPipe].GetPoolObject ().SetActive (true);
 
-		// Call the function again.
-		StartCoroutine (Spawner ());
 	}
 }
