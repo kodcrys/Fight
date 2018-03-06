@@ -119,6 +119,12 @@ public class UIAnimations : MonoBehaviour {
 	float timeInterShake;
 	float timeShake;
 
+	[Header("UI Shop")]
+	[SerializeField]
+	bool isRunRotateAni;
+	[SerializeField]
+	GameObject panel_Shop;
+
 	void OnEnable() {
 		if (contentTxt != null)
 			contentTxt.text = btnContent [indexMode];
@@ -275,6 +281,7 @@ public class UIAnimations : MonoBehaviour {
 
 	void HandleBotBar() {
 		if (isShop) {
+			panel_Shop.SetActive (true);
 		}
 		if (isRate)
 			Application.OpenURL (linkRate);
@@ -396,6 +403,10 @@ public class UIAnimations : MonoBehaviour {
 		}
 	}
 
+	public void RotateAni() {
+		transform.Rotate (new Vector3 (0, 0, speed * Time.deltaTime));
+	}
+
 	IEnumerator RunAni(){
 		while (true) {
 			if (isRunChangeColorAni)
@@ -420,6 +431,8 @@ public class UIAnimations : MonoBehaviour {
 				AniShake ();
 			else if (isShakeAni)
 				target.eulerAngles = new Vector3 (0, 0, 0);
+			if (isRunRotateAni)
+				RotateAni ();
 			yield return new WaitForSeconds (0.02f);
 		}
 	}
