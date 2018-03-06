@@ -24,6 +24,8 @@ public class BirdController : MonoBehaviour {
 	public float flag = 0;
 	public int score = 0;
 
+	public static bool touchOnScreen;
+
 	// Use this for initialization
 	void Awake () 
 	{
@@ -42,9 +44,25 @@ public class BirdController : MonoBehaviour {
 		}
 	}
 
+	void Start ()
+	{
+		touchOnScreen = false;
+	}
+
+	void Update ()
+	{
+		if (Input.GetMouseButtonDown (0))
+			touchOnScreen = true;
+
+		if (touchOnScreen && isAlive)
+			anim.SetBool ("Flap", true);
+	}
 	// Update is called once per frame
 	void FixedUpdate () {
-		_BirdMoveMent ();
+		if (touchOnScreen) 
+		{
+			_BirdMoveMent ();
+		}
 	}
 
 	float tempx = 120	, tempy = 300;
@@ -131,6 +149,7 @@ public class BirdController : MonoBehaviour {
 				isAlive = false;
 				Destroy (spawner);
 				audioSource.PlayOneShot (diedClip);
+				anim.SetBool ("Flap", false);
 				anim.SetTrigger ("Died");
 				myBody.velocity = Vector2.zero;
 			}

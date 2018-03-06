@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FingerAnim : FingerBase {
+public class FingerAnim : BaseFinger {
 
 	enum FingerState {none, Idel, First, Atk, Down, Death}
 	[SerializeField]
@@ -10,6 +10,7 @@ public class FingerAnim : FingerBase {
 
 
 	void Start(){
+		Time.timeScale = 1;
 	}
 
 	// Update is called once per frame
@@ -25,9 +26,6 @@ public class FingerAnim : FingerBase {
 			break;
 		case FingerState.First:
 			DoFirstAtk ();
-			break;
-		
-		case FingerState.Death:
 			break;
 		}
 
@@ -49,18 +47,13 @@ public class FingerAnim : FingerBase {
 		fingerAtk.SetActive (false);
 
 		firstAtk = false;
-		lastAtk = false;
 
-		if (!FingerBase.changeAnim) 
-		{
 			if (time >= timeInter) 
 			{
 				time = 0;
 			} 
-			else 
-			{
-				time += Time.deltaTime;
-			}
+			
+			time += Time.deltaTime;
 
 			if (time >= timeInter) 
 			{
@@ -82,20 +75,19 @@ public class FingerAnim : FingerBase {
 				finger.transform.Rotate (finger.transform.localRotation.x, finger.transform.localRotation.y, rot2);
 				finger.transform.localPosition = Vector3.MoveTowards (finger.transform.localPosition, new Vector3 (finger.transform.localPosition.x - pos2, finger.transform.localPosition.y, finger.transform.localPosition.z), Time.deltaTime * speedScale);
 			}
-		}
+
 	}
 
 	public override void DoFirstAtk()
 	{
 		firstAtk = true;
-		lastAtk = false;
 		finger.SetActive (false);
 		fingerDown.SetActive (true);
 		fingerAtk.SetActive (false);
 	}
 
 	public void ClickAtk(){
-		Time.timeScale = 1;
+		
 		doingSomething = true;
 		FingerBase.changeAnim = true;
 	}
