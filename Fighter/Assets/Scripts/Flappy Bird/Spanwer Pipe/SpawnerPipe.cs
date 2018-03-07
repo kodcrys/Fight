@@ -28,6 +28,7 @@ public class SpawnerPipe : MonoBehaviour {
 	{
 		// The number of pipe depend on the score. Every 10 score will unlock 1 new pipes
 		int numberPipe = Mathf.RoundToInt(BirdController.instance.score / 10);
+		Debug.Log (numberPipe);
 		if (numberPipe > 5)
 			numberPipe = 5;
 
@@ -36,7 +37,7 @@ public class SpawnerPipe : MonoBehaviour {
 
 		// Random the position for the pipe depend on the number of pipe.
 		Vector3 temp = Vector3.zero;
-		temp.y = Random.Range (-PoolManager.Intance.listRandomPos[randomPipe], PoolManager.Intance.listRandomPos[randomPipe]);
+		temp.y = Random.Range (-0.25f, PoolManager.Intance.listRandomPos[randomPipe]);
 
 		// Create the pipe.
 		PoolManager.Intance.lstPool [randomPipe].getindex ();
