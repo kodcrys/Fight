@@ -22,20 +22,20 @@ public class UpDownPipe : MonoBehaviour {
 		// Random range for the position which the pipe will move to.
 		randPos = Random.Range (minRange, MaxRange);
 		// Save the start position of the pipe.
-		startPos = transform.position;
+		startPos = transform.localScale;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		// If position > the range, to check the bool variable and vice versa.
-		if (transform.position.y >= (startPos.y + randPos))
+		if (transform.localScale.y >= (startPos.y + randPos))
 			MoveUp = false;
 		else
-			if (transform.position.y <= (startPos.y - randPos))
+			if (transform.localScale.y <= (startPos.y - randPos))
 				MoveUp = true;
 
 		// Move up and down the pipe.
-		Vector3 temp = transform.position;
+		Vector3 temp = transform.localScale;
 		if (MoveUp) 
 		{
 			temp.y += randSpeed;
@@ -46,6 +46,6 @@ public class UpDownPipe : MonoBehaviour {
 			temp.y -= randSpeed;
 			temp.x -= Time.deltaTime * tempx;
 		}
-		transform.position = temp;
+		transform.localScale = temp;
 	}
 }
