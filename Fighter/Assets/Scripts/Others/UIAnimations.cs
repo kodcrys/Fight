@@ -124,6 +124,8 @@ public class UIAnimations : MonoBehaviour {
 	bool isRunRotateAni;
 	[SerializeField]
 	GameObject panel_Shop;
+	[SerializeField]
+	FadeAni fadeShop;
 
 	void OnEnable() {
 		if (contentTxt != null)
@@ -281,7 +283,9 @@ public class UIAnimations : MonoBehaviour {
 
 	void HandleBotBar() {
 		if (isShop) {
-			panel_Shop.SetActive (true);
+			fadeShop.isRunHide = true;
+			fadeShop.stateFade = FadeAni.State.Show;
+			fadeShop.changeToShopScene = true;
 		}
 		if (isRate)
 			Application.OpenURL (linkRate);
@@ -289,6 +293,12 @@ public class UIAnimations : MonoBehaviour {
 			Application.OpenURL (linkShare);
 		if (isLeaderboard) {
 		}
+	}
+
+	public void CloseShop() {
+		fadeShop.isRunHide = true;
+		fadeShop.stateFade = FadeAni.State.Show;
+		fadeShop.changeToShopScene = false;
 	}
 
 	void ScaleToMin() {
