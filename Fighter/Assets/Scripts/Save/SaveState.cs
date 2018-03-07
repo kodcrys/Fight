@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 public class SaveState {
 
+	public bool isFirstOpenApp = true;
+
 	public int TotalGold = 0;
 
 	public int CurExp = 0;

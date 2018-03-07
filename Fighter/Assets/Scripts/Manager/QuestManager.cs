@@ -27,9 +27,17 @@ public class QuestManager : MonoBehaviour {
 	[SerializeField]
 	Button[] BtnsClaimReward;
 	[SerializeField]
+	Image[] iconOfClaimReward;
+	[SerializeField]
 	GameObject coinEffect;
 	[SerializeField]
 	GameObject canvas;
+	[SerializeField]
+	Sprite finishSymbol;
+	[SerializeField]
+	Image[] btnFrameIconQuest;
+	[SerializeField]
+	Sprite notFinishF, finishF;
 
 	[Header("Progress claim daily bonus")]
 	[SerializeField]
@@ -228,10 +236,15 @@ public class QuestManager : MonoBehaviour {
 
 	public void DoneQuest(List<DataQuests> lstStoreQuest) {
 		for (int i = 0; i < lstStoreQuest.Count; i++) {
-			if (lstStoreQuest [i].doing >= lstStoreQuest [i].requirement)
+			if (lstStoreQuest [i].doing >= lstStoreQuest [i].requirement) {
 				BtnsClaimReward [i].enabled = true;
-			else
+				iconOfClaimReward [i].sprite = finishSymbol;
+				btnFrameIconQuest [i].sprite = finishF;
+			} else {
 				BtnsClaimReward [i].enabled = false;
+				iconOfClaimReward [i].sprite = lstStoreQuest [i].icon;
+				btnFrameIconQuest [i].sprite = notFinishF;
+			}
 		}
 	}
 
@@ -254,7 +267,6 @@ public class QuestManager : MonoBehaviour {
 		
 		LoadStatusRewardBonus ();
 
-		
 		SaveManager.instance.state.TotalGold += quest.rewardGold;
 		SaveManager.instance.state.CurExp += quest.rewardExp;
 		SaveManager.instance.Save ();
@@ -307,9 +319,10 @@ public class QuestManager : MonoBehaviour {
 			questList [i].doing = 0;
 			questList [i].isDone = false;
 
-			SaveManager.instance.state.isRewardBonus = false;
-			SaveManager.instance.state.curProgressInDay = 0;
-			SaveManager.instance.Save ();
+
 		}
+		SaveManager.instance.state.isRewardBonus = false;
+		SaveManager.instance.state.curProgressInDay = 0;
+		SaveManager.instance.Save ();
 	}
 }

@@ -36,6 +36,8 @@ public class StartSceneManager : MonoBehaviour {
 	[SerializeField]
 	List<DailyReward> btnsClaimRewardDaily;
 	[SerializeField]
+	GameObject dailyRewardObj;
+	[SerializeField]
 	GameObject EffDailyReward;
 
 	// part library
@@ -76,16 +78,24 @@ public class StartSceneManager : MonoBehaviour {
 		DisplayGold ();
 		DisplayDiamond ();
 		CheckSetting ();
+
+		// Chua lam tat app thi tra ze
+		if (SaveManager.instance.state.isFirstOpenApp) {
+			dailyRewardObj.SetActive (true);
+			SaveManager.instance.state.isFirstOpenApp = false;
+			SaveManager.instance.Save ();
+		} else
+			dailyRewardObj.SetActive (false);
+
 		DisplayClaimRewardDaily ();
 	}
 
 	// Update is called once per frame
 	void Update () {
-
 		// get list form questManager
 		lstQuest = QuestManager.Intance.CalculateTimeRefreshQuest (startTime, endTime, countDownRefresh, lstQuest);
 
-		if (dailyQuestObject.activeSelf) {
+		if (/*dailyQuestObject.activeSelf*/aniOfDailyQuest.isRunSeqAni) {
 			if (lstQuest.Count > 0 && QuestManager.Intance.isCanLoadData) {
 				QuestManager.Intance.LoadData (quests, lstQuest);
 				QuestManager.Intance.isCanLoadData = false;
