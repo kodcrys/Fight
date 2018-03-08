@@ -127,6 +127,10 @@ public class UIAnimations : MonoBehaviour {
 	[SerializeField]
 	FadeAni fadeShop;
 
+	[Header("Reward Ani")]
+	[SerializeField]
+	bool isRunRewardAni;
+
 	void OnEnable() {
 		if (contentTxt != null)
 			contentTxt.text = btnContent [indexMode];
@@ -417,6 +421,18 @@ public class UIAnimations : MonoBehaviour {
 		transform.Rotate (new Vector3 (0, 0, speed * Time.deltaTime));
 	}
 
+	float timeChangeRotate;
+	void RewardAni() {
+		timeChangeRotate += Time.deltaTime;
+		if(timeChangeRotate >= 0.1f) {
+			target.transform.eulerAngles = new Vector3 (0, 0, -3);
+		}
+		if(timeChangeRotate >= 0.2f) {
+			target.transform.eulerAngles = new Vector3 (0, 0, 3);
+			timeChangeRotate = 0;
+		}
+	}
+
 	IEnumerator RunAni(){
 		while (true) {
 			if (isRunChangeColorAni)
@@ -443,6 +459,8 @@ public class UIAnimations : MonoBehaviour {
 				target.eulerAngles = new Vector3 (0, 0, 0);
 			if (isRunRotateAni)
 				RotateAni ();
+			if (isRunRewardAni)
+				RewardAni ();
 			yield return new WaitForSeconds (0.02f);
 		}
 	}

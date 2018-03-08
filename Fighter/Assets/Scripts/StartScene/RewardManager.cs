@@ -31,6 +31,10 @@ public class RewardManager : MonoBehaviour {
 	GameObject panel_Reward;
 	[SerializeField]
 	GameObject canvas_Reward;
+	[SerializeField]
+	GameObject lightBuyChar;
+	[SerializeField]
+	GameObject lightBuyEquipment;
 
 	// Use this for initialization
 	void OnEnable () {
@@ -60,14 +64,20 @@ public class RewardManager : MonoBehaviour {
 		if (isShopGold) {
 			btnBuyGold.SetActive (true);
 			btnBuyDiamond.SetActive (false);
+			lightBuyChar.SetActive (false);
+			lightBuyEquipment.SetActive (false);
 		} else {
 			btnBuyGold.SetActive (false);
 			btnBuyDiamond.SetActive (true);
+			lightBuyChar.SetActive (false);
+			lightBuyEquipment.SetActive (false);
 		}
 	}
 
 	public void CloseReward() {
 		panel_Reward.SetActive (false);
 		canvas_Reward.SetActive (false);
+		lightBuyChar.SetActive (true);
+		lightBuyEquipment.SetActive (true);
 	}
 }

@@ -420,6 +420,7 @@ MonoBehaviour:
   isRunRotateAni: 0
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
+  isRunRewardAni: 0
 --- !u!1 &10662117
 GameObject:
   m_ObjectHideFlags: 0
@@ -5396,6 +5397,7 @@ MonoBehaviour:
   isRunRotateAni: 0
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
+  isRunRewardAni: 0
 --- !u!1001 &265266279
 Prefab:
   m_ObjectHideFlags: 0
@@ -5615,7 +5617,7 @@ GameObject:
   - component: {fileID: 270941833}
   - component: {fileID: 270941835}
   m_Layer: 5
-  m_Name: Light
+  m_Name: LightChar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5748,6 +5750,7 @@ MonoBehaviour:
   isRunRotateAni: 1
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
+  isRunRewardAni: 0
 --- !u!1001 &275520897
 Prefab:
   m_ObjectHideFlags: 0
@@ -6345,6 +6348,7 @@ MonoBehaviour:
   isRunRotateAni: 0
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
+  isRunRewardAni: 0
 --- !u!1 &320011123
 GameObject:
   m_ObjectHideFlags: 0
@@ -9346,7 +9350,7 @@ GameObject:
   - component: {fileID: 558788961}
   - component: {fileID: 558788963}
   m_Layer: 5
-  m_Name: Light
+  m_Name: LightEquipment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9479,6 +9483,7 @@ MonoBehaviour:
   isRunRotateAni: 1
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
+  isRunRewardAni: 0
 --- !u!1001 &560081527
 Prefab:
   m_ObjectHideFlags: 0
@@ -11043,6 +11048,7 @@ MonoBehaviour:
   isRunRotateAni: 0
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
+  isRunRewardAni: 0
 --- !u!114 &629699727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11616,6 +11622,8 @@ MonoBehaviour:
   rewardExp: {fileID: 1296701786}
   panel_Reward: {fileID: 1014496540}
   canvas_Reward: {fileID: 21310016}
+  lightBuyChar: {fileID: 270941831}
+  lightBuyEquipment: {fileID: 558788959}
 --- !u!4 &659436347
 Transform:
   m_ObjectHideFlags: 0
@@ -12642,6 +12650,7 @@ MonoBehaviour:
   isRunRotateAni: 0
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
+  isRunRewardAni: 0
 --- !u!1 &686353551
 GameObject:
   m_ObjectHideFlags: 0
@@ -14089,6 +14098,7 @@ MonoBehaviour:
   isRunRotateAni: 0
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
+  isRunRewardAni: 0
 --- !u!1001 &775759493
 Prefab:
   m_ObjectHideFlags: 0
@@ -17803,6 +17813,7 @@ MonoBehaviour:
   isRunRotateAni: 0
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
+  isRunRewardAni: 0
 --- !u!1 &1014496540
 GameObject:
   m_ObjectHideFlags: 0
@@ -17813,13 +17824,14 @@ GameObject:
   - component: {fileID: 1014496541}
   - component: {fileID: 1014496543}
   - component: {fileID: 1014496542}
+  - component: {fileID: 1014496544}
   m_Layer: 5
   m_Name: Panel_Reward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1014496541
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17827,9 +17839,10 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1014496540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -21924}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1026382240}
   - {fileID: 1497440145}
   m_Father: {fileID: 1633792830}
   m_RootOrder: 15
@@ -17872,6 +17885,192 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1014496540}
+--- !u!114 &1014496544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1014496540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1014496542}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 659436346}
+        m_MethodName: CloseReward
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!1 &1026382239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1026382240}
+  - component: {fileID: 1026382242}
+  - component: {fileID: 1026382241}
+  - component: {fileID: 1026382243}
+  m_Layer: 5
+  m_Name: Reward
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1026382240
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1026382239}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1014496541}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -360}
+  m_SizeDelta: {x: 559, y: 600}
+  m_Pivot: {x: 0.5, y: 0.2}
+--- !u!114 &1026382241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1026382239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 6ce665456ee12438f8a18d84c9499f63, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1026382242
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1026382239}
+--- !u!114 &1026382243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1026382239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77dbd7f7cc8304301a9815a07ac07c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1026382240}
+  speed: 0
+  isRunScaleAni: 0
+  isScaleAni: 0
+  isUIBotBar: 0
+  maxScale: {x: 0, y: 0, z: 0}
+  originScale: {x: 0, y: 0, z: 0}
+  minScale: {x: 0, y: 0, z: 0}
+  isShop: 0
+  isRate: 0
+  isShare: 0
+  isLeaderboard: 0
+  linkRate: 
+  linkShare: 
+  sprChangeFrame1: {fileID: 0}
+  sprChangeFrame2: {fileID: 0}
+  isRunChangeColorAni: 0
+  color1:
+    serializedVersion: 2
+    rgba: 0
+  color2:
+    serializedVersion: 2
+    rgba: 0
+  isRunMoveAni: 0
+  isMoveAni: 0
+  pos1: {fileID: 0}
+  pos2: {fileID: 0}
+  pos3: {fileID: 0}
+  isRunBtnPlayAni: 0
+  btnContent:
+  - P1 VS P2
+  - P1 VS CPU
+  - TOURNAMENT
+  - MINI GAME
+  playBtn: {fileID: 0}
+  contentTxt: {fileID: 0}
+  nextBtn: {fileID: 0}
+  preBtn: {fileID: 0}
+  isRunSeqAni: 0
+  isSequence: 0
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
+  obj3: {fileID: 0}
+  pos1Seq: {fileID: 0}
+  pos2Seq: {fileID: 0}
+  pos3Seq: {fileID: 0}
+  progressBar: {fileID: 0}
+  isRunShakeAni: 0
+  isShakeAni: 0
+  timeInterShake: 0
+  isRunRotateAni: 0
+  panel_Shop: {fileID: 0}
+  fadeShop: {fileID: 0}
+  isRunRewardAni: 1
 --- !u!1 &1033828966
 GameObject:
   m_ObjectHideFlags: 0
@@ -21950,6 +22149,7 @@ MonoBehaviour:
   isRunRotateAni: 0
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
+  isRunRewardAni: 0
 --- !u!1001 &1248984241
 Prefab:
   m_ObjectHideFlags: 0
@@ -22245,7 +22445,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 5.0003495}
+  m_AnchoredPosition: {x: 0, y: 5.000349}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1256502110
@@ -22563,6 +22763,7 @@ MonoBehaviour:
   isRunRotateAni: 0
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
+  isRunRewardAni: 0
 --- !u!1001 &1266788059
 Prefab:
   m_ObjectHideFlags: 0
@@ -23165,7 +23366,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 5.0003495}
+  m_AnchoredPosition: {x: 0, y: 5.000349}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1306922289
@@ -23478,6 +23679,7 @@ MonoBehaviour:
   isRunRotateAni: 0
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
+  isRunRewardAni: 0
 --- !u!1 &1311053123
 GameObject:
   m_ObjectHideFlags: 0
@@ -26150,7 +26352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1497440145
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26174,7 +26376,7 @@ RectTransform:
   - {fileID: 1771446919}
   - {fileID: 1509208532}
   m_Father: {fileID: 1014496541}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -26278,6 +26480,7 @@ MonoBehaviour:
   isRunRotateAni: 1
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
+  isRunRewardAni: 0
 --- !u!1 &1507244707
 GameObject:
   m_ObjectHideFlags: 0
@@ -26622,6 +26825,7 @@ MonoBehaviour:
   isRunRotateAni: 0
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
+  isRunRewardAni: 0
 --- !u!1 &1517849645
 GameObject:
   m_ObjectHideFlags: 0
@@ -28147,6 +28351,7 @@ MonoBehaviour:
   isRunRotateAni: 0
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
+  isRunRewardAni: 0
 --- !u!1001 &1609555639
 Prefab:
   m_ObjectHideFlags: 0
@@ -29674,6 +29879,7 @@ MonoBehaviour:
   isRunRotateAni: 0
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
+  isRunRewardAni: 0
 --- !u!1001 &1671216835
 Prefab:
   m_ObjectHideFlags: 0
@@ -30763,6 +30969,7 @@ MonoBehaviour:
   isRunRotateAni: 0
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
+  isRunRewardAni: 0
 --- !u!1 &1753537289
 GameObject:
   m_ObjectHideFlags: 0
@@ -31474,6 +31681,7 @@ MonoBehaviour:
   isRunRotateAni: 0
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
+  isRunRewardAni: 0
 --- !u!4 &1769111549 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4163065274155022, guid: a61321162124f4efa904c6475edc163f,
@@ -33591,7 +33799,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 5.0003495}
+  m_AnchoredPosition: {x: 0, y: 5.000349}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1907873409
@@ -34109,7 +34317,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 878.6001}
+  m_AnchoredPosition: {x: 0, y: 878.6}
   m_SizeDelta: {x: 352, y: 539.19995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1928617230
@@ -37597,6 +37805,7 @@ MonoBehaviour:
   isRunRotateAni: 0
   panel_Shop: {fileID: 2107663854}
   fadeShop: {fileID: 227191916}
+  isRunRewardAni: 0
 --- !u!1 &2100405353
 GameObject:
   m_ObjectHideFlags: 0
