@@ -57,7 +57,6 @@ GameObject:
   - component: {fileID: 4378212457322788}
   - component: {fileID: 114793247431387526}
   - component: {fileID: 61300668860664194}
-  - component: {fileID: 114328416548381722}
   m_Layer: 0
   m_Name: 2
   m_TagString: PipeHolder
@@ -192,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 735c5cb244bc04b02b41d957fde0d386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 0.005
+  maxSpeed: 0.0025
   minSpeed: 0.0025
   MaxRange: 0.32
   minRange: 0.32
@@ -209,29 +208,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 735c5cb244bc04b02b41d957fde0d386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 0.005
+  maxSpeed: 0.0025
   minSpeed: 0.0025
   MaxRange: 0.32
   minRange: 0.32
   tempx: 0
   MoveUp: 0
---- !u!114 &114328416548381722
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1969373805746210}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 735c5cb244bc04b02b41d957fde0d386, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSpeed: 0.02
-  minSpeed: 0.01
-  MaxRange: 1
-  minRange: 0
-  tempx: 0
-  MoveUp: 1
 --- !u!114 &114793247431387526
 MonoBehaviour:
   m_ObjectHideFlags: 1
