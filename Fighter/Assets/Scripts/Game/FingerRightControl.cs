@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FingerRightControl : FingerBase {
 
+	[SerializeField]
+	bool isUIAni;
+
 	// Use this for initialization
 	void Start () {
 		touch = true;
@@ -46,20 +49,26 @@ public class FingerRightControl : FingerBase {
 	}
 
 	public override void DoIdel(){
-		finger.SetActive (true);
-		fingerDown.SetActive (false);
-		fingerAtk.SetActive (false);
+		if(finger != null)
+			finger.SetActive (true);
+		if (fingerDown != null)
+			fingerDown.SetActive (false);
+		if (fingerAtk != null)
+			fingerAtk.SetActive (false);
 
 		touch = true;
 		isAtk = false;
 		firstAtk = false;
 		lastAtk = false;
 
-		if (!enemyLeft.firstAtk) {
-			if (atk < 100 && atk >= 0) {
-				atk++;
-			} else {
-				atk = 100;
+		if (isUIAni == false) {
+
+			if (!enemyLeft.firstAtk) {
+				if (atk < 100 && atk >= 0) {
+					atk++;
+				} else {
+					atk = 100;
+				}
 			}
 		}
 
@@ -92,15 +101,23 @@ public class FingerRightControl : FingerBase {
 	public override void DoAtk(){
 		if (!firstAtk && !enemyLeft.firstAtk) {
 			firstAtk = true;
-			finger.SetActive (false);
-			fingerDown.SetActive (true);
-			fingerAtk.SetActive (false);
+
+			if(finger != null)
+				finger.SetActive (false);
+			if (fingerDown != null)
+				fingerDown.SetActive (true);
+			if (fingerAtk != null)
+				fingerAtk.SetActive (false);
+			
 			fingerAction = FingerState.Doing;
 		} else if(enemyLeft.firstAtk){
 			lastAtk = true;
-			finger.SetActive (false);
-			fingerDown.SetActive (false);
-			fingerAtk.SetActive (true);
+			if(finger != null)
+				finger.SetActive (false);
+			if (fingerDown != null)
+				fingerDown.SetActive (false);
+			if (fingerAtk != null)
+				fingerAtk.SetActive (true);
 			fingerAction = FingerState.Doing;
 		}
 	}
