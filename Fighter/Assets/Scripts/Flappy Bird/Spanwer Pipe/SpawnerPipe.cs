@@ -28,7 +28,7 @@ public class SpawnerPipe : MonoBehaviour {
 	{
 		// The number of pipe depend on the score. Every 10 score will unlock 1 new pipes
 		int numberPipe = Mathf.RoundToInt(BirdController.instance.score / 10);
-		Debug.Log (numberPipe);
+
 		if (numberPipe > 5)
 			numberPipe = 5;
 

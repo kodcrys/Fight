@@ -23,10 +23,9 @@ public class HandAnim : MonoBehaviour {
 	[SerializeField]
 	bool changeRot, changePot;
 
-	bool hitThePhone;
+	bool hitThePhone, movePhoneFinish;
 
-	[SerializeField]
-	private Transform shakeHandPos;
+	float runShake;
 
 	// max scale and min scale.
 	[SerializeField]
@@ -37,6 +36,7 @@ public class HandAnim : MonoBehaviour {
 		changeRot = false;
 		changePot = false;
 		hitThePhone = false;
+		runShake = 0.2f;
 	}
 
 	void Update(){
@@ -55,19 +55,36 @@ public class HandAnim : MonoBehaviour {
 			break;
 		}
 
+		Vector3 shakeHandPos = new Vector3 (0.06f, -0.09f, 0);
 		if (hitThePhone) 
 		{
-			transform.position = Vector3.MoveTowards (transform.position, shakeHandPos.position, speedRot * 5);
-			if (transform.position == shakeHandPos.position) 
+			
+			runShake -= Time.deltaTime * 2;
+
+
+			if (runShake >= 0) 
 			{
-				transform.position = Vector3.MoveTowards (shakeHandPos.position, transform.position, speedRot * 5);
+				if (!movePhoneFinish)
+					transform.position = Vector3.MoveTowards (transform.position, transform.position + shakeHandPos, runShake);
+				else
+					transform.position = Vector3.MoveTowards (transform.position, transform.position - shakeHandPos, runShake);
 			}
+			if (!movePhoneFinish && runShake <= 0)
+			{
+				movePhoneFinish = true;
+				runShake = 0.2f;
+			}
+
+			if (movePhoneFinish && runShake <= 0)
+				hitThePhone = false;
 		}
 	}
 
-	void ShakeHand ()
+	public void ShakeHand ()
 	{
 		hitThePhone = true;
+		movePhoneFinish = false;
+		runShake = 0.2f;
 	}
 
 	void HandMoveAnim(){
@@ -84,6 +101,7 @@ public class HandAnim : MonoBehaviour {
 			else 
 			{
 				changeAnim = 0;
+
 				if (!changeRot)
 					changeRot = true;
 				else
