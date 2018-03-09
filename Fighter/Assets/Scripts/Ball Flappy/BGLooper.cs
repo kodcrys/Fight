@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BGLooper : MonoBehaviour {
 
-	int numBGPanels = 4;
+	int numBGPanels = 36;
 
 	float pipeMax = 1.2f;
 	float pipeMin = 0.7f;

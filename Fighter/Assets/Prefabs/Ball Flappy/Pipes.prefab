@@ -711,10 +711,6 @@ MonoBehaviour:
   pos1: {fileID: 4962663303572582}
   pos2: {fileID: 4066321963719470}
   pos: {fileID: 4520992747655650}
-  coin:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &114912038418386418
 MonoBehaviour:
   m_ObjectHideFlags: 1
