@@ -141,6 +141,14 @@ public class UIAnimations : MonoBehaviour {
 	[SerializeField]
 	GameObject fadeOpenReward;
 
+	[Header("Gatcha Ani")]
+	[SerializeField]
+	bool isRunAniGatcha;
+	[SerializeField]
+	GameObject [] objectsRunAniGatcha;
+	[SerializeField]
+	Transform [] posAni;
+
 	void OnEnable() {
 		if (contentTxt != null)
 			contentTxt.text = btnContent [indexMode];
@@ -486,6 +494,33 @@ public class UIAnimations : MonoBehaviour {
 		}
 	}
 
+	[SerializeField]
+	public int indexGatcha = 0;
+
+	float timeDelayShowGatcha = 0;
+
+	void GatchaAniX10() {
+		if (indexGatcha < objectsRunAniGatcha.Length) {
+			
+			objectsRunAniGatcha [indexGatcha].SetActive (true);
+
+			timeDelayShowGatcha += Time.deltaTime;
+
+			if (timeDelayShowGatcha > 0.5f) {
+				if (objectsRunAniGatcha [indexGatcha].transform.position != posAni [indexGatcha].position) {
+					objectsRunAniGatcha [indexGatcha].transform.position = Vector3.MoveTowards (objectsRunAniGatcha [indexGatcha].transform.position, posAni [indexGatcha].position, speed * Time.deltaTime);
+				}
+				if (objectsRunAniGatcha [indexGatcha].transform.localScale != originScale)
+					objectsRunAniGatcha [indexGatcha].transform.localScale = Vector3.MoveTowards (objectsRunAniGatcha [indexGatcha].transform.localScale, originScale, Time.deltaTime);
+
+				if (objectsRunAniGatcha [indexGatcha].transform.position == posAni [indexGatcha].position) {
+					indexGatcha++;
+					timeDelayShowGatcha = 0;
+				}
+			}
+		}
+	}
+
 	IEnumerator RunAni(){
 		while (true) {
 			if (isRunChangeColorAni)
@@ -514,6 +549,8 @@ public class UIAnimations : MonoBehaviour {
 				RotateAni ();
 			if (isRunRewardAni)
 				RewardAni ();
+			if (isRunAniGatcha)
+				GatchaAniX10 ();
 			yield return new WaitForSeconds (0.02f);
 		}
 	}

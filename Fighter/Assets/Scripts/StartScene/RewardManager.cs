@@ -30,6 +30,10 @@ public class RewardManager : MonoBehaviour {
 	[SerializeField]
 	GameObject panel_Reward;
 	[SerializeField]
+	GameObject panelOfCv_X1Reward;
+	[SerializeField]
+	GameObject panelOfCv_X10Reward;
+	[SerializeField]
 	GameObject canvas_Reward;
 	[SerializeField]
 	GameObject lightBuyChar;
@@ -61,57 +65,38 @@ public class RewardManager : MonoBehaviour {
 		}
 	}
 
-	void TypeOfReward () {
-		
-	}
-
 	public void OpenReward(bool isShopGold) {
+		panelOfCv_X1Reward.SetActive (true);
+		panelOfCv_X10Reward.SetActive (false);
 
 		// open panel ani reward
 		panel_Reward.SetActive (true);
 
+		// gatchaX1
 		charEqManager.GatchaCharacter ();
 
-		if (isShopGold) {
-			// change btn buy gold active if isShopGold = false
-			btnBuyGold.SetActive (true);
-			btnBuyDiamond.SetActive (false);
+		RewardHandle (isShopGold);
+	}
 
-			// set active light = false in shop scene
-			lightBuyChar.SetActive (false);
-			lightBuyEquipment.SetActive (false);
+	public void OpenRewardX10 (bool isShopGold) {
+		panelOfCv_X1Reward.SetActive (false);
+		panelOfCv_X10Reward.SetActive (true);
 
-			// Set status type reward object 
-			character.SetActive (true);
-			equipment.SetActive (false);
-			rewardExp.SetActive (false);
-			rewardGold.SetActive (false);
-			rewardDiamond.SetActive (false);
-		} else {
-			// change btn buy diamond active if isShopGold = false
-			btnBuyGold.SetActive (false);
-			btnBuyDiamond.SetActive (true);
+		// open panel ani reward
+		panel_Reward.SetActive (true);
 
-			// set active light = false in shop scene
-			lightBuyChar.SetActive (false);
-			lightBuyEquipment.SetActive (false);
+		charEqManager.GatchaX10Character ();
 
-			// Set status type reward object 
-			character.SetActive (false);
-			equipment.SetActive (true);
-			rewardExp.SetActive (false);
-			rewardGold.SetActive (false);
-			rewardDiamond.SetActive (false);
-		}
+		RewardHandle (isShopGold);
 	}
 
 	public void OpenRewardInRewardScene(bool isShopGold) {
-		// open panel ani reward
-		canvas_Reward.SetActive(false);
-		panel_Reward.SetActive (true);
+		CloseReward();
 
-		charEqManager.GatchaCharacter ();
+		OpenReward (isShopGold);
+	}
 
+	void RewardHandle(bool isShopGold) {
 		if (isShopGold) {
 			// change btn buy gold active if isShopGold = false
 			btnBuyGold.SetActive (true);
@@ -146,7 +131,27 @@ public class RewardManager : MonoBehaviour {
 	}
 
 	public void CloseReward() {
-		// close 2 panel ani reward and rrward
+		// close 2 panel ani reward and reward
+		panel_Reward.SetActive (false);
+		canvas_Reward.SetActive (false);
+
+		// open 2 light in shop scene
+		lightBuyChar.SetActive (true);
+		lightBuyEquipment.SetActive (true);
+
+		// close light in scene reward and set origin scale
+		lightReward.transform.localScale = new Vector3 (2, 2, 1);
+		lightReward.SetActive (false);
+
+		// reopen reward object
+		rewardObj.SetActive (true);
+	}
+
+	public void CloseRewardX10() {
+
+		charEqManager.OriginGatchaX10 ();
+
+		// close 2 panel ani reward and reward
 		panel_Reward.SetActive (false);
 		canvas_Reward.SetActive (false);
 

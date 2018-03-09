@@ -318,8 +318,6 @@ public class QuestManager : MonoBehaviour {
 		for (int i = 0; i < questList.Count; i++) {
 			questList [i].doing = 0;
 			questList [i].isDone = false;
-
-
 		}
 		SaveManager.instance.state.isRewardBonus = false;
 		SaveManager.instance.state.curProgressInDay = 0;
