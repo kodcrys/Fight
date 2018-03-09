@@ -31,7 +31,7 @@ public class FingerRightControl : FingerBase {
 			break;
 		}
 
-		if()
+		//if()
 
 /*		if (!doingSomething) {
 			if (!isAtk)
