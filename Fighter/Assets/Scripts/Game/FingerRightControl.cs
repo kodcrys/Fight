@@ -37,19 +37,10 @@ public class FingerRightControl : FingerBase {
 
 		if (doingSomething) {
 			if (!enemyLeft.firstAtk && lastAtk) {
+				lastAtk = false;
 				fingerAction = FingerState.Atk;
 			}
 		}
-
-/*		if (!doingSomething) {
-			if (!isAtk)
-				fingerAction = FingerState.Idel;
-		} else {
-			if (!isAtk)
-				fingerAction = FingerState.Atk;
-			else
-				fingerAction = FingerState.Doing;
-		}*/ 
 	}
 
 	public override void DoIdel(){
