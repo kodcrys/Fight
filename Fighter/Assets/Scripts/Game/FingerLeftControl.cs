@@ -32,6 +32,12 @@ public class FingerLeftControl : FingerBase {
 		}
 
 
+		if (doingSomething) {
+			if (!enemyRight.firstAtk && lastAtk) {
+				fingerAction = FingerState.Atk;
+			}
+		}
+
 /*		if (!doingSomething) {
 			if (!isAtk)
 				fingerAction = FingerState.Idel;
