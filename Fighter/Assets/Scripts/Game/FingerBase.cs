@@ -41,7 +41,7 @@ public class FingerBase : MonoBehaviour {
 
 	public float time, timeInter;
 
-	public UnityEngine.UI.Text atkText, heath;
+	public UnityEngine.UI.Text atkText, healthText;
 
 
 	public virtual void DoIdel(){

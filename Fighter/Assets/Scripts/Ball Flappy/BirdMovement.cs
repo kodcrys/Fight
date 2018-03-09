@@ -67,19 +67,14 @@ public class BirdMovement : MonoBehaviour {
 					rigid.AddForce (new Vector2 (-0.54f, -3.6f));
 			}
 		}
-		else 
-		{
-			if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0) ) 
-			{
-				didFlap = true;
-			}
-		}
 	}
+		
 
-	float tempx = 18, tempy = 120;
+	float tempx = 120	, tempy = 300;
 	// Do physics engine updates here
 	void FixedUpdate () 
 	{
+		Debug.Log (dead);
 		if (dead) 
 		{
 			return;
@@ -88,21 +83,22 @@ public class BirdMovement : MonoBehaviour {
 
 		if (didFlap) 
 		{
+			Debug.Log (123);
 			if (time <= 0.5f) 
 			{
-				tempx -= 1.8f;
-				tempy -= 12;
+				tempx -= 20f;
+				tempy -= 50f;
 			}
 			else 
 			{
-				tempx = 18;
-				tempy = 120;
+				tempx = 120;
+				tempy = 300;
 			}
 
-			if (tempx <= 50) 
+			if (tempx <= 100) 
 			{
-				tempx = 10;
-				tempy = 66;
+				tempx = 60;
+				tempy = 150;
 			}
 
 			time = 0f;
@@ -115,10 +111,16 @@ public class BirdMovement : MonoBehaviour {
 		else 
 		{ 
 			time += Time.deltaTime;
-			rigid.AddForce (new Vector2 (-0.18f, -1.2f));
+			rigid.AddForce (new Vector2 (-2f, -5f));
 		}
 
 	}
+
+	public void TouchOnScreen ()
+	{
+		didFlap = true;
+	}
+
 	UIManager ui;
 	bool isCorrect;
 	bool isScoreBox;
