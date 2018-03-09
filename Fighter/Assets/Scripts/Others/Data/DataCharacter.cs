@@ -1,16 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+[CreateAssetMenu(fileName = "New Character", menuName = "Data/Character")]
 public class DataCharacter : ScriptableObject {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public string name;
+	public Sprite equipmentOfChar;
+	public Sprite equipmentWP;
+	public Sprite equipmetnTShirt;
+	public int ATK;
+	public int DEF;
+	public int HP;
 }

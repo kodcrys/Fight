@@ -421,6 +421,11 @@ MonoBehaviour:
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
   isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
 --- !u!1 &10662117
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,7 +670,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 0
 --- !u!114 &21310017
 MonoBehaviour:
@@ -735,6 +740,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 588644139}
+  - {fileID: 2061651695}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -915,7 +921,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &32852184
 RectTransform:
@@ -2235,7 +2241,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &95988063
 RectTransform:
@@ -2408,6 +2414,10 @@ Prefab:
         type: 2}
       propertyPath: direction
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716840245699892, guid: 004ab364e28614787a160813b9c3caab, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 004ab364e28614787a160813b9c3caab, type: 2}
@@ -2885,6 +2895,10 @@ Prefab:
         type: 2}
       propertyPath: direction
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716840245699892, guid: 004ab364e28614787a160813b9c3caab, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 004ab364e28614787a160813b9c3caab, type: 2}
@@ -3443,7 +3457,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &163573642
 RectTransform:
@@ -3993,7 +4007,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &210343106
 RectTransform:
@@ -4535,7 +4549,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &226417431
 RectTransform:
@@ -4603,7 +4617,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &227191915
 RectTransform:
@@ -4979,7 +4993,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &252628576
 RectTransform:
@@ -5398,6 +5412,11 @@ MonoBehaviour:
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
   isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
 --- !u!1001 &265266279
 Prefab:
   m_ObjectHideFlags: 0
@@ -5548,11 +5567,11 @@ GameObject:
   - component: {fileID: 265812220}
   - component: {fileID: 265812219}
   m_Layer: 5
-  m_Name: Equipment
+  m_Name: Equipment_Hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &265812218
 RectTransform:
@@ -5562,15 +5581,15 @@ RectTransform:
   m_GameObject: {fileID: 265812217}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1311053124}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 36, y: 182}
-  m_SizeDelta: {x: 500, y: 500}
+  m_AnchoredPosition: {x: 81, y: 160}
+  m_SizeDelta: {x: 701, y: 801}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &265812219
 MonoBehaviour:
@@ -5591,7 +5610,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e32e8951ff7104295afbdeb3917946c0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6da664ddceec944679b0e04fa0d3cc60, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5751,6 +5770,11 @@ MonoBehaviour:
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
   isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
 --- !u!1001 &275520897
 Prefab:
   m_ObjectHideFlags: 0
@@ -6193,7 +6217,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &313130127
 RectTransform:
@@ -6349,6 +6373,11 @@ MonoBehaviour:
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
   isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
 --- !u!1 &320011123
 GameObject:
   m_ObjectHideFlags: 0
@@ -6504,8 +6533,8 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
 --- !u!224 &322293126
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6931,7 +6960,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 0
 --- !u!224 &348542559
 RectTransform:
@@ -7361,7 +7390,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &370209346
 RectTransform:
@@ -8734,7 +8763,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &493981188
 RectTransform:
@@ -8780,7 +8809,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &502090776
 RectTransform:
@@ -9197,6 +9226,103 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 522800965}
+--- !u!1 &526309194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 526309195}
+  - component: {fileID: 526309196}
+  m_Layer: 0
+  m_Name: CharacterEquipment
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &526309195
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 526309194}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &526309196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 526309194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf674496d3464a098edc913ae0a35fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCharacterObject: 0
+  isCharacterUI: 1
+  nameOfCharacter: {fileID: 1377525196}
+  hatCharImg: {fileID: 265812219}
+  hatCharSRChar1: {fileID: 0}
+  hatCharSRChar2: {fileID: 0}
+  dataCharacter:
+  - {fileID: 11400000, guid: 160b98e45bc4840669c5570d5f24c5a9, type: 2}
+  - {fileID: 11400000, guid: c3d0af84d1f8b4c19907fe990491caf1, type: 2}
+  - {fileID: 11400000, guid: 9c29a3557321846918a4805b006e4b10, type: 2}
+  - {fileID: 11400000, guid: abdc8f18e606f4041a742f6b3bdac173, type: 2}
+  - {fileID: 11400000, guid: d079f2c7d268249b9b78b5e68293e2a4, type: 2}
+  - {fileID: 11400000, guid: 10c4552076ee64b1397a6742d627a188, type: 2}
+  - {fileID: 11400000, guid: 9693a3ac6e71e4b13ad60a81a30ae6b1, type: 2}
+  - {fileID: 11400000, guid: 191cdd5a148f84d7f80672b75da80f01, type: 2}
+  - {fileID: 11400000, guid: 748f99467b99f47bbb23a437b77e33e6, type: 2}
+  - {fileID: 11400000, guid: 736084a933ce7429086d168f7d20ffc3, type: 2}
+  - {fileID: 11400000, guid: 5ad615f3285724a1e8a7db228a0a4046, type: 2}
+  - {fileID: 11400000, guid: 504dc7509759d4049950866b39a1ca67, type: 2}
+  - {fileID: 11400000, guid: 2a02238fc2c1d41d69965cd48681c95d, type: 2}
+  - {fileID: 11400000, guid: 4c7334083e14f4820ac98d07e0be6a5f, type: 2}
+  - {fileID: 11400000, guid: 0146f6485527e491aa3a63458af66f70, type: 2}
+  - {fileID: 11400000, guid: 65ffb04eb1b704948a17bd890191cabb, type: 2}
+  - {fileID: 11400000, guid: 0967bd70f65d74af0bafb469008e7dbd, type: 2}
+  - {fileID: 11400000, guid: 7bbded4c78e3347e1a5a1f0eb6eca9d8, type: 2}
+  - {fileID: 11400000, guid: 581393f5d62f540a7993688f9d38fad4, type: 2}
+  - {fileID: 11400000, guid: 47760e31fc27b45dc88bf8aa9f37e1c9, type: 2}
+  - {fileID: 11400000, guid: dfe0db07dc3e245fc9652c93609e70d4, type: 2}
+  - {fileID: 11400000, guid: 497d06af3ea824e1c9acbdea21485e3f, type: 2}
+  - {fileID: 11400000, guid: 92e4afe98d55e4818b9117b6bb2da750, type: 2}
+  - {fileID: 11400000, guid: 30a4dc0a537a04709bf537b67deb9bab, type: 2}
+  - {fileID: 11400000, guid: 7d89877c3f416468fb4d6d7a684eb8c9, type: 2}
+  - {fileID: 11400000, guid: 6bca548db8f3040f48e6d27d9ded149f, type: 2}
+  - {fileID: 11400000, guid: 542220bb18653426dbd89d2a38458a87, type: 2}
+  - {fileID: 11400000, guid: 49eac8389bae74ae397159be736fece8, type: 2}
+  - {fileID: 11400000, guid: 84bb6b69314d4444e9c8e10b4032f25d, type: 2}
+  - {fileID: 11400000, guid: 8369e40f7a6444ee59f86c112e26c462, type: 2}
+  - {fileID: 11400000, guid: 36d08b3fb7a764ffd87a49daad1a8363, type: 2}
+  - {fileID: 11400000, guid: 21299ec74fd7a4b1ab5aedc091b3b453, type: 2}
+  - {fileID: 11400000, guid: 486bfd9b376574b6ebaf913f7cbc6153, type: 2}
+  - {fileID: 11400000, guid: 987bc75047eef4636a2b10b765a953d9, type: 2}
+  - {fileID: 11400000, guid: f90a4a45487cd458bb6c2e69ea4f59c0, type: 2}
+  - {fileID: 11400000, guid: 507405bf7ec164b5c89581eed4bc6cfb, type: 2}
+  - {fileID: 11400000, guid: 2dfc2942fe5d7427abf3ad05e3894042, type: 2}
+  - {fileID: 11400000, guid: 0c37b8210e4f943ca9b01e20e9b55197, type: 2}
+  - {fileID: 11400000, guid: 67000ae8a802f443b95591eebc6dc648, type: 2}
+  - {fileID: 11400000, guid: a64d1b943b6744b1982679e24ace8fb9, type: 2}
+  - {fileID: 11400000, guid: f96eac1b7cc21411ebc994ccffc032ca, type: 2}
+  - {fileID: 11400000, guid: 09f14da74025144688ef15db7a0fa577, type: 2}
+  - {fileID: 11400000, guid: 6217f203d77004985aad47881a09ae6f, type: 2}
+  - {fileID: 11400000, guid: 597bd36995cf8444eb851fa48cae74ab, type: 2}
+  - {fileID: 11400000, guid: bf49c02acc21e4999a1bc9b05b3083a2, type: 2}
+  - {fileID: 11400000, guid: 94b1a3b3dbe14454ca67248e098a7d5e, type: 2}
+  - {fileID: 11400000, guid: 95788b23aadc8491dbee22999d5f6dae, type: 2}
+  - {fileID: 11400000, guid: 800df7f5f61cb4264925a64ebabad637, type: 2}
+  - {fileID: 11400000, guid: ceb0e5e35b33847e99f4e355f32b4e9d, type: 2}
+  - {fileID: 11400000, guid: cfdfbafd6501c4b13a0cbc6785de33fd, type: 2}
 --- !u!1 &529467976
 GameObject:
   m_ObjectHideFlags: 0
@@ -9484,6 +9610,11 @@ MonoBehaviour:
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
   isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
 --- !u!1001 &560081527
 Prefab:
   m_ObjectHideFlags: 0
@@ -9878,7 +10009,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &580461891
 RectTransform:
@@ -10070,7 +10201,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &584195469
 RectTransform:
@@ -10138,7 +10269,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &585091670
 RectTransform:
@@ -10206,12 +10337,14 @@ GameObject:
   m_Component:
   - component: {fileID: 588644139}
   - component: {fileID: 588644140}
+  - component: {fileID: 588644142}
+  - component: {fileID: 588644141}
   m_Layer: 5
   m_Name: Panel_Reward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &588644139
 RectTransform:
@@ -10244,6 +10377,85 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 588644138}
+--- !u!114 &588644141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 588644138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1014496542}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 659436346}
+        m_MethodName: CloseReward
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &588644142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 588644138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.003921569}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!1001 &593983792
 Prefab:
   m_ObjectHideFlags: 0
@@ -11049,6 +11261,11 @@ MonoBehaviour:
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
   isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
 --- !u!114 &629699727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11624,6 +11841,9 @@ MonoBehaviour:
   canvas_Reward: {fileID: 21310016}
   lightBuyChar: {fileID: 270941831}
   lightBuyEquipment: {fileID: 558788959}
+  lightReward: {fileID: 1497440144}
+  rewardObj: {fileID: 1026382239}
+  charEqManager: {fileID: 526309196}
 --- !u!4 &659436347
 Transform:
   m_ObjectHideFlags: 0
@@ -12096,7 +12316,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &678864970
 RectTransform:
@@ -12651,6 +12871,11 @@ MonoBehaviour:
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
   isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
 --- !u!1 &686353551
 GameObject:
   m_ObjectHideFlags: 0
@@ -12740,7 +12965,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &686774298
 RectTransform:
@@ -13114,6 +13339,10 @@ Prefab:
       propertyPath: direction
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 1716840245699892, guid: 004ab364e28614787a160813b9c3caab, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 004ab364e28614787a160813b9c3caab, type: 2}
   m_IsPrefabParent: 0
@@ -13408,7 +13637,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &743829561
 RectTransform:
@@ -14099,6 +14328,11 @@ MonoBehaviour:
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
   isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
 --- !u!1001 &775759493
 Prefab:
   m_ObjectHideFlags: 0
@@ -14391,7 +14625,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &782459054
 RectTransform:
@@ -14408,8 +14642,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -2112.7004, y: 0}
-  m_SizeDelta: {x: 2212.7, y: 2336}
+  m_AnchoredPosition: {x: -2118, y: 0}
+  m_SizeDelta: {x: 2118, y: 2336}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &782459055
 CanvasRenderer:
@@ -15023,7 +15257,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &831470115
 RectTransform:
@@ -15064,7 +15298,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &849133531
 RectTransform:
@@ -15675,7 +15909,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &888066855
 RectTransform:
@@ -15825,6 +16059,10 @@ Prefab:
         type: 2}
       propertyPath: direction
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716840245699892, guid: 004ab364e28614787a160813b9c3caab, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 004ab364e28614787a160813b9c3caab, type: 2}
@@ -16158,6 +16396,10 @@ Prefab:
       propertyPath: direction
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 1716840245699892, guid: 004ab364e28614787a160813b9c3caab, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 004ab364e28614787a160813b9c3caab, type: 2}
   m_IsPrefabParent: 0
@@ -16281,6 +16523,10 @@ Prefab:
         type: 2}
       propertyPath: direction
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716840245699892, guid: 004ab364e28614787a160813b9c3caab, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 004ab364e28614787a160813b9c3caab, type: 2}
@@ -16623,7 +16869,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &960231700
 RectTransform:
@@ -16797,6 +17043,10 @@ Prefab:
         type: 2}
       propertyPath: direction
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716840245699892, guid: 004ab364e28614787a160813b9c3caab, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 004ab364e28614787a160813b9c3caab, type: 2}
@@ -17540,7 +17790,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1009837311
 RectTransform:
@@ -17601,7 +17851,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1009837313}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 659436346}
+        m_MethodName: OpenRewardInRewardScene
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1009837313
@@ -17814,6 +18075,11 @@ MonoBehaviour:
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
   isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
 --- !u!1 &1014496540
 GameObject:
   m_ObjectHideFlags: 0
@@ -17831,7 +18097,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1014496541
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17864,14 +18130,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.17254902, g: 0.17254902, b: 0.17254902, a: 0.8}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7cceccd71c6fe4bc6afe36201e3eb703, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17891,7 +18157,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1014496540}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -18018,7 +18284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1026382240}
-  speed: 0
+  speed: 20
   isRunScaleAni: 0
   isScaleAni: 0
   isUIBotBar: 0
@@ -18071,6 +18337,18 @@ MonoBehaviour:
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
   isRunRewardAni: 1
+  rewardImg: {fileID: 1026382241}
+  rewardSpr:
+  - {fileID: 21300000, guid: 6ce665456ee12438f8a18d84c9499f63, type: 3}
+  - {fileID: 21300000, guid: 89e30ff4332a4476cab65cee100a15ff, type: 3}
+  - {fileID: 21300000, guid: 9142e0ec916264a26a50b8316ca2bb76, type: 3}
+  - {fileID: 21300000, guid: 135d6b44667cb418cbb5b6b90b32601f, type: 3}
+  - {fileID: 21300000, guid: 10027f6341ac649cb888bb68b5f822da, type: 3}
+  - {fileID: 21300000, guid: 985e352551d3746319e9f6c993d6907a, type: 3}
+  - {fileID: 21300000, guid: 97ccb51a99e20480783dc39c544e1699, type: 3}
+  lightReward: {fileID: 1497440144}
+  canvasReward: {fileID: 21310016}
+  fadeOpenReward: {fileID: 2061651694}
 --- !u!1 &1033828966
 GameObject:
   m_ObjectHideFlags: 0
@@ -18086,7 +18364,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1033828967
 RectTransform:
@@ -19011,7 +19289,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1074599188
 RectTransform:
@@ -19482,6 +19760,10 @@ Prefab:
     - target: {fileID: 1716840245699892, guid: 004ab364e28614787a160813b9c3caab, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716840245699892, guid: 004ab364e28614787a160813b9c3caab, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 004ab364e28614787a160813b9c3caab, type: 2}
@@ -20135,7 +20417,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1136424157
 RectTransform:
@@ -20351,7 +20633,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1143932743
 RectTransform:
@@ -20425,7 +20707,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1151709791
 RectTransform:
@@ -20603,6 +20885,10 @@ Prefab:
       propertyPath: direction
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 1716840245699892, guid: 004ab364e28614787a160813b9c3caab, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 004ab364e28614787a160813b9c3caab, type: 2}
   m_IsPrefabParent: 0
@@ -20622,7 +20908,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &1153142157
 MonoBehaviour:
@@ -20720,7 +21006,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1168175545
 RectTransform:
@@ -20933,7 +21219,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1180230992
 RectTransform:
@@ -21904,7 +22190,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1242831903
 RectTransform:
@@ -22150,6 +22436,11 @@ MonoBehaviour:
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
   isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
 --- !u!1001 &1248984241
 Prefab:
   m_ObjectHideFlags: 0
@@ -22426,7 +22717,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 0
 --- !u!224 &1255908258
 RectTransform:
@@ -22568,6 +22859,10 @@ Prefab:
         type: 2}
       propertyPath: direction
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716840245699892, guid: 004ab364e28614787a160813b9c3caab, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 004ab364e28614787a160813b9c3caab, type: 2}
@@ -22764,6 +23059,11 @@ MonoBehaviour:
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
   isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
 --- !u!1001 &1266788059
 Prefab:
   m_ObjectHideFlags: 0
@@ -22933,7 +23233,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1276947578
 RectTransform:
@@ -23347,7 +23647,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 0
 --- !u!224 &1296701787
 RectTransform:
@@ -23680,6 +23980,11 @@ MonoBehaviour:
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
   isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
 --- !u!1 &1311053123
 GameObject:
   m_ObjectHideFlags: 0
@@ -23690,12 +23995,13 @@ GameObject:
   - component: {fileID: 1311053124}
   - component: {fileID: 1311053126}
   - component: {fileID: 1311053125}
+  - component: {fileID: 1311053127}
   m_Layer: 5
   m_Name: Char
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1311053124
 RectTransform:
@@ -23750,6 +24056,43 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1311053123}
+--- !u!114 &1311053127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1311053123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84530f8e160324024b584c91ffe65bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finger: {fileID: 0}
+  fingerAtk: {fileID: 0}
+  fingerDown: {fileID: 0}
+  enemy: {fileID: 0}
+  health: 0
+  defend: 0
+  atk: 0
+  fingerRight: 0
+  fingerLeft: 0
+  changeScale: 0
+  speedScale: 0.2
+  scale1: 1
+  scale2: 0.95
+  rot1: -0.2
+  rot2: 0.2
+  pos1: 0.005
+  pos2: 0.005
+  firstAtk: 0
+  lastAtk: 0
+  doingSomething: 0
+  isAtk: 0
+  touch: 0
+  time: 0
+  timeInter: 0
+  atkText: {fileID: 0}
+  fingerAction: 1
 --- !u!4 &1327939050 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4163065274155022, guid: a61321162124f4efa904c6475edc163f,
@@ -24116,7 +24459,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1355509726
 RectTransform:
@@ -24182,7 +24525,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1360309221
 RectTransform:
@@ -24225,7 +24568,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1369138220
 RectTransform:
@@ -24405,11 +24748,11 @@ GameObject:
   - component: {fileID: 1377525197}
   - component: {fileID: 1377525196}
   m_Layer: 5
-  m_Name: NemDisplay
+  m_Name: NameDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1377525195
 RectTransform:
@@ -25762,6 +26105,10 @@ Prefab:
       propertyPath: direction
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 1716840245699892, guid: 004ab364e28614787a160813b9c3caab, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 004ab364e28614787a160813b9c3caab, type: 2}
   m_IsPrefabParent: 0
@@ -25780,7 +26127,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1483371554
 RectTransform:
@@ -25944,7 +26291,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1488514622
 RectTransform:
@@ -26361,7 +26708,7 @@ RectTransform:
   m_GameObject: {fileID: 1497440144}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 59767594}
   - {fileID: 310178221}
@@ -26481,6 +26828,11 @@ MonoBehaviour:
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
   isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
 --- !u!1 &1507244707
 GameObject:
   m_ObjectHideFlags: 0
@@ -26826,6 +27178,11 @@ MonoBehaviour:
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
   isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
 --- !u!1 &1517849645
 GameObject:
   m_ObjectHideFlags: 0
@@ -26841,7 +27198,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1517849646
 RectTransform:
@@ -26989,7 +27346,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1527783439
 RectTransform:
@@ -27151,7 +27508,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1540470510
 RectTransform:
@@ -27212,7 +27569,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1540470512}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 659436346}
+        m_MethodName: OpenRewardInRewardScene
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1540470512
@@ -27508,6 +27876,10 @@ Prefab:
       propertyPath: direction
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1716840245699892, guid: 004ab364e28614787a160813b9c3caab, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 004ab364e28614787a160813b9c3caab, type: 2}
   m_IsPrefabParent: 0
@@ -27729,7 +28101,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1586164492
 RectTransform:
@@ -28162,6 +28534,10 @@ Prefab:
       propertyPath: direction
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 1716840245699892, guid: 004ab364e28614787a160813b9c3caab, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 004ab364e28614787a160813b9c3caab, type: 2}
   m_IsPrefabParent: 0
@@ -28352,6 +28728,11 @@ MonoBehaviour:
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
   isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
 --- !u!1001 &1609555639
 Prefab:
   m_ObjectHideFlags: 0
@@ -28472,6 +28853,10 @@ Prefab:
         type: 2}
       propertyPath: direction
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716840245699892, guid: 004ab364e28614787a160813b9c3caab, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 004ab364e28614787a160813b9c3caab, type: 2}
@@ -28736,7 +29121,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1625365584
 RectTransform:
@@ -28986,7 +29371,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1632928905
 RectTransform:
@@ -29880,6 +30265,11 @@ MonoBehaviour:
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
   isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
 --- !u!1001 &1671216835
 Prefab:
   m_ObjectHideFlags: 0
@@ -30970,6 +31360,11 @@ MonoBehaviour:
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
   isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
 --- !u!1 &1753537289
 GameObject:
   m_ObjectHideFlags: 0
@@ -31136,6 +31531,10 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716840245699892, guid: 004ab364e28614787a160813b9c3caab, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 004ab364e28614787a160813b9c3caab, type: 2}
@@ -31682,6 +32081,11 @@ MonoBehaviour:
   panel_Shop: {fileID: 0}
   fadeShop: {fileID: 0}
   isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
 --- !u!4 &1769111549 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4163065274155022, guid: a61321162124f4efa904c6475edc163f,
@@ -31955,7 +32359,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1778401678
 RectTransform:
@@ -32846,7 +33250,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1842731711
 Prefab:
@@ -33780,7 +34184,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 0
 --- !u!224 &1904410753
 RectTransform:
@@ -34559,7 +34963,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1930288584
 RectTransform:
@@ -35114,6 +35518,10 @@ Prefab:
       propertyPath: direction
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1716840245699892, guid: 004ab364e28614787a160813b9c3caab, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 004ab364e28614787a160813b9c3caab, type: 2}
   m_IsPrefabParent: 0
@@ -35321,7 +35729,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1970372819
 RectTransform:
@@ -35534,7 +35942,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1973106899
 RectTransform:
@@ -37235,7 +37643,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 0
 --- !u!224 &2056681991
 RectTransform:
@@ -37257,6 +37665,74 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2061651694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2061651695}
+  - component: {fileID: 2061651697}
+  - component: {fileID: 2061651696}
+  m_Layer: 5
+  m_Name: FadeOpenReward
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 0
+--- !u!224 &2061651695
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2061651694}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 21310020}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2061651696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2061651694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &2061651697
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2061651694}
 --- !u!1 &2064552723
 GameObject:
   m_ObjectHideFlags: 0
@@ -37806,6 +38282,11 @@ MonoBehaviour:
   panel_Shop: {fileID: 2107663854}
   fadeShop: {fileID: 227191916}
   isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
 --- !u!1 &2100405353
 GameObject:
   m_ObjectHideFlags: 0

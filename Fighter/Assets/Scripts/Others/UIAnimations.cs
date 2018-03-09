@@ -130,6 +130,16 @@ public class UIAnimations : MonoBehaviour {
 	[Header("Reward Ani")]
 	[SerializeField]
 	bool isRunRewardAni;
+	[SerializeField]
+	Image rewardImg;
+	[SerializeField]
+	Sprite [] rewardSpr;
+	[SerializeField]
+	GameObject lightReward;
+	[SerializeField]
+	GameObject canvasReward;
+	[SerializeField]
+	GameObject fadeOpenReward;
 
 	void OnEnable() {
 		if (contentTxt != null)
@@ -422,14 +432,57 @@ public class UIAnimations : MonoBehaviour {
 	}
 
 	float timeChangeRotate;
+	float timeTotalRewardAni;
 	void RewardAni() {
+		timeTotalRewardAni += 0.05f;
 		timeChangeRotate += Time.deltaTime;
-		if(timeChangeRotate >= 0.1f) {
-			target.transform.eulerAngles = new Vector3 (0, 0, -3);
+		if (timeTotalRewardAni <= 1.5f) {
+			if (timeChangeRotate >= 0.1f) {
+				target.transform.eulerAngles = new Vector3 (0, 0, -3);
+			}
+			if (timeChangeRotate >= 0.2f) {
+				target.transform.eulerAngles = new Vector3 (0, 0, 3);
+				timeChangeRotate = 0;
+			}
 		}
-		if(timeChangeRotate >= 0.2f) {
-			target.transform.eulerAngles = new Vector3 (0, 0, 3);
-			timeChangeRotate = 0;
+		if (timeTotalRewardAni > 1.5f) {
+			target.transform.eulerAngles = new Vector3 (0, 0, 0);
+			if (lightReward.activeSelf && timeTotalRewardAni < 2.2f) {
+				lightReward.transform.localScale = Vector3.MoveTowards (lightReward.transform.localScale, new Vector3 (20, 20, 0), speed * Time.deltaTime);
+			}
+			if (timeTotalRewardAni > 1.5f && timeTotalRewardAni <= 1.6f) {
+				lightReward.SetActive (true);
+				rewardImg.sprite = rewardSpr [1];
+			}
+			if (timeTotalRewardAni > 1.6f && timeTotalRewardAni <= 1.7f) {
+				rewardImg.sprite = rewardSpr [2];
+			}
+			if (timeTotalRewardAni > 1.7f && timeTotalRewardAni <= 1.8f) {
+				rewardImg.sprite = rewardSpr [3];
+			}
+			if (timeTotalRewardAni > 1.8f && timeTotalRewardAni < 1.9f) {
+				rewardImg.sprite = rewardSpr [4];
+			}
+			if (timeTotalRewardAni > 1.9f && timeTotalRewardAni < 2f) {
+				rewardImg.sprite = rewardSpr [5];
+			}
+			if (timeTotalRewardAni > 2f && timeTotalRewardAni < 2.1f) {
+				rewardImg.sprite = rewardSpr [6];
+			}
+			if (timeTotalRewardAni > 2.1f && timeTotalRewardAni < 2.2f) {
+				canvasReward.SetActive (true);
+				fadeOpenReward.SetActive (true);
+				lightReward.transform.localScale =new Vector3 (4, 4, 0);
+			}
+
+			if (timeTotalRewardAni >= 2.4f) {
+				//isRunRewardAni = false;
+				timeTotalRewardAni = 0;
+				timeChangeRotate = 0;
+				rewardImg.gameObject.SetActive (false);
+				rewardImg.sprite = rewardSpr [0];
+				fadeOpenReward.SetActive (false);
+			}
 		}
 	}
 
