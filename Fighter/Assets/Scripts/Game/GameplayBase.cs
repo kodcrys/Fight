@@ -12,6 +12,8 @@ public class GameplayBase : MonoBehaviour {
 
 	public bool lastAtk;
 
+	public bool atkDone;
+
 	public void Start(){
 		instance = this;
 	}

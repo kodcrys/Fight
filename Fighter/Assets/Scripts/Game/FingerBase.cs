@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class FingerBase : MonoBehaviour {
 
+	public enum FingerState {none, Idel, Atk, Doing, Win, Death}
+
+	public FingerState fingerAction = FingerState.none;
+
 	[Header("GameObject")]
 	public GameObject finger, fingerAtk, fingerDown;
 
-	[Header("Enemy")]
-	public FingerControl enemy;
+	[Header("Enemy Left")]
+	public FingerLeftControl enemyLeft;
+
+	[Header("Enemy Right")]
+	public FingerRightControl enemyRight;
 
 	[Header("Finger Status")]
 	public int health, defend, atk;
@@ -34,22 +41,22 @@ public class FingerBase : MonoBehaviour {
 
 	public float time, timeInter;
 
-	public UnityEngine.UI.Text atkText;
+	public UnityEngine.UI.Text atkText, heath;
 
 
 	public virtual void DoIdel(){
 		
 	}
 
-	public virtual void DoFirstAtk(){
+	public virtual void DoAtk(){
 
 	}
 
-	public virtual void DoLastAtk(){
-		
+	public virtual void DoingAtk(){
+
 	}
 
-	public virtual void DoDown(){
+	public virtual void Win(){
 
 	}
 

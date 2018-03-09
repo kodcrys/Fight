@@ -23,6 +23,11 @@ public class HandAnim : MonoBehaviour {
 	[SerializeField]
 	bool changeRot, changePot;
 
+	bool hitThePhone;
+
+	[SerializeField]
+	private Transform shakeHandPos;
+
 	// max scale and min scale.
 	[SerializeField]
 	float maxScale, minScale;
@@ -31,6 +36,7 @@ public class HandAnim : MonoBehaviour {
 		transform.localScale = new Vector3 (minScale, minScale, 1f);
 		changeRot = false;
 		changePot = false;
+		hitThePhone = false;
 	}
 
 	void Update(){
@@ -48,6 +54,20 @@ public class HandAnim : MonoBehaviour {
 		case AnimationState.head:
 			break;
 		}
+
+		if (hitThePhone) 
+		{
+			transform.position = Vector3.MoveTowards (transform.position, shakeHandPos.position, speedRot * 5);
+			if (transform.position == shakeHandPos.position) 
+			{
+				transform.position = Vector3.MoveTowards (shakeHandPos.position, transform.position, speedRot * 5);
+			}
+		}
+	}
+
+	void ShakeHand ()
+	{
+		hitThePhone = true;
 	}
 
 	void HandMoveAnim(){
