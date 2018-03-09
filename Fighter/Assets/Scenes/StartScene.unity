@@ -24064,13 +24064,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1311053123}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84530f8e160324024b584c91ffe65bed, type: 3}
+  m_Script: {fileID: 11500000, guid: f397e48c656594c2eaca06507d887190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fingerAction: 1
   finger: {fileID: 0}
   fingerAtk: {fileID: 0}
   fingerDown: {fileID: 0}
-  enemy: {fileID: 0}
+  enemyLeft: {fileID: 0}
+  enemyRight: {fileID: 0}
   health: 0
   defend: 0
   atk: 0
@@ -24090,9 +24092,9 @@ MonoBehaviour:
   isAtk: 0
   touch: 0
   time: 0
-  timeInter: 0
+  timeInter: 0.45
   atkText: {fileID: 0}
-  fingerAction: 1
+  heath: {fileID: 0}
 --- !u!4 &1327939050 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4163065274155022, guid: a61321162124f4efa904c6475edc163f,

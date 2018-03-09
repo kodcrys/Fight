@@ -11,7 +11,8 @@ public class FingerRightControl : FingerBase {
 	
 	// Update is called once per frame
 	void Update () {
-		atkText.text = atk.ToString();
+		if(atkText != null)
+			atkText.text = atk.ToString();
 
 		switch (fingerAction) {
 		case FingerState.none:
