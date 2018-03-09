@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FingerBase : MonoBehaviour {
 
-	public enum FingerState {none, Idel, Atk, Doing, Death}
+	public enum FingerState {none, Idel, Atk, Doing, Win, Death}
 
 	public FingerState fingerAction = FingerState.none;
 
@@ -41,7 +41,7 @@ public class FingerBase : MonoBehaviour {
 
 	public float time, timeInter;
 
-	public UnityEngine.UI.Text atkText;
+	public UnityEngine.UI.Text atkText, heath;
 
 
 	public virtual void DoIdel(){
@@ -53,6 +53,10 @@ public class FingerBase : MonoBehaviour {
 	}
 
 	public virtual void DoingAtk(){
+
+	}
+
+	public virtual void Win(){
 
 	}
 

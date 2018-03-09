@@ -31,6 +31,8 @@ public class FingerRightControl : FingerBase {
 			break;
 		}
 
+		if()
+
 /*		if (!doingSomething) {
 			if (!isAtk)
 				fingerAction = FingerState.Idel;
