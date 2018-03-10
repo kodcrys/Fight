@@ -42,17 +42,19 @@ public class FingerRightControl : FingerBase {
 			break;
 		}
 
-		if (doingSomething) {
-			if (!enemyLeft.firstAtk && lastAtk) {
-				lastAtk = false;
-				fingerAction = FingerState.Atk;
+		if (isUIAni == false) {
+			if (doingSomething) {
+				if (!enemyLeft.firstAtk && lastAtk) {
+					lastAtk = false;
+					fingerAction = FingerState.Atk;
+				}
 			}
-		}
 
-		if (health == 0) {
-			fingerAction = FingerState.Death;
-		} else if (enemyLeft.health == 0) {
-			fingerAction = FingerState.Win;
+			if (health == 0) {
+				fingerAction = FingerState.Death;
+			} else if (enemyLeft.health == 0) {
+				fingerAction = FingerState.Win;
+			}
 		}
 	}
 
