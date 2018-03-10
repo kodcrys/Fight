@@ -6,13 +6,19 @@ public class RewardManager : MonoBehaviour {
 	public bool isRewardCharacter, isRewardEquipment, isRewardGold, isRewardExp, isRewardDiamond, isRewardCharacterWeek;
 
 	[HideInInspector]
-	public bool isX1, isX10;
+	public bool isX1;
 
 	[Header("UI Button Handle")]
 	[SerializeField]
 	GameObject btnBuyGold;
 	[SerializeField]
 	GameObject btnBuyDiamond;
+	[SerializeField]
+	GameObject btnBuyGoldX10;
+	[SerializeField]
+	GameObject btnBuyDiamondX10;
+	[SerializeField]
+	UnityEngine.UI.Button closeRewardX10;
 
 	[Header("Reward Object")]
 	[SerializeField]
@@ -25,6 +31,14 @@ public class RewardManager : MonoBehaviour {
 	GameObject rewardDiamond;
 	[SerializeField]
 	GameObject rewardExp;
+
+	[Header("Reward Object X10")]
+	[HideInInspector]
+	public bool isX10Gold;
+	[SerializeField]
+	GameObject characterX10;
+	[SerializeField]
+	GameObject equipmentX10;
 
 	[Header("Reward Scene")]
 	[SerializeField]
@@ -48,8 +62,12 @@ public class RewardManager : MonoBehaviour {
 	[SerializeField]
 	CharacterEquipmentManager charEqManager;
 
+	public static RewardManager instance;
+
 	// Use this for initialization
-	void OnEnable () {
+	void Awake () {
+		if (instance == null)
+			instance = this;
 	}
 
 	public void ShowBtn() {
@@ -66,8 +84,11 @@ public class RewardManager : MonoBehaviour {
 	}
 
 	public void OpenReward(bool isShopGold) {
+		isX1 = true;
 		panelOfCv_X1Reward.SetActive (true);
 		panelOfCv_X10Reward.SetActive (false);
+
+		//lightX1.SetActive (true);
 
 		// open panel ani reward
 		panel_Reward.SetActive (true);
@@ -79,21 +100,30 @@ public class RewardManager : MonoBehaviour {
 	}
 
 	public void OpenRewardX10 (bool isShopGold) {
+
+		closeRewardX10.enabled = false;
+
+		isX1 = false;
 		panelOfCv_X1Reward.SetActive (false);
 		panelOfCv_X10Reward.SetActive (true);
+
+		//lightX1.SetActive (false);
 
 		// open panel ani reward
 		panel_Reward.SetActive (true);
 
 		charEqManager.GatchaX10Character ();
 
-		RewardHandle (isShopGold);
+		RewardHandleX10 (isShopGold);
 	}
 
 	public void OpenRewardInRewardScene(bool isShopGold) {
 		CloseReward();
 
 		OpenReward (isShopGold);
+	}
+
+	public void OpenRewardX10InReawardScene(bool isShopGold) {
 	}
 
 	void RewardHandle(bool isShopGold) {
@@ -127,6 +157,56 @@ public class RewardManager : MonoBehaviour {
 			rewardExp.SetActive (false);
 			rewardGold.SetActive (false);
 			rewardDiamond.SetActive (false);
+		}
+	}
+
+	void RewardHandleX10(bool isShopGold) {
+		if (isShopGold) {
+			
+			isX10Gold = true;
+
+			// change btn buy gold active if isShopGold = false
+			btnBuyGoldX10.SetActive (false);
+			btnBuyDiamondX10.SetActive (false);
+
+			// set active light = false in shop scene
+			lightBuyChar.SetActive (false);
+			lightBuyEquipment.SetActive (false);
+
+			// Set status type reward object 
+			characterX10.SetActive (true);
+			equipmentX10.SetActive (false);
+			rewardExp.SetActive (false);
+			rewardGold.SetActive (false);
+			rewardDiamond.SetActive (false);
+		} else {
+
+			isX10Gold = false;
+
+			// change btn buy diamond active if isShopGold = false
+			btnBuyGoldX10.SetActive (false);
+			btnBuyDiamondX10.SetActive (false);
+
+			// set active light = false in shop scene
+			lightBuyChar.SetActive (false);
+			lightBuyEquipment.SetActive (false);
+
+			// Set status type reward object 
+			characterX10.SetActive (false);
+			equipmentX10.SetActive (true);
+			rewardExp.SetActive (false);
+			rewardGold.SetActive (false);
+			rewardDiamond.SetActive (false);
+		}
+	}
+
+	public void ShowBtnX10EndAni() {
+		if (isX10Gold) {
+			btnBuyGoldX10.SetActive (true);
+			btnBuyDiamondX10.SetActive (false);
+		} else {
+			btnBuyGoldX10.SetActive (false);
+			btnBuyDiamondX10.SetActive (true);
 		}
 	}
 

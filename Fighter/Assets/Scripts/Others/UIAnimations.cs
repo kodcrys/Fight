@@ -141,13 +141,17 @@ public class UIAnimations : MonoBehaviour {
 	[SerializeField]
 	GameObject fadeOpenReward;
 
-	[Header("Gatcha Ani")]
+	[Header("Gatcha X10 Ani")]
 	[SerializeField]
 	bool isRunAniGatcha;
 	[SerializeField]
 	GameObject [] objectsRunAniGatcha;
 	[SerializeField]
 	Transform [] posAni;
+	[SerializeField]
+	Button closeReward;
+	[SerializeField]
+	GameObject lightX1Gatcha;
 
 	void OnEnable() {
 		if (contentTxt != null)
@@ -484,6 +488,10 @@ public class UIAnimations : MonoBehaviour {
 			}
 
 			if (timeTotalRewardAni >= 2.4f) {
+				if (RewardManager.instance.isX1)
+					lightX1Gatcha.SetActive (true);
+				else
+					lightX1Gatcha.SetActive (false);
 				//isRunRewardAni = false;
 				timeTotalRewardAni = 0;
 				timeChangeRotate = 0;
@@ -511,11 +519,16 @@ public class UIAnimations : MonoBehaviour {
 					objectsRunAniGatcha [indexGatcha].transform.position = Vector3.MoveTowards (objectsRunAniGatcha [indexGatcha].transform.position, posAni [indexGatcha].position, speed * Time.deltaTime);
 				}
 				if (objectsRunAniGatcha [indexGatcha].transform.localScale != originScale)
-					objectsRunAniGatcha [indexGatcha].transform.localScale = Vector3.MoveTowards (objectsRunAniGatcha [indexGatcha].transform.localScale, originScale, Time.deltaTime);
+					objectsRunAniGatcha [indexGatcha].transform.localScale = Vector3.MoveTowards (objectsRunAniGatcha [indexGatcha].transform.localScale, originScale, posAni [indexGatcha].localScale.z * Time.deltaTime);
 
 				if (objectsRunAniGatcha [indexGatcha].transform.position == posAni [indexGatcha].position) {
+					if (indexGatcha == objectsRunAniGatcha.Length - 1) {
+						closeReward.enabled = true;
+						RewardManager.instance.ShowBtnX10EndAni ();
+					}
 					indexGatcha++;
 					timeDelayShowGatcha = 0;
+
 				}
 			}
 		}
