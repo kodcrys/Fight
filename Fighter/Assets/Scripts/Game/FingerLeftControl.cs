@@ -156,7 +156,7 @@ public class FingerLeftControl : FingerBase {
 				fingerAtk.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
 				fingerDown.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
 				hand.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
-				StartCoroutine (WaitForSeconds (0.1f));
+				StartCoroutine (WaitChangeColor (0.1f));
 			} else {
 				finger.GetComponent<SpriteRenderer> ().color = new Color32 (255, 207, 179, 255);
 				fingerAtk.GetComponent<SpriteRenderer> ().color = new Color32 (255, 207, 179, 255);
@@ -255,7 +255,7 @@ public class FingerLeftControl : FingerBase {
 	}
 
 	IEnumerator WaitChangeColor(float time){
-		yield return WaitForSeconds (time);
+		yield return new WaitForSeconds (time);
 		if (changeColor)
 			changeColor = false;
 	}
