@@ -172,8 +172,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 65b6503627be64c358144908bd14f19d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 83982538fe1d5463da9b1eea51fce129, type: 3}
+  m_Color: {r: 1, g: 0.8117647, b: 0.7019608, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -577,8 +577,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: b2565b13ca65f41ddbae61664e964c52, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 49582325fb4954956b48dbff4850cdcd, type: 3}
+  m_Color: {r: 1, g: 0.83137256, b: 0.7019608, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -975,8 +975,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 8976c779565bc404c9d104f479ce3d88, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 5fea593ecc93445469c35ac4427d02ca, type: 3}
+  m_Color: {r: 1, g: 0.8117647, b: 0.7019608, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1341,8 +1341,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: b3d45cdf5c19b42038bc64ed164c4eb6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 1040e700ab1c84eca9986142ca75df23, type: 3}
+  m_Color: {r: 1, g: 0.8117647, b: 0.7019608, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1394,6 +1394,7 @@ MonoBehaviour:
   finger: {fileID: 1576644765}
   fingerAtk: {fileID: 887350672}
   fingerDown: {fileID: 39493675}
+  hand: {fileID: 1169754930}
   enemyLeft: {fileID: 0}
   enemyRight: {fileID: 1540023914}
   health: 0
@@ -1705,8 +1706,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dc9ea6e163bec48818703008cfb5972c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 6de605d9084ad45d2836580254b59ca6, type: 3}
+  m_Color: {r: 1, g: 0.83137256, b: 0.7019608, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1758,6 +1759,7 @@ MonoBehaviour:
   finger: {fileID: 408478865}
   fingerAtk: {fileID: 1742600473}
   fingerDown: {fileID: 1704966376}
+  hand: {fileID: 1540023910}
   enemyLeft: {fileID: 1169754934}
   enemyRight: {fileID: 0}
   health: 0
@@ -1845,8 +1847,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: f20654437a2654c228335abbc093c071, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: db10f95aa69bc47059d60408ad60a6c8, type: 3}
+  m_Color: {r: 1, g: 0.8117647, b: 0.7019608, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1988,8 +1990,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 615d2564c898a4ae6a17e92edc2b3822, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 7dc0eee6c94f24bdb92a3e2d29cfade2, type: 3}
+  m_Color: {r: 1, g: 0.83137256, b: 0.7019608, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2060,8 +2062,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 83983aa0e11fc46d7901fa5add18ff1c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a92f64a3bb60544288fbbf1f948e506f, type: 3}
+  m_Color: {r: 1, g: 0.83137256, b: 0.7019608, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

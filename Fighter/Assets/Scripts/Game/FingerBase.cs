@@ -9,7 +9,7 @@ public class FingerBase : MonoBehaviour {
 	public FingerState fingerAction = FingerState.none;
 
 	[Header("GameObject")]
-	public GameObject finger, fingerAtk, fingerDown;
+	public GameObject finger, fingerAtk, fingerDown, hand;
 
 	[Header("Enemy Left")]
 	public FingerLeftControl enemyLeft;
@@ -22,6 +22,8 @@ public class FingerBase : MonoBehaviour {
 
 	[Header("Status Animation")]
 	public bool fingerRight, fingerLeft;
+
+	public bool changeColor;
 
 	public int changeScale = 0;
 
