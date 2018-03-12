@@ -70,35 +70,33 @@ public class BirdMovement : MonoBehaviour {
 	}
 		
 
-	float tempx = 120	, tempy = 300;
+	float tempx = 180	, tempy = 450;
 	// Do physics engine updates here
 	void FixedUpdate () 
 	{
-		Debug.Log (dead);
 		if (dead) 
 		{
 			return;
 		}
 
-
+		Debug.Log (dead + " " + didFlap);
 		if (didFlap) 
 		{
-			Debug.Log (123);
 			if (time <= 0.5f) 
 			{
-				tempx -= 20f;
-				tempy -= 50f;
+				tempx -= 30f;
+				tempy -= 75f;
 			}
 			else 
 			{
-				tempx = 120;
-				tempy = 300;
+				tempx = 180f;
+				tempy = 450f;
 			}
 
 			if (tempx <= 100) 
 			{
-				tempx = 60;
-				tempy = 150;
+				tempx = 90f;
+				tempy = 225f;
 			}
 
 			time = 0f;
@@ -110,8 +108,9 @@ public class BirdMovement : MonoBehaviour {
 		} 
 		else 
 		{ 
+			Debug.Log ("fall");
 			time += Time.deltaTime;
-			rigid.AddForce (new Vector2 (-2f, -5f));
+			rigid.AddForce (new Vector2 (-3f, -7.5f));
 		}
 
 	}

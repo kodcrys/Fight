@@ -20,3 +20,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ShopScene.unity
     guid: 52a72469d54e64a0e95a0167a7504581
+  - enabled: 0
+    path: Assets/Scenes/FlappyThumb 1.unity
+    guid: ead7d0462429449109a1a44774b862f6
