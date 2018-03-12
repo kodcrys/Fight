@@ -152,6 +152,13 @@ public class UIAnimations : MonoBehaviour {
 	Button closeReward;
 	[SerializeField]
 	GameObject lightX1Gatcha;
+	[SerializeField]
+	GameObject[] lightX10Gatcha;
+
+	[Header("Scale Effect X10 Ani")]
+	public bool isRunEffX10Ani;
+	[SerializeField]
+	ParticleSystem [] effectGlowStar;
 
 	void OnEnable() {
 		if (contentTxt != null)
@@ -511,16 +518,19 @@ public class UIAnimations : MonoBehaviour {
 		if (indexGatcha < objectsRunAniGatcha.Length) {
 			
 			objectsRunAniGatcha [indexGatcha].SetActive (true);
+			lightX10Gatcha [indexGatcha].SetActive (true);
 
 			timeDelayShowGatcha += Time.deltaTime;
 
 			if (timeDelayShowGatcha > 0.5f) {
 				if (objectsRunAniGatcha [indexGatcha].transform.position != posAni [indexGatcha].position) {
 					objectsRunAniGatcha [indexGatcha].transform.position = Vector3.MoveTowards (objectsRunAniGatcha [indexGatcha].transform.position, posAni [indexGatcha].position, speed * Time.deltaTime);
+					lightX10Gatcha [indexGatcha].transform.position = objectsRunAniGatcha [indexGatcha].transform.position;
 				}
-				if (objectsRunAniGatcha [indexGatcha].transform.localScale != originScale)
+				if (objectsRunAniGatcha [indexGatcha].transform.localScale != originScale) {
 					objectsRunAniGatcha [indexGatcha].transform.localScale = Vector3.MoveTowards (objectsRunAniGatcha [indexGatcha].transform.localScale, originScale, posAni [indexGatcha].localScale.z * Time.deltaTime);
-
+					lightX10Gatcha [indexGatcha].transform.localScale = Vector3.MoveTowards (lightX10Gatcha [indexGatcha].transform.localScale, minScale, posAni[indexGatcha].localScale.y * Time.deltaTime);
+				}
 				if (objectsRunAniGatcha [indexGatcha].transform.position == posAni [indexGatcha].position) {
 					if (indexGatcha == objectsRunAniGatcha.Length - 1) {
 						closeReward.enabled = true;
@@ -530,6 +540,28 @@ public class UIAnimations : MonoBehaviour {
 					timeDelayShowGatcha = 0;
 
 				}
+			}
+		}
+	}
+
+	void EffectGatchaX10ScaleRun() {
+		for (int i = 0; i < effectGlowStar.Length; i++) {
+			var sh = effectGlowStar [i].shape;
+			sh.scale = Vector3.MoveTowards (sh.scale, minScale, Time.deltaTime / 2f);
+			if (sh.scale == minScale) {
+				var em = effectGlowStar [i].emission;
+				em.rateOverTime = 5;
+			}
+		}
+	}
+
+	public void EffectGatchaX10ScaleOff() {
+		for (int i = 0; i < effectGlowStar.Length; i++) {
+			var sh = effectGlowStar [i].shape;
+			if (sh.scale != new Vector3 (0.5f, 1, 0.5f)) {
+				sh.scale = new Vector3 (0.5f, 1, 0.5f);
+				var em = effectGlowStar [i].emission;
+				em.rateOverTime = 25;
 			}
 		}
 	}
@@ -564,6 +596,9 @@ public class UIAnimations : MonoBehaviour {
 				RewardAni ();
 			if (isRunAniGatcha)
 				GatchaAniX10 ();
+			if (isRunEffX10Ani)
+				EffectGatchaX10ScaleRun ();
+
 			yield return new WaitForSeconds (0.02f);
 		}
 	}

@@ -34,6 +34,10 @@ public class CharacterEquipmentManager : MonoBehaviour {
 	[SerializeField]
 	DataCharacter [] dataCharacter;
 
+	[Header("Data Equipment")]
+	[SerializeField]
+	DataItems [] dataEquipment;
+
 	[Header("Origin Position")]
 	[SerializeField]
 	Transform originPos;
@@ -62,6 +66,19 @@ public class CharacterEquipmentManager : MonoBehaviour {
 			hatX10CharImg [i].sprite = dataCharacter [indexChar [i]].equipmentOfChar;
 			nameOfX10Character [i].text = dataCharacter [indexChar [i]].name;
 		}
+	}
+
+	public void GatchaEquipment() {
+		int indexEquipment = Random.Range (0, dataEquipment.Length);
+		DataItems data = dataEquipment [indexEquipment];
+
+		if (isCharacterUI == false) {
+			
+		}
+	}
+
+	public void GatchaX10Equipment() {
+		
 	}
 
 	public void OriginGatchaX10() {

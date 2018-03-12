@@ -1,16 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+public enum TypeObject {hat, weapon, tshirt}
+
+[CreateAssetMenu(fileName = "New Equipment", menuName = "Data/Equipment")]
 public class DataItems : ScriptableObject {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public string name;
+
+	public TypeObject typeItem;
+
+	public Sprite avatar;
+
+	public int ATK;
+	public int DEF;
+	public int HP;
 }

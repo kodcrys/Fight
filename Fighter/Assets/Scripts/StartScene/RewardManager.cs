@@ -62,6 +62,10 @@ public class RewardManager : MonoBehaviour {
 	[SerializeField]
 	CharacterEquipmentManager charEqManager;
 
+	[Header("Effect Glow")]
+	[SerializeField]
+	UIAnimations [] anisEffLightGlow;
+
 	public static RewardManager instance;
 
 	// Use this for initialization
@@ -101,6 +105,9 @@ public class RewardManager : MonoBehaviour {
 
 	public void OpenRewardX10 (bool isShopGold) {
 
+		/*for (int i = 0; i < anisEffLightGlow.Length; i++)
+			anisEffLightGlow [i].isRunEffX10Ani = true;*/
+
 		closeRewardX10.enabled = false;
 
 		isX1 = false;
@@ -119,11 +126,14 @@ public class RewardManager : MonoBehaviour {
 
 	public void OpenRewardInRewardScene(bool isShopGold) {
 		CloseReward();
-
+		CloseRewardX10 ();
 		OpenReward (isShopGold);
 	}
 
 	public void OpenRewardX10InReawardScene(bool isShopGold) {
+		CloseReward();
+		CloseRewardX10 ();
+		OpenRewardX10 (isShopGold);
 	}
 
 	void RewardHandle(bool isShopGold) {
@@ -228,6 +238,13 @@ public class RewardManager : MonoBehaviour {
 	}
 
 	public void CloseRewardX10() {
+
+		for (int i = 0; i < anisEffLightGlow.Length; i++) {
+			anisEffLightGlow [i].transform.position = Vector3.zero;
+			anisEffLightGlow [i].transform.localScale = new Vector3 (4, 4, 1);
+			anisEffLightGlow [i].gameObject.SetActive (false);
+			anisEffLightGlow [i].EffectGatchaX10ScaleOff ();
+		}
 
 		charEqManager.OriginGatchaX10 ();
 
