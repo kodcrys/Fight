@@ -23,7 +23,7 @@ public class FingerBase : MonoBehaviour {
 	[Header("Status Animation")]
 	public bool fingerRight, fingerLeft;
 
-	public bool changeColor;
+	public bool changeColor, oneShotColor;
 
 	public int changeScale = 0;
 

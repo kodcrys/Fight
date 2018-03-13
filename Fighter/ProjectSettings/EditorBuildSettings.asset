@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/LoadingScene.unity
     guid: b2df71ebd01f94a99a959562bec4280e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StartScene.unity
     guid: e4370f64259074aa9a225731f5b771b3
   - enabled: 1
@@ -21,5 +21,5 @@ EditorBuildSettings:
     path: Assets/Scenes/ShopScene.unity
     guid: 52a72469d54e64a0e95a0167a7504581
   - enabled: 0
-    path: Assets/Scenes/FlappyThumb 1.unity
+    path: 
     guid: ead7d0462429449109a1a44774b862f6

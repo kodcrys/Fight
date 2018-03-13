@@ -13,6 +13,7 @@ public class FingerLeftControl : FingerBase {
 		atk = 100;
 		health = 100;
 		changeColor = false;
+		oneShotColor = false;
 	}
 	
 	// Update is called once per frame
@@ -55,6 +56,20 @@ public class FingerLeftControl : FingerBase {
 			fingerAction = FingerState.Death;
 		} else if (enemyRight.health == 0) {
 			fingerAction = FingerState.Win;
+		}
+
+
+		if (changeColor) {
+			finger.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
+			fingerAtk.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
+			fingerDown.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
+			hand.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
+			StartCoroutine (WaitChangeColor (0.005f));
+		} else {
+			finger.GetComponent<SpriteRenderer> ().color = new Color32 (255, 207, 179, 255);
+			fingerAtk.GetComponent<SpriteRenderer> ().color = new Color32 (255, 207, 179, 255);
+			fingerDown.GetComponent<SpriteRenderer> ().color = new Color32 (255, 207, 179, 255);
+			hand.GetComponent<SpriteRenderer> ().color = new Color32 (255, 207, 179, 255);
 		}
 
 	}
@@ -150,18 +165,9 @@ public class FingerLeftControl : FingerBase {
 		} else if (lastAtk) {
 			enemyRight.isAtk = true;
 			enemyRight.health -= 2;
-			changeColor = true;
-			if (changeColor) {
-				finger.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
-				fingerAtk.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
-				fingerDown.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
-				hand.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
-				StartCoroutine (WaitChangeColor (0.1f));
-			} else {
-				finger.GetComponent<SpriteRenderer> ().color = new Color32 (255, 207, 179, 255);
-				fingerAtk.GetComponent<SpriteRenderer> ().color = new Color32 (255, 207, 179, 255);
-				fingerDown.GetComponent<SpriteRenderer> ().color = new Color32 (255, 207, 179, 255);
-				hand.GetComponent<SpriteRenderer> ().color = new Color32 (255, 207, 179, 255);
+			if (!enemyRight.oneShotColor) {
+				enemyRight.changeColor = true;
+				enemyRight.oneShotColor = true;
 			}
 			if (doingSomething) {
 				if (atk > 0) {
@@ -252,6 +258,7 @@ public class FingerLeftControl : FingerBase {
 		if (!isAtk)
 			fingerAction = FingerState.Idel;
 		FingerBase.changeAnim = false;
+		enemyRight.oneShotColor = false;
 	}
 
 	IEnumerator WaitChangeColor(float time){
