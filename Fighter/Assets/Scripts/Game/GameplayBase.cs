@@ -6,15 +6,25 @@ public class GameplayBase : MonoBehaviour {
 
 	public static GameplayBase instance;
 
-	public bool isAtk;
+	public GameObject rightButton, leftButton;
 
-	public bool firstAtk;
+	public bool zoomCamera;
 
-	public bool lastAtk;
-
-	public bool atkDone;
+	public Camera mainCamera;
 
 	public void Start(){
 		instance = this;
+		zoomCamera = false;
+	}
+
+	public void Update(){
+		Debug.Log (mainCamera.orthographicSize);
+
+		if (zoomCamera) {
+			if (mainCamera.orthographicSize >= 6)
+				mainCamera.orthographicSize = 6;
+			else
+				mainCamera.orthographicSize += 2 * Time.deltaTime;
+		}
 	}
 }

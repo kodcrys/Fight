@@ -41,6 +41,8 @@ public class FingerBase : MonoBehaviour {
 
 	public bool touch;
 
+	public bool stopTime;
+
 	public float time, timeInter;
 
 	public UnityEngine.UI.Text atkText, healthText;

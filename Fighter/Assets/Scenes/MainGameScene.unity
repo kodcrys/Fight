@@ -512,10 +512,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 569bf4856cd354e44818db76ec758075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAtk: 0
-  firstAtk: 0
-  lastAtk: 0
-  atkDone: 0
+  rightButton: {fileID: 123934731}
+  leftButton: {fileID: 1520242075}
+  mainCamera: {fileID: 825680082}
 --- !u!4 &405106601
 Transform:
   m_ObjectHideFlags: 0
@@ -1403,6 +1402,7 @@ MonoBehaviour:
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
+  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 1
@@ -1416,6 +1416,7 @@ MonoBehaviour:
   doingSomething: 0
   isAtk: 0
   touch: 0
+  stopTime: 0
   time: 0
   timeInter: 0.45
   atkText: {fileID: 2067648819}
@@ -1769,6 +1770,7 @@ MonoBehaviour:
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
+  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 1
@@ -1782,6 +1784,7 @@ MonoBehaviour:
   doingSomething: 0
   isAtk: 0
   touch: 0
+  stopTime: 0
   time: 0
   timeInter: 0.45
   atkText: {fileID: 1001168572}

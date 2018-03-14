@@ -14,6 +14,7 @@ public class FingerLeftControl : FingerBase {
 		health = 100;
 		changeColor = false;
 		oneShotColor = false;
+		stopTime = true;
 	}
 	
 	// Update is called once per frame
@@ -52,10 +53,13 @@ public class FingerLeftControl : FingerBase {
 			}
 		}
 
-		if (health == 0) {
-			fingerAction = FingerState.Death;
-		} else if (enemyRight.health == 0) {
-			fingerAction = FingerState.Win;
+		if (health <= 0 || enemyRight.health <= 0) {
+			GameplayBase.instance.leftButton.SetActive (false);
+			if (stopTime) {
+				GameplayBase.instance.mainCamera.orthographicSize = 3;
+				fingerAction = FingerState.Doing;
+				StartCoroutine (WhoDeadWhoWin (1.5f));
+			}
 		}
 
 
@@ -140,47 +144,59 @@ public class FingerLeftControl : FingerBase {
 	}
 
 	public override void DoingAtk(){
-		if (firstAtk) {
-			if (!enemyRight.lastAtk) {
-				if (enemyRight.atk > 0) {
-					enemyRight.atk -= 5;
-				} else if (enemyRight.atk <= 0) {
-					enemyRight.atk = 0;
+		if (health > 0) {
+			if (firstAtk) {
+				if (!enemyRight.lastAtk) {
+					if (enemyRight.atk > 0) {
+						enemyRight.atk -= 5;
+					} else if (enemyRight.atk <= 0) {
+						enemyRight.atk = 0;
+					}
+
+					if (atk < 100) {
+						atk += 2;
+					} else if (atk >= 100) {
+						atk = 100;
+					}
 				}
 
-				if (atk < 100) {
-					atk += 2;
-				} else if (atk >= 100) {
-					atk = 100;
+				if (isAtk) {
+					if (!enemyRight.doingSomething) {
+						isAtk = false;
+						touch = false;
+						fingerAction = FingerState.Idel;
+					}
+				}
+			} else if (lastAtk) {
+				enemyRight.isAtk = true;
+				if (enemyRight.health > 0)
+					enemyRight.health -= 2;
+				if (!enemyRight.oneShotColor) {
+					enemyRight.changeColor = true;
+					enemyRight.oneShotColor = true;
+				}
+				if (doingSomething) {
+					if (atk > 0) {
+						atk -= 6;
+					} else if (atk <= 0) {
+						atk = 0;
+						enemyRight.touch = false;
+						enemyRight.isAtk = false;
+						fingerAction = FingerState.Atk;
+						isAtk = false;
+						if (enemyRight.health > 1)
+							enemyRight.fingerAction = FingerState.Idel;
+					}
 				}
 			}
-
-			if (isAtk) {
-				if (!enemyRight.doingSomething) {
-					isAtk = false;
-					touch = false;
-					fingerAction = FingerState.Idel;
-				}
-			}
-		} else if (lastAtk) {
-			enemyRight.isAtk = true;
-			enemyRight.health -= 2;
-			if (!enemyRight.oneShotColor) {
-				enemyRight.changeColor = true;
-				enemyRight.oneShotColor = true;
-			}
-			if (doingSomething) {
-				if (atk > 0) {
-					atk -= 6;
-				} else if (atk <= 0) {
-					atk = 0;
-					enemyRight.touch = false;
-					enemyRight.isAtk = false;
-					fingerAction = FingerState.Atk;
-					isAtk = false;
-					enemyRight.fingerAction = FingerState.Idel;
-				}
-			}
+		} else if (health <= 0) {
+			finger.SetActive (false);
+			fingerDown.SetActive (true);
+			fingerAtk.SetActive (false);
+		} else if (enemyRight.health <= 0) {
+			finger.SetActive (false);
+			fingerDown.SetActive (false);
+			fingerAtk.SetActive (true);
 		}
 	}
 
@@ -259,6 +275,18 @@ public class FingerLeftControl : FingerBase {
 			fingerAction = FingerState.Idel;
 		FingerBase.changeAnim = false;
 		enemyRight.oneShotColor = false;
+	}
+
+	IEnumerator WhoDeadWhoWin(float time){
+		yield return new WaitForSeconds (time);
+		stopTime = false;
+		GameplayBase.instance.zoomCamera = true;
+		if (health <= 0) {
+			health = 0;
+			fingerAction = FingerState.Death;
+		} else if (enemyRight.health <= 0) {
+			fingerAction = FingerState.Win;
+		}
 	}
 
 	IEnumerator WaitChangeColor(float time){
