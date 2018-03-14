@@ -32,4 +32,8 @@ public class SaveState {
 	public bool isOnRing = true;
 
 	public bool isRewardBonus = false;
+
+	public int winCountLeft = 0;
+
+	public int winCountRight = 0;
 }

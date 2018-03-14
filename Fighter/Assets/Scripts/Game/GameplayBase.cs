@@ -12,14 +12,14 @@ public class GameplayBase : MonoBehaviour {
 
 	public Camera mainCamera;
 
+	public int roundCount;
+
 	public void Start(){
 		instance = this;
 		zoomCamera = false;
 	}
 
 	public void Update(){
-		Debug.Log (mainCamera.orthographicSize);
-
 		if (zoomCamera) {
 			if (mainCamera.orthographicSize >= 6)
 				mainCamera.orthographicSize = 6;

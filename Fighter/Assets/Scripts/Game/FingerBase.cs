@@ -43,6 +43,8 @@ public class FingerBase : MonoBehaviour {
 
 	public bool stopTime;
 
+	public int winCount;
+
 	public float time, timeInter;
 
 	public UnityEngine.UI.Text atkText, healthText;

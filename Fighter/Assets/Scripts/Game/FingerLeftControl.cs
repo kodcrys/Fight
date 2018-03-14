@@ -56,9 +56,9 @@ public class FingerLeftControl : FingerBase {
 		if (health <= 0 || enemyRight.health <= 0) {
 			GameplayBase.instance.leftButton.SetActive (false);
 			if (stopTime) {
-				GameplayBase.instance.mainCamera.orthographicSize = 3;
+				GameplayBase.instance.mainCamera.orthographicSize = 4;
 				fingerAction = FingerState.Doing;
-				StartCoroutine (WhoDeadWhoWin (1.5f));
+				StartCoroutine (WhoDeadWhoWin (1f));
 			}
 		}
 
@@ -205,6 +205,8 @@ public class FingerLeftControl : FingerBase {
 		fingerDown.SetActive (false);
 		fingerAtk.SetActive (false);
 
+		StartCoroutine (WaitForNextRound (1.5f));
+		
 		if (time >= timeInter) {
 			time = 0;
 		} else {
@@ -287,6 +289,15 @@ public class FingerLeftControl : FingerBase {
 		} else if (enemyRight.health <= 0) {
 			fingerAction = FingerState.Win;
 		}
+	}
+
+	IEnumerator WaitForNextRound(float time){
+		yield return new WaitForSeconds (time);
+		SaveManager.instance.state.winCountLeft++;
+		SaveManager.instance.Save ();
+		if (SaveManager.instance.state.winCountLeft < 2)
+			UnityEngine.SceneManagement.SceneManager.LoadScene ("MainGameScene");
+
 	}
 
 	IEnumerator WaitChangeColor(float time){
