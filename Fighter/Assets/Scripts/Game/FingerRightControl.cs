@@ -306,8 +306,13 @@ public class FingerRightControl : FingerBase {
 		yield return new WaitForSeconds (time);
 		SaveManager.instance.state.winCountRight++;
 		SaveManager.instance.Save ();
-		if (SaveManager.instance.state.winCountRight < 2)
-			UnityEngine.SceneManagement.SceneManager.LoadScene ("MainGameScene");
+		if (SaveManager.instance.state.winCountRight <= 2) {
+			if (!AnimationText.endRound) {
+				SaveManager.instance.state.roundCount++;
+				SaveManager.instance.Save ();
+				AnimationText.endRound = true;
+			}
+		}
 	}
 
 	IEnumerator WaitChangeColor(float time){

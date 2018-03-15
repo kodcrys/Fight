@@ -516,7 +516,7 @@ MonoBehaviour:
   leftButton: {fileID: 1520242075}
   zoomCamera: 0
   mainCamera: {fileID: 825680082}
-  roundCount: 0
+  roundText: {fileID: 1516650866}
 --- !u!4 &405106601
 Transform:
   m_ObjectHideFlags: 0
@@ -1205,13 +1205,14 @@ GameObject:
   - component: {fileID: 952418546}
   - component: {fileID: 952418548}
   - component: {fileID: 952418547}
+  - component: {fileID: 952418549}
   m_Layer: 5
   m_Name: KOText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &952418546
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1220,7 +1221,7 @@ RectTransform:
   m_GameObject: {fileID: 952418545}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 498240923}
   m_RootOrder: 1
@@ -1242,7 +1243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8609952, g: 0.9411765, b: 0.11072664, a: 1}
+  m_Color: {r: 0.8609952, g: 0.9411765, b: 0.11072664, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1269,6 +1270,34 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 952418545}
+--- !u!114 &952418549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 952418545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24630fd8634ad44678a316ec0b55a5d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textAnimState: 2
+  textStepAnim: 0
+  color1:
+    serializedVersion: 2
+    rgba: 1896668
+  color2:
+    serializedVersion: 2
+    rgba: 0
+  color3:
+    serializedVersion: 2
+    rgba: 4280086748
+  t: 0
+  step: 0
+  time: 0
+  timeInter: 0
+  timeEnd: 0.5
+  startAnim: 0
 --- !u!1 &1001168570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1758,6 +1787,7 @@ MonoBehaviour:
   step: 0
   time: 0
   timeInter: 1
+  timeEnd: 0
   startAnim: 0
 --- !u!114 &1516650866
 MonoBehaviour:
