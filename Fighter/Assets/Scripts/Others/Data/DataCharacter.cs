@@ -10,4 +10,5 @@ public class DataCharacter : ScriptableObject {
 	public int ATK;
 	public int DEF;
 	public int HP;
+	public bool isOwned;
 }

@@ -97,8 +97,12 @@ public class RewardManager : MonoBehaviour {
 		// open panel ani reward
 		panel_Reward.SetActive (true);
 
-		// gatchaX1
-		charEqManager.GatchaCharacter ();
+		// gatchaX1 character
+		if (isShopGold)
+			charEqManager.GatchaCharacter ();
+		else
+			charEqManager.GatchaEquipment ();
+		// gatchaX1 diamond
 
 		RewardHandle (isShopGold);
 	}
@@ -119,7 +123,10 @@ public class RewardManager : MonoBehaviour {
 		// open panel ani reward
 		panel_Reward.SetActive (true);
 
-		charEqManager.GatchaX10Character ();
+		if (isShopGold)
+			charEqManager.GatchaX10Character ();
+		else
+			charEqManager.GatchaX10Equipment ();
 
 		RewardHandleX10 (isShopGold);
 	}
@@ -245,8 +252,10 @@ public class RewardManager : MonoBehaviour {
 			anisEffLightGlow [i].gameObject.SetActive (false);
 			anisEffLightGlow [i].EffectGatchaX10ScaleOff ();
 		}
-
-		charEqManager.OriginGatchaX10 ();
+			
+		// Tra ve vi tri ban dau cua cac object reward truoc khi chay lai
+		charEqManager.OriginGatchaX10Char ();
+		charEqManager.OriginGatchaX10Equipment ();
 
 		// close 2 panel ani reward and reward
 		panel_Reward.SetActive (false);

@@ -73,6 +73,8 @@ public class UIAnimations : MonoBehaviour {
 	[SerializeField]
 	Transform pos3;
 	bool changeDes1, changeDes2, changeDes3;
+	[SerializeField]
+	float offsetMoveY;
 
 	[Header("Button Play")]
 	[SerializeField]
@@ -286,8 +288,8 @@ public class UIAnimations : MonoBehaviour {
 	}
 
 	void Move3DesBackDes3ToDes1() {
-		target.position =  Vector3.MoveTowards (target.position, new Vector3(target.position.x, -6f, target.position.z), speed * Time.deltaTime);
-		if(target.position == new Vector3(target.position.x, -6f, target.position.z))
+		target.position =  Vector3.MoveTowards (target.position, new Vector3(target.position.x, -6f + offsetMoveY, target.position.z), speed * Time.deltaTime);
+		if(target.position == new Vector3(target.position.x, -6f + offsetMoveY, target.position.z))
 			changeDes1 = changeDes2 = changeDes3 = false;
 	}
 		
@@ -491,7 +493,7 @@ public class UIAnimations : MonoBehaviour {
 			if (timeTotalRewardAni > 2.1f && timeTotalRewardAni < 2.2f) {
 				canvasReward.SetActive (true);
 				fadeOpenReward.SetActive (true);
-				lightReward.transform.localScale =new Vector3 (4, 4, 0);
+				lightReward.transform.localScale = new Vector3 (4, 4, 0);
 			}
 
 			if (timeTotalRewardAni >= 2.4f) {
@@ -511,12 +513,12 @@ public class UIAnimations : MonoBehaviour {
 
 	[SerializeField]
 	public int indexGatcha = 0;
+	public bool AniGatchaCharacter;
 
 	float timeDelayShowGatcha = 0;
 
 	void GatchaAniX10() {
 		if (indexGatcha < objectsRunAniGatcha.Length) {
-			
 			objectsRunAniGatcha [indexGatcha].SetActive (true);
 			lightX10Gatcha [indexGatcha].SetActive (true);
 
@@ -532,7 +534,18 @@ public class UIAnimations : MonoBehaviour {
 					lightX10Gatcha [indexGatcha].transform.localScale = Vector3.MoveTowards (lightX10Gatcha [indexGatcha].transform.localScale, minScale, posAni[indexGatcha].localScale.y * Time.deltaTime);
 				}
 				if (objectsRunAniGatcha [indexGatcha].transform.position == posAni [indexGatcha].position) {
+
 					if (indexGatcha == objectsRunAniGatcha.Length - 1) {
+
+						for(int i = 0; i<indexGatcha; i++) {
+							if (AniGatchaCharacter) {
+								if (objectsRunAniGatcha [i].GetComponent<CointainData> ().dataChar.isOwned) {
+									//Debug.Log (objectsRunAniGatcha [i].GetComponent<CointainData> ().dataChar.name);
+									//objec
+								}
+							}
+						}
+
 						closeReward.enabled = true;
 						RewardManager.instance.ShowBtnX10EndAni ();
 					}
