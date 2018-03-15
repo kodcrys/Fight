@@ -156,6 +156,8 @@ public class UIAnimations : MonoBehaviour {
 	GameObject lightX1Gatcha;
 	[SerializeField]
 	GameObject[] lightX10Gatcha;
+	[SerializeField]
+	GameObject[] effectSmoke;
 
 	[Header("Scale Effect X10 Ani")]
 	public bool isRunEffX10Ani;
