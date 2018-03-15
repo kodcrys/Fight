@@ -544,6 +544,8 @@ public class UIAnimations : MonoBehaviour {
 								if (objectsRunAniGatcha [i].GetComponent<CointainData> ().dataChar.isOwned) {
 									effectSmoke [i].transform.position = objectsRunAniGatcha [i].transform.position;
 									effectSmoke [i].SetActive (true);
+								} else {
+									objectsRunAniGatcha [i].GetComponent<CointainData> ().dataChar.isOwned = true;
 								}
 							}
 						}
