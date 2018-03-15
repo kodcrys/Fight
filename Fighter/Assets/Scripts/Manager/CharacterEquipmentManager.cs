@@ -20,15 +20,19 @@ public class CharacterEquipmentManager : MonoBehaviour {
 	[SerializeField]
 	UnityEngine.UI.Image hatCharImg;
 	[SerializeField]
-	SpriteRenderer hatCharSRChar1;
+	GameObject rewardGoldSymbol;
 	[SerializeField]
-	SpriteRenderer hatCharSRChar2;
+	GameObject characterSymbol;
 
 	[Header("Hat of X10 character")]
 	[SerializeField]
 	UnityEngine.UI.Image[] hatX10CharImg;
 	[SerializeField]
 	UIAnimations gatchaX10;
+	[SerializeField]
+	GameObject[] rewardGoldSymbols;
+	[SerializeField]
+	GameObject[] characterSymbols;
 
 	[Header("Data character")]
 	[SerializeField]
@@ -59,6 +63,10 @@ public class CharacterEquipmentManager : MonoBehaviour {
 	UnityEngine.UI.Image[] X10EquipmentAmorImg;
 	[SerializeField]
 	UIAnimations gatchaX10Equip;
+	[SerializeField]
+	GameObject[] rewardDiamondSymbols;
+	[SerializeField]
+	GameObject[] equipmentSymbols;
 
 
 	[Header("Data Equipment")]
@@ -78,6 +86,8 @@ public class CharacterEquipmentManager : MonoBehaviour {
 		int indexChar = Random.Range (0, dataCharacter.Length);
 		DataCharacter data = dataCharacter [indexChar];
 
+		ShowCharacterX1 (true);
+
 		hatCharImg.transform.parent.parent.GetComponent<CointainData> ().dataChar = data;
 		if (isCharacterUI) {
 			nameOfCharacter.text = data.name;
@@ -87,12 +97,14 @@ public class CharacterEquipmentManager : MonoBehaviour {
 
 	public void GatchaX10Character() {
 		int[] indexChar = new int[10];
+
+		ShowCharacters (true);
+
 		for (int i = 0; i < indexChar.Length; i++)
 			indexChar [i] = Random.Range (0, dataCharacter.Length);
 
 		for (int i = 0; i < indexChar.Length; i++) {
 			hatX10CharImg [i].transform.parent.parent.GetComponent<CointainData> ().dataChar = dataCharacter [indexChar [i]];
-
 			hatX10CharImg [i].sprite = dataCharacter [indexChar [i]].equipmentOfChar;
 			nameOfX10Character [i].text = dataCharacter [indexChar [i]].name;
 		}
@@ -129,6 +141,9 @@ public class CharacterEquipmentManager : MonoBehaviour {
 
 	public void GatchaX10Equipment() {
 		int[] indexEquip = new int[10];
+
+		ShowEquipmentX10 (true);
+
 		for (int i = 0; i < indexEquip.Length; i++)
 			indexEquip [i] = Random.Range (0, dataEquipment.Length);
 
@@ -136,7 +151,7 @@ public class CharacterEquipmentManager : MonoBehaviour {
 
 			DataItems data = dataEquipment [indexEquip [i]];
 		
-			X10EquipmentHatImg[i].transform.parent.GetComponent<CointainData> ().dataItem = data;
+			X10EquipmentHatImg[i].transform.parent.parent.GetComponent<CointainData> ().dataItem = data;
 
 			nameOfX10Equipment [i].text = data.name;
 
@@ -184,5 +199,48 @@ public class CharacterEquipmentManager : MonoBehaviour {
 		}
 		gatchaX10.indexGatcha = 0;
 		gatchaX10Equip.indexGatcha = 0;
+	}
+
+	void ShowCharacters(bool isShow){
+		for (int i = 0; i < characterSymbols.Length; i++) {
+			characterSymbols [i].SetActive (isShow);
+			rewardGoldSymbols [i].SetActive (!isShow);
+		}
+	}
+
+	public void ChangeReward(int i) {
+		characterSymbols [i].SetActive (false);
+		rewardGoldSymbols [i].SetActive (true);
+		nameOfX10Character[i].text = "+500";
+		SaveManager.instance.state.TotalGold += 500;
+		SaveManager.instance.Save ();
+	}
+
+	void ShowCharacterX1(bool isShow) {
+		characterSymbol.SetActive (isShow);
+		rewardGoldSymbol.SetActive (!isShow);
+	}
+
+	public void ChangeRewardX1() {
+		characterSymbol.SetActive (false);
+		rewardGoldSymbol.SetActive (false);
+		nameOfCharacter.text = "+500";
+		SaveManager.instance.state.TotalGold += 500;
+		SaveManager.instance.Save ();
+	}
+
+	void ShowEquipmentX10 (bool isShow) {
+		for (int i = 0; i < equipmentSymbols.Length; i++) {
+			equipmentSymbols [i].SetActive (isShow);
+			rewardDiamondSymbols [i].SetActive (!isShow);
+		}
+	}
+
+	public void ChangeRewardX10Equipment(int i) {
+		equipmentSymbols [i].SetActive (false);
+		rewardDiamondSymbols [i].SetActive (true);
+		nameOfX10Equipment[i].text = "+25";
+		SaveManager.instance.state.TotalDiamond += 25;
+		SaveManager.instance.Save ();
 	}
 }

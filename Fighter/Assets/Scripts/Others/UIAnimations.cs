@@ -158,6 +158,8 @@ public class UIAnimations : MonoBehaviour {
 	GameObject[] lightX10Gatcha;
 	[SerializeField]
 	GameObject[] effectSmoke;
+	[SerializeField]
+	CharacterEquipmentManager charEquipManager;
 
 	[Header("Scale Effect X10 Ani")]
 	public bool isRunEffX10Ani;
@@ -538,15 +540,23 @@ public class UIAnimations : MonoBehaviour {
 				if (objectsRunAniGatcha [indexGatcha].transform.position == posAni [indexGatcha].position) {
 
 					if (indexGatcha == objectsRunAniGatcha.Length - 1) {
-
-						for(int i = 0; i<indexGatcha; i++) {
-							if (AniGatchaCharacter) {
+						if (AniGatchaCharacter) {
+							for (int i = 0; i < indexGatcha; i++) {
 								if (objectsRunAniGatcha [i].GetComponent<CointainData> ().dataChar.isOwned) {
 									effectSmoke [i].transform.position = objectsRunAniGatcha [i].transform.position;
 									effectSmoke [i].SetActive (true);
-								} else {
+									charEquipManager.ChangeReward (i);
+								} else
 									objectsRunAniGatcha [i].GetComponent<CointainData> ().dataChar.isOwned = true;
-								}
+							}
+						} else {
+							for (int i = 0; i < 10; i++) {
+								if (objectsRunAniGatcha [i].GetComponent<CointainData> ().dataItem.isOwned) {
+									effectSmoke [i].transform.position = objectsRunAniGatcha [i].transform.position;
+									effectSmoke [i].SetActive (true);
+									charEquipManager.ChangeRewardX10Equipment (i);
+								} else
+									objectsRunAniGatcha [i].GetComponent<CointainData> ().dataItem.isOwned = true;
 							}
 						}
 

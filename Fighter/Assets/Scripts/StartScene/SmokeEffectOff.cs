@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class SmokeEffectOff : MonoBehaviour {
 
-	ParticleSystem partical;
-
+	float time = 0;
+	public bool isRunFinish;
 	// Use this for initialization
-	void Start () {
-		partical = GetComponent<ParticleSystem> ();
-		StartCoroutine (OffEffect ());
+	void OnEnable () {
+		time = 0;
+		isRunFinish = false;
 	}
 	
-	IEnumerator OffEffect() {
-
-		Debug.Log (gameObject.name + " " + partical.IsAlive ());
-		while (true) {
-			if (partical.IsAlive ())
-				gameObject.SetActive (false);
-			yield return new WaitForSeconds (0.02f);
+	void Update() {
+		time += Time.deltaTime;
+		if (time >= 1.8f) {
+			gameObject.SetActive (false);
+			isRunFinish = true;
+			time = 0;
 		}
 	}
 }
