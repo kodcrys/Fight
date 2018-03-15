@@ -61,19 +61,20 @@ public class FingerRightControl : FingerBase {
 					StartCoroutine (WhoDeadWhoWin (1f));
 				}
 			}
-		}
-
-		if (changeColor) {
-			finger.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
-			fingerAtk.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
-			fingerDown.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
-			hand.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
-			StartCoroutine (WaitChangeColor (0.005f));
-		} else {
-			finger.GetComponent<SpriteRenderer> ().color = new Color32 (255, 212, 179, 255);
-			fingerAtk.GetComponent<SpriteRenderer> ().color = new Color32 (255, 212, 179, 255);
-			fingerDown.GetComponent<SpriteRenderer> ().color = new Color32 (255, 212, 179, 255);
-			hand.GetComponent<SpriteRenderer> ().color = new Color32 (255, 212, 179, 255);
+		
+			
+			if (changeColor) {
+				finger.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
+				fingerAtk.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
+				fingerDown.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
+				hand.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
+				StartCoroutine (WaitChangeColor (0.005f));
+			} else {
+				finger.GetComponent<SpriteRenderer> ().color = new Color32 (255, 212, 179, 255);
+				fingerAtk.GetComponent<SpriteRenderer> ().color = new Color32 (255, 212, 179, 255);
+				fingerDown.GetComponent<SpriteRenderer> ().color = new Color32 (255, 212, 179, 255);
+				hand.GetComponent<SpriteRenderer> ().color = new Color32 (255, 212, 179, 255);
+			}
 		}
 	}
 

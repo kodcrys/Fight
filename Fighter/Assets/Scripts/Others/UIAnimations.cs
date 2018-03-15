@@ -542,8 +542,8 @@ public class UIAnimations : MonoBehaviour {
 						for(int i = 0; i<indexGatcha; i++) {
 							if (AniGatchaCharacter) {
 								if (objectsRunAniGatcha [i].GetComponent<CointainData> ().dataChar.isOwned) {
-									//Debug.Log (objectsRunAniGatcha [i].GetComponent<CointainData> ().dataChar.name);
-									//objec
+									effectSmoke [i].transform.position = objectsRunAniGatcha [i].transform.position;
+									effectSmoke [i].SetActive (true);
 								}
 							}
 						}

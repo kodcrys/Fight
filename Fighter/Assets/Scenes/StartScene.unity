@@ -756,6 +756,7 @@ MonoBehaviour:
   closeReward: {fileID: 0}
   lightX1Gatcha: {fileID: 0}
   lightX10Gatcha: []
+  effectSmoke: []
   isRunEffX10Ani: 0
   effectGlowStar: []
   indexGatcha: 0
@@ -4354,7 +4355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &92356349
 ParticleSystemRenderer:
   serializedVersion: 4
@@ -4466,7 +4467,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -2047038019
+  randomSeed: 1495278647
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7676,7 +7677,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 92356348}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.13659966, y: 0.5, z: -90}
+  m_LocalPosition: {x: 0.13659966, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12952,7 +12953,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &195683319
 ParticleSystemRenderer:
   serializedVersion: 4
@@ -13064,7 +13065,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1950777996
+  randomSeed: 1328052314
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -16274,7 +16275,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 195683318}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.13659966, y: 0.5, z: -90}
+  m_LocalPosition: {x: 0.13659966, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -19697,7 +19698,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 496734911}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.4072625
+  m_Size: 0.40726247
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -20010,6 +20011,7 @@ MonoBehaviour:
   closeReward: {fileID: 0}
   lightX1Gatcha: {fileID: 0}
   lightX10Gatcha: []
+  effectSmoke: []
   isRunEffX10Ani: 0
   effectGlowStar: []
   indexGatcha: 0
@@ -20656,6 +20658,7 @@ MonoBehaviour:
   closeReward: {fileID: 0}
   lightX1Gatcha: {fileID: 0}
   lightX10Gatcha: []
+  effectSmoke: []
   isRunEffX10Ani: 0
   effectGlowStar: []
   indexGatcha: 0
@@ -22419,6 +22422,7 @@ MonoBehaviour:
   closeReward: {fileID: 0}
   lightX1Gatcha: {fileID: 0}
   lightX10Gatcha: []
+  effectSmoke: []
   isRunEffX10Ani: 0
   effectGlowStar: []
   indexGatcha: 0
@@ -34394,6 +34398,7 @@ MonoBehaviour:
   closeReward: {fileID: 0}
   lightX1Gatcha: {fileID: 0}
   lightX10Gatcha: []
+  effectSmoke: []
   isRunEffX10Ani: 0
   effectGlowStar: []
   indexGatcha: 0
@@ -38077,6 +38082,7 @@ MonoBehaviour:
   closeReward: {fileID: 0}
   lightX1Gatcha: {fileID: 0}
   lightX10Gatcha: []
+  effectSmoke: []
   isRunEffX10Ani: 0
   effectGlowStar: []
   indexGatcha: 0
@@ -40569,6 +40575,7 @@ MonoBehaviour:
   closeReward: {fileID: 0}
   lightX1Gatcha: {fileID: 0}
   lightX10Gatcha: []
+  effectSmoke: []
   isRunEffX10Ani: 0
   effectGlowStar: []
   indexGatcha: 0
@@ -42590,6 +42597,7 @@ MonoBehaviour:
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
+  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 2
@@ -42603,6 +42611,8 @@ MonoBehaviour:
   doingSomething: 0
   isAtk: 0
   touch: 0
+  stopTime: 0
+  winCount: 0
   time: 0
   timeInter: 0.45
   atkText: {fileID: 0}
@@ -43897,6 +43907,7 @@ MonoBehaviour:
   closeReward: {fileID: 0}
   lightX1Gatcha: {fileID: 0}
   lightX10Gatcha: []
+  effectSmoke: []
   isRunEffX10Ani: 0
   effectGlowStar: []
   indexGatcha: 0
@@ -44050,6 +44061,7 @@ MonoBehaviour:
   closeReward: {fileID: 0}
   lightX1Gatcha: {fileID: 0}
   lightX10Gatcha: []
+  effectSmoke: []
   isRunEffX10Ani: 0
   effectGlowStar: []
   indexGatcha: 0
@@ -50317,7 +50329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &929951641
 ParticleSystemRenderer:
   serializedVersion: 4
@@ -50429,7 +50441,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -771156934
+  randomSeed: -2106520437
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -53639,7 +53651,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 929951640}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.13659966, y: 0.5, z: -90}
+  m_LocalPosition: {x: 0.13659966, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -56587,6 +56599,7 @@ MonoBehaviour:
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
+  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 2
@@ -56600,6 +56613,8 @@ MonoBehaviour:
   doingSomething: 0
   isAtk: 0
   touch: 0
+  stopTime: 0
+  winCount: 0
   time: 0
   timeInter: 0.45
   atkText: {fileID: 0}
@@ -58046,6 +58061,7 @@ MonoBehaviour:
   closeReward: {fileID: 0}
   lightX1Gatcha: {fileID: 0}
   lightX10Gatcha: []
+  effectSmoke: []
   isRunEffX10Ani: 0
   effectGlowStar: []
   indexGatcha: 0
@@ -58387,6 +58403,7 @@ MonoBehaviour:
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
+  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 2
@@ -58400,6 +58417,8 @@ MonoBehaviour:
   doingSomething: 0
   isAtk: 0
   touch: 0
+  stopTime: 0
+  winCount: 0
   time: 0
   timeInter: 0.45
   atkText: {fileID: 0}
@@ -58591,6 +58610,7 @@ MonoBehaviour:
   closeReward: {fileID: 0}
   lightX1Gatcha: {fileID: 1497440144}
   lightX10Gatcha: []
+  effectSmoke: []
   isRunEffX10Ani: 0
   effectGlowStar: []
   indexGatcha: 0
@@ -60275,7 +60295,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &1050516546
 ParticleSystemRenderer:
   serializedVersion: 4
@@ -60387,7 +60407,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -2054955031
+  randomSeed: -1732759968
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -63597,7 +63617,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1050516545}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.13659966, y: 0.5, z: -90}
+  m_LocalPosition: {x: 0.13659966, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -65967,6 +65987,7 @@ MonoBehaviour:
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
+  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 2
@@ -65980,6 +66001,8 @@ MonoBehaviour:
   doingSomething: 0
   isAtk: 0
   touch: 0
+  stopTime: 0
+  winCount: 0
   time: 0
   timeInter: 0.45
   atkText: {fileID: 0}
@@ -74074,6 +74097,7 @@ MonoBehaviour:
   closeReward: {fileID: 0}
   lightX1Gatcha: {fileID: 0}
   lightX10Gatcha: []
+  effectSmoke: []
   isRunEffX10Ani: 0
   effectGlowStar: []
   indexGatcha: 0
@@ -74094,7 +74118,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &1246361364
 ParticleSystemRenderer:
   serializedVersion: 4
@@ -74206,7 +74230,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -252874624
+  randomSeed: 1593321154
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -77416,7 +77440,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1246361363}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.13659966, y: 0.5, z: -90}
+  m_LocalPosition: {x: 0.13659966, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -78399,6 +78423,7 @@ MonoBehaviour:
   closeReward: {fileID: 0}
   lightX1Gatcha: {fileID: 0}
   lightX10Gatcha: []
+  effectSmoke: []
   isRunEffX10Ani: 0
   effectGlowStar: []
   indexGatcha: 0
@@ -78682,6 +78707,7 @@ MonoBehaviour:
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
+  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 2
@@ -78695,6 +78721,8 @@ MonoBehaviour:
   doingSomething: 0
   isAtk: 0
   touch: 0
+  stopTime: 0
+  winCount: 0
   time: 0
   timeInter: 0.45
   atkText: {fileID: 0}
@@ -79690,6 +79718,7 @@ MonoBehaviour:
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
+  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 2
@@ -79703,6 +79732,8 @@ MonoBehaviour:
   doingSomething: 0
   isAtk: 0
   touch: 0
+  stopTime: 0
+  winCount: 0
   time: 0
   timeInter: 0.45
   atkText: {fileID: 0}
@@ -80495,6 +80526,7 @@ MonoBehaviour:
   closeReward: {fileID: 0}
   lightX1Gatcha: {fileID: 0}
   lightX10Gatcha: []
+  effectSmoke: []
   isRunEffX10Ani: 0
   effectGlowStar: []
   indexGatcha: 0
@@ -80786,6 +80818,7 @@ MonoBehaviour:
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
+  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 2
@@ -80799,6 +80832,8 @@ MonoBehaviour:
   doingSomething: 0
   isAtk: 0
   touch: 0
+  stopTime: 0
+  winCount: 0
   time: 0
   timeInter: 0.45
   atkText: {fileID: 0}
@@ -81850,6 +81885,7 @@ MonoBehaviour:
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
+  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 2
@@ -81863,6 +81899,8 @@ MonoBehaviour:
   doingSomething: 0
   isAtk: 0
   touch: 0
+  stopTime: 0
+  winCount: 0
   time: 0
   timeInter: 0.45
   atkText: {fileID: 0}
@@ -84736,7 +84774,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &1407245365
 ParticleSystemRenderer:
   serializedVersion: 4
@@ -84848,7 +84886,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 347559138
+  randomSeed: 1161244768
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -88058,7 +88096,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1407245364}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.13659966, y: 0.5, z: -90}
+  m_LocalPosition: {x: 0.13659966, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -89979,6 +90017,7 @@ MonoBehaviour:
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
+  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 2
@@ -89992,6 +90031,8 @@ MonoBehaviour:
   doingSomething: 0
   isAtk: 0
   touch: 0
+  stopTime: 0
+  winCount: 0
   time: 0
   timeInter: 0.45
   atkText: {fileID: 0}
@@ -91506,6 +91547,7 @@ MonoBehaviour:
   - {fileID: 196591717}
   - {fileID: 432196725}
   - {fileID: 1128601675}
+  effectSmoke: []
   isRunEffX10Ani: 0
   effectGlowStar: []
   indexGatcha: 0
@@ -93380,6 +93422,7 @@ MonoBehaviour:
   closeReward: {fileID: 0}
   lightX1Gatcha: {fileID: 0}
   lightX10Gatcha: []
+  effectSmoke: []
   isRunEffX10Ani: 0
   effectGlowStar: []
   indexGatcha: 0
@@ -95784,7 +95827,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &1560610291
 ParticleSystemRenderer:
   serializedVersion: 4
@@ -95896,7 +95939,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1843675627
+  randomSeed: -355877814
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -99106,7 +99149,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1560610290}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.13659966, y: 0.5, z: -90}
+  m_LocalPosition: {x: 0.13659966, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -102172,6 +102215,7 @@ MonoBehaviour:
   closeReward: {fileID: 0}
   lightX1Gatcha: {fileID: 0}
   lightX10Gatcha: []
+  effectSmoke: []
   isRunEffX10Ani: 0
   effectGlowStar: []
   indexGatcha: 0
@@ -105454,6 +105498,7 @@ MonoBehaviour:
   closeReward: {fileID: 0}
   lightX1Gatcha: {fileID: 0}
   lightX10Gatcha: []
+  effectSmoke: []
   isRunEffX10Ani: 0
   effectGlowStar: []
   indexGatcha: 0
@@ -109362,6 +109407,7 @@ MonoBehaviour:
   closeReward: {fileID: 0}
   lightX1Gatcha: {fileID: 0}
   lightX10Gatcha: []
+  effectSmoke: []
   isRunEffX10Ani: 0
   effectGlowStar: []
   indexGatcha: 0
@@ -110354,6 +110400,7 @@ MonoBehaviour:
   closeReward: {fileID: 0}
   lightX1Gatcha: {fileID: 0}
   lightX10Gatcha: []
+  effectSmoke: []
   isRunEffX10Ani: 0
   effectGlowStar: []
   indexGatcha: 0
@@ -110584,6 +110631,17 @@ MonoBehaviour:
   - {fileID: 196591717}
   - {fileID: 432196725}
   - {fileID: 1128601675}
+  effectSmoke:
+  - {fileID: 92356348}
+  - {fileID: 1916656886}
+  - {fileID: 1050516545}
+  - {fileID: 1407245364}
+  - {fileID: 195683318}
+  - {fileID: 2130072399}
+  - {fileID: 2063778387}
+  - {fileID: 929951640}
+  - {fileID: 1560610290}
+  - {fileID: 1246361363}
   isRunEffX10Ani: 0
   effectGlowStar: []
   indexGatcha: 0
@@ -116191,7 +116249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &1916656887
 ParticleSystemRenderer:
   serializedVersion: 4
@@ -116303,7 +116361,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -187897557
+  randomSeed: 1439067261
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -119513,7 +119571,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1916656886}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.13659966, y: 0.5, z: -90}
+  m_LocalPosition: {x: 0.13659966, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -120287,7 +120345,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 878.6}
+  m_AnchoredPosition: {x: 0, y: 878.6001}
   m_SizeDelta: {x: 352, y: 539.19995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1928617230
@@ -120801,6 +120859,7 @@ MonoBehaviour:
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
+  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 2
@@ -120814,6 +120873,8 @@ MonoBehaviour:
   doingSomething: 0
   isAtk: 0
   touch: 0
+  stopTime: 0
+  winCount: 0
   time: 0
   timeInter: 0.45
   atkText: {fileID: 0}
@@ -122124,6 +122185,7 @@ MonoBehaviour:
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
+  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 2
@@ -122137,6 +122199,8 @@ MonoBehaviour:
   doingSomething: 0
   isAtk: 0
   touch: 0
+  stopTime: 0
+  winCount: 0
   time: 0
   timeInter: 0.45
   atkText: {fileID: 0}
@@ -126520,7 +126584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &2063778388
 ParticleSystemRenderer:
   serializedVersion: 4
@@ -126632,7 +126696,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 2092388106
+  randomSeed: 2012566754
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -129842,7 +129906,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2063778387}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.13659966, y: 0.5, z: -90}
+  m_LocalPosition: {x: 0.13659966, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -131040,6 +131104,7 @@ MonoBehaviour:
   closeReward: {fileID: 0}
   lightX1Gatcha: {fileID: 0}
   lightX10Gatcha: []
+  effectSmoke: []
   isRunEffX10Ani: 0
   effectGlowStar: []
   indexGatcha: 0
@@ -132350,7 +132415,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &2130072400
 ParticleSystemRenderer:
   serializedVersion: 4
@@ -132462,7 +132527,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -414140258
+  randomSeed: -391863576
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -135672,7 +135737,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2130072399}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.13659966, y: 0.5, z: -90}
+  m_LocalPosition: {x: 0.13659966, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
