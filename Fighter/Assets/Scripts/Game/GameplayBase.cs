@@ -13,16 +13,19 @@ public class GameplayBase : MonoBehaviour {
 	public Camera mainCamera;
 
 	[SerializeField]
-	UnityEngine.UI.Text roundText;
+	UnityEngine.UI.Image roundNumImg;
+
+	[SerializeField]
+	List<Sprite> numRound = new List<Sprite>();
 
 
 	public void Start(){
 		instance = this;
 		zoomCamera = false;
-		if (SaveManager.instance.state.roundCount <= 2)
-			roundText.text = "Round " + SaveManager.instance.state.roundCount;
-		else
-			roundText.text = "Final\nRound";
+		if (SaveManager.instance.state.roundCount == 1)
+			roundNumImg.sprite = numRound [0];
+		else if(SaveManager.instance.state.roundCount == 2)
+			roundNumImg.sprite = numRound [1];
 	}
 
 	public void Update(){

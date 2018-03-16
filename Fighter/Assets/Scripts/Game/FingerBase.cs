@@ -18,7 +18,7 @@ public class FingerBase : MonoBehaviour {
 	public FingerRightControl enemyRight;
 
 	[Header("Finger Status")]
-	public int health, defend, atk;
+	public int health, defend, atk, stamina, maxHealth;
 
 	[Header("Status Animation")]
 	public bool fingerRight, fingerLeft;
@@ -49,6 +49,15 @@ public class FingerBase : MonoBehaviour {
 
 	public UnityEngine.UI.Text atkText, healthText;
 
+	public UnityEngine.UI.Image healthImage, staminaImage;
+
+	public virtual void HanderHealth(){
+		
+	}
+		
+	public virtual void HanderStamina(){
+		
+	}
 
 	public virtual void DoIdel(){
 		

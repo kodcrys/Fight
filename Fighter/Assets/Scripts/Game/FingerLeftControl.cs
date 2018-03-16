@@ -10,8 +10,8 @@ public class FingerLeftControl : FingerBase {
 	// Use this for initialization
 	void Start () {
 		touch = true;
-		atk = 100;
-		health = 100;
+		stamina = 100;
+		health = maxHealth;
 		changeColor = false;
 		oneShotColor = false;
 		stopTime = true;
@@ -19,10 +19,10 @@ public class FingerLeftControl : FingerBase {
 	
 	// Update is called once per frame
 	void Update () {
-		if (atkText != null)
-			atkText.text = atk.ToString ();
-		if (healthText != null)
-			healthText.text = health.ToString ();
+		if (staminaImage != null)
+			HanderStamina ();
+		if (healthImage != null)
+			HanderHealth ();
 
 		switch (fingerAction) {
 		case FingerState.none:
@@ -78,6 +78,18 @@ public class FingerLeftControl : FingerBase {
 
 	}
 
+	public override void HanderHealth(){
+		healthImage.fillAmount = Map (health, 0, maxHealth, 0, 1);
+	}
+
+	public override void HanderStamina(){
+		staminaImage.fillAmount = Map (stamina, 0, 100, 0, 1);
+	}
+
+	public float Map(float value, float inMin, float inMax, float outMin, float outMax){
+		return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+	}
+
 	public override void DoIdel(){
 		if (finger != null)
 			finger.SetActive (true);
@@ -93,10 +105,10 @@ public class FingerLeftControl : FingerBase {
 
 		if (isUIAni == false) {
 			if (!enemyRight.firstAtk) {
-				if (atk < 100) {
-					atk += 2;
-				} else if (atk >= 100) {
-					atk = 100;
+				if (stamina < 100) {
+					stamina += 2;
+				} else if (stamina >= 100) {
+					stamina = 100;
 				}
 			}
 		}
@@ -147,16 +159,16 @@ public class FingerLeftControl : FingerBase {
 		if (health > 0) {
 			if (firstAtk) {
 				if (!enemyRight.lastAtk) {
-					if (enemyRight.atk > 0) {
-						enemyRight.atk -= 5;
-					} else if (enemyRight.atk <= 0) {
-						enemyRight.atk = 0;
+					if (enemyRight.stamina > 0) {
+						enemyRight.stamina -= 5;
+					} else if (enemyRight.stamina <= 0) {
+						enemyRight.stamina = 0;
 					}
 
-					if (atk < 100) {
-						atk += 2;
-					} else if (atk >= 100) {
-						atk = 100;
+					if (stamina < 100) {
+						stamina += 2;
+					} else if (stamina >= 100) {
+						stamina = 100;
 					}
 				}
 
@@ -170,16 +182,16 @@ public class FingerLeftControl : FingerBase {
 			} else if (lastAtk) {
 				enemyRight.isAtk = true;
 				if (enemyRight.health > 0)
-					enemyRight.health -= 2;
+					enemyRight.health -= atk;
 				if (!enemyRight.oneShotColor) {
 					enemyRight.changeColor = true;
 					enemyRight.oneShotColor = true;
 				}
 				if (doingSomething) {
-					if (atk > 0) {
-						atk -= 6;
-					} else if (atk <= 0) {
-						atk = 0;
+					if (stamina > 0) {
+						stamina -= 6;
+					} else if (stamina <= 0) {
+						stamina = 0;
 						enemyRight.touch = false;
 						enemyRight.isAtk = false;
 						fingerAction = FingerState.Atk;
