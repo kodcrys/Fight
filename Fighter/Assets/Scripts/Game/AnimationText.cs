@@ -24,26 +24,38 @@ public class AnimationText : MonoBehaviour {
 	int step;
 
 	[SerializeField]
-	float time, timeInter;
+	float time, timeInter, timeEnd;
 
 	public bool startAnim;
 
 	public static bool canPlay;
 	public static bool beginRound;
+	public static bool endRound;
 
 	void Start(){
 		startAnim = false;
+		beginRound = true;
+		startAnim = true;
+		endRound = false;
 	}
 
 	// Update is called once per frame
 	void Update () {
 		switch (textStepAnim) {
 		case TextStepAnim.none:
-			if (beginRound)
-				canPlay = false;
-			transform.GetComponent<UnityEngine.UI.Text> ().color = color3;
-			if (startAnim) {
-				textStepAnim = TextStepAnim.Begin;
+			if (textAnimState == TextAnim.RoundText) {
+				if (beginRound)
+					canPlay = false;
+				transform.GetComponent<UnityEngine.UI.Text> ().color = color3;
+				if (startAnim) {
+					textStepAnim = TextStepAnim.Begin;
+				}
+			} else if (textAnimState == TextAnim.KOText) {
+				transform.GetComponent<UnityEngine.UI.Text> ().color = color3;
+				if (endRound) {
+					canPlay = false;
+					textStepAnim = TextStepAnim.Begin;
+				}
 			}
 			break;
 		case TextStepAnim.Begin:
@@ -66,6 +78,9 @@ public class AnimationText : MonoBehaviour {
 			t = 0;
 			step = 0;
 		} else if (textAnimState == TextAnim.KOText) {
+			transform.GetComponent<UnityEngine.UI.Text> ().color = color1;
+			transform.localScale = new Vector3 (0.1f, 0.1f, 0.1f);
+			step = 0;
 		}
 	}
 
@@ -91,6 +106,18 @@ public class AnimationText : MonoBehaviour {
 				}
 			}
 		} else if (textAnimState == TextAnim.KOText) {
+			if (step == 0) {
+				transform.GetComponent<UnityEngine.UI.Text> ().color = color3;
+				transform.localScale = Vector3.MoveTowards (transform.localScale, new Vector3 (1.2f, 1.2f, 1.2f), Time.deltaTime * 2);
+				if (transform.localScale == new Vector3 (1.2f, 1.2f, 1.2f)) {
+					step = 1;
+				}
+			} else if (step == 1) {
+				transform.localScale = Vector3.MoveTowards (transform.localScale, new Vector3 (1, 1, 1), Time.deltaTime);
+				if (transform.localScale == new Vector3 (1, 1, 1)) {
+					textStepAnim = TextStepAnim.End;
+				}
+			}
 		}
 	}
 
@@ -100,8 +127,14 @@ public class AnimationText : MonoBehaviour {
 			textStepAnim = TextStepAnim.none;
 			canPlay = true;
 			beginRound = false;
+			startAnim = false;
 		} else if (textAnimState == TextAnim.KOText) {
-			
+			time += Time.deltaTime;
+			if (time >= timeEnd) {
+				UnityEngine.SceneManagement.SceneManager.LoadScene ("MainGameScene");
+				textStepAnim = TextStepAnim.none;
+				time = 0;
+			}
 		}
 	}
 }

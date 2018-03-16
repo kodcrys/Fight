@@ -12,14 +12,27 @@ public class GameplayBase : MonoBehaviour {
 
 	public Camera mainCamera;
 
-	public int roundCount;
+	[SerializeField]
+	UnityEngine.UI.Text roundText;
+
 
 	public void Start(){
 		instance = this;
 		zoomCamera = false;
+		if (SaveManager.instance.state.roundCount <= 2)
+			roundText.text = "Round " + SaveManager.instance.state.roundCount;
+		else
+			roundText.text = "Final\nRound";
 	}
 
 	public void Update(){
+		if (AnimationText.canPlay) {
+			rightButton.SetActive (true);
+			leftButton.SetActive (true);
+		} else {
+			rightButton.SetActive (false);
+			leftButton.SetActive (false);
+		}
 		if (zoomCamera) {
 			if (mainCamera.orthographicSize >= 6)
 				mainCamera.orthographicSize = 6;

@@ -36,4 +36,6 @@ public class SaveState {
 	public int winCountLeft = 0;
 
 	public int winCountRight = 0;
+
+	public int roundCount = 1;
 }

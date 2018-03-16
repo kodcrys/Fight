@@ -295,8 +295,13 @@ public class FingerLeftControl : FingerBase {
 		yield return new WaitForSeconds (time);
 		SaveManager.instance.state.winCountLeft++;
 		SaveManager.instance.Save ();
-		if (SaveManager.instance.state.winCountLeft < 2)
-			UnityEngine.SceneManagement.SceneManager.LoadScene ("MainGameScene");
+		if (SaveManager.instance.state.winCountLeft <= 2) {
+			if (!AnimationText.endRound) {
+				SaveManager.instance.state.roundCount++;
+				SaveManager.instance.Save ();
+				AnimationText.endRound = true;
+			}
+		}
 
 	}
 
