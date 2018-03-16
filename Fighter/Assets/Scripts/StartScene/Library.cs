@@ -45,10 +45,19 @@ public class Library : MonoBehaviour {
 	CointainData[] dataItems;
 
 	bool isMove = false;
+	public bool isClick = false;
+
+	public static Library Instance;
+
+	void Awake () {
+		if (Instance == null)
+			Instance = this;
+	}
 
 	void Start()
 	{
 		isMove = false;
+		isClick = false;
 	}
 
 	void Update() {
@@ -121,19 +130,25 @@ public class Library : MonoBehaviour {
 	}
 
 	public void ShowLibrary() {
-		EnDisableLibraryCell ();
-		libraryMove.isRunMoveAni = true;
-		topBarStartMenu.isRunMoveAni = false;
-		botBarStartMenu.isRunMoveAni = false;
-		midBarStartMenu.isRunScaleAni = false;
-		btnBackLibrary.SetActive (true);
+		if (isClick == false) {
+			EnDisableLibraryCell ();
+			libraryMove.isRunMoveAni = true;
+			topBarStartMenu.isRunMoveAni = false;
+			botBarStartMenu.isRunMoveAni = false;
+			midBarStartMenu.isRunScaleAni = false;
+			//btnBackLibrary.SetActive (true);
+			isClick = true;
+		}
 	}
 
 	public void HideLibrary() {
-		libraryMove.isRunMoveAni = false;
-		topBarStartMenu.isRunMoveAni = true;
-		botBarStartMenu.isRunMoveAni = true;
-		midBarStartMenu.isRunScaleAni = true;
-		btnBackLibrary.SetActive (false);
+		if (isClick) {
+			libraryMove.isRunMoveAni = false;
+			topBarStartMenu.isRunMoveAni = true;
+			botBarStartMenu.isRunMoveAni = true;
+			midBarStartMenu.isRunScaleAni = true;
+			btnBackLibrary.SetActive (false);
+			//isClick = false;
+		}
 	}
 }

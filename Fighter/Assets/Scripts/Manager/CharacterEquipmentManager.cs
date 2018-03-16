@@ -53,6 +53,10 @@ public class CharacterEquipmentManager : MonoBehaviour {
 	UnityEngine.UI.Image equipmentWpImg;
 	[SerializeField]
 	UnityEngine.UI.Image equipmentAmorImg;
+	[SerializeField]
+	GameObject rewardDiamondSymbol;
+	[SerializeField]
+	GameObject equipmentSymbol;
 
 	[Header("X10 equipment")]
 	[SerializeField]
@@ -114,7 +118,9 @@ public class CharacterEquipmentManager : MonoBehaviour {
 		int indexEquipment = Random.Range (0, dataEquipment.Length);
 		DataItems data = dataEquipment [indexEquipment];
 
-		equipmentHatImg.transform.parent.GetComponent<CointainData> ().dataItem = data;
+		equipmentHatImg.transform.parent.parent.GetComponent<CointainData> ().dataItem = data;
+
+		ShowEquipmentX1 (true);
 
 		nameOfEquipment.text = data.name;
 
@@ -192,7 +198,7 @@ public class CharacterEquipmentManager : MonoBehaviour {
 
 	public void OriginGatchaX10Equipment() {
 		for (int i = 0; i < 10; i++) {
-			Transform goB = X10EquipmentHatImg [i].transform.parent.transform;
+			Transform goB = X10EquipmentHatImg [i].transform.parent.parent.transform;
 			goB.position = originPos.position;
 			goB.localScale = new Vector3 (1, 1, 1);
 			goB.gameObject.SetActive (false);
@@ -223,9 +229,22 @@ public class CharacterEquipmentManager : MonoBehaviour {
 
 	public void ChangeRewardX1() {
 		characterSymbol.SetActive (false);
-		rewardGoldSymbol.SetActive (false);
+		rewardGoldSymbol.SetActive (true);
 		nameOfCharacter.text = "+500";
 		SaveManager.instance.state.TotalGold += 500;
+		SaveManager.instance.Save ();
+	}
+
+	void ShowEquipmentX1(bool isShow) {
+		equipmentSymbol.SetActive (isShow);
+		rewardDiamondSymbol.SetActive (!isShow);
+	}
+
+	public void ChangeRewardX1Equipment() {
+		equipmentSymbol.SetActive (false);
+		rewardDiamondSymbol.SetActive (true);
+		nameOfEquipment.text = "+25";
+		SaveManager.instance.state.TotalDiamond += 25;
 		SaveManager.instance.Save ();
 	}
 

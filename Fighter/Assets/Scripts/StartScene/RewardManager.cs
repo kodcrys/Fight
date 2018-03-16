@@ -66,6 +66,9 @@ public class RewardManager : MonoBehaviour {
 	[SerializeField]
 	UIAnimations [] anisEffLightGlow;
 
+	[HideInInspector]
+	public bool isReturnRewardGold;
+
 	public static RewardManager instance;
 
 	// Use this for initialization
@@ -74,7 +77,7 @@ public class RewardManager : MonoBehaviour {
 			instance = this;
 	}
 
-	public void ShowBtn() {
+	/*public void ShowBtn() {
 		if (isRewardCharacter) {
 			btnBuyGold.SetActive (true);
 			btnBuyDiamond.SetActive (false);
@@ -85,7 +88,7 @@ public class RewardManager : MonoBehaviour {
 			btnBuyGold.SetActive (false);
 			btnBuyDiamond.SetActive (false);
 		}
-	}
+	}*/
 
 	public void OpenReward(bool isShopGold) {
 		isX1 = true;
@@ -98,10 +101,14 @@ public class RewardManager : MonoBehaviour {
 		panel_Reward.SetActive (true);
 
 		// gatchaX1 character
-		if (isShopGold)
+		if (isShopGold) {
 			charEqManager.GatchaCharacter ();
-		else
+			isReturnRewardGold = true;
+		} else {
 			charEqManager.GatchaEquipment ();
+			isReturnRewardGold = false;
+		}
+			
 		// gatchaX1 diamond
 
 		RewardHandle (isShopGold);
@@ -146,8 +153,8 @@ public class RewardManager : MonoBehaviour {
 	void RewardHandle(bool isShopGold) {
 		if (isShopGold) {
 			// change btn buy gold active if isShopGold = false
-			btnBuyGold.SetActive (true);
-			btnBuyDiamond.SetActive (false);
+			//btnBuyGold.SetActive (true);
+			//btnBuyDiamond.SetActive (false);
 
 			// set active light = false in shop scene
 			lightBuyChar.SetActive (false);
@@ -159,10 +166,11 @@ public class RewardManager : MonoBehaviour {
 			rewardExp.SetActive (false);
 			rewardGold.SetActive (false);
 			rewardDiamond.SetActive (false);
+
 		} else {
 			// change btn buy diamond active if isShopGold = false
-			btnBuyGold.SetActive (false);
-			btnBuyDiamond.SetActive (true);
+			//btnBuyGold.SetActive (false);
+			//btnBuyDiamond.SetActive (true); 
 
 			// set active light = false in shop scene
 			lightBuyChar.SetActive (false);
@@ -175,6 +183,17 @@ public class RewardManager : MonoBehaviour {
 			rewardGold.SetActive (false);
 			rewardDiamond.SetActive (false);
 		}
+	}
+
+	// change btn buy diamond active if isShopGold = false or change btn buy gold active if isShopGold = false
+	public void ShowBtnGold(bool isGold) {
+		btnBuyGold.SetActive (isGold);
+		btnBuyDiamond.SetActive (!isGold); 
+	}
+
+	public void DisableBtnGoldDia() {
+		btnBuyGold.SetActive (false);
+		btnBuyDiamond.SetActive (false);
 	}
 
 	void RewardHandleX10(bool isShopGold) {

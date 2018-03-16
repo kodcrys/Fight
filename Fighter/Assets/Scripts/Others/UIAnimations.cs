@@ -142,6 +142,7 @@ public class UIAnimations : MonoBehaviour {
 	GameObject canvasReward;
 	[SerializeField]
 	GameObject fadeOpenReward;
+	public bool isFinishFadeRewardAni;
 
 	[Header("Gatcha X10 Ani")]
 	[SerializeField]
@@ -165,6 +166,13 @@ public class UIAnimations : MonoBehaviour {
 	public bool isRunEffX10Ani;
 	[SerializeField]
 	ParticleSystem [] effectGlowStar;
+
+	[Header("Library")]
+	//define scene is libray?
+	[SerializeField]
+	bool isLibraryScene;
+	[SerializeField]
+	GameObject backLibrarybtn;
 
 	void OnEnable() {
 		if (contentTxt != null)
@@ -273,6 +281,7 @@ public class UIAnimations : MonoBehaviour {
 		}
 	}
 
+	float timeLibraryScene = 0;
 	void Move3DesGoDes1ToDes3() {
 		if (changeDes1 == false) {
 			target.position = Vector3.MoveTowards (target.position, pos1.position, speed * Time.deltaTime);
@@ -286,14 +295,32 @@ public class UIAnimations : MonoBehaviour {
 		}
 		if (changeDes1 && changeDes2 && changeDes3 == false) {
 			target.position = Vector3.MoveTowards (target.position, pos3.position, speed * Time.deltaTime);
-			if (target.position == pos3.position)
-				changeDes3 = true;
+			if (target.position == pos3.position) {
+				if (isLibraryScene) {
+					timeLibraryScene += Time.deltaTime;
+
+					if (timeLibraryScene >= 0.05f) {
+						backLibrarybtn.SetActive (true);
+						timeLibraryScene = 0;
+						changeDes3 = true;
+					}
+				} else {
+					changeDes3 = true;
+					if (Library.Instance.isClick)
+						Library.Instance.isClick = false;
+				}
+			}
 		}
 	}
 
 	void Move3DesBackDes3ToDes1() {
-		target.position =  Vector3.MoveTowards (target.position, new Vector3(target.position.x, -6f + offsetMoveY, target.position.z), speed * Time.deltaTime);
-		if(target.position == new Vector3(target.position.x, -6f + offsetMoveY, target.position.z))
+		Vector3 newPos = target.position;
+		newPos.y = -6f + offsetMoveY;
+
+		if(target.position != newPos)
+			target.position =  Vector3.MoveTowards (target.position, newPos, speed * Time.deltaTime);
+
+		if(target.position == newPos)
 			changeDes1 = changeDes2 = changeDes3 = false;
 	}
 		
@@ -458,6 +485,7 @@ public class UIAnimations : MonoBehaviour {
 
 	float timeChangeRotate;
 	float timeTotalRewardAni;
+	float waitInX1Gatcha;
 	void RewardAni() {
 		timeTotalRewardAni += 0.05f;
 		timeChangeRotate += Time.deltaTime;
@@ -506,11 +534,17 @@ public class UIAnimations : MonoBehaviour {
 				else
 					lightX1Gatcha.SetActive (false);
 				//isRunRewardAni = false;
-				timeTotalRewardAni = 0;
+
 				timeChangeRotate = 0;
+				timeTotalRewardAni = 0;
+
 				rewardImg.gameObject.SetActive (false);
 				rewardImg.sprite = rewardSpr [0];
 				fadeOpenReward.SetActive (false);
+
+				isFinishFadeRewardAni = true;
+
+				// change smoke reward diamond
 			}
 		}
 	}
@@ -524,18 +558,18 @@ public class UIAnimations : MonoBehaviour {
 	void GatchaAniX10() {
 		if (indexGatcha < objectsRunAniGatcha.Length) {
 			objectsRunAniGatcha [indexGatcha].SetActive (true);
-			lightX10Gatcha [indexGatcha].SetActive (true);
+			//lightX10Gatcha [indexGatcha].SetActive (true);
 
 			timeDelayShowGatcha += Time.deltaTime;
 
 			if (timeDelayShowGatcha > 0.5f) {
 				if (objectsRunAniGatcha [indexGatcha].transform.position != posAni [indexGatcha].position) {
 					objectsRunAniGatcha [indexGatcha].transform.position = Vector3.MoveTowards (objectsRunAniGatcha [indexGatcha].transform.position, posAni [indexGatcha].position, speed * Time.deltaTime);
-					lightX10Gatcha [indexGatcha].transform.position = objectsRunAniGatcha [indexGatcha].transform.position;
+					//lightX10Gatcha [indexGatcha].transform.position = objectsRunAniGatcha [indexGatcha].transform.position;
 				}
 				if (objectsRunAniGatcha [indexGatcha].transform.localScale != originScale) {
 					objectsRunAniGatcha [indexGatcha].transform.localScale = Vector3.MoveTowards (objectsRunAniGatcha [indexGatcha].transform.localScale, originScale, posAni [indexGatcha].localScale.z * Time.deltaTime);
-					lightX10Gatcha [indexGatcha].transform.localScale = Vector3.MoveTowards (lightX10Gatcha [indexGatcha].transform.localScale, minScale, posAni[indexGatcha].localScale.y * Time.deltaTime);
+					//lightX10Gatcha [indexGatcha].transform.localScale = Vector3.MoveTowards (lightX10Gatcha [indexGatcha].transform.localScale, minScale, posAni[indexGatcha].localScale.y * Time.deltaTime);
 				}
 				if (objectsRunAniGatcha [indexGatcha].transform.position == posAni [indexGatcha].position) {
 

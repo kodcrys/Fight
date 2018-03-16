@@ -13,6 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: IRON MAN
   equipmentOfChar: {fileID: 21300000, guid: d588884a2cb60492cb58fbbad99a3898, type: 3}
+  equipmentWP: {fileID: 0}
+  equipmetnTShirt: {fileID: 0}
   ATK: 0
   DEF: 0
   HP: 0
+  isOwned: 1

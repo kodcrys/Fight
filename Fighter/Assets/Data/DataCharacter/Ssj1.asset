@@ -13,6 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: SSJ 1
   equipmentOfChar: {fileID: 21300000, guid: 6e502abf239a6483597d6999d60b4b96, type: 3}
+  equipmentWP: {fileID: 0}
+  equipmetnTShirt: {fileID: 0}
   ATK: 0
   DEF: 0
   HP: 0
+  isOwned: 1
