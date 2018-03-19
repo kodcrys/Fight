@@ -217,8 +217,8 @@ public class CharacterEquipmentManager : MonoBehaviour {
 	public void ChangeReward(int i) {
 		characterSymbols [i].SetActive (false);
 		rewardGoldSymbols [i].SetActive (true);
-		nameOfX10Character[i].text = "+500";
-		SaveManager.instance.state.TotalGold += 500;
+		nameOfX10Character[i].text = "+25";
+		SaveManager.instance.state.TotalGold += 25;
 		SaveManager.instance.Save ();
 	}
 
@@ -230,8 +230,8 @@ public class CharacterEquipmentManager : MonoBehaviour {
 	public void ChangeRewardX1() {
 		characterSymbol.SetActive (false);
 		rewardGoldSymbol.SetActive (true);
-		nameOfCharacter.text = "+500";
-		SaveManager.instance.state.TotalGold += 500;
+		nameOfCharacter.text = "+25";
+		SaveManager.instance.state.TotalGold += 25;
 		SaveManager.instance.Save ();
 	}
 

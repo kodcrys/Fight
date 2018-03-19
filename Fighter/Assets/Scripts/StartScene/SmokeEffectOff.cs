@@ -16,9 +16,9 @@ public class SmokeEffectOff : MonoBehaviour {
 	void OnEnable () {
 		time = 0;
 		isRunFinish = false;
-		if (isSmokeLarge) {
-			RewardManager.instance.DisableBtnGoldDia ();
-		}
+		//if (isSmokeLarge) {
+		//	RewardManager.instance.DisableBtnGoldDia ();
+		//}
 	}
 	
 	void Update() {

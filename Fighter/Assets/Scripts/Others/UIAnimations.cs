@@ -486,6 +486,7 @@ public class UIAnimations : MonoBehaviour {
 	float timeChangeRotate;
 	float timeTotalRewardAni;
 	float waitInX1Gatcha;
+
 	void RewardAni() {
 		timeTotalRewardAni += 0.05f;
 		timeChangeRotate += Time.deltaTime;
@@ -572,10 +573,9 @@ public class UIAnimations : MonoBehaviour {
 					//lightX10Gatcha [indexGatcha].transform.localScale = Vector3.MoveTowards (lightX10Gatcha [indexGatcha].transform.localScale, minScale, posAni[indexGatcha].localScale.y * Time.deltaTime);
 				}
 				if (objectsRunAniGatcha [indexGatcha].transform.position == posAni [indexGatcha].position) {
-
 					if (indexGatcha == objectsRunAniGatcha.Length - 1) {
 						if (AniGatchaCharacter) {
-							for (int i = 0; i < indexGatcha; i++) {
+							for (int i = 0; i < 10; i++) {
 								if (objectsRunAniGatcha [i].GetComponent<CointainData> ().dataChar.isOwned) {
 									effectSmoke [i].transform.position = objectsRunAniGatcha [i].transform.position;
 									effectSmoke [i].SetActive (true);

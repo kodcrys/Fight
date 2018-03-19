@@ -259,6 +259,8 @@ public class RewardManager : MonoBehaviour {
 		lightReward.transform.localScale = new Vector3 (2, 2, 1);
 		lightReward.SetActive (false);
 
+		DisableBtnGoldDia ();
+
 		// reopen reward object
 		rewardObj.SetActive (true);
 	}
