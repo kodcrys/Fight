@@ -324,6 +324,10 @@ public class FingerRightControl : FingerBase {
 				SaveManager.instance.Save ();
 				AnimationText.endRound = true;
 			}
+		} else {
+			if (!AnimationText.endRound) {
+				AnimationText.endRound = true;
+			}
 		}
 	}
 
