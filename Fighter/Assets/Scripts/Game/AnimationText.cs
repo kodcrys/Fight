@@ -4,21 +4,13 @@ using UnityEngine;
 
 public class AnimationText : MonoBehaviour {
 
-	public enum TextAnim {none, RoundText, KOText}
+	public enum TextAnim {none, RoundText, KOText, FightText}
 
 	public TextAnim textAnimState = TextAnim.none;
 
 	public enum TextStepAnim {none, Begin, Doing, End}
 
 	public TextStepAnim textStepAnim = TextStepAnim.none;
-
-	int colorA;
-
-	[SerializeField]
-	Color32 color1, color2, color3;
-
-	[SerializeField]
-	float t;
 
 	[SerializeField]
 	int step;
@@ -27,10 +19,14 @@ public class AnimationText : MonoBehaviour {
 	float time, timeInter, timeEnd;
 
 	[SerializeField]
-	Transform K, O, kDes, oDes;
+	Transform one, two, oneDes, twoDes;
+
+	[SerializeField]
+	float speed;
 
 	public bool startAnim;
 
+	public static bool FightAnim;
 	public static bool canPlay;
 	public static bool beginRound;
 	public static bool endRound;
@@ -40,6 +36,7 @@ public class AnimationText : MonoBehaviour {
 		beginRound = true;
 		startAnim = true;
 		endRound = false;
+		FightAnim = false;
 	}
 
 	// Update is called once per frame
@@ -62,6 +59,14 @@ public class AnimationText : MonoBehaviour {
 				transform.GetChild (3).gameObject.SetActive (false);
 				if (endRound) {
 					canPlay = false;
+					textStepAnim = TextStepAnim.Begin;
+				}
+			} else if (textAnimState == TextAnim.FightText) {
+				transform.GetChild (0).gameObject.SetActive (false);
+				transform.GetChild (1).gameObject.SetActive (false);
+				transform.GetChild (2).gameObject.SetActive (false);
+				transform.GetChild (3).gameObject.SetActive (false);
+				if (FightAnim) {
 					textStepAnim = TextStepAnim.Begin;
 				}
 			}
@@ -97,8 +102,16 @@ public class AnimationText : MonoBehaviour {
 			transform.GetChild (1).gameObject.SetActive (true);
 			transform.GetChild (2).gameObject.SetActive (true);
 			transform.GetChild (3).gameObject.SetActive (true);
-			K.localPosition = new Vector3 (-1500, 800, 0);
-			O.localPosition = new Vector3 (1500, -800, 0);
+			one.localPosition = new Vector3 (-1500, 800, 0);
+			two.localPosition = new Vector3 (1500, -800, 0);
+			step = 0;
+		} else if (textAnimState == TextAnim.FightText) {
+			transform.GetChild (0).gameObject.SetActive (true);
+			transform.GetChild (1).gameObject.SetActive (true);
+			transform.GetChild (2).gameObject.SetActive (true);
+			transform.GetChild (3).gameObject.SetActive (true);
+			one.localPosition = new Vector3 (-2000, -100, 0);
+			two.localPosition = new Vector3 (2000, -100, 0);
 			step = 0;
 		}
 	}
@@ -106,34 +119,54 @@ public class AnimationText : MonoBehaviour {
 	void DoingAnimText(){
 		if (textAnimState == TextAnim.RoundText) {
 			if (step == 0) {
-				transform.localScale = Vector3.MoveTowards (transform.localScale, new Vector3 (1, 1, 1), Time.deltaTime * 5);
-				if (transform.localScale == new Vector3 (1, 1, 1))
+				transform.localScale = Vector3.MoveTowards (transform.localScale, new Vector3 (0.9f, 0.9f, 0.9f), Time.deltaTime * 6);
+				if (transform.localScale == new Vector3 (0.9f, 0.9f, 0.9f))
 					step = 1;
 			} else if (step == 1) {
+				transform.localScale = Vector3.MoveTowards (transform.localScale, new Vector3 (1, 1, 1), Time.deltaTime * 5);
+				if (transform.localScale == new Vector3 (1, 1, 1))
+					step = 2;
+			} else if (step == 2) {
 				transform.eulerAngles = new Vector3 (0, 0, -10);
 				time += Time.deltaTime;
 				if (time >= timeInter) {
-					step = 2;
+					step = 3;
 					time = 0;
 				}
-			} else if(step == 2) {
-				transform.localPosition = Vector3.MoveTowards (transform.localPosition, new Vector3 (0, -1500, 0), Time.deltaTime * 5000);
+			} else if(step == 3) {
+				transform.localPosition = Vector3.MoveTowards (transform.localPosition, new Vector3 (0, -1500, 0), Time.deltaTime * speed);
 				if (transform.localPosition == new Vector3 (0, -1500, 0)) {
 					textStepAnim = TextStepAnim.End;
 				}
 			}
 		} else if (textAnimState == TextAnim.KOText) {
 			if (step == 0) {
-				K.localPosition = Vector3.MoveTowards (K.localPosition, kDes.localPosition * 10, Time.deltaTime * 5000);
-				O.localPosition = Vector3.MoveTowards (O.localPosition, oDes.localPosition * 10, Time.deltaTime * 5000);
-				if (K.localPosition == kDes.localPosition * 10) {
+				one.localPosition = Vector3.MoveTowards (one.localPosition, new Vector3 (-50, 0, 0), Time.deltaTime * speed);
+				two.localPosition = Vector3.MoveTowards (two.localPosition, new Vector3 (50, 0, 0), Time.deltaTime * speed);
+				if (one.localPosition == new Vector3 (-50, 0, 0)) {
 					step = 1;
 				}
 			} else if (step == 1) {
-				K.localPosition = Vector3.MoveTowards (K.localPosition, kDes.localPosition, Time.deltaTime * 5000);
-				O.localPosition = Vector3.MoveTowards (O.localPosition, oDes.localPosition, Time.deltaTime * 5000);
-				if (K.localPosition == kDes.localPosition) {
+				one.localPosition = Vector3.MoveTowards (one.localPosition, oneDes.localPosition, Time.deltaTime * speed);
+				two.localPosition = Vector3.MoveTowards (two.localPosition, twoDes.localPosition, Time.deltaTime * speed);
+				if (one.localPosition == oneDes.localPosition) {
 					textStepAnim = TextStepAnim.End;
+				}
+			}
+		} else if (textAnimState == TextAnim.FightText) {
+			if (step == 0) {
+				one.localPosition = Vector3.MoveTowards (one.localPosition, new Vector3 (-450, -100, 0), Time.deltaTime * speed);
+				two.localPosition = Vector3.MoveTowards (two.localPosition, new Vector3 (250, -100, 0), Time.deltaTime * speed);
+				if (one.localPosition == new Vector3 (-450, -100, 0)) {
+					step = 1;
+				}
+			} else if (step == 1) {
+				one.localPosition = Vector3.MoveTowards (one.localPosition, oneDes.localPosition, Time.deltaTime * speed);
+				two.localPosition = Vector3.MoveTowards (two.localPosition, twoDes.localPosition, Time.deltaTime * speed);
+				time += Time.deltaTime;
+				if (time >= timeInter) {
+					textStepAnim = TextStepAnim.End;
+					time = 0;
 				}
 			}
 		}
@@ -143,7 +176,7 @@ public class AnimationText : MonoBehaviour {
 		if (textAnimState == TextAnim.RoundText) {
 			startAnim = false;
 			textStepAnim = TextStepAnim.none;
-			canPlay = true;
+			FightAnim = true;
 			beginRound = false;
 			startAnim = false;
 		} else if (textAnimState == TextAnim.KOText) {
@@ -153,6 +186,10 @@ public class AnimationText : MonoBehaviour {
 				textStepAnim = TextStepAnim.none;
 				time = 0;
 			}
+		} else if (textAnimState == TextAnim.FightText) {
+			canPlay = true;
+			FightAnim = false;
+			textStepAnim = TextStepAnim.none;
 		}
 	}
 }
