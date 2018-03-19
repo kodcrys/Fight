@@ -80,12 +80,12 @@ public class StartSceneManager : MonoBehaviour {
 		CheckSetting ();
 
 		// Chua lam tat app thi tra ze
-		if (SaveManager.instance.state.isFirstOpenApp) {
+		/*if (SaveManager.instance.state.isFirstOpenApp) {
 			dailyRewardObj.SetActive (true);
 			SaveManager.instance.state.isFirstOpenApp = false;
 			SaveManager.instance.Save ();
 		} else
-			dailyRewardObj.SetActive (false);
+			dailyRewardObj.SetActive (false);*/
 
 		DisplayClaimRewardDaily ();
 	}

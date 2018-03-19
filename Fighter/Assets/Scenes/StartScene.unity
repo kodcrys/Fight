@@ -41640,6 +41640,8 @@ MonoBehaviour:
   health: 0
   defend: 0
   atk: 0
+  stamina: 0
+  maxHealth: 0
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
@@ -41663,6 +41665,8 @@ MonoBehaviour:
   timeInter: 0.45
   atkText: {fileID: 0}
   healthText: {fileID: 0}
+  healthImage: {fileID: 0}
+  staminaImage: {fileID: 0}
   isUIAni: 1
 --- !u!114 &740341251
 MonoBehaviour:
@@ -54443,6 +54447,8 @@ MonoBehaviour:
   health: 0
   defend: 0
   atk: 0
+  stamina: 0
+  maxHealth: 0
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
@@ -54466,6 +54472,8 @@ MonoBehaviour:
   timeInter: 0.45
   atkText: {fileID: 0}
   healthText: {fileID: 0}
+  healthImage: {fileID: 0}
+  staminaImage: {fileID: 0}
   isUIAni: 1
 --- !u!114 &993801298
 MonoBehaviour:
@@ -56115,6 +56123,8 @@ MonoBehaviour:
   health: 0
   defend: 0
   atk: 0
+  stamina: 0
+  maxHealth: 0
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
@@ -56138,6 +56148,8 @@ MonoBehaviour:
   timeInter: 0.45
   atkText: {fileID: 0}
   healthText: {fileID: 0}
+  healthImage: {fileID: 0}
+  staminaImage: {fileID: 0}
   isUIAni: 1
 --- !u!114 &1025194257
 MonoBehaviour:
@@ -63278,6 +63290,8 @@ MonoBehaviour:
   health: 0
   defend: 0
   atk: 0
+  stamina: 0
+  maxHealth: 0
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
@@ -63301,6 +63315,8 @@ MonoBehaviour:
   timeInter: 0.45
   atkText: {fileID: 0}
   healthText: {fileID: 0}
+  healthImage: {fileID: 0}
+  staminaImage: {fileID: 0}
   isUIAni: 1
 --- !u!114 &1118219381
 MonoBehaviour:
@@ -75365,6 +75381,8 @@ MonoBehaviour:
   health: 0
   defend: 0
   atk: 0
+  stamina: 0
+  maxHealth: 0
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
@@ -75388,6 +75406,8 @@ MonoBehaviour:
   timeInter: 0.45
   atkText: {fileID: 0}
   healthText: {fileID: 0}
+  healthImage: {fileID: 0}
+  staminaImage: {fileID: 0}
   isUIAni: 1
 --- !u!114 &1271464389
 MonoBehaviour:
@@ -76101,6 +76121,8 @@ MonoBehaviour:
   health: 0
   defend: 0
   atk: 0
+  stamina: 0
+  maxHealth: 0
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
@@ -76124,6 +76146,8 @@ MonoBehaviour:
   timeInter: 0.45
   atkText: {fileID: 0}
   healthText: {fileID: 0}
+  healthImage: {fileID: 0}
+  staminaImage: {fileID: 0}
   isUIAni: 1
 --- !u!114 &1295972554
 MonoBehaviour:
@@ -77155,6 +77179,8 @@ MonoBehaviour:
   health: 0
   defend: 0
   atk: 0
+  stamina: 0
+  maxHealth: 0
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
@@ -77178,6 +77204,8 @@ MonoBehaviour:
   timeInter: 0.45
   atkText: {fileID: 0}
   healthText: {fileID: 0}
+  healthImage: {fileID: 0}
+  staminaImage: {fileID: 0}
   isUIAni: 1
 --- !u!1 &1312353988
 GameObject:
@@ -78175,6 +78203,8 @@ MonoBehaviour:
   health: 0
   defend: 0
   atk: 0
+  stamina: 0
+  maxHealth: 0
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
@@ -78198,6 +78228,8 @@ MonoBehaviour:
   timeInter: 0.45
   atkText: {fileID: 0}
   healthText: {fileID: 0}
+  healthImage: {fileID: 0}
+  staminaImage: {fileID: 0}
   isUIAni: 1
 --- !u!114 &1332690254
 MonoBehaviour:
@@ -85785,6 +85817,8 @@ MonoBehaviour:
   health: 0
   defend: 0
   atk: 0
+  stamina: 0
+  maxHealth: 0
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
@@ -85808,6 +85842,8 @@ MonoBehaviour:
   timeInter: 0.45
   atkText: {fileID: 0}
   healthText: {fileID: 0}
+  healthImage: {fileID: 0}
+  staminaImage: {fileID: 0}
   isUIAni: 1
 --- !u!114 &1458444876
 MonoBehaviour:
@@ -114210,6 +114246,8 @@ MonoBehaviour:
   health: 0
   defend: 0
   atk: 0
+  stamina: 0
+  maxHealth: 0
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
@@ -114233,6 +114271,8 @@ MonoBehaviour:
   timeInter: 0.45
   atkText: {fileID: 0}
   healthText: {fileID: 0}
+  healthImage: {fileID: 0}
+  staminaImage: {fileID: 0}
   isUIAni: 1
 --- !u!114 &1933232390
 MonoBehaviour:
@@ -115407,6 +115447,8 @@ MonoBehaviour:
   health: 0
   defend: 0
   atk: 0
+  stamina: 0
+  maxHealth: 0
   fingerRight: 0
   fingerLeft: 0
   changeColor: 0
@@ -115430,6 +115472,8 @@ MonoBehaviour:
   timeInter: 0.45
   atkText: {fileID: 0}
   healthText: {fileID: 0}
+  healthImage: {fileID: 0}
+  staminaImage: {fileID: 0}
   isUIAni: 1
 --- !u!114 &1949988544
 MonoBehaviour:
