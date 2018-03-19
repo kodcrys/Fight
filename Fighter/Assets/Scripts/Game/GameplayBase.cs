@@ -18,6 +18,9 @@ public class GameplayBase : MonoBehaviour {
 	[SerializeField]
 	List<Sprite> numRound = new List<Sprite>();
 
+	[SerializeField]
+	List<GameObject> wincheck = new List<GameObject>();
+
 
 	public void Start(){
 		instance = this;
@@ -42,5 +45,9 @@ public class GameplayBase : MonoBehaviour {
 			else
 				mainCamera.orthographicSize += 2 * Time.deltaTime;
 		}
+	}
+
+	void CheckWin(){
+		
 	}
 }

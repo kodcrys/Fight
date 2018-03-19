@@ -15,6 +15,7 @@ public class FingerLeftControl : FingerBase {
 		changeColor = false;
 		oneShotColor = false;
 		stopTime = true;
+		a = 0;
 	}
 	
 	// Update is called once per frame
@@ -305,16 +306,21 @@ public class FingerLeftControl : FingerBase {
 
 	IEnumerator WaitForNextRound(float time){
 		yield return new WaitForSeconds (time);
-		SaveManager.instance.state.winCountLeft++;
-		SaveManager.instance.Save ();
-		if (SaveManager.instance.state.winCountLeft <= 2) {
-			if (!AnimationText.endRound) {
-				SaveManager.instance.state.roundCount++;
-				SaveManager.instance.Save ();
-				AnimationText.endRound = true;
+		a++;
+		if (a == 1) {
+			SaveManager.instance.state.winCountLeft++;
+			if (SaveManager.instance.state.winCountLeft < 2) {
+				if (!AnimationText.endRound) {
+					SaveManager.instance.state.roundCount++;
+					AnimationText.endRound = true;
+				}
+			} else {
+				if (!AnimationText.endRound) {
+					AnimationText.endRound = true;
+				}
 			}
+			SaveManager.instance.Save ();
 		}
-
 	}
 
 	IEnumerator WaitChangeColor(float time){

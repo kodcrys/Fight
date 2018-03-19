@@ -41,6 +41,7 @@ public class AnimationText : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		Debug.Log (SaveManager.instance.state.roundCount);
 		switch (textStepAnim) {
 		case TextStepAnim.none:
 			if (textAnimState == TextAnim.RoundText) {
@@ -141,9 +142,9 @@ public class AnimationText : MonoBehaviour {
 			}
 		} else if (textAnimState == TextAnim.KOText) {
 			if (step == 0) {
-				one.localPosition = Vector3.MoveTowards (one.localPosition, new Vector3 (-50, 0, 0), Time.deltaTime * speed);
-				two.localPosition = Vector3.MoveTowards (two.localPosition, new Vector3 (50, 0, 0), Time.deltaTime * speed);
-				if (one.localPosition == new Vector3 (-50, 0, 0)) {
+				one.localPosition = Vector3.MoveTowards (one.localPosition, new Vector3 (-150, -20, 0), Time.deltaTime * speed);
+				two.localPosition = Vector3.MoveTowards (two.localPosition, new Vector3 (100, -200, 0), Time.deltaTime * speed);
+				if (one.localPosition == new Vector3 (-150, -20, 0)) {
 					step = 1;
 				}
 			} else if (step == 1) {
@@ -182,8 +183,14 @@ public class AnimationText : MonoBehaviour {
 		} else if (textAnimState == TextAnim.KOText) {
 			time += Time.deltaTime;
 			if (time >= timeEnd) {
-				UnityEngine.SceneManagement.SceneManager.LoadScene ("MainGameScene");
-				textStepAnim = TextStepAnim.none;
+				if (SaveManager.instance.state.winCountLeft >= 2 || SaveManager.instance.state.winCountRight >= 2) {
+					endRound = false;
+					textStepAnim = TextStepAnim.none;
+				} else {
+					UnityEngine.SceneManagement.SceneManager.LoadScene ("MainGameScene");
+					endRound = false;
+					textStepAnim = TextStepAnim.none;
+				}
 				time = 0;
 			}
 		} else if (textAnimState == TextAnim.FightText) {
