@@ -23,7 +23,10 @@ public class AnimationFadeManager : MonoBehaviour {
 						fadeOption.timeInter = 3.5f;
 					}
 				}
-				fadeOption.fadeLocation [0].sprite = fadeOption.fadeAnimOption [fadeOption.i];
+				if(fadeOption.isUI == false)
+					fadeOption.fadeLocation [0].sprite = fadeOption.fadeAnimOption [fadeOption.i];
+				else
+					fadeOption.faceList[0].sprite = fadeOption.fadeAnimOption [fadeOption.i];
 			} else if (fadeOption.leftControl.fingerAction == FingerBase.FingerState.Doing) {
 				if (fadeOption.leftControl.firstAtk) {
 					fadeOption.fadeLocation [1].sprite = fadeOption.fadeAnimOption [2];
@@ -50,7 +53,10 @@ public class AnimationFadeManager : MonoBehaviour {
 						fadeOption.timeInter = 3.5f;
 					}
 				}
-				fadeOption.fadeLocation [0].sprite = fadeOption.fadeAnimOption [fadeOption.i];
+				if(fadeOption.isUI == false)
+					fadeOption.fadeLocation [0].sprite = fadeOption.fadeAnimOption [fadeOption.i];
+				else
+					fadeOption.faceList[0].sprite = fadeOption.fadeAnimOption [fadeOption.i];
 			} else if (fadeOption.rightControl.fingerAction == FingerBase.FingerState.Doing) {
 				if (fadeOption.rightControl.firstAtk) {
 					fadeOption.fadeLocation [1].sprite = fadeOption.fadeAnimOption [2];
@@ -70,8 +76,10 @@ public class AnimationFadeManager : MonoBehaviour {
 
 [Serializable]
 public class FadeAnimOption{
+	public bool isUI = false;
 	public List<Sprite> fadeAnimOption = new List<Sprite>();
 	public List<SpriteRenderer> fadeLocation = new List<SpriteRenderer>();
+	public List<UnityEngine.UI.Image> faceList = new List<UnityEngine.UI.Image>();
 	public FingerLeftControl leftControl;
 	public FingerRightControl rightControl;
 	public float time, timeInter;
