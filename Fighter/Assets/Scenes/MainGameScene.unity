@@ -655,7 +655,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -100, y: 50}
+  m_AnchoredPosition: {x: -200, y: -20}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &405106599
@@ -862,8 +862,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1500, y: -800}
-  m_SizeDelta: {x: 267, y: 314}
+  m_AnchoredPosition: {x: 150, y: -200}
+  m_SizeDelta: {x: 459.5, y: 540.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &440690234
 MonoBehaviour:
@@ -1253,7 +1253,7 @@ MonoBehaviour:
   two: {fileID: 440690233}
   oneDes: {fileID: 347433160}
   twoDes: {fileID: 1844924125}
-  speed: 0
+  speed: 6000
   startAnim: 0
 --- !u!114 &624195571
 MonoBehaviour:
@@ -2269,6 +2269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOption:
+    isUI: 0
     fadeAnimOption:
     - {fileID: 21300000, guid: 94033dc99368d41caad616234945fc75, type: 3}
     - {fileID: 21300000, guid: da59a700734a64a8180951f820d3dbf2, type: 3}
@@ -2280,6 +2281,7 @@ MonoBehaviour:
     - {fileID: 861390493}
     - {fileID: 1065994259}
     - {fileID: 1064252092}
+    faceList: []
     leftControl: {fileID: 1169754934}
     rightControl: {fileID: 0}
     time: 0
@@ -2329,6 +2331,7 @@ MonoBehaviour:
   winCount: 0
   time: 0
   timeInter: 0.45
+  a: 0
   atkText: {fileID: 0}
   healthText: {fileID: 0}
   healthImage: {fileID: 595790668}
@@ -2846,6 +2849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOption:
+    isUI: 0
     fadeAnimOption:
     - {fileID: 21300000, guid: 0ce856b83a44e47fda264dd68fbabe89, type: 3}
     - {fileID: 21300000, guid: fa1b3412b08e84992a7627c8d417087e, type: 3}
@@ -2857,6 +2861,7 @@ MonoBehaviour:
     - {fileID: 1955287538}
     - {fileID: 143412621}
     - {fileID: 1666885726}
+    faceList: []
     leftControl: {fileID: 0}
     rightControl: {fileID: 1540023914}
     time: 0
@@ -2906,6 +2911,7 @@ MonoBehaviour:
   winCount: 0
   time: 0
   timeInter: 0.45
+  a: 0
   atkText: {fileID: 0}
   healthText: {fileID: 0}
   healthImage: {fileID: 1303841578}
@@ -3112,7 +3118,7 @@ MonoBehaviour:
   two: {fileID: 0}
   oneDes: {fileID: 0}
   twoDes: {fileID: 0}
-  speed: 0
+  speed: 6000
   startAnim: 0
 --- !u!114 &1615643545
 MonoBehaviour:
@@ -3411,7 +3417,7 @@ MonoBehaviour:
   two: {fileID: 2040150335}
   oneDes: {fileID: 1616378464}
   twoDes: {fileID: 444303846}
-  speed: 0
+  speed: 6000
   startAnim: 0
 --- !u!1 &1666885724
 GameObject:
@@ -3658,7 +3664,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 100, y: -50}
+  m_AnchoredPosition: {x: 150, y: -200}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1927431902
@@ -3693,8 +3699,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1500, y: 800}
-  m_SizeDelta: {x: 266, y: 314}
+  m_AnchoredPosition: {x: -200, y: -20}
+  m_SizeDelta: {x: 457.7, y: 540.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1927431904
 MonoBehaviour:

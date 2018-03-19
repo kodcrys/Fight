@@ -47,6 +47,8 @@ public class FingerBase : MonoBehaviour {
 
 	public float time, timeInter;
 
+	public float a;
+
 	public UnityEngine.UI.Text atkText, healthText;
 
 	public UnityEngine.UI.Image healthImage, staminaImage;
