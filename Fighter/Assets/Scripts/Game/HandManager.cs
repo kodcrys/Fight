@@ -68,9 +68,9 @@ public class HandManager : MonoBehaviour {
 				Twohand.transform.Rotate (Twohand.transform.localRotation.x, Twohand.transform.localRotation.y, speedRot * Time.deltaTime);
 
 			if (!changePot)
-				Twohand.transform.localPosition = Vector3.MoveTowards (Twohand.transform.localPosition, new Vector3 (Twohand.transform.localPosition.x + 1.5f, 0, Twohand.transform.localPosition.z), Time.deltaTime * speedPot);
+				Twohand.transform.localPosition = Vector3.MoveTowards (Twohand.transform.localPosition, new Vector3 (Twohand.transform.localPosition.x + 1.5f, Twohand.transform.localPosition.y, Twohand.transform.localPosition.z), Time.deltaTime * speedPot);
 			else
-				Twohand.transform.localPosition = Vector3.MoveTowards (Twohand.transform.localPosition, new Vector3 (Twohand.transform.localPosition.x - 1.5f, 0, Twohand.transform.localPosition.z), Time.deltaTime * speedPot);
+				Twohand.transform.localPosition = Vector3.MoveTowards (Twohand.transform.localPosition, new Vector3 (Twohand.transform.localPosition.x - 1.5f, Twohand.transform.localPosition.y, Twohand.transform.localPosition.z), Time.deltaTime * speedPot);
 		} else if (changeAnim == 1) {
 			Twohand.transform.localScale = Vector3.MoveTowards (Twohand.transform.localScale, new Vector3 (1.08f, 1.08f, Twohand.transform.localScale.z), Time.deltaTime * speedScale);
 			if (!changeRot)
@@ -78,9 +78,9 @@ public class HandManager : MonoBehaviour {
 			else
 				Twohand.transform.Rotate (Twohand.transform.localRotation.x, Twohand.transform.localRotation.y, -speedRot * Time.deltaTime);
 			if (!changePot)
-				Twohand.transform.localPosition = Vector3.MoveTowards (Twohand.transform.localPosition, new Vector3 (Twohand.transform.localPosition.x + 1.5f, 0, Twohand.transform.localPosition.z), Time.deltaTime * speedPot);
+				Twohand.transform.localPosition = Vector3.MoveTowards (Twohand.transform.localPosition, new Vector3 (Twohand.transform.localPosition.x + 1.5f, Twohand.transform.localPosition.y, Twohand.transform.localPosition.z), Time.deltaTime * speedPot);
 			else
-				Twohand.transform.localPosition = Vector3.MoveTowards (Twohand.transform.localPosition, new Vector3 (Twohand.transform.localPosition.x - 1.5f, 0, Twohand.transform.localPosition.z), Time.deltaTime * speedPot);
+				Twohand.transform.localPosition = Vector3.MoveTowards (Twohand.transform.localPosition, new Vector3 (Twohand.transform.localPosition.x - 1.5f, Twohand.transform.localPosition.y, Twohand.transform.localPosition.z), Time.deltaTime * speedPot);
 		}
 	}
 }

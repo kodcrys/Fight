@@ -49,9 +49,13 @@ public class FingerBase : MonoBehaviour {
 
 	public float a;
 
+	public int fingerAminChanger;
+
 	public UnityEngine.UI.Text atkText, healthText;
 
 	public UnityEngine.UI.Image healthImage, staminaImage;
+
+	public Animator stunFinger;
 
 	public virtual void HanderHealth(){
 		

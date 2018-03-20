@@ -115,7 +115,7 @@ public class FingerRightControl : FingerBase {
 			}
 		}
 
-		if (!FingerBase.changeAnim) {
+		if (fingerAminChanger == 0) {
 			if (time >= timeInter) {
 				time = 0;
 			} else {
@@ -138,13 +138,15 @@ public class FingerRightControl : FingerBase {
 				finger.transform.Rotate (finger.transform.localRotation.x, finger.transform.localRotation.y, rot2);
 				finger.transform.localPosition = Vector3.MoveTowards (finger.transform.localPosition, new Vector3 (finger.transform.localPosition.x - pos2, finger.transform.localPosition.y, finger.transform.localPosition.z), Time.deltaTime * speedScale);
 			}
+		} else if (fingerAminChanger == 1) {
+			stunFinger.enabled = true;
 		}
 	}
 
 	public override void DoAtk(){
 		if (!firstAtk && !enemyLeft.firstAtk) {
 			firstAtk = true;
-
+			enemyLeft.fingerAminChanger = 1;
 			if(finger != null)
 				finger.SetActive (false);
 			if (fingerDown != null)
@@ -297,6 +299,7 @@ public class FingerRightControl : FingerBase {
 	public void UnClickAtk(){
 		touch = true;
 		doingSomething = false;
+		enemyLeft.fingerAminChanger = 0;
 		if (!isAtk)
 			fingerAction = FingerState.Idel;
 		FingerBase.changeAnim = false;

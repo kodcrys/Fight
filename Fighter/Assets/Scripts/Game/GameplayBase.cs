@@ -43,8 +43,8 @@ public class GameplayBase : MonoBehaviour {
 			leftButton.SetActive (false);
 		}
 		if (zoomCamera) {
-			if (mainCamera.orthographicSize >= 6)
-				mainCamera.orthographicSize = 6;
+			if (mainCamera.orthographicSize >= SaveManager.instance.state.cameraSize)
+				mainCamera.orthographicSize = SaveManager.instance.state.cameraSize;
 			else
 				mainCamera.orthographicSize += 2 * Time.deltaTime;
 		}
