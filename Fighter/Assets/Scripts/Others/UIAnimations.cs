@@ -654,15 +654,13 @@ public class UIAnimations : MonoBehaviour {
 	}
 
 	public void ChangeIconFrameChangeBtn(int i) {
-		for(int j = 0; j<changeImgBtn.Length; j++) {
-			if (btnChange.sprite == changeImgBtn [j]) {
-				Debug.Log (btnChange.sprite.name + " " + changeImgBtn [i].name);
-				btnsChange [j].transform.position = posBtn [0].transform.position;
-			} else {
-				btnsChange [j].transform.position = posBtn [j].transform.position;
-			}
-		}
 		btnChange.sprite = changeImgBtn [i];
+
+		for(int j = 0; j<changeImgBtn.Length; j++) {
+			if (btnChange.sprite == changeImgBtn [j]) 
+				btnsChange [j].transform.position = posBtn [0].transform.position;
+		}
+
 		isRunAniBtnChange = true;
 	}
 
