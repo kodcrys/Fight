@@ -38,4 +38,6 @@ public class SaveState {
 	public int winCountRight = 0;
 
 	public int roundCount = 1;
+
+	public float cameraSize = 6.21f;
 }

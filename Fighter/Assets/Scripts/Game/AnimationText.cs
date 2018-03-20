@@ -24,6 +24,9 @@ public class AnimationText : MonoBehaviour {
 	[SerializeField]
 	float speed;
 
+	[SerializeField]
+	GameObject boomPrefab;
+
 	public bool startAnim;
 
 	public static bool FightAnim;
@@ -41,7 +44,6 @@ public class AnimationText : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (SaveManager.instance.state.roundCount);
 		switch (textStepAnim) {
 		case TextStepAnim.none:
 			if (textAnimState == TextAnim.RoundText) {
@@ -156,9 +158,10 @@ public class AnimationText : MonoBehaviour {
 			}
 		} else if (textAnimState == TextAnim.FightText) {
 			if (step == 0) {
-				one.localPosition = Vector3.MoveTowards (one.localPosition, new Vector3 (-450, -100, 0), Time.deltaTime * speed);
+				one.localPosition = Vector3.MoveTowards (one.localPosition, new Vector3 (-250, -100, 0), Time.deltaTime * speed);
 				two.localPosition = Vector3.MoveTowards (two.localPosition, new Vector3 (250, -100, 0), Time.deltaTime * speed);
-				if (one.localPosition == new Vector3 (-450, -100, 0)) {
+				if (one.localPosition == new Vector3 (-250, -100, 0)) {
+					Instantiate (boomPrefab, new Vector3 (0, -1, 0), Quaternion.identity);
 					step = 1;
 				}
 			} else if (step == 1) {

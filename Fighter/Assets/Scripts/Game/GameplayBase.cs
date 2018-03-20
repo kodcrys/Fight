@@ -19,7 +19,10 @@ public class GameplayBase : MonoBehaviour {
 	List<Sprite> numRound = new List<Sprite>();
 
 	[SerializeField]
-	List<GameObject> wincheck = new List<GameObject>();
+	List<GameObject> winCheckRight = new List<GameObject>();
+
+	[SerializeField]
+	List<GameObject> winCheckLeft = new List<GameObject>();
 
 
 	public void Start(){
@@ -45,9 +48,21 @@ public class GameplayBase : MonoBehaviour {
 			else
 				mainCamera.orthographicSize += 2 * Time.deltaTime;
 		}
+
+		CheckWin ();
 	}
 
 	void CheckWin(){
-		
+		if (SaveManager.instance.state.winCountRight > 0) {
+			for (int i = 1; i <= SaveManager.instance.state.winCountRight; i++) {
+				winCheckRight [i - 1].SetActive (true);
+			}
+		}
+
+		if (SaveManager.instance.state.winCountLeft > 0) {
+			for (int i = 1; i <= SaveManager.instance.state.winCountLeft; i++) {
+				winCheckLeft [i - 1].SetActive (true);
+			}
+		}
 	}
 }
