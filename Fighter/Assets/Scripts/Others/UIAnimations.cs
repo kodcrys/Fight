@@ -174,6 +174,20 @@ public class UIAnimations : MonoBehaviour {
 	[SerializeField]
 	GameObject backLibrarybtn;
 
+	[Header("Frame change")]
+	[SerializeField]
+	bool isRunAniBtnChange;
+	[SerializeField]
+	bool isRunAniFrameChange;
+	[SerializeField]
+	Sprite[] changeImgBtn;
+	[SerializeField]
+	GameObject[] posBtn;
+	[SerializeField]
+	GameObject[] btnsChange;
+	[SerializeField]
+	Image btnChange;
+
 	void OnEnable() {
 		if (contentTxt != null)
 			contentTxt.text = btnContent [indexMode];
@@ -627,39 +641,69 @@ public class UIAnimations : MonoBehaviour {
 		}
 	}
 
+	public void ActiveRunFrameChangeBtn() {
+		if (isRunAniBtnChange)
+			isRunAniBtnChange = false;
+		else
+			isRunAniBtnChange = true;
+	}
+
+	void ScaleFrameChangeBtnTo(Vector3 desScale) {
+		if (target.localScale != desScale)
+			target.localScale = Vector3.MoveTowards (target.localScale, desScale, speed * Time.deltaTime);
+	}
+
+	public void ChangeIconFrameChangeBtn(int i) {
+		for(int j = 0; j<changeImgBtn.Length; j++) {
+			if (btnChange.sprite == changeImgBtn [j]) {
+				Debug.Log (btnChange.sprite.name + " " + changeImgBtn [i].name);
+				btnsChange [j].transform.position = posBtn [0].transform.position;
+			} else {
+				btnsChange [j].transform.position = posBtn [j].transform.position;
+			}
+		}
+		btnChange.sprite = changeImgBtn [i];
+		isRunAniBtnChange = true;
+	}
+
 	IEnumerator RunAni(){
 		while (true) {
-			if (isRunChangeColorAni)
-				ChangeColor ();
-			if (isRunMoveAni)
-				Move3DesGoDes1ToDes3 ();
-			else if (isMoveAni)
-				Move3DesBackDes3ToDes1 ();
-			if (isRunScaleAni)
-				ScaleToScale ();
-			else if (isScaleAni)
-				ScaleToMin ();
-			if (isRunBtnPlayAni) {
-				AniBtnNextOrPre ();
-				ScaleToScale ();
-			}
-			if (isRunSeqAni)
-				AniSequenceMoveGo ();
-			else if(isSequence)
-				AniSequenceMoveBack ();
-			if (isRunShakeAni)
-				AniShake ();
-			else if (isShakeAni)
-				target.eulerAngles = new Vector3 (0, 0, 0);
-			if (isRunRotateAni)
-				RotateAni ();
-			if (isRunRewardAni)
-				RewardAni ();
-			if (isRunAniGatcha)
-				GatchaAniX10 ();
-			if (isRunEffX10Ani)
-				EffectGatchaX10ScaleRun ();
-
+			//if (isRunAniBtnChange == false) {
+				if (isRunChangeColorAni)
+					ChangeColor ();
+				if (isRunMoveAni)
+					Move3DesGoDes1ToDes3 ();
+				else if (isMoveAni)
+					Move3DesBackDes3ToDes1 ();
+				if (isRunScaleAni)
+					ScaleToScale ();
+				else if (isScaleAni)
+					ScaleToMin ();
+				if (isRunBtnPlayAni) {
+					AniBtnNextOrPre ();
+					ScaleToScale ();
+				}
+				if (isRunSeqAni)
+					AniSequenceMoveGo ();
+				else if (isSequence)
+					AniSequenceMoveBack ();
+				if (isRunShakeAni)
+					AniShake ();
+				else if (isShakeAni)
+					target.eulerAngles = new Vector3 (0, 0, 0);
+				if (isRunRotateAni)
+					RotateAni ();
+				if (isRunRewardAni)
+					RewardAni ();
+				if (isRunAniGatcha)
+					GatchaAniX10 ();
+				if (isRunEffX10Ani)
+					EffectGatchaX10ScaleRun ();
+				if (isRunAniBtnChange)
+					ScaleFrameChangeBtnTo (maxScale);
+				else if(isRunAniFrameChange)
+					ScaleFrameChangeBtnTo (minScale);
+			//}
 			yield return new WaitForSeconds (0.02f);
 		}
 	}
