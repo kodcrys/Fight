@@ -66,7 +66,7 @@ public class ChooseCharManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		isTurnPlayer1 = true;
+		isTurnPlayer1 = false;
 		chooseSymbol.SetActive (false);
 	}
 
@@ -119,6 +119,7 @@ public class ChooseCharManager : MonoBehaviour {
 		//chooseSymbol.transform.SetParent (gob.transform);
 		chooseSymbol.SetActive (true);
 		CointainData ctData = gob.GetComponent<CointainData> ();
+		Debug.Log (isTurnPlayer1);
 		if (ctData.dataChar != null) {
 			if (isTurnPlayer1) {
 				hatSymbol2.gameObject.SetActive (false);
