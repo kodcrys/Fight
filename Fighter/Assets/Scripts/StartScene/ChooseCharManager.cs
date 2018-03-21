@@ -124,6 +124,7 @@ public class ChooseCharManager : MonoBehaviour {
 		topBar.isRunMoveAni = false;
 		midBar.isRunScaleAni = false;
 		botBar.isRunMoveAni = false;
+		showTop.isRunMoveAni = true;
 
 		moveChooseFrame.isRunMoveAni = true;
 	}
