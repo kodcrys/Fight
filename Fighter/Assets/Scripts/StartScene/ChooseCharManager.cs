@@ -157,10 +157,21 @@ public class ChooseCharManager : MonoBehaviour {
 
 			} else {
 				hatSymbol.gameObject.SetActive (false);
-				hatMainR.gameObject.SetActive (true);
-				hatMainR.sprite = ctData.dataChar.equipmentOfChar;
-				amorMainR.gameObject.SetActive (false);
-				weaponMainR.gameObject.SetActive (false);
+
+				if (ctData.dataItem.typeItem == TypeObject.hat) {
+					hatMainR.gameObject.SetActive (true);
+					hatMainR.sprite = ctData.dataItem.avatar;
+				}
+
+				if (ctData.dataItem.typeItem == TypeObject.tshirt) {
+					hatMainR.gameObject.SetActive (true);
+					hatMainR.sprite = ctData.dataItem.avatar;
+				}
+
+				if (ctData.dataItem.typeItem == TypeObject.weapon) {
+					amorMainR.gameObject.SetActive (false);
+					amorMainR.sprite = ctData.dataItem.avatar;
+				}
 			}
 		}
 	}
