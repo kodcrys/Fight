@@ -59,6 +59,7 @@ public class FingerLeftControl : FingerBase {
 
 		if (health <= 0 || enemyRight.health <= 0) {
 			GameplayBase.instance.leftButton.SetActive (false);
+			AnimationText.canPlay = false;
 			if (stopTime) {
 				GameplayBase.instance.mainCamera.orthographicSize = 4;
 				fingerAction = FingerState.Doing;
@@ -72,7 +73,7 @@ public class FingerLeftControl : FingerBase {
 			fingerAtk.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
 			fingerDown.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
 			hand.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
-			StartCoroutine (WaitChangeColor (0.005f));
+			StartCoroutine (WaitChangeColor (0.0001f));
 		} else {
 			finger.GetComponent<SpriteRenderer> ().color = new Color32 (255, 207, 179, 255);
 			fingerAtk.GetComponent<SpriteRenderer> ().color = new Color32 (255, 207, 179, 255);

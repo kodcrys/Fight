@@ -2379,8 +2379,6 @@ MonoBehaviour:
   atk: 2
   stamina: 0
   maxHealth: 100
-  fingerRight: 0
-  fingerLeft: 0
   changeColor: 0
   oneShotColor: 0
   changeScale: 0
@@ -2420,9 +2418,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difLevel: 0
-  left: 0
+  left: 1
   right: 0
-  fingerAI: {fileID: 0}
+  finger: {fileID: 1169754930}
+  fingerAILeft: {fileID: 0}
+  fingerAIRight: {fileID: 0}
+  ranMove: 0
+  time: 0
+  timeInter: 0
 --- !u!1 &1238121525
 GameObject:
   m_ObjectHideFlags: 0
@@ -2977,8 +2980,6 @@ MonoBehaviour:
   atk: 2
   stamina: 0
   maxHealth: 100
-  fingerRight: 0
-  fingerLeft: 0
   changeColor: 0
   oneShotColor: 0
   changeScale: 0
@@ -3017,10 +3018,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24bb1861475ca4513864287b467312b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difLevel: 0
+  difLevel: 1
   left: 0
-  right: 0
-  fingerAI: {fileID: 0}
+  right: 1
+  finger: {fileID: 1540023910}
+  fingerAILeft: {fileID: 0}
+  fingerAIRight: {fileID: 0}
+  ranMove: 0
+  time: 0
+  timeInter: 0.4
 --- !u!1 &1576644765
 GameObject:
   m_ObjectHideFlags: 0

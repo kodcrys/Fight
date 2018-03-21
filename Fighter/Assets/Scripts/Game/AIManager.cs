@@ -23,6 +23,9 @@ public class AIManager : MonoBehaviour {
 	[SerializeField]
 	int ranMove;
 
+	[SerializeField]
+	float time, timeInter;
+
 	// Use this for initialization
 	void Start () {
 		// chon do kho code o day
@@ -34,35 +37,65 @@ public class AIManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		switch (difLevel) {
-		case DifficultLevel.Easy:
-			EasyMode ();
-			break;
-		case DifficultLevel.Normal:
-			break;
-		case DifficultLevel.Hard:
-			break;
+		if (AnimationText.canPlay) {
+			time += Time.deltaTime;
+			switch (difLevel) {
+			case DifficultLevel.Easy:
+				EasyMode ();
+				break;
+			case DifficultLevel.Normal:
+				break;
+			case DifficultLevel.Hard:
+				break;
+			}
 		}
 	}
 
 	void EasyMode(){
 		if (right) {
 			if (fingerAIRight.enemyLeft.fingerAction == FingerBase.FingerState.Idel) {
-				ranMove = Random.Range (0, 100);
-				if (ranMove > 50)
-					AIClick ();
-				else
-					AIUnClick ();
+				if (time >= timeInter) {
+					ranMove = Random.Range (0, 100);
+					time = 0;
+				}
+				if (ranMove > 50) {
+					if (!fingerAIRight.isAtk)
+						AIClick ();
+				} else {
+					if (!fingerAIRight.isAtk)
+						AIUnClick ();
+				}
+			} else {
+				if (time >= timeInter) {
+					ranMove = Random.Range (0, 100);
+					time = 0;
+				}
+				if (ranMove > 70) {
+					if (!fingerAIRight.isAtk)
+						AIClick ();
+				} else {
+					if (!fingerAIRight.isAtk)
+						AIUnClick ();
+				}
 			}
 		}
 			
 	}
 
 	void AIClick(){
-		if (left)
-			FingerLeftControl.instance.ClickAtk ();
-		else if (right)
-			FingerRightControl.instance.ClickAtk ();
+		if (left) {
+			fingerAILeft.doingSomething = true;
+			if (fingerAILeft.touch) {
+				if (!fingerAILeft.isAtk)
+					fingerAILeft.DoAtk ();
+			}
+		} else if (right) {
+			fingerAIRight.doingSomething = true;
+			if (fingerAIRight.touch) {
+				if (!fingerAIRight.isAtk)
+					fingerAIRight.DoAtk ();
+			}
+		}
 	}
 
 	void AIUnClick(){
