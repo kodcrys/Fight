@@ -52,6 +52,18 @@ public class ChooseCharManager : MonoBehaviour {
 	[SerializeField]
 	UnityEngine.UI.Image weaponMainL;
 
+	[Header("UIAnimations")]
+	[SerializeField]
+	UIAnimations topBar;
+	[SerializeField]
+	UIAnimations midBar;
+	[SerializeField]
+	UIAnimations botBar;
+	[SerializeField]
+	UIAnimations moveChooseFrame;
+	[SerializeField]
+	UIAnimations showTop;
+
 	bool isTurnPlayer1 = false;
 
 	GameObject objFollow;
@@ -108,6 +120,14 @@ public class ChooseCharManager : MonoBehaviour {
 		}
 	}
 
+	public void AniChangeScene() {
+		topBar.isRunMoveAni = false;
+		midBar.isRunScaleAni = false;
+		botBar.isRunMoveAni = false;
+
+		moveChooseFrame.isRunMoveAni = true;
+	}
+
 	public void ChooseChar() {
 		GameObject gob = EventSystem.current.currentSelectedGameObject;
 		//chooseSymbol.transform.position = gob.transform.position;
@@ -135,7 +155,7 @@ public class ChooseCharManager : MonoBehaviour {
 				weaponMainR.gameObject.SetActive (false);
 			}
 		}
-		Debug.Log (ctData.dataItem.name);
+	
 		if (ctData.dataItem != null) {
 			if (isTurnPlayer1) {
 				hatSymbol2.gameObject.SetActive (false);
