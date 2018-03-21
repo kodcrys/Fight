@@ -43,5 +43,5 @@ public class SaveState {
 
 	public bool player1AI = false;
 
-	public bool player2AI = false;
+	public bool player2AI = true;
 }

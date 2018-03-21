@@ -4,29 +4,39 @@ using UnityEngine;
 
 public class AIManager : MonoBehaviour {
 
-	enum DifficultLevel {none, Easy, Normal, Hard}
-	[SerializeField]
-	DifficultLevel difLevel = DifficultLevel.none;
+	public enum DifficultLevel {none, Easy, Normal, Hard}
+
+	public DifficultLevel difLevel = DifficultLevel.none;
 
 	[SerializeField]
 	bool left, right;
 
 	[SerializeField]
-	GameObject fingerAI;
+	GameObject finger;
+
+	[SerializeField]
+	FingerLeftControl fingerAILeft;
+
+	[SerializeField]
+	FingerRightControl fingerAIRight;
+
+	[SerializeField]
+	int ranMove;
 
 	// Use this for initialization
 	void Start () {
 		// chon do kho code o day
 		if (left)
-			fingerAI.GetComponent<FingerLeftControl> ();
+			fingerAILeft = finger.GetComponent<FingerLeftControl> ();
 		else if (right)
-			fingerAI.GetComponent<FingerRightControl>();
+			fingerAIRight = finger.GetComponent<FingerRightControl> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		switch (difLevel) {
 		case DifficultLevel.Easy:
+			EasyMode ();
 			break;
 		case DifficultLevel.Normal:
 			break;
@@ -36,7 +46,16 @@ public class AIManager : MonoBehaviour {
 	}
 
 	void EasyMode(){
-		
+		if (right) {
+			if (fingerAIRight.enemyLeft.fingerAction == FingerBase.FingerState.Idel) {
+				ranMove = Random.Range (0, 100);
+				if (ranMove > 50)
+					AIClick ();
+				else
+					AIUnClick ();
+			}
+		}
+			
 	}
 
 	void AIClick(){

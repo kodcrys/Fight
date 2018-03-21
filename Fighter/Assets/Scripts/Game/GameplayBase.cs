@@ -27,22 +27,9 @@ public class GameplayBase : MonoBehaviour {
 	[SerializeField]
 	GameObject player1, player2;
 
-	void Awake(){
-		if (!SaveManager.instance.state.player1AI) {
-			player1.GetComponent<AIManager> ().enabled = false;
-		} else if (SaveManager.instance.state.player1AI) {
-			player1.GetComponent<AIManager> ().enabled = true;
-		}
-
-		if (!SaveManager.instance.state.player2AI) {
-			player2.GetComponent<AIManager> ().enabled = false;
-		} else if (SaveManager.instance.state.player2AI) {
-			player2.GetComponent<AIManager> ().enabled = true;
-		}
-	}
-
 	public void Start(){
 		instance = this;
+		CheckAI ();
 		zoomCamera = false;
 		if (SaveManager.instance.state.roundCount == 1)
 			roundNumImg.sprite = numRound [0];
@@ -69,6 +56,20 @@ public class GameplayBase : MonoBehaviour {
 		}
 
 		CheckWin ();
+	}
+
+	void CheckAI(){
+		if (!SaveManager.instance.state.player1AI) {
+			player1.GetComponent<AIManager> ().enabled = false;
+		} else if (SaveManager.instance.state.player1AI) {
+			player1.GetComponent<AIManager> ().enabled = true;
+		}
+
+		if (!SaveManager.instance.state.player2AI) {
+			player2.GetComponent<AIManager> ().enabled = false;
+		} else if (SaveManager.instance.state.player2AI) {
+			player2.GetComponent<AIManager> ().enabled = true;
+		}
 	}
 
 	void CheckWin(){
