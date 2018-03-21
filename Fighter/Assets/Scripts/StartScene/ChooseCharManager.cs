@@ -32,7 +32,7 @@ public class ChooseCharManager : MonoBehaviour {
 	[SerializeField]
 	Transform maskFrameChooseEquip;
 
-	[Header("PLayer1")]
+	[Header("PLayer2 or AI")]
 	[SerializeField]
 	UnityEngine.UI.Image hatSymbol;
 	[SerializeField]
@@ -42,7 +42,7 @@ public class ChooseCharManager : MonoBehaviour {
 	[SerializeField]
 	UnityEngine.UI.Image weaponMainR;
 
-	[Header("PLayer2 or AI")]
+	[Header("PLayer1")]
 	[SerializeField]
 	UnityEngine.UI.Image hatSymbol2;
 	[SerializeField]

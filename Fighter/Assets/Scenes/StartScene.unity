@@ -30836,14 +30836,14 @@ MonoBehaviour:
   chooseSymbol: {fileID: 1041132329}
   maskFrameChooseChar: {fileID: 940063256}
   maskFrameChooseEquip: {fileID: 958913719}
-  hatSymbol: {fileID: 0}
-  hatMainR: {fileID: 0}
-  amorMainR: {fileID: 0}
-  weaponMainR: {fileID: 0}
-  hatSymbol2: {fileID: 0}
-  hatMainL: {fileID: 0}
-  amorMainL: {fileID: 0}
-  weaponMainL: {fileID: 0}
+  hatSymbol: {fileID: 409336107}
+  hatMainR: {fileID: 1106056978}
+  amorMainR: {fileID: 1965988990}
+  weaponMainR: {fileID: 417479807}
+  hatSymbol2: {fileID: 666803228}
+  hatMainL: {fileID: 1257849541}
+  amorMainL: {fileID: 1502698998}
+  weaponMainL: {fileID: 1226939443}
   isPlayAI: 0
 --- !u!1 &466538128
 GameObject:
