@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class FingerRightControl : FingerBase {
 
+	public static FingerRightControl instance;
+
 	[SerializeField]
 	bool isUIAni;
 
 	// Use this for initialization
 	void Start () {
+		instance = this;
 		touch = true;
 		stamina = 100;
 		health = maxHealth;
@@ -291,9 +294,6 @@ public class FingerRightControl : FingerBase {
 			if (!isAtk)
 				fingerAction = FingerState.Atk;
 		}
-
-
-		FingerBase.changeAnim = true;
 	}
 
 	public void UnClickAtk(){
@@ -302,7 +302,6 @@ public class FingerRightControl : FingerBase {
 		enemyLeft.fingerAminChanger = 0;
 		if (!isAtk)
 			fingerAction = FingerState.Idel;
-		FingerBase.changeAnim = false;
 		enemyLeft.oneShotColor = false;
 	}
 

@@ -24,6 +24,22 @@ public class GameplayBase : MonoBehaviour {
 	[SerializeField]
 	List<GameObject> winCheckLeft = new List<GameObject>();
 
+	[SerializeField]
+	GameObject player1, player2;
+
+	void Awake(){
+		if (!SaveManager.instance.state.player1AI) {
+			player1.GetComponent<AIManager> ().enabled = false;
+		} else if (SaveManager.instance.state.player1AI) {
+			player1.GetComponent<AIManager> ().enabled = true;
+		}
+
+		if (!SaveManager.instance.state.player2AI) {
+			player2.GetComponent<AIManager> ().enabled = false;
+		} else if (SaveManager.instance.state.player2AI) {
+			player2.GetComponent<AIManager> ().enabled = true;
+		}
+	}
 
 	public void Start(){
 		instance = this;
@@ -36,8 +52,11 @@ public class GameplayBase : MonoBehaviour {
 
 	public void Update(){
 		if (AnimationText.canPlay) {
-			rightButton.SetActive (true);
-			leftButton.SetActive (true);
+			if (!SaveManager.instance.state.player2AI)
+				rightButton.SetActive (true);
+
+			if (!SaveManager.instance.state.player1AI)
+				leftButton.SetActive (true);
 		} else {
 			rightButton.SetActive (false);
 			leftButton.SetActive (false);

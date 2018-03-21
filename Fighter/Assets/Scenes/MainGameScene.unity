@@ -699,6 +699,8 @@ MonoBehaviour:
   winCheckLeft:
   - {fileID: 1452528520}
   - {fileID: 1646166497}
+  player1: {fileID: 1169754930}
+  player2: {fileID: 1540023910}
 --- !u!4 &405106601
 Transform:
   m_ObjectHideFlags: 0
@@ -2418,7 +2420,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difLevel: 0
-  useAI: 0
   left: 0
   right: 0
   fingerAI: {fileID: 0}
@@ -3017,7 +3018,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difLevel: 0
-  useAI: 0
   left: 0
   right: 0
   fingerAI: {fileID: 0}

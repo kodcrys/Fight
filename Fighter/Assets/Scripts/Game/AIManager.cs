@@ -8,26 +8,11 @@ public class AIManager : MonoBehaviour {
 	[SerializeField]
 	DifficultLevel difLevel = DifficultLevel.none;
 
-	public bool useAI;
-
 	[SerializeField]
 	bool left, right;
 
 	[SerializeField]
 	GameObject fingerAI;
-
-	[SerializeField]
-	GameObject clickControl;
-
-	void Awake(){
-		if (!useAI) {
-			gameObject.GetComponent<AIManager> ().enabled = false;
-			clickControl.SetActive (true);
-		} else {
-			gameObject.GetComponent<AIManager> ().enabled = true;
-			clickControl.SetActive (false);
-		}
-	}
 
 	// Use this for initialization
 	void Start () {
@@ -52,5 +37,19 @@ public class AIManager : MonoBehaviour {
 
 	void EasyMode(){
 		
+	}
+
+	void AIClick(){
+		if (left)
+			FingerLeftControl.instance.ClickAtk ();
+		else if (right)
+			FingerRightControl.instance.ClickAtk ();
+	}
+
+	void AIUnClick(){
+		if (left)
+			FingerLeftControl.instance.UnClickAtk ();
+		else if (right)
+			FingerRightControl.instance.UnClickAtk ();
 	}
 }
