@@ -857,6 +857,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1100239913368782
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224083864976285568}
+  - component: {fileID: 222076211886389028}
+  - component: {fileID: 114027539923191100}
+  m_Layer: 5
+  m_Name: NameInfo1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1105958066330408
 GameObject:
   m_ObjectHideFlags: 1
@@ -2026,6 +2043,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1243204613533440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224783400400153562}
+  m_Layer: 5
+  m_Name: ShowPos_Frame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
 --- !u!1 &1246105116440842
 GameObject:
   m_ObjectHideFlags: 1
@@ -2562,6 +2594,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1314916454918354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224025616302299878}
+  m_Layer: 5
+  m_Name: ShowPos_Top
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1317199946419708
 GameObject:
   m_ObjectHideFlags: 1
@@ -2705,6 +2752,23 @@ GameObject:
   - component: {fileID: 114939196780936732}
   m_Layer: 5
   m_Name: Mask
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1330915669285800
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224236097297623442}
+  - component: {fileID: 222671712424894552}
+  - component: {fileID: 114760281807589402}
+  m_Layer: 5
+  m_Name: NameInfo2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2948,6 +3012,22 @@ GameObject:
   - component: {fileID: 114116291178071274}
   m_Layer: 5
   m_Name: Finger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1360485969998622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224096581220526636}
+  - component: {fileID: 114321799873799446}
+  m_Layer: 5
+  m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3547,6 +3627,7 @@ GameObject:
   - component: {fileID: 224797613435899920}
   - component: {fileID: 222095664450966540}
   - component: {fileID: 114555421628027602}
+  - component: {fileID: 114702713911076608}
   m_Layer: 5
   m_Name: VsImg
   m_TagString: Untagged
@@ -3842,6 +3923,23 @@ GameObject:
   - component: {fileID: 114036069167066882}
   m_Layer: 5
   m_Name: Finger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1435501438703988
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224126403704543188}
+  - component: {fileID: 222955598712897610}
+  - component: {fileID: 114645662652897756}
+  m_Layer: 5
+  m_Name: Flag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4731,6 +4829,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1536358481252464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224728198693813138}
+  m_Layer: 5
+  m_Name: HidePos_Top
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1537204279464494
 GameObject:
   m_ObjectHideFlags: 1
@@ -5007,6 +5120,7 @@ GameObject:
   - component: {fileID: 224114891317935780}
   - component: {fileID: 222025807588153464}
   - component: {fileID: 114843406209039946}
+  - component: {fileID: 114022865177543972}
   m_Layer: 5
   m_Name: Frame
   m_TagString: Untagged
@@ -8061,6 +8175,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1966778114454096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224272410154822726}
+  m_Layer: 5
+  m_Name: HidePos_Frame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
 --- !u!1 &1966887368501388
 GameObject:
   m_ObjectHideFlags: 1
@@ -8255,7 +8384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 5b173178c19654c40964db8b18cfe829, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -8393,7 +8522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 2a02238fc2c1d41d69965cd48681c95d, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -8436,7 +8565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 30a4dc0a537a04709bf537b67deb9bab, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -8605,7 +8734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 42a791a1aa8b74af1a8bd70e852570d1, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -8727,7 +8856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 4476e0e40a00d4d64b4728dd80366f91, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -8743,7 +8872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: d6ce1cbae16cd411dafbdab0c7e1a39f, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -8786,7 +8915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 05456915b4062475dbfaaf017fb250d9, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -8858,6 +8987,99 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114022865177543972
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1567803518575154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77dbd7f7cc8304301a9815a07ac07c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 224114891317935780}
+  speed: 15
+  isRunScaleAni: 0
+  isScaleAni: 0
+  isUIBotBar: 0
+  maxScale: {x: 0, y: 0, z: 0}
+  originScale: {x: 0, y: 0, z: 0}
+  minScale: {x: 0, y: 0, z: 0}
+  isShop: 0
+  isRate: 0
+  isShare: 0
+  isLeaderboard: 0
+  linkRate: 
+  linkShare: 
+  sprChangeFrame1: {fileID: 0}
+  sprChangeFrame2: {fileID: 0}
+  isRunChangeColorAni: 0
+  color1:
+    serializedVersion: 2
+    rgba: 0
+  color2:
+    serializedVersion: 2
+    rgba: 0
+  isRunMoveAni: 0
+  isMoveAni: 1
+  pos1: {fileID: 224272410154822726}
+  pos2: {fileID: 224783400400153562}
+  pos3: {fileID: 224783400400153562}
+  offsetMoveY: -2
+  isRunBtnPlayAni: 0
+  btnContent:
+  - P1 VS P2
+  - P1 VS CPU
+  - TOURNAMENT
+  - MINI GAME
+  playBtn: {fileID: 0}
+  contentTxt: {fileID: 0}
+  nextBtn: {fileID: 0}
+  preBtn: {fileID: 0}
+  isRunSeqAni: 0
+  isSequence: 0
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
+  obj3: {fileID: 0}
+  pos1Seq: {fileID: 0}
+  pos2Seq: {fileID: 0}
+  pos3Seq: {fileID: 0}
+  progressBar: {fileID: 0}
+  isRunShakeAni: 0
+  isShakeAni: 0
+  timeInterShake: 0
+  isRunRotateAni: 0
+  panel_Shop: {fileID: 0}
+  fadeShop: {fileID: 0}
+  isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
+  isFinishFadeRewardAni: 0
+  isRunAniGatcha: 0
+  objectsRunAniGatcha: []
+  posAni: []
+  closeReward: {fileID: 0}
+  lightX1Gatcha: {fileID: 0}
+  lightX10Gatcha: []
+  effectSmoke: []
+  charEquipManager: {fileID: 0}
+  isRunEffX10Ani: 0
+  effectGlowStar: []
+  isLibraryScene: 0
+  backLibrarybtn: {fileID: 0}
+  isRunAniBtnChange: 0
+  isRunAniFrameChange: 0
+  changeImgBtn: []
+  posBtn: []
+  btnsChange: []
+  btnChange: {fileID: 0}
+  typeChange: []
+  indexGatcha: 0
+  AniGatchaCharacter: 0
 --- !u!114 &114023006696855822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8889,7 +9111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 49f3b717ca8a94146807c5d4a5abc9b0, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -8912,6 +9134,33 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &114027539923191100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1100239913368782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 4d83829967a274a84aff1fac783b7902, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!114 &114029206127180660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9120,7 +9369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 66d7a536519c346f180bd49eb8350ff0, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -9243,7 +9492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: d079f2c7d268249b9b78b5e68293e2a4, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -9298,7 +9547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 7d89877c3f416468fb4d6d7a684eb8c9, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -9354,7 +9603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: eda6e249e68444841847eddb9d40182d, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -10073,7 +10322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 0146f6485527e491aa3a63458af66f70, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -10631,7 +10880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 497d06af3ea824e1c9acbdea21485e3f, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -10675,7 +10924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: b312739e1694e4ce6b9abe2f9564dfd6, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -10718,7 +10967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 39123d79d50bd4df19c43b8e7b5f98a4, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -11102,7 +11351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 30ba58cecab404d298eb63c6c339fcee, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -11183,7 +11432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 9ea7beff7b131408d93c0f84bcc9be3f, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -11454,7 +11703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 4cd15149164dc40a58926bc6cac5a691, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -11470,7 +11719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 975e18e5065434168b470af9d21572d3, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -11608,7 +11857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: abdc8f18e606f4041a742f6b3bdac173, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -12405,7 +12654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 486bfd9b376574b6ebaf913f7cbc6153, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -12673,7 +12922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 0103b5b6e59194383b8249ca5dd139fe, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -12793,7 +13042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: e28b5d494a53c41429e984f994306aa2, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -12958,7 +13207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 7f6eb5a27a99a4761b73b4708006f5d4, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -13031,7 +13280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 95788b23aadc8491dbee22999d5f6dae, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -13236,7 +13485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 47760e31fc27b45dc88bf8aa9f37e1c9, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -13292,7 +13541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 9da18d5de0d3f40f4a35ba1be089e644, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -13578,7 +13827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: f0386fa85f6c540959c5628098e167b4, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -14032,7 +14281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 3946755e7bd684b9084cc756a34d3f75, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -14190,7 +14439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 36125bb9d448b42188133762506095d3, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -14232,7 +14481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: a64d1b943b6744b1982679e24ace8fb9, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -14313,7 +14562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: ac9a4e7efe7e8409185a9dbb89d30ca6, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -14407,7 +14656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 33f424c238f0f4d48ae25bb39d2d8fc4, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -14622,7 +14871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: e8c1b192dc4b9412abf57f2d76876b97, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -14638,7 +14887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: e51cd1026b36c4ffea7301d00d8931ed, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -14745,7 +14994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: a7795814e5e8c489688cd5fbc2590f97, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -14952,7 +15201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: d0238b17c42a44501b5d471b5092dacf, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -14967,7 +15216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 748f99467b99f47bbb23a437b77e33e6, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -15069,7 +15318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 6718b3698d7d3460e9ecd7b0e1348df3, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -15681,7 +15930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: c04dbf2aac899431d9d94c0821536a20, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -15967,7 +16216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 5e46a5a19844d46a180d939ed98610e3, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -16204,7 +16453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 0967bd70f65d74af0bafb469008e7dbd, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -16263,6 +16512,99 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114321799873799446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1360485969998622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77dbd7f7cc8304301a9815a07ac07c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 224096581220526636}
+  speed: 8
+  isRunScaleAni: 0
+  isScaleAni: 0
+  isUIBotBar: 0
+  maxScale: {x: 0, y: 0, z: 0}
+  originScale: {x: 0, y: 0, z: 0}
+  minScale: {x: 0, y: 0, z: 0}
+  isShop: 0
+  isRate: 0
+  isShare: 0
+  isLeaderboard: 0
+  linkRate: 
+  linkShare: 
+  sprChangeFrame1: {fileID: 0}
+  sprChangeFrame2: {fileID: 0}
+  isRunChangeColorAni: 0
+  color1:
+    serializedVersion: 2
+    rgba: 0
+  color2:
+    serializedVersion: 2
+    rgba: 0
+  isRunMoveAni: 0
+  isMoveAni: 1
+  pos1: {fileID: 224728198693813138}
+  pos2: {fileID: 224025616302299878}
+  pos3: {fileID: 224025616302299878}
+  offsetMoveY: 12
+  isRunBtnPlayAni: 0
+  btnContent:
+  - P1 VS P2
+  - P1 VS CPU
+  - TOURNAMENT
+  - MINI GAME
+  playBtn: {fileID: 0}
+  contentTxt: {fileID: 0}
+  nextBtn: {fileID: 0}
+  preBtn: {fileID: 0}
+  isRunSeqAni: 0
+  isSequence: 0
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
+  obj3: {fileID: 0}
+  pos1Seq: {fileID: 0}
+  pos2Seq: {fileID: 0}
+  pos3Seq: {fileID: 0}
+  progressBar: {fileID: 0}
+  isRunShakeAni: 0
+  isShakeAni: 0
+  timeInterShake: 0
+  isRunRotateAni: 0
+  panel_Shop: {fileID: 0}
+  fadeShop: {fileID: 0}
+  isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
+  isFinishFadeRewardAni: 0
+  isRunAniGatcha: 0
+  objectsRunAniGatcha: []
+  posAni: []
+  closeReward: {fileID: 0}
+  lightX1Gatcha: {fileID: 0}
+  lightX10Gatcha: []
+  effectSmoke: []
+  charEquipManager: {fileID: 0}
+  isRunEffX10Ani: 0
+  effectGlowStar: []
+  isLibraryScene: 0
+  backLibrarybtn: {fileID: 0}
+  isRunAniBtnChange: 0
+  isRunAniFrameChange: 0
+  changeImgBtn: []
+  posBtn: []
+  btnsChange: []
+  btnChange: {fileID: 0}
+  typeChange: []
+  indexGatcha: 0
+  AniGatchaCharacter: 0
 --- !u!114 &114326276843148240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16464,7 +16806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 6bca548db8f3040f48e6d27d9ded149f, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -16534,7 +16876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 504dc7509759d4049950866b39a1ca67, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -16551,7 +16893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: be2c2ec2cf2d545ed9c0d7756f0c30de, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -16567,7 +16909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 6cae1e97f4ec840edba8e53eee839e8b, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -16610,7 +16952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: fe3261d3b486f4c3db3bf2ae79bc90c1, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -17090,7 +17432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 0560e4b726bfc44f685d119bb770c604, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -17106,7 +17448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 5f1fa6526d40142efa19f8c8c2b2e017, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -17590,7 +17932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 8369e40f7a6444ee59f86c112e26c462, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -17655,7 +17997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 9693a3ac6e71e4b13ad60a81a30ae6b1, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -17787,7 +18129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 2dfc2942fe5d7427abf3ad05e3894042, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -17973,7 +18315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: c3d0af84d1f8b4c19907fe990491caf1, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -18016,7 +18358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: f96eac1b7cc21411ebc994ccffc032ca, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -18060,7 +18402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: f42345240bc5e489584eea32bea194f9, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -18333,7 +18675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: dfe0db07dc3e245fc9652c93609e70d4, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -18533,7 +18875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 923c9a8aced2e464da393d537739ec7d, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -18627,7 +18969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 65ffb04eb1b704948a17bd890191cabb, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -18912,7 +19254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 36d08b3fb7a764ffd87a49daad1a8363, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -18989,7 +19331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 4d18c1529633648a9ba65cb30bac1be4, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -19071,7 +19413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 5200406d7b6604162a98dbf704e873fc, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -19087,7 +19429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: cba7752062e0d4020863327cfa2ea880, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -19256,7 +19598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 736084a933ce7429086d168f7d20ffc3, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -19700,7 +20042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 191cdd5a148f84d7f80672b75da80f01, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -20067,7 +20409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 9ddf6da0f0f904284835d8ee55e46cfc, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -20083,7 +20425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 9a87d8aec92174696bb2c18c1f23367b, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -20178,7 +20520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 375477e50a831466ab1a69ba729cb4ce, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -20246,7 +20588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 4923358e7caf843c99f060ff1623aeb5, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -20575,7 +20917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 7bbded4c78e3347e1a5a1f0eb6eca9d8, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -20618,7 +20960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 67000ae8a802f443b95591eebc6dc648, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -20766,7 +21108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 728d217b628a44240bf4d1e85926d0d8, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -22005,7 +22347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: be7ced61b27664cfd8e59bc45b34dc7d, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -22039,7 +22381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: bf49c02acc21e4999a1bc9b05b3083a2, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -22168,7 +22510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: b80ba56a107f54ffaa47b23d4b8c77e4, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -22210,14 +22552,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77dbd7f7cc8304301a9815a07ac07c8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 0
+  target: {fileID: 224120969767597162}
+  speed: 20
   isRunScaleAni: 0
   isScaleAni: 0
   isUIBotBar: 0
-  maxScale: {x: 0, y: 0, z: 0}
-  originScale: {x: 0, y: 0, z: 0}
-  minScale: {x: 0, y: 0, z: 0}
+  maxScale: {x: 1, y: 0, z: 1}
+  originScale: {x: 1, y: 1, z: 1}
+  minScale: {x: 1, y: 1, z: 1}
   isShop: 0
   isRate: 0
   isShare: 0
@@ -22283,12 +22625,25 @@ MonoBehaviour:
   effectGlowStar: []
   isLibraryScene: 0
   backLibrarybtn: {fileID: 0}
-  isRunAniBtnChange: 0
-  isRunAniFrameChange: 0
-  changeImgBtn: []
-  posBtn: []
-  btnsChange: []
-  btnChange: {fileID: 0}
+  isRunAniBtnChange: 1
+  isRunAniFrameChange: 1
+  changeImgBtn:
+  - {fileID: 21300000, guid: 17dd9a91c1a44412f84e7d0d334a757a, type: 3}
+  - {fileID: 21300000, guid: 030b6006951024033ba6866f14afcc6c, type: 3}
+  - {fileID: 21300000, guid: 400b96b6b018241b594f3ffd9451c660, type: 3}
+  posBtn:
+  - {fileID: 1041994208209254}
+  - {fileID: 1475604506577596}
+  - {fileID: 1522937852435490}
+  btnsChange:
+  - {fileID: 1150164402215258}
+  - {fileID: 1707117409392920}
+  - {fileID: 1590969578865568}
+  btnChange: {fileID: 114698348801464228}
+  typeChange:
+  - {fileID: 1064005129984084}
+  - {fileID: 1780261627488580}
+  - {fileID: 1748926037594726}
   indexGatcha: 0
   AniGatchaCharacter: 0
 --- !u!114 &114518587346325818
@@ -22427,7 +22782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 94b1a3b3dbe14454ca67248e098a7d5e, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -22671,7 +23026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 3f19ae595035746f180ae8bf1863f2f8, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -22846,7 +23201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 990261ec1c7144bc2944316b737b6163, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -22942,7 +23297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 160b98e45bc4840669c5570d5f24c5a9, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -23099,7 +23454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: d37021878f99a4a50939e2429dc8aea1, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -23188,7 +23543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 1821774e5838d4d7b84a48b66cb9a91c, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -23366,7 +23721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 3daf8e3d93519413eaa6e84fe4f64d1f, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -23494,7 +23849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 7ba32c49838e846bdbb66e9e401bb665, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -23564,7 +23919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 738abb866975d40219c67d7a53800da9, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -23654,7 +24009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: ec1d4e20c92ee4d778838334738ae01b, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -23701,7 +24056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 831eb18744bbc4b5fbb0eefd2f480f43, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -24213,7 +24568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: e31ea6af3bb91465c90b8c23751f330e, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -25297,7 +25652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: a53975ddb96d94566a575f8f2564006d, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -25648,7 +26003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 2a78f64f9fdfb4b5bbf2a10d44d7de16, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -25731,7 +26086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 6217f203d77004985aad47881a09ae6f, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -25775,7 +26130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: a59be5f726ddf4429bd2ce29b9b972f7, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -26018,7 +26373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 09f14da74025144688ef15db7a0fa577, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -26087,7 +26442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 0be5952631b8540d8b6942b89aa5255c, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -26111,6 +26466,33 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 0ce856b83a44e47fda264dd68fbabe89, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!114 &114645662652897756
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1435501438703988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: e21b0c96385394bcb9413fb4a33d2190, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -26231,7 +26613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: b18a005405b6e496a9463f16049bf008, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -26247,7 +26629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: cfd63bedd4ad34506b59bdccbc6ecc89, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -26504,7 +26886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: b22d0e761fc8746378b1c36275c46c05, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -26547,7 +26929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 79492e57044904593812a851326bbeda, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -26609,7 +26991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 7547730b7a9da44a0bb91419862f104c, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -26679,7 +27061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 4b3993cb8794c4ce3afc1da87927c45f, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -26773,7 +27155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 4c7334083e14f4820ac98d07e0be6a5f, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -26897,7 +27279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: d3922bf0a90de4082825d2d0bbb2bfe2, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -27006,7 +27388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: ebfb77de69daf461cbcb75b6cba551c0, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -27049,7 +27431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: b6f6d89b6eb2a4c4da6bc35c4b10781d, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -27281,7 +27663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 8825f0171208a420e991c01128237c5d, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -27376,7 +27758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: f010f3813f28f43c6b5f41df3fd82b4a, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -27392,7 +27774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: fa8ff23997c1f4705ac4f11f681c0b13, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -27544,7 +27926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: ea3079022dbf045389e9077f004f548b, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -27794,6 +28176,99 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &114702713911076608
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1412370875992758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77dbd7f7cc8304301a9815a07ac07c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 224797613435899920}
+  speed: 7
+  isRunScaleAni: 0
+  isScaleAni: 1
+  isUIBotBar: 0
+  maxScale: {x: 2.2, y: 2.2, z: 1}
+  originScale: {x: 2, y: 2, z: 1}
+  minScale: {x: 0, y: 0, z: 1}
+  isShop: 0
+  isRate: 0
+  isShare: 0
+  isLeaderboard: 0
+  linkRate: 
+  linkShare: 
+  sprChangeFrame1: {fileID: 0}
+  sprChangeFrame2: {fileID: 0}
+  isRunChangeColorAni: 0
+  color1:
+    serializedVersion: 2
+    rgba: 0
+  color2:
+    serializedVersion: 2
+    rgba: 0
+  isRunMoveAni: 0
+  isMoveAni: 0
+  pos1: {fileID: 0}
+  pos2: {fileID: 0}
+  pos3: {fileID: 0}
+  offsetMoveY: 0
+  isRunBtnPlayAni: 0
+  btnContent:
+  - P1 VS P2
+  - P1 VS CPU
+  - TOURNAMENT
+  - MINI GAME
+  playBtn: {fileID: 0}
+  contentTxt: {fileID: 0}
+  nextBtn: {fileID: 0}
+  preBtn: {fileID: 0}
+  isRunSeqAni: 0
+  isSequence: 0
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
+  obj3: {fileID: 0}
+  pos1Seq: {fileID: 0}
+  pos2Seq: {fileID: 0}
+  pos3Seq: {fileID: 0}
+  progressBar: {fileID: 0}
+  isRunShakeAni: 0
+  isShakeAni: 0
+  timeInterShake: 0
+  isRunRotateAni: 0
+  panel_Shop: {fileID: 0}
+  fadeShop: {fileID: 0}
+  isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
+  isFinishFadeRewardAni: 0
+  isRunAniGatcha: 0
+  objectsRunAniGatcha: []
+  posAni: []
+  closeReward: {fileID: 0}
+  lightX1Gatcha: {fileID: 0}
+  lightX10Gatcha: []
+  effectSmoke: []
+  charEquipManager: {fileID: 0}
+  isRunEffX10Ani: 0
+  effectGlowStar: []
+  isLibraryScene: 0
+  backLibrarybtn: {fileID: 0}
+  isRunAniBtnChange: 0
+  isRunAniFrameChange: 0
+  changeImgBtn: []
+  posBtn: []
+  btnsChange: []
+  btnChange: {fileID: 0}
+  typeChange: []
+  indexGatcha: 0
+  AniGatchaCharacter: 0
 --- !u!114 &114703338501105840
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -28004,7 +28479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: cfdfbafd6501c4b13a0cbc6785de33fd, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -28147,7 +28622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 597bd36995cf8444eb851fa48cae74ab, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -28218,7 +28693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: f620bdf8222134ce0bdaef1942a19cde, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -28708,7 +29183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 800df7f5f61cb4264925a64ebabad637, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -28984,7 +29459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 6991a82a7cab940f297c16230dfa4632, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -29000,7 +29475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: d33e0784c0f414de08c9566466205268, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -29016,7 +29491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: fe63e1772110d4e01a24a6c6b495aba2, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -29138,7 +29613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 8e4174bb9c1374145975646725107ba0, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -29188,6 +29663,33 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &114760281807589402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1330915669285800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: b1b7277c779eb4022b03be072534146b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!114 &114761392988867062
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -29265,7 +29767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 21299ec74fd7a4b1ab5aedc091b3b453, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -29282,7 +29784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: df1202b5e427f4e9a80d72a072640ff7, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -29610,7 +30112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 10c4552076ee64b1397a6742d627a188, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -29858,7 +30360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 448b1e2027ed4445188034f1734bc1ac, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -29900,7 +30402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: f90a4a45487cd458bb6c2e69ea4f59c0, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -30048,7 +30550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 35f4c460885534f989b6400752ea7edf, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -30534,7 +31036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 9c29a3557321846918a4805b006e4b10, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -30601,7 +31103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 1154ec320f2ff4e07aa2704831d8a021, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -30729,7 +31231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 71d968809a9f44ab6b2d0641217d5c06, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -30897,7 +31399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 56fd4d62e24484257999af49e1806a01, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -31004,7 +31506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 84bb6b69314d4444e9c8e10b4032f25d, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -31039,7 +31541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 5ad615f3285724a1e8a7db228a0a4046, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -31220,7 +31722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 29f11ae5e765a4bcd93e027b94d261fa, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -31279,7 +31781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 43f1062df47a64ee78c4a7cb5bc42765, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -31346,7 +31848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 542220bb18653426dbd89d2a38458a87, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -31864,7 +32366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 0c73701d3ad964148a2a4d4fd3d2401c, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -31880,7 +32382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: cc709b21c232e49e99b2343ab237dc85, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -32554,7 +33056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: d7dd903e25d714c749c181d0e29de00a, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -32621,7 +33123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 92e4afe98d55e4818b9117b6bb2da750, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -32782,7 +33284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 430b19510f41248fcb2934ca56c902c4, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -33145,7 +33647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: ee04964b7dd6f49d3b416e6f6ed36a72, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -33408,7 +33910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 7751a766267ed414587ab63a23a21f4c, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -33423,7 +33925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 49eac8389bae74ae397159be736fece8, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -33439,7 +33941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 0c37b8210e4f943ca9b01e20e9b55197, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -33616,7 +34118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: b72c7f91754454a54aa40be8f34b8a88, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -33852,7 +34354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 507405bf7ec164b5c89581eed4bc6cfb, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -33984,7 +34486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: c091a08b617c04608863d75fde9e99e3, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -34232,7 +34734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 7b5b8a35da59b4fa1a3c5cda62ef3009, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -34667,7 +35169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 37bb149ae1cb9412795c7b7d99c64808, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -34694,7 +35196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: ceb0e5e35b33847e99f4e355f32b4e9d, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -34711,7 +35213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 4a8adb80936364b418a700fe80ca5123, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -35057,7 +35559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: b42af102cb61b4096a072d63d424fd58, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -35073,7 +35575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: 507504acc781244c498ec50975d82eb7, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -35378,7 +35880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 581393f5d62f540a7993688f9d38fad4, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -35421,7 +35923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataChar: {fileID: 0}
+  dataChar: {fileID: 11400000, guid: 987bc75047eef4636a2b10b765a953d9, type: 2}
   dataItem: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
@@ -35845,7 +36347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataChar: {fileID: 0}
-  dataItem: {fileID: 0}
+  dataItem: {fileID: 11400000, guid: aa6447de039a84889ab1f1e8e25447b8, type: 2}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -36507,6 +37009,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1521074452205948}
+--- !u!222 &222076211886389028
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1100239913368782}
 --- !u!222 &222076907367720120
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -38037,6 +38545,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1168422135881728}
+--- !u!222 &222671712424894552
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1330915669285800}
 --- !u!222 &222672245724324384
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -38745,6 +39259,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1874108761518762}
+--- !u!222 &222955598712897610
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1435501438703988}
 --- !u!222 &222957562045425666
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -39060,6 +39580,24 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -7}
   m_SizeDelta: {x: 651, y: 401}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224025616302299878
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1314916454918354}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224911057623571120}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 1029}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224026454002144250
 RectTransform:
@@ -39497,12 +40035,30 @@ RectTransform:
   m_LocalScale: {x: 1.999956, y: 1.999956, z: 1.001196}
   m_Children: []
   m_Father: {fileID: 224911057623571120}
-  m_RootOrder: 1
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1799.9995, y: 89.99979}
   m_SizeDelta: {x: 301, y: 121}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224083864976285568
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1100239913368782}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224096581220526636}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1000, y: 0}
+  m_SizeDelta: {x: 401, y: 91}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224083974016151782
 RectTransform:
@@ -39615,6 +40171,27 @@ RectTransform:
   m_AnchoredPosition: {x: 14, y: 10}
   m_SizeDelta: {x: 701, y: 801}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224096581220526636
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1360485969998622}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 224083864976285568}
+  - {fileID: 224236097297623442}
+  - {fileID: 224126403704543188}
+  m_Father: {fileID: 224911057623571120}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 1629}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224099381182374390
 RectTransform:
   m_ObjectHideFlags: 1
@@ -39725,7 +40302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -775}
+  m_AnchoredPosition: {x: 0, y: -2000}
   m_SizeDelta: {x: 2165.3, y: 439}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224115015557130468
@@ -39855,6 +40432,24 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 65, y: 201}
   m_SizeDelta: {x: 701, y: 801}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224126403704543188
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1435501438703988}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224096581220526636}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -3.9001465}
+  m_SizeDelta: {x: 242, y: 193}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224127213706625230
 RectTransform:
@@ -41159,6 +41754,24 @@ RectTransform:
   m_AnchoredPosition: {x: 82, y: 131}
   m_SizeDelta: {x: 701, y: 801}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224236097297623442
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1330915669285800}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224096581220526636}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1000, y: 0}
+  m_SizeDelta: {x: 401, y: 91}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224237418852606830
 RectTransform:
   m_ObjectHideFlags: 1
@@ -41418,6 +42031,24 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 226, y: 226}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224272410154822726
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1966778114454096}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.9999558, y: 1.9999558, z: 1.0011959}
+  m_Children: []
+  m_Father: {fileID: 224911057623571120}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -2000}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224272509372225136
 RectTransform:
@@ -43362,7 +43993,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1315.4996, y: 0}
+  m_AnchoredPosition: {x: 1315.4994, y: 0}
   m_SizeDelta: {x: 2631, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224510462717485086
@@ -45235,6 +45866,24 @@ RectTransform:
   m_AnchoredPosition: {x: 24, y: -0.00000095367}
   m_SizeDelta: {x: 701, y: 801}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224728198693813138
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1536358481252464}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224911057623571120}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 1695}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224732466202968308
 RectTransform:
   m_ObjectHideFlags: 1
@@ -45583,6 +46232,24 @@ RectTransform:
   m_AnchoredPosition: {x: 48, y: 109}
   m_SizeDelta: {x: 701, y: 801}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224783400400153562
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1243204613533440}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224911057623571120}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -775}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224786218183022392
 RectTransform:
   m_ObjectHideFlags: 1
@@ -45759,10 +46426,10 @@ RectTransform:
   m_GameObject: {fileID: 1412370875992758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 224911057623571120}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -45909,7 +46576,7 @@ RectTransform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 224911057623571120}
-  m_RootOrder: 2
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -46694,10 +47361,15 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 224025616302299878}
+  - {fileID: 224728198693813138}
+  - {fileID: 224096581220526636}
+  - {fileID: 224114891317935780}
   - {fileID: 224797613435899920}
+  - {fileID: 224783400400153562}
+  - {fileID: 224272410154822726}
   - {fileID: 224077903686018106}
   - {fileID: 224818030939617830}
-  - {fileID: 224114891317935780}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
