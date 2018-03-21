@@ -20,9 +20,6 @@ public class FingerBase : MonoBehaviour {
 	[Header("Finger Status")]
 	public int health, defend, atk, stamina, maxHealth;
 
-	[Header("Status Animation")]
-	public bool fingerRight, fingerLeft;
-
 	public bool changeColor, oneShotColor;
 
 	public int changeScale = 0;

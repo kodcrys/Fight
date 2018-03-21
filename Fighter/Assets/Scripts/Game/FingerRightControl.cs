@@ -59,6 +59,7 @@ public class FingerRightControl : FingerBase {
 
 			if (health <= 0 || enemyLeft.health <= 0) {
 				GameplayBase.instance.rightButton.SetActive (false);
+				AnimationText.canPlay = false;
 				if (stopTime) {
 					GameplayBase.instance.mainCamera.orthographicSize = 4;
 					fingerAction = FingerState.Doing;
@@ -72,7 +73,7 @@ public class FingerRightControl : FingerBase {
 				fingerAtk.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
 				fingerDown.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
 				hand.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
-				StartCoroutine (WaitChangeColor (0.005f));
+				StartCoroutine (WaitChangeColor (0.0001f));
 			} else {
 				finger.GetComponent<SpriteRenderer> ().color = new Color32 (255, 212, 179, 255);
 				fingerAtk.GetComponent<SpriteRenderer> ().color = new Color32 (255, 212, 179, 255);
@@ -156,7 +157,6 @@ public class FingerRightControl : FingerBase {
 				fingerDown.SetActive (true);
 			if (fingerAtk != null)
 				fingerAtk.SetActive (false);
-			
 			fingerAction = FingerState.Doing;
 		} else if(enemyLeft.firstAtk){
 			lastAtk = true;
