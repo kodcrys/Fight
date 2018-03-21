@@ -135,8 +135,33 @@ public class ChooseCharManager : MonoBehaviour {
 				weaponMainR.gameObject.SetActive (false);
 			}
 		}
-		//	Library.Instance.ReadInfoCharacter (ctData.dataChar);
-		//if (ctData.dataItem != null)
-		//	Library.Instance.ReadInfoEquipment (ctData.dataItem);
+
+		if (ctData.dataItem != null) {
+			if (isTurnPlayer1) {
+				hatSymbol2.gameObject.SetActive (false);
+
+				if (ctData.dataItem.typeItem == TypeObject.hat) {
+					hatMainL.gameObject.SetActive (true);
+					hatMainL.sprite = ctData.dataItem.avatar;
+				}
+
+				if (ctData.dataItem.typeItem == TypeObject.tshirt) {
+					amorMainL.gameObject.SetActive (true);
+					amorMainL.sprite = ctData.dataItem.avatar;
+				}
+
+				if (ctData.dataItem.typeItem == TypeObject.weapon) {
+					weaponMainL.gameObject.SetActive (true);
+					weaponMainL.sprite = ctData.dataItem.avatar;
+				}
+
+			} else {
+				hatSymbol.gameObject.SetActive (false);
+				hatMainR.gameObject.SetActive (true);
+				hatMainR.sprite = ctData.dataChar.equipmentOfChar;
+				amorMainR.gameObject.SetActive (false);
+				weaponMainR.gameObject.SetActive (false);
+			}
+		}
 	}
 }
