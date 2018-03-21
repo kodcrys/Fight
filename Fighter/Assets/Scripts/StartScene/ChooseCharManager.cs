@@ -52,7 +52,7 @@ public class ChooseCharManager : MonoBehaviour {
 	[SerializeField]
 	UnityEngine.UI.Image weaponMainL;
 
-	bool isTurnPlayer1;
+	bool isTurnPlayer1 = false;
 
 	GameObject objFollow;
 
@@ -120,10 +120,19 @@ public class ChooseCharManager : MonoBehaviour {
 		chooseSymbol.SetActive (true);
 		CointainData ctData = gob.GetComponent<CointainData> ();
 		if (ctData.dataChar != null) {
-			hatSymbol2.gameObject.SetActive (false);
-			hatMainL.sprite = ctData.dataChar.equipmentOfChar;
-			amorMainL.gameObject.SetActive (false);
-			weaponMainL.gameObject.SetActive (false);
+			if (isTurnPlayer1) {
+				hatSymbol2.gameObject.SetActive (false);
+				hatMainL.gameObject.SetActive (true);
+				hatMainL.sprite = ctData.dataChar.equipmentOfChar;
+				amorMainL.gameObject.SetActive (false);
+				weaponMainL.gameObject.SetActive (false);
+			} else {
+				hatSymbol.gameObject.SetActive (false);
+				hatMainR.gameObject.SetActive (true);
+				hatMainR.sprite = ctData.dataChar.equipmentOfChar;
+				amorMainR.gameObject.SetActive (false);
+				weaponMainR.gameObject.SetActive (false);
+			}
 		}
 		//	Library.Instance.ReadInfoCharacter (ctData.dataChar);
 		//if (ctData.dataItem != null)
