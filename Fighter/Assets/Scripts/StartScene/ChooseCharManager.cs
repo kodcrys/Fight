@@ -119,7 +119,7 @@ public class ChooseCharManager : MonoBehaviour {
 		//chooseSymbol.transform.SetParent (gob.transform);
 		chooseSymbol.SetActive (true);
 		CointainData ctData = gob.GetComponent<CointainData> ();
-		Debug.Log (isTurnPlayer1);
+
 		if (ctData.dataChar != null) {
 			if (isTurnPlayer1) {
 				hatSymbol2.gameObject.SetActive (false);
@@ -135,7 +135,7 @@ public class ChooseCharManager : MonoBehaviour {
 				weaponMainR.gameObject.SetActive (false);
 			}
 		}
-
+		Debug.Log (ctData.dataItem.name);
 		if (ctData.dataItem != null) {
 			if (isTurnPlayer1) {
 				hatSymbol2.gameObject.SetActive (false);
@@ -164,13 +164,13 @@ public class ChooseCharManager : MonoBehaviour {
 				}
 
 				if (ctData.dataItem.typeItem == TypeObject.tshirt) {
-					hatMainR.gameObject.SetActive (true);
-					hatMainR.sprite = ctData.dataItem.avatar;
+					amorMainR.gameObject.SetActive (true);
+					amorMainR.sprite = ctData.dataItem.avatar;
 				}
 
 				if (ctData.dataItem.typeItem == TypeObject.weapon) {
-					amorMainR.gameObject.SetActive (false);
-					amorMainR.sprite = ctData.dataItem.avatar;
+					weaponMainR.gameObject.SetActive (true);
+					weaponMainR.sprite = ctData.dataItem.avatar;
 				}
 			}
 		}

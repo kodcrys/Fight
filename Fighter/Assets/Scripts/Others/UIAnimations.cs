@@ -187,6 +187,8 @@ public class UIAnimations : MonoBehaviour {
 	GameObject[] btnsChange;
 	[SerializeField]
 	Image btnChange;
+	[SerializeField]
+	GameObject [] typeChange;
 
 	void OnEnable() {
 		if (contentTxt != null)
@@ -654,13 +656,28 @@ public class UIAnimations : MonoBehaviour {
 	}
 
 	public void ChangeIconFrameChangeBtn(int i) {
+		GameObject goTemp = new GameObject ();
+
 		btnChange.sprite = changeImgBtn [i];
 
-		for(int j = 0; j<changeImgBtn.Length; j++) {
-			if (btnChange.sprite == changeImgBtn [j]) 
-				btnsChange [j].transform.position = posBtn [0].transform.position;
+		for (int j = 0; j < btnsChange.Length; j++) {
+			if (btnChange.sprite == btnsChange [j].GetComponent<Image> ().sprite) {
+				goTemp = btnsChange [j];
+				btnsChange [j] = btnsChange [0];
+				btnsChange [0] = goTemp;
+			}
 		}
 
+		for (int j = 0; j < btnsChange.Length; j++)
+			btnsChange[j].transform.position = posBtn[j].transform.position;
+
+		for (int j = 0; j < typeChange.Length; j++) {
+			if (j == i)
+				typeChange [j].SetActive (true);
+			else
+				typeChange [j].SetActive (false);
+		}
+		ChooseCharManager.instance.chooseSymbol.SetActive (false);
 		isRunAniBtnChange = true;
 	}
 
