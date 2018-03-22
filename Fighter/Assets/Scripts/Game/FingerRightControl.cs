@@ -55,6 +55,9 @@ public class FingerRightControl : FingerBase {
 					lastAtk = false;
 					fingerAction = FingerState.Atk;
 				}
+			} else {
+				if (!enemyLeft.lastAtk && !isAtk)
+					fingerAction = FingerState.Idel;
 			}
 
 			if (health <= 0 || enemyLeft.health <= 0) {
@@ -80,6 +83,8 @@ public class FingerRightControl : FingerBase {
 				fingerDown.GetComponent<SpriteRenderer> ().color = new Color32 (255, 212, 179, 255);
 				hand.GetComponent<SpriteRenderer> ().color = new Color32 (255, 212, 179, 255);
 			}
+
+
 		}
 	}
 
