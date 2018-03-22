@@ -5,6 +5,7 @@ public class CointainData : MonoBehaviour {
 
 	public DataCharacter dataChar;
 	public DataItems dataItem;
+	public Sprite dataMap;
 
 	[SerializeField]
 	bool isX1Gatcha;

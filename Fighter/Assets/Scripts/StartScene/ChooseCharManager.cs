@@ -81,6 +81,10 @@ public class ChooseCharManager : MonoBehaviour {
 	UnityEngine.UI.Text contentBtn;
 	string[] playMode = { "P1 VS P2", "P1 VS CPU", "TOURNAMENT", "MINI GAME" };
 
+	[Header("Screen Map")]
+	[SerializeField]
+	SpriteRenderer map;
+
 	bool isTurnPlayer1 = false;
 
 	GameObject objFollow;
@@ -96,9 +100,10 @@ public class ChooseCharManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-		ready1 = preBtn.GetComponent<UnityEngine.UI.Image> ();
-		ready2 = nextBtn.GetComponent<UnityEngine.UI.Image> ();
+		if(preBtn != null)
+			ready1 = preBtn.GetComponent<UnityEngine.UI.Image> ();
+		if(nextBtn != null)
+			ready2 = nextBtn.GetComponent<UnityEngine.UI.Image> ();
 
 		isTurnPlayer1 = true;
 		chooseSymbol.SetActive (false);
@@ -236,7 +241,9 @@ public class ChooseCharManager : MonoBehaviour {
 				weaponMainR.gameObject.SetActive (false);
 			}
 			chooseSymbol.SetActive (true);
-		}
+		} else
+			chooseSymbol.SetActive (false);
+
 	
 		if (ctData.dataItem != null && ctData.dataItem.isOwned) {
 			if (isTurnPlayer1) {
@@ -276,6 +283,16 @@ public class ChooseCharManager : MonoBehaviour {
 				}
 			}
 			chooseSymbol.SetActive (true);
+		} else
+			chooseSymbol.SetActive (true);
+
+		if (ctData.dataMap != null) {
+			map.sprite = ctData.dataMap;
+			chooseSymbol.SetActive (true);
 		}
+	}
+
+	public void Home() {
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("StartScene");
 	}
 }
