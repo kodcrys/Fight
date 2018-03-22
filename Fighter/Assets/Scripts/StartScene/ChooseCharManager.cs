@@ -70,11 +70,23 @@ public class ChooseCharManager : MonoBehaviour {
 	[SerializeField]
 	UIAnimations preBtn;
 
+	[Header("Lock Btn")]
+	[SerializeField]
+	Sprite lockSpr;
+	[SerializeField]
+	Sprite readySpr;
+
+	[Header("Btn Play Game")]
+	[SerializeField]
+	UnityEngine.UI.Text contentBtn;
+	string[] playMode = { "P1 VS P2", "P1 VS CPU", "TOURNAMENT", "MINI GAME" };
+
 	bool isTurnPlayer1 = false;
 
 	GameObject objFollow;
 
 	[HideInInspector]
+	UnityEngine.UI.Image ready1, ready2;
 	public bool isPlayAI;
 
 	void Awake() {
@@ -84,7 +96,11 @@ public class ChooseCharManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		isTurnPlayer1 = false;
+
+		ready1 = preBtn.GetComponent<UnityEngine.UI.Image> ();
+		ready2 = nextBtn.GetComponent<UnityEngine.UI.Image> ();
+
+		isTurnPlayer1 = true;
 		chooseSymbol.SetActive (false);
 	}
 
@@ -94,6 +110,8 @@ public class ChooseCharManager : MonoBehaviour {
 	}
 
 	bool isShowTypeChar = true;
+
+	// CHange type equipment choose or character choose
 	public void ChangeTypeChar() {
 		isShowTypeChar = !isShowTypeChar;
 		chooseSymbol.SetActive (false);
@@ -110,6 +128,7 @@ public class ChooseCharManager : MonoBehaviour {
 		}
 	}
 
+	// display image in each library cell
 	void EnDisableLibraryCell() {
 		for (int i = 0; i < dataChars.Length; i++) {
 			if (dataChars [i].dataChar.isOwned == false)
@@ -126,7 +145,34 @@ public class ChooseCharManager : MonoBehaviour {
 		}
 	}
 
+	// run ani change scene when click play
 	public void AniChangeScene() {
+
+		// p1 zs p2
+		if (contentBtn.text == playMode [0]) {
+			
+		}
+		// zs AI
+		if (contentBtn.text == playMode [1]) {
+			
+		}
+		// tour
+		if (contentBtn.text == playMode [2]) {
+			
+		}
+		// minigame
+		if (contentBtn.text == playMode [3]) {
+			
+		}
+
+		isTurnPlayer1 = true;
+
+		ready1.sprite = readySpr;
+		ready2.sprite = readySpr;
+
+		preBtn.GetComponent<UnityEngine.UI.Button> ().interactable = true;
+		nextBtn.GetComponent<UnityEngine.UI.Button> ().interactable = false;
+
 		topBar.isRunMoveAni = false;
 		midBar.isRunScaleAni = false;
 		botBar.isRunMoveAni = false;
@@ -138,6 +184,7 @@ public class ChooseCharManager : MonoBehaviour {
 		preBtn.isRunMoveAni = true;
 	}
 
+	// run ani change scene when click back
 	public void AniChangeBackScene() {
 		topBar.isRunMoveAni = true;
 		midBar.isRunScaleAni = true;
@@ -150,19 +197,30 @@ public class ChooseCharManager : MonoBehaviour {
 		preBtn.isRunMoveAni = false;
 	}
 
+	//
+	public void LockWhenFinishChoose() {
+		if (isTurnPlayer1) {
+			nextBtn.GetComponent<UnityEngine.UI.Button> ().interactable = true;
+			ready1.sprite = lockSpr;
+			isTurnPlayer1 = false;
+		} else {
+			ready2.sprite = lockSpr;
+		}
+	}
+
+	// choose character or equipment when click button in choose frame
 	public void ChooseChar() {
 		GameObject gob = EventSystem.current.currentSelectedGameObject;
-		//chooseSymbol.transform.position = gob.transform.position;
+	
 		objFollow = gob;
 		if (isShowTypeChar)
 			chooseSymbol.transform.SetParent (maskFrameChooseChar);
 		else
 			chooseSymbol.transform.SetParent (maskFrameChooseEquip);
-		//chooseSymbol.transform.SetParent (gob.transform);
-		chooseSymbol.SetActive (true);
+		
 		CointainData ctData = gob.GetComponent<CointainData> ();
 
-		if (ctData.dataChar != null) {
+		if (ctData.dataChar != null && ctData.dataChar.isOwned) {
 			if (isTurnPlayer1) {
 				hatSymbol2.gameObject.SetActive (false);
 				hatMainL.gameObject.SetActive (true);
@@ -176,9 +234,10 @@ public class ChooseCharManager : MonoBehaviour {
 				amorMainR.gameObject.SetActive (false);
 				weaponMainR.gameObject.SetActive (false);
 			}
+			chooseSymbol.SetActive (true);
 		}
 	
-		if (ctData.dataItem != null) {
+		if (ctData.dataItem != null && ctData.dataItem.isOwned) {
 			if (isTurnPlayer1) {
 				hatSymbol2.gameObject.SetActive (false);
 
@@ -215,6 +274,7 @@ public class ChooseCharManager : MonoBehaviour {
 					weaponMainR.sprite = ctData.dataItem.avatar;
 				}
 			}
+			chooseSymbol.SetActive (true);
 		}
 	}
 }
