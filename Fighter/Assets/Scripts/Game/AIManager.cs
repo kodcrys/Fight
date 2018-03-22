@@ -44,6 +44,7 @@ public class AIManager : MonoBehaviour {
 				EasyMode ();
 				break;
 			case DifficultLevel.Normal:
+				NormalMode ();
 				break;
 			case DifficultLevel.Hard:
 				break;
@@ -52,6 +53,7 @@ public class AIManager : MonoBehaviour {
 	}
 
 	void EasyMode(){
+		timeInter = 0.4f;
 		if (right) {
 			if (fingerAIRight.enemyLeft.fingerAction == FingerBase.FingerState.Idel) {
 				if (time >= timeInter) {
@@ -82,6 +84,38 @@ public class AIManager : MonoBehaviour {
 			
 	}
 
+	void NormalMode(){
+		timeInter = 0.2f;
+		if (right) {
+			if (fingerAIRight.enemyLeft.fingerAction == FingerBase.FingerState.Idel) {
+				if (time >= timeInter) {
+					ranMove = Random.Range (0, 100);
+					time = 0;
+				}
+				if (ranMove > 50) {
+					if (!fingerAIRight.isAtk)
+						AIClick ();
+				} else {
+					if (!fingerAIRight.isAtk)
+						AIUnClick ();
+				}
+			} else {
+				if (time >= timeInter) {
+					ranMove = Random.Range (0, 100);
+					time = 0;
+				}
+				if (ranMove > 50) {
+					if (!fingerAIRight.isAtk)
+						AIClick ();
+				} else {
+					if (!fingerAIRight.isAtk)
+						AIUnClick ();
+				}
+			}
+		}
+
+	}
+
 	void AIClick(){
 		if (left) {
 			fingerAILeft.doingSomething = true;
@@ -99,9 +133,12 @@ public class AIManager : MonoBehaviour {
 	}
 
 	void AIUnClick(){
-		if (left)
-			FingerLeftControl.instance.UnClickAtk ();
-		else if (right)
-			FingerRightControl.instance.UnClickAtk ();
+		if (left) {
+			if (fingerAILeft.fingerAction != FingerBase.FingerState.Idel)
+				FingerLeftControl.instance.UnClickAtk ();
+		} else if (right) {
+			if (fingerAIRight.fingerAction != FingerBase.FingerState.Idel)
+				FingerRightControl.instance.UnClickAtk ();
+		}
 	}
 }

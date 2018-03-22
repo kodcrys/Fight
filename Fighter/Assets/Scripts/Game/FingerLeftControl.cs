@@ -55,6 +55,9 @@ public class FingerLeftControl : FingerBase {
 				lastAtk = false;
 				fingerAction = FingerState.Atk;
 			}
+		} else {
+			if (!enemyRight.lastAtk && !isAtk)
+				fingerAction = FingerState.Idel;
 		}
 
 		if (health <= 0 || enemyRight.health <= 0) {
