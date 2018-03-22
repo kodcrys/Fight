@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -22,6 +23,12 @@ public class ChooseCharManager : MonoBehaviour {
 	CointainData[] dataChars;
 	[SerializeField]
 	CointainData[] dataItems;
+	[SerializeField]
+	CointainData[] dataHats;
+	[SerializeField]
+	CointainData[] dataAmors;
+	[SerializeField]
+	CointainData[] dataWeapons;
 
 	[Header("Choose Action")]
 	public GameObject chooseSymbol;
@@ -178,6 +185,8 @@ public class ChooseCharManager : MonoBehaviour {
 		preBtn.GetComponent<UnityEngine.UI.Button> ().interactable = true;
 		nextBtn.GetComponent<UnityEngine.UI.Button> ().interactable = false;
 
+		EnDisableLibraryCell ();
+
 		topBar.isRunMoveAni = false;
 		midBar.isRunScaleAni = false;
 		botBar.isRunMoveAni = false;
@@ -191,6 +200,8 @@ public class ChooseCharManager : MonoBehaviour {
 
 	// run ani change scene when click back
 	public void AniChangeBackScene() {
+		chooseSymbol.SetActive (false);
+
 		topBar.isRunMoveAni = true;
 		midBar.isRunScaleAni = true;
 		botBar.isRunMoveAni = true;
@@ -289,6 +300,131 @@ public class ChooseCharManager : MonoBehaviour {
 		if (ctData.dataMap != null) {
 			map.sprite = ctData.dataMap;
 			chooseSymbol.SetActive (true);
+		}
+	}
+
+	public void RandomChar() {
+
+		GameObject gob = EventSystem.current.currentSelectedGameObject;
+		List<CointainData> dtChars = new List<CointainData> ();
+
+		chooseSymbol.SetActive (false);
+
+		for (int i = 0; i < dataChars.Length; i++)
+			if (dataChars [i].dataChar.isOwned)
+				dtChars.Add (dataChars [i]);
+
+		if (dtChars.Count > 0) {
+
+			int rand = Random.Range (0, dtChars.Count);
+			while (dtChars [rand].dataChar.isOwned == false) {
+				rand = Random.Range (0, dtChars.Count);
+			}
+			CointainData ctData = dtChars [rand];
+
+			if (isTurnPlayer1) {
+				hatSymbol2.gameObject.SetActive (false);
+				hatMainL.gameObject.SetActive (true);
+				hatMainL.sprite = ctData.dataChar.equipmentOfChar;
+				amorMainL.gameObject.SetActive (false);
+				weaponMainL.gameObject.SetActive (false);
+			} else {
+				hatSymbol.gameObject.SetActive (false);
+				hatMainR.gameObject.SetActive (true);
+				hatMainR.sprite = ctData.dataChar.equipmentOfChar;
+				amorMainR.gameObject.SetActive (false);
+				weaponMainR.gameObject.SetActive (false);
+			}
+		}
+	}
+
+	public void RandomHat() {
+
+		GameObject gob = EventSystem.current.currentSelectedGameObject;
+		List<CointainData> dtHats = new List<CointainData> ();
+
+		chooseSymbol.SetActive (false);
+
+		for (int i = 0; i < dataHats.Length; i++)
+			if (dataHats [i].dataItem.isOwned)
+				dtHats.Add (dataHats [i]);
+
+		if (dtHats.Count > 0) {
+			int rand = Random.Range (0, dtHats.Count);
+			while (dtHats [rand].dataItem.isOwned == false) {
+				rand = Random.Range (0, dtHats.Count);
+			}
+			CointainData ctData = dtHats [rand];
+
+			if (isTurnPlayer1) {
+				hatSymbol2.gameObject.SetActive (false);
+				hatMainL.gameObject.SetActive (true);
+				hatMainL.sprite = ctData.dataItem.avatar;
+			} else {
+				hatSymbol.gameObject.SetActive (false);
+				hatMainR.gameObject.SetActive (true);
+				hatMainR.sprite = ctData.dataItem.avatar;
+			}
+		}
+	}
+
+	public void RandomAmor() {
+
+		GameObject gob = EventSystem.current.currentSelectedGameObject;
+		List<CointainData> dtAmors = new List<CointainData> ();
+
+		chooseSymbol.SetActive (false);
+
+		for (int i = 0; i < dataAmors.Length; i++)
+			if (dataAmors [i].dataItem.isOwned)
+				dtAmors.Add (dataAmors [i]);
+
+		if (dtAmors.Count > 0) {
+			int rand = Random.Range (0, dtAmors.Count);
+			while (dtAmors [rand].dataItem.isOwned == false) {
+				rand = Random.Range (0, dtAmors.Count);
+			}
+			CointainData ctData = dtAmors [rand];
+
+			if (isTurnPlayer1) {
+				hatSymbol2.gameObject.SetActive (false);
+				amorMainL.gameObject.SetActive (true);
+				amorMainL.sprite = ctData.dataItem.avatar;
+			} else {
+				hatSymbol.gameObject.SetActive (false);
+				amorMainR.gameObject.SetActive (true);
+				amorMainR.sprite = ctData.dataItem.avatar;
+			}
+		}
+	}
+
+	public void RandomWeapon() {
+
+		GameObject gob = EventSystem.current.currentSelectedGameObject;
+		List<CointainData> dtWps = new List<CointainData> ();
+
+		chooseSymbol.SetActive (false);
+
+		for (int i = 0; i < dataWeapons.Length; i++)
+			if (dataWeapons [i].dataItem.isOwned)
+				dtWps.Add (dataWeapons [i]);
+
+		if (dtWps.Count > 0) {
+			int rand = Random.Range (0, dtWps.Count);
+			while (dtWps [rand].dataItem.isOwned == false) {
+				rand = Random.Range (0, dtWps.Count);
+			}
+			CointainData ctData = dtWps [rand];
+
+			if (isTurnPlayer1) {
+				hatSymbol2.gameObject.SetActive (false);
+				weaponMainL.gameObject.SetActive (true);
+				weaponMainL.sprite = ctData.dataItem.avatar;
+			} else {
+				hatSymbol.gameObject.SetActive (false);
+				weaponMainR.gameObject.SetActive (true);
+				weaponMainR.sprite = ctData.dataItem.avatar;
+			}
 		}
 	}
 
