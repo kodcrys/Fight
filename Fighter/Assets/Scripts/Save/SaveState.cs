@@ -41,7 +41,7 @@ public class SaveState {
 
 	public float cameraSize = 6.21f;
 
-	public bool player1AI = false;
+	public bool player1AI = true;
 
 	public bool player2AI = true;
 }

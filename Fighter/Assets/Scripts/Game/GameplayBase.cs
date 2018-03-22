@@ -10,6 +10,8 @@ public class GameplayBase : MonoBehaviour {
 
 	public bool zoomCamera;
 
+	public bool gamePause;
+
 	public Camera mainCamera;
 
 	[SerializeField]
@@ -27,8 +29,12 @@ public class GameplayBase : MonoBehaviour {
 	[SerializeField]
 	GameObject player1, player2;
 
+	[SerializeField]
+	GameObject pausePanel;
+
 	public void Start(){
 		instance = this;
+		gamePause = false;
 		CheckAI ();
 		zoomCamera = false;
 		if (SaveManager.instance.state.roundCount == 1)
@@ -84,5 +90,15 @@ public class GameplayBase : MonoBehaviour {
 				winCheckLeft [i - 1].SetActive (true);
 			}
 		}
+	}
+
+	public void PauseClick(){
+		gamePause = true;
+		pausePanel.SetActive (true);
+	}
+
+	public void CountinueClick(){
+		gamePause = false;
+		pausePanel.SetActive (false);
 	}
 }

@@ -60,6 +60,10 @@ public class FingerLeftControl : FingerBase {
 				fingerAction = FingerState.Idel;
 		}
 
+		if (firstAtk && enemyRight.lastAtk) {
+			isAtk = true;
+		}
+
 		if (health <= 0 || enemyRight.health <= 0) {
 			GameplayBase.instance.leftButton.SetActive (false);
 			AnimationText.canPlay = false;
