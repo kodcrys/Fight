@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: e4370f64259074aa9a225731f5b771b3
   - enabled: 1
+    path: Assets/Scenes/ChooseMap.unity
+    guid: 8ee15cc6002c0491ea97a88f6a94f82e
+  - enabled: 1
     path: Assets/Scenes/MainGameScene.unity
     guid: b9a0c774cccd440f3ad59f022eb9b696
   - enabled: 0

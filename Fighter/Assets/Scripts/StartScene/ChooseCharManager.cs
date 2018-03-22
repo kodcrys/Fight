@@ -205,6 +205,7 @@ public class ChooseCharManager : MonoBehaviour {
 			isTurnPlayer1 = false;
 		} else {
 			ready2.sprite = lockSpr;
+			UnityEngine.SceneManagement.SceneManager.LoadScene ("ChooseMap");
 		}
 	}
 
