@@ -65,6 +65,10 @@ public class ChooseCharManager : MonoBehaviour {
 	UIAnimations showTop;
 	[SerializeField]
 	UIAnimations vsImage;
+	[SerializeField]
+	UIAnimations nextBtn;
+	[SerializeField]
+	UIAnimations preBtn;
 
 	bool isTurnPlayer1 = false;
 
@@ -130,6 +134,20 @@ public class ChooseCharManager : MonoBehaviour {
 		showTop.isRunMoveAni = true;
 		vsImage.isRunScaleAni = true;
 		moveChooseFrame.isRunMoveAni = true;
+		nextBtn.isRunMoveAni = true;
+		preBtn.isRunMoveAni = true;
+	}
+
+	public void AniChangeBackScene() {
+		topBar.isRunMoveAni = true;
+		midBar.isRunScaleAni = true;
+		botBar.isRunMoveAni = true;
+
+		showTop.isRunMoveAni = false;
+		vsImage.isRunScaleAni = false;
+		moveChooseFrame.isRunMoveAni = false;
+		nextBtn.isRunMoveAni = false;
+		preBtn.isRunMoveAni = false;
 	}
 
 	public void ChooseChar() {

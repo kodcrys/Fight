@@ -329,9 +329,15 @@ public class UIAnimations : MonoBehaviour {
 		}
 	}
 
+	[SerializeField]
+	bool dontUseOffset;
 	void Move3DesBackDes3ToDes1() {
 		Vector3 newPos = target.position;
-		newPos.y = -6f + offsetMoveY;
+
+		if (dontUseOffset == false)
+			newPos.y = -6f + offsetMoveY;
+		else
+			newPos = pos1.transform.position;
 
 		if(target.position != newPos)
 			target.position =  Vector3.MoveTowards (target.position, newPos, speed * Time.deltaTime);
@@ -384,7 +390,8 @@ public class UIAnimations : MonoBehaviour {
 	}
 
 	void ScaleToMin() {
-		target.localScale =  Vector3.MoveTowards (target.localScale, minScale, speed * Time.deltaTime);
+		if(target.localScale != minScale)
+			target.localScale =  Vector3.MoveTowards (target.localScale, minScale, speed * Time.deltaTime);
 		if (target.localScale == minScale)
 			changeScale1 = changeScale2 = false;
 	}
