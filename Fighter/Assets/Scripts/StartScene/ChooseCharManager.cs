@@ -92,6 +92,10 @@ public class ChooseCharManager : MonoBehaviour {
 	[SerializeField]
 	SpriteRenderer map;
 
+	[Header("Fade ani")]
+	[SerializeField]
+	FadeAni aniFade;
+
 	[Header("Save")]
 	[SerializeField]
 	SaveDataCharacter cointainSave;
@@ -100,8 +104,9 @@ public class ChooseCharManager : MonoBehaviour {
 
 	GameObject objFollow;
 
-	[HideInInspector]
+	[SerializeField]
 	UnityEngine.UI.Image ready1, ready2;
+	[HideInInspector]
 	public bool isPlayAI;
 
 	void Awake() {
@@ -111,10 +116,10 @@ public class ChooseCharManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if(preBtn != null)
+		/*if(preBtn != null)
 			ready1 = preBtn.GetComponent<UnityEngine.UI.Image> ();
 		if(nextBtn != null)
-			ready2 = nextBtn.GetComponent<UnityEngine.UI.Image> ();
+			ready2 = nextBtn.GetComponent<UnityEngine.UI.Image> ();*/
 
 		isTurnPlayer1 = true;
 		chooseSymbol.SetActive (false);
@@ -225,7 +230,9 @@ public class ChooseCharManager : MonoBehaviour {
 			isTurnPlayer1 = false;
 		} else {
 			ready2.sprite = lockSpr;
-			UnityEngine.SceneManagement.SceneManager.LoadScene ("ChooseMap");
+			aniFade.stateFade = FadeAni.State.Show;
+			aniFade.isChangeMap = true;
+			//UnityEngine.SceneManagement.SceneManager.LoadScene ("ChooseMap");
 		}
 	}
 
@@ -591,6 +598,14 @@ public class ChooseCharManager : MonoBehaviour {
 			weaponMainR.gameObject.SetActive (false);
 		}
 		#endregion
+	}
+
+	public void BackChooseChar() {
+		aniFade.stateFade = FadeAni.State.Show;
+		aniFade.isChangeChooseChar = true;
+
+		// bien danh dau tu map ze choose char
+		FadeAni.isRunMapToChooseChar = true;
 	}
 
 	public void Home() {

@@ -71,6 +71,10 @@ public class StartSceneManager : MonoBehaviour {
 	[SerializeField]
 	UIAnimations midBar;
 
+	[Header("Fade ani")]
+	[SerializeField]
+	FadeAni fadeAni; 
+
 	void Awake() {
 		if (instance != null)
 			instance = this;
@@ -90,6 +94,13 @@ public class StartSceneManager : MonoBehaviour {
 			dailyRewardObj.SetActive (false);*/
 
 		DisplayClaimRewardDaily ();
+
+		if (FadeAni.isRunMapToChooseChar) {
+			ChooseCharManager.instance.AniChangeScene ();
+			fadeAni.OffFade ();
+			fadeAni.stateFade = FadeAni.State.Hide;
+			FadeAni.isRunMapToChooseChar = false;
+		}
 	}
 
 	// Update is called once per frame

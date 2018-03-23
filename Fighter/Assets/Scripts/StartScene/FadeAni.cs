@@ -5,6 +5,14 @@ public class FadeAni : MonoBehaviour {
 	[HideInInspector]
 	public bool isRunHide;
 
+	[HideInInspector]
+	public bool isChangeMap;
+
+	[HideInInspector]
+	public bool isChangeChooseChar;
+
+	public static bool isRunMapToChooseChar;
+
 	public enum State {none, Show, Hide, Show1, Show2}
 	[Header("State machine")]
 	public State stateFade = State.none;
@@ -57,6 +65,8 @@ public class FadeAni : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		isChangeMap = false;
+		isChangeChooseChar = false;
 		timeDelay = 0;
 	}
 	
@@ -104,6 +114,12 @@ public class FadeAni : MonoBehaviour {
 							timeDelay = 0;
 						}
 					}
+					
+					if (isChangeMap)
+						UnityEngine.SceneManagement.SceneManager.LoadScene ("ChooseMap");
+
+					if (isChangeChooseChar)
+						UnityEngine.SceneManagement.SceneManager.LoadScene ("StartScene");
 				}
 				break;
 			case State.Hide:
@@ -116,6 +132,11 @@ public class FadeAni : MonoBehaviour {
 				}
 				break;
 		}
+	}
+
+	public void OffFade() {
+		fade1.position = showPos2Fade1.position;
+		fade2.position = showPos2Fade2.position;
 	}
 
 	void HandleShop() {
