@@ -27,6 +27,10 @@ public class FingerLeftControl : FingerBase {
 			HanderStamina ();
 		if (healthImage != null)
 			HanderHealth ();
+		if (redHealth != null) {
+			if (takeDame)
+				StartCoroutine (WaitRedBlood (0.5f));
+		}
 
 		switch (fingerAction) {
 		case FingerState.none:
@@ -63,6 +67,7 @@ public class FingerLeftControl : FingerBase {
 		if (AnimationText.canPlay) {
 			if (firstAtk && enemyRight.lastAtk) {
 				isAtk = true;
+				takeDame = true;
 			} else {
 				isAtk = false;
 			}
@@ -96,6 +101,10 @@ public class FingerLeftControl : FingerBase {
 
 	public override void HanderHealth(){
 		healthImage.fillAmount = Map (health, 0, maxHealth, 0, 1);
+	}
+
+	public override void HanderRedHealth(){
+		redHealth.fillAmount = Map (health, 0, maxHealth, 0, 1);
 	}
 
 	public override void HanderStamina(){
@@ -210,7 +219,8 @@ public class FingerLeftControl : FingerBase {
 				if (doingSomething) {
 					if (stamina > 0) {
 						stamina -= 8;
-						Handheld.Vibrate();
+						if (SaveManager.instance.state.isOnRing)
+							Handheld.Vibrate ();
 					} else if (stamina <= 0) {
 						stamina = 0;
 						enemyRight.touch = false;
@@ -354,5 +364,11 @@ public class FingerLeftControl : FingerBase {
 		yield return new WaitForSeconds (time);
 		if (changeColor)
 			changeColor = false;
+	}
+
+	IEnumerator WaitRedBlood(float time){
+		yield return new WaitForSeconds (time);
+		HanderRedHealth ();
+		takeDame = false;
 	}
 }
