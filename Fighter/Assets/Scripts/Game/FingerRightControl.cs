@@ -22,7 +22,7 @@ public class FingerRightControl : FingerBase {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (staminaImage != null)
 			HanderStamina ();
 		if (healthImage != null)
@@ -60,8 +60,12 @@ public class FingerRightControl : FingerBase {
 					fingerAction = FingerState.Idel;
 			}
 
-			if (firstAtk && enemyLeft.lastAtk) {
-				isAtk = true;
+			if (AnimationText.canPlay) {
+				if (firstAtk && enemyLeft.lastAtk) {
+					isAtk = true;
+				} else {
+					isAtk = false;
+				}
 			}
 
 			if (health <= 0 || enemyLeft.health <= 0) {
@@ -184,7 +188,7 @@ public class FingerRightControl : FingerBase {
 			if (firstAtk) {
 				if (!enemyLeft.lastAtk) {
 					if (enemyLeft.stamina > 0) {
-						enemyLeft.stamina -= 5;
+						enemyLeft.stamina -= 2;
 					} else if (enemyLeft.stamina <= 0) {
 						enemyLeft.stamina = 0;
 					}
@@ -208,13 +212,15 @@ public class FingerRightControl : FingerBase {
 				if (enemyLeft.health > 0)
 					enemyLeft.health -= atk;
 				if (!enemyLeft.oneShotColor) {
+					CameraShake.instance.Shake ();
 					enemyLeft.changeColor = true;
 					enemyLeft.oneShotColor = true;
 				}
 
 				if (doingSomething) {
 					if (stamina > 0) {
-						stamina -= 10;
+						stamina -= 8;
+						Handheld.Vibrate();
 					} else if (stamina <= 0) {
 						stamina = 0;
 						enemyLeft.isAtk = false;
@@ -241,6 +247,10 @@ public class FingerRightControl : FingerBase {
 		finger.SetActive (true);
 		fingerDown.SetActive (false);
 		fingerAtk.SetActive (false);
+
+		isAtk = true;
+		firstAtk = false;
+		lastAtk = false;
 
 		StartCoroutine (WaitForNextRound (1.5f));
 
@@ -272,6 +282,10 @@ public class FingerRightControl : FingerBase {
 		finger.SetActive (false);
 		fingerDown.SetActive (true);
 		fingerAtk.SetActive (false);
+
+		isAtk = true;
+		firstAtk = false;
+		lastAtk = false;
 
 		if (time >= timeInter) {
 			time = 0;
@@ -339,6 +353,7 @@ public class FingerRightControl : FingerBase {
 			} else {
 				if (!AnimationText.endRound) {
 					AnimationText.endRound = true;
+					GameplayBase.instance.gameoverPanel.SetActive (true);
 				}
 			}
 			SaveManager.instance.Save ();

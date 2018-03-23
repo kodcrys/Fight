@@ -7,7 +7,11 @@ public class AnimationFadeManager : MonoBehaviour {
 
 	[SerializeField]
 	FadeAnimOption fadeOption;
-	
+
+	void Start(){
+		fadeOption.starDead.SetActive (false);
+	}
+
 	// Update is called once per frame
 	void Update () {
 		if (fadeOption.leftControl != null) {
@@ -38,6 +42,7 @@ public class AnimationFadeManager : MonoBehaviour {
 			} else if (fadeOption.leftControl.fingerAction == FingerBase.FingerState.Win) {
 				fadeOption.fadeLocation [0].sprite = fadeOption.fadeAnimOption [4];
 			} else if (fadeOption.leftControl.fingerAction == FingerBase.FingerState.Death) {
+				fadeOption.starDead.SetActive (true);
 				fadeOption.fadeLocation [1].sprite = fadeOption.fadeAnimOption [5];
 			}
 		}else if (fadeOption.rightControl != null) {
@@ -68,6 +73,7 @@ public class AnimationFadeManager : MonoBehaviour {
 			}else if (fadeOption.rightControl.fingerAction == FingerBase.FingerState.Win) {
 				fadeOption.fadeLocation [0].sprite = fadeOption.fadeAnimOption [4];
 			} else if (fadeOption.rightControl.fingerAction == FingerBase.FingerState.Death) {
+				fadeOption.starDead.SetActive (true);
 				fadeOption.fadeLocation [1].sprite = fadeOption.fadeAnimOption [5];
 			}
 		}
@@ -84,4 +90,5 @@ public class FadeAnimOption{
 	public FingerRightControl rightControl;
 	public float time, timeInter;
 	public int i;
+	public GameObject starDead;
 }

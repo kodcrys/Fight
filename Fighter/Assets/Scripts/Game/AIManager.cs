@@ -36,7 +36,7 @@ public class AIManager : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (AnimationText.canPlay) {
 			if (!GameplayBase.instance.gamePause) {
 				time += Time.deltaTime;

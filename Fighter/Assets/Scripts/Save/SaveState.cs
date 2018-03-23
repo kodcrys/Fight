@@ -44,4 +44,12 @@ public class SaveState {
 	public bool player1AI = true;
 
 	public bool player2AI = true;
+
+	public bool soundOnOff = true;
+
+	public bool musicOnOff = true;
+
+	public bool voiceOnOff = true;
+
+	public bool shakeOnOff = true;
 }

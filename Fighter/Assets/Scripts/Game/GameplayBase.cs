@@ -29,8 +29,7 @@ public class GameplayBase : MonoBehaviour {
 	[SerializeField]
 	GameObject player1, player2;
 
-	[SerializeField]
-	GameObject pausePanel;
+	public GameObject pausePanel, gameoverPanel;
 
 	public void Start(){
 		instance = this;
@@ -100,5 +99,13 @@ public class GameplayBase : MonoBehaviour {
 	public void CountinueClick(){
 		gamePause = false;
 		pausePanel.SetActive (false);
+	}
+
+	public void ReMatch(){
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("MainGameScene");
+		SaveManager.instance.state.winCountLeft = 0;
+		SaveManager.instance.state.winCountRight = 0;
+		SaveManager.instance.state.roundCount = 1;
+		SaveManager.instance.Save ();
 	}
 }
