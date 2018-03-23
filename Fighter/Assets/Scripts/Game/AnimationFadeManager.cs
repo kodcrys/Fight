@@ -9,7 +9,8 @@ public class AnimationFadeManager : MonoBehaviour {
 	FadeAnimOption fadeOption;
 
 	void Start(){
-		fadeOption.starDead.SetActive (false);
+		if(fadeOption != null)
+			fadeOption.starDead.SetActive (false);
 	}
 
 	// Update is called once per frame

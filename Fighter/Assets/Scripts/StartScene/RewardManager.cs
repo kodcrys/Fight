@@ -48,6 +48,8 @@ public class RewardManager : MonoBehaviour {
 	[SerializeField]
 	GameObject panelOfCv_X10Reward;
 	[SerializeField]
+	GameObject panelOfCv_DailyOrQuest;
+	[SerializeField]
 	GameObject canvas_Reward;
 	[SerializeField]
 	GameObject lightBuyChar;
@@ -90,11 +92,17 @@ public class RewardManager : MonoBehaviour {
 		}
 	}*/
 
+	public void OpenRewardDailyOrQuest() {
+		panelOfCv_X1Reward.SetActive (false);
+		panelOfCv_X10Reward.SetActive (false);
+		panelOfCv_DailyOrQuest.SetActive (true);
+	}
+
 	public void OpenReward(bool isShopGold) {
 		isX1 = true;
 		panelOfCv_X1Reward.SetActive (true);
 		panelOfCv_X10Reward.SetActive (false);
-
+		panelOfCv_DailyOrQuest.SetActive (false);
 		//lightX1.SetActive (true);
 
 		// open panel ani reward
@@ -124,6 +132,7 @@ public class RewardManager : MonoBehaviour {
 		isX1 = false;
 		panelOfCv_X1Reward.SetActive (false);
 		panelOfCv_X10Reward.SetActive (true);
+		panelOfCv_DailyOrQuest.SetActive (false);
 
 		//lightX1.SetActive (false);
 
