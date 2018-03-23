@@ -9,7 +9,7 @@ public class AnimationFadeManager : MonoBehaviour {
 	FadeAnimOption fadeOption;
 
 	void Start(){
-		if(fadeOption != null)
+		if(fadeOption.starDead != null)
 			fadeOption.starDead.SetActive (false);
 	}
 
@@ -43,7 +43,8 @@ public class AnimationFadeManager : MonoBehaviour {
 			} else if (fadeOption.leftControl.fingerAction == FingerBase.FingerState.Win) {
 				fadeOption.fadeLocation [0].sprite = fadeOption.fadeAnimOption [4];
 			} else if (fadeOption.leftControl.fingerAction == FingerBase.FingerState.Death) {
-				fadeOption.starDead.SetActive (true);
+				if(fadeOption.starDead != null)
+					fadeOption.starDead.SetActive (true);
 				fadeOption.fadeLocation [1].sprite = fadeOption.fadeAnimOption [5];
 			}
 		}else if (fadeOption.rightControl != null) {
@@ -74,7 +75,8 @@ public class AnimationFadeManager : MonoBehaviour {
 			}else if (fadeOption.rightControl.fingerAction == FingerBase.FingerState.Win) {
 				fadeOption.fadeLocation [0].sprite = fadeOption.fadeAnimOption [4];
 			} else if (fadeOption.rightControl.fingerAction == FingerBase.FingerState.Death) {
-				fadeOption.starDead.SetActive (true);
+				if(fadeOption.starDead != null)
+					fadeOption.starDead.SetActive (true);
 				fadeOption.fadeLocation [1].sprite = fadeOption.fadeAnimOption [5];
 			}
 		}

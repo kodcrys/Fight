@@ -116,11 +116,6 @@ public class ChooseCharManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		/*if(preBtn != null)
-			ready1 = preBtn.GetComponent<UnityEngine.UI.Image> ();
-		if(nextBtn != null)
-			ready2 = nextBtn.GetComponent<UnityEngine.UI.Image> ();*/
-
 		isTurnPlayer1 = true;
 		chooseSymbol.SetActive (false);
 	}
