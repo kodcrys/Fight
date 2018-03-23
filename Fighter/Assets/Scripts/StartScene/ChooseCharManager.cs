@@ -250,6 +250,10 @@ public class ChooseCharManager : MonoBehaviour {
 				weaponMainL.gameObject.SetActive (false);
 
 				cointainSave.characterPlayer1 = ctData.dataChar;
+				cointainSave.hatPlayer1 = null;
+				cointainSave.amorPlayer1 = null;
+				cointainSave.weaponPlayer1 = null;
+
 			} else {
 				hatSymbol.gameObject.SetActive (false);
 				hatMainR.gameObject.SetActive (true);
@@ -258,6 +262,9 @@ public class ChooseCharManager : MonoBehaviour {
 				weaponMainR.gameObject.SetActive (false);
 
 				cointainSave.characterPlayer2 = ctData.dataChar;
+				cointainSave.hatPlayer2 = null;
+				cointainSave.amorPlayer2 = null;
+				cointainSave.weaponPlayer2 = null;
 			}
 			chooseSymbol.SetActive (true);
 		} else
@@ -266,6 +273,9 @@ public class ChooseCharManager : MonoBehaviour {
 	
 		if (ctData.dataItem != null && ctData.dataItem.isOwned) {
 			if (isTurnPlayer1) {
+
+				cointainSave.characterPlayer1 = null;
+
 				hatSymbol2.gameObject.SetActive (false);
 
 				if (ctData.dataItem.typeItem == TypeObject.hat) {
@@ -290,6 +300,9 @@ public class ChooseCharManager : MonoBehaviour {
 				}
 
 			} else {
+
+				cointainSave.characterPlayer2 = null;
+
 				hatSymbol.gameObject.SetActive (false);
 
 				if (ctData.dataItem.typeItem == TypeObject.hat) {
@@ -350,6 +363,11 @@ public class ChooseCharManager : MonoBehaviour {
 				weaponMainL.gameObject.SetActive (false);
 
 				cointainSave.characterPlayer1 = ctData.dataChar;
+
+				cointainSave.hatPlayer1 = null;
+				cointainSave.amorPlayer1 = null;
+				cointainSave.weaponPlayer1 = null;
+
 			} else {
 				hatSymbol.gameObject.SetActive (false);
 				hatMainR.gameObject.SetActive (true);
@@ -358,6 +376,11 @@ public class ChooseCharManager : MonoBehaviour {
 				weaponMainR.gameObject.SetActive (false);
 
 				cointainSave.characterPlayer2 = ctData.dataChar;
+
+				cointainSave.hatPlayer2 = null;
+				cointainSave.amorPlayer2 = null;
+				cointainSave.weaponPlayer2 = null;
+
 			}
 		}
 	}
@@ -381,12 +404,18 @@ public class ChooseCharManager : MonoBehaviour {
 			CointainData ctData = dtHats [rand];
 
 			if (isTurnPlayer1) {
+				
+				cointainSave.characterPlayer1 = null;
+
 				hatSymbol2.gameObject.SetActive (false);
 				hatMainL.gameObject.SetActive (true);
 				hatMainL.sprite = ctData.dataItem.avatar;
 
 				cointainSave.hatPlayer1 = ctData.dataItem;
 			} else {
+
+				cointainSave.characterPlayer2 = null;
+
 				hatSymbol.gameObject.SetActive (false);
 				hatMainR.gameObject.SetActive (true);
 				hatMainR.sprite = ctData.dataItem.avatar;
@@ -415,12 +444,18 @@ public class ChooseCharManager : MonoBehaviour {
 			CointainData ctData = dtAmors [rand];
 
 			if (isTurnPlayer1) {
+
+				cointainSave.characterPlayer1 = null;
+
 				hatSymbol2.gameObject.SetActive (false);
 				amorMainL.gameObject.SetActive (true);
 				amorMainL.sprite = ctData.dataItem.avatar;
 
 				cointainSave.amorPlayer1 = ctData.dataItem;
 			} else {
+
+				cointainSave.characterPlayer2 = null;
+
 				hatSymbol.gameObject.SetActive (false);
 				amorMainR.gameObject.SetActive (true);
 				amorMainR.sprite = ctData.dataItem.avatar;
@@ -449,12 +484,18 @@ public class ChooseCharManager : MonoBehaviour {
 			CointainData ctData = dtWps [rand];
 
 			if (isTurnPlayer1) {
+
+				cointainSave.characterPlayer1 = null;
+
 				hatSymbol2.gameObject.SetActive (false);
 				weaponMainL.gameObject.SetActive (true);
 				weaponMainL.sprite = ctData.dataItem.avatar;
 
 				cointainSave.weaponPlayer1 = ctData.dataItem;
 			} else {
+
+				cointainSave.characterPlayer2 = null;
+
 				hatSymbol.gameObject.SetActive (false);
 				weaponMainR.gameObject.SetActive (true);
 				weaponMainR.sprite = ctData.dataItem.avatar;
@@ -465,10 +506,13 @@ public class ChooseCharManager : MonoBehaviour {
 	}
 
 	public void ReadSave() {
+		#region character
 		if (cointainSave.characterPlayer1 != null) {
 			hatSymbol2.gameObject.SetActive (false);
+
 			hatMainL.gameObject.SetActive (true);
 			hatMainL.sprite = cointainSave.characterPlayer1.equipmentOfChar;
+
 			amorMainL.gameObject.SetActive (false);
 			weaponMainL.gameObject.SetActive (false);
 		} else {
@@ -477,6 +521,76 @@ public class ChooseCharManager : MonoBehaviour {
 			amorMainL.gameObject.SetActive (false);
 			weaponMainL.gameObject.SetActive (false);
 		}
+
+		if (cointainSave.characterPlayer2 != null) {
+			hatSymbol.gameObject.SetActive (false);
+
+			hatMainR.gameObject.SetActive (true);
+			hatMainR.sprite = cointainSave.characterPlayer2.equipmentOfChar;
+
+			amorMainR.gameObject.SetActive (false);
+			weaponMainR.gameObject.SetActive (false);
+		} else {
+			hatSymbol.gameObject.SetActive (true);
+			hatMainR.gameObject.SetActive (false);
+			amorMainR.gameObject.SetActive (false);
+			weaponMainR.gameObject.SetActive (false);
+		}
+		#endregion
+
+		#region hatPlayer
+		if (cointainSave.hatPlayer1 != null) {
+			hatSymbol2.gameObject.SetActive (false);
+
+			hatMainL.gameObject.SetActive (true);
+			hatMainL.sprite = cointainSave.hatPlayer1.avatar;
+		} else {
+			hatSymbol2.gameObject.SetActive (true);
+			hatMainL.gameObject.SetActive (false);
+		}
+
+		if (cointainSave.hatPlayer2 != null) {
+			hatSymbol.gameObject.SetActive (false);
+
+			hatMainR.gameObject.SetActive (true);
+			hatMainR.sprite = cointainSave.hatPlayer2.avatar;
+		} else {
+			hatSymbol.gameObject.SetActive (true);
+			hatMainR.gameObject.SetActive (false);
+		}
+		#endregion
+
+		#region amorPlayer
+		if (cointainSave.amorPlayer1 != null) {
+			amorMainL.gameObject.SetActive (true);
+			amorMainL.sprite = cointainSave.amorPlayer1.avatar;
+		} else {
+			amorMainL.gameObject.SetActive (false);
+		}
+
+		if (cointainSave.amorPlayer2 != null) {
+			amorMainR.gameObject.SetActive (true);
+			amorMainR.sprite = cointainSave.amorPlayer2.avatar;
+		} else {
+			amorMainR.gameObject.SetActive (false);
+		}
+		#endregion
+
+		#region weaponPlayer
+		if (cointainSave.weaponPlayer1 != null) {
+			weaponMainL.gameObject.SetActive (true);
+			weaponMainL.sprite = cointainSave.weaponPlayer1.avatar;
+		} else {
+			weaponMainL.gameObject.SetActive (false);
+		}
+
+		if (cointainSave.weaponPlayer2 != null) {
+			weaponMainR.gameObject.SetActive (true);
+			weaponMainR.sprite = cointainSave.weaponPlayer2.avatar;
+		} else {
+			weaponMainR.gameObject.SetActive (false);
+		}
+		#endregion
 	}
 
 	public void Home() {

@@ -71,10 +71,6 @@ public class StartSceneManager : MonoBehaviour {
 	[SerializeField]
 	UIAnimations midBar;
 
-	[Header("Save")]
-	[SerializeField]
-	SaveDataCharacter cointainSave;
-
 	void Awake() {
 		if (instance != null)
 			instance = this;
@@ -82,6 +78,8 @@ public class StartSceneManager : MonoBehaviour {
 		DisplayGold ();
 		DisplayDiamond ();
 		CheckSetting ();
+
+		ChooseCharManager.instance.ReadSave ();
 
 		// Chua lam tat app thi tra ze
 		/*if (SaveManager.instance.state.isFirstOpenApp) {
