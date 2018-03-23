@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class SaveState {
 
@@ -44,4 +45,6 @@ public class SaveState {
 	public bool player1AI = true;
 
 	public bool player2AI = true;
+
+	public List<CointainData> changeChar;
 }
