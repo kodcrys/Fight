@@ -71,6 +71,10 @@ public class StartSceneManager : MonoBehaviour {
 	[SerializeField]
 	UIAnimations midBar;
 
+	[Header("Save")]
+	[SerializeField]
+	SaveDataCharacter cointainSave;
+
 	void Awake() {
 		if (instance != null)
 			instance = this;
@@ -208,4 +212,6 @@ public class StartSceneManager : MonoBehaviour {
 		voiceUI.CheckVoice ();
 		ringUI.CheckRing ();
 	}
+
+
 }

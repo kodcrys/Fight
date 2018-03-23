@@ -92,6 +92,10 @@ public class ChooseCharManager : MonoBehaviour {
 	[SerializeField]
 	SpriteRenderer map;
 
+	[Header("Save")]
+	[SerializeField]
+	SaveDataCharacter cointainSave;
+
 	bool isTurnPlayer1 = false;
 
 	GameObject objFollow;
@@ -244,18 +248,16 @@ public class ChooseCharManager : MonoBehaviour {
 				hatMainL.sprite = ctData.dataChar.equipmentOfChar;
 				amorMainL.gameObject.SetActive (false);
 				weaponMainL.gameObject.SetActive (false);
-				//SaveManager.instance.state.changeCharPlayer1 = new List<CointainData> ();
-				//SaveManager.instance.state.changeCharPlayer1.Add (ctData);
-				SaveManager.instance.Save ();
+
+				cointainSave.characterPlayer1 = ctData.dataChar;
 			} else {
 				hatSymbol.gameObject.SetActive (false);
 				hatMainR.gameObject.SetActive (true);
 				hatMainR.sprite = ctData.dataChar.equipmentOfChar;
 				amorMainR.gameObject.SetActive (false);
 				weaponMainR.gameObject.SetActive (false);
-				//SaveManager.instance.state.changeCharPlayer2 = new List<CointainData> ();
-				//SaveManager.instance.state.changeCharPlayer2.Add (ctData);
-				//SaveManager.instance.Save ();
+
+				cointainSave.characterPlayer2 = ctData.dataChar;
 			}
 			chooseSymbol.SetActive (true);
 		} else
@@ -270,17 +272,21 @@ public class ChooseCharManager : MonoBehaviour {
 					hatMainL.gameObject.SetActive (true);
 					hatMainL.sprite = ctData.dataItem.avatar;
 
-
+					cointainSave.hatPlayer1 = ctData.dataItem;
 				}
 
 				if (ctData.dataItem.typeItem == TypeObject.tshirt) {
 					amorMainL.gameObject.SetActive (true);
 					amorMainL.sprite = ctData.dataItem.avatar;
+
+					cointainSave.amorPlayer1 = ctData.dataItem;
 				}
 
 				if (ctData.dataItem.typeItem == TypeObject.weapon) {
 					weaponMainL.gameObject.SetActive (true);
 					weaponMainL.sprite = ctData.dataItem.avatar;
+
+					cointainSave.weaponPlayer1 = ctData.dataItem;
 				}
 
 			} else {
@@ -289,16 +295,22 @@ public class ChooseCharManager : MonoBehaviour {
 				if (ctData.dataItem.typeItem == TypeObject.hat) {
 					hatMainR.gameObject.SetActive (true);
 					hatMainR.sprite = ctData.dataItem.avatar;
+
+					cointainSave.hatPlayer2 = ctData.dataItem;
 				}
 
 				if (ctData.dataItem.typeItem == TypeObject.tshirt) {
 					amorMainR.gameObject.SetActive (true);
 					amorMainR.sprite = ctData.dataItem.avatar;
+
+					cointainSave.amorPlayer2 = ctData.dataItem;
 				}
 
 				if (ctData.dataItem.typeItem == TypeObject.weapon) {
 					weaponMainR.gameObject.SetActive (true);
 					weaponMainR.sprite = ctData.dataItem.avatar;
+
+					cointainSave.weaponPlayer2 = ctData.dataItem;
 				}
 			}
 			chooseSymbol.SetActive (true);
@@ -336,12 +348,16 @@ public class ChooseCharManager : MonoBehaviour {
 				hatMainL.sprite = ctData.dataChar.equipmentOfChar;
 				amorMainL.gameObject.SetActive (false);
 				weaponMainL.gameObject.SetActive (false);
+
+				cointainSave.characterPlayer1 = ctData.dataChar;
 			} else {
 				hatSymbol.gameObject.SetActive (false);
 				hatMainR.gameObject.SetActive (true);
 				hatMainR.sprite = ctData.dataChar.equipmentOfChar;
 				amorMainR.gameObject.SetActive (false);
 				weaponMainR.gameObject.SetActive (false);
+
+				cointainSave.characterPlayer2 = ctData.dataChar;
 			}
 		}
 	}
@@ -368,10 +384,14 @@ public class ChooseCharManager : MonoBehaviour {
 				hatSymbol2.gameObject.SetActive (false);
 				hatMainL.gameObject.SetActive (true);
 				hatMainL.sprite = ctData.dataItem.avatar;
+
+				cointainSave.hatPlayer1 = ctData.dataItem;
 			} else {
 				hatSymbol.gameObject.SetActive (false);
 				hatMainR.gameObject.SetActive (true);
 				hatMainR.sprite = ctData.dataItem.avatar;
+
+				cointainSave.hatPlayer2 = ctData.dataItem;
 			}
 		}
 	}
@@ -398,10 +418,14 @@ public class ChooseCharManager : MonoBehaviour {
 				hatSymbol2.gameObject.SetActive (false);
 				amorMainL.gameObject.SetActive (true);
 				amorMainL.sprite = ctData.dataItem.avatar;
+
+				cointainSave.amorPlayer1 = ctData.dataItem;
 			} else {
 				hatSymbol.gameObject.SetActive (false);
 				amorMainR.gameObject.SetActive (true);
 				amorMainR.sprite = ctData.dataItem.avatar;
+
+				cointainSave.amorPlayer2 = ctData.dataItem;
 			}
 		}
 	}
@@ -428,11 +452,30 @@ public class ChooseCharManager : MonoBehaviour {
 				hatSymbol2.gameObject.SetActive (false);
 				weaponMainL.gameObject.SetActive (true);
 				weaponMainL.sprite = ctData.dataItem.avatar;
+
+				cointainSave.weaponPlayer1 = ctData.dataItem;
 			} else {
 				hatSymbol.gameObject.SetActive (false);
 				weaponMainR.gameObject.SetActive (true);
 				weaponMainR.sprite = ctData.dataItem.avatar;
+
+				cointainSave.weaponPlayer2 = ctData.dataItem;
 			}
+		}
+	}
+
+	public void ReadSave() {
+		if (cointainSave.characterPlayer1 != null) {
+			hatSymbol2.gameObject.SetActive (false);
+			hatMainL.gameObject.SetActive (true);
+			hatMainL.sprite = cointainSave.characterPlayer1.equipmentOfChar;
+			amorMainL.gameObject.SetActive (false);
+			weaponMainL.gameObject.SetActive (false);
+		} else {
+			hatSymbol2.gameObject.SetActive (true);
+			hatMainL.gameObject.SetActive (false);
+			amorMainL.gameObject.SetActive (false);
+			weaponMainL.gameObject.SetActive (false);
 		}
 	}
 
