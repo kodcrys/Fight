@@ -40,6 +40,8 @@ public class FingerBase : MonoBehaviour {
 
 	public bool stopTime;
 
+	public bool takeDame;
+
 	public int winCount;
 
 	public float time, timeInter;
@@ -50,7 +52,7 @@ public class FingerBase : MonoBehaviour {
 
 	public UnityEngine.UI.Text atkText, healthText;
 
-	public UnityEngine.UI.Image healthImage, staminaImage;
+	public UnityEngine.UI.Image healthImage, staminaImage, redHealth;
 
 	public Animator stunFinger;
 
@@ -59,6 +61,10 @@ public class FingerBase : MonoBehaviour {
 	}
 		
 	public virtual void HanderStamina(){
+		
+	}
+
+	public virtual void HanderRedHealth(){
 		
 	}
 
