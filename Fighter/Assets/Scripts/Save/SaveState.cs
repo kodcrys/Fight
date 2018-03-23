@@ -46,6 +46,6 @@ public class SaveState {
 
 	public bool player2AI = true;
 
-	public List<CointainData> changeCharPlayer1;
-	public List<CointainData> changeCharPlayer2;
+	//public List<CointainData> changeCharPlayer1 = new List<CointainData> ();
+	//public List<CointainData> changeCharPlayer2 = new List<CointainData> ();
 }

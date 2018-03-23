@@ -17,7 +17,7 @@ public class CointainData : MonoBehaviour {
 	SmokeEffectOff smokeEffectOff;
 
 	bool isCheck;
-
+	//changeChar
 	void OnEnable() {
 		isCheck = true;
 	

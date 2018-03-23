@@ -244,12 +244,18 @@ public class ChooseCharManager : MonoBehaviour {
 				hatMainL.sprite = ctData.dataChar.equipmentOfChar;
 				amorMainL.gameObject.SetActive (false);
 				weaponMainL.gameObject.SetActive (false);
+				//SaveManager.instance.state.changeCharPlayer1 = new List<CointainData> ();
+				//SaveManager.instance.state.changeCharPlayer1.Add (ctData);
+				SaveManager.instance.Save ();
 			} else {
 				hatSymbol.gameObject.SetActive (false);
 				hatMainR.gameObject.SetActive (true);
 				hatMainR.sprite = ctData.dataChar.equipmentOfChar;
 				amorMainR.gameObject.SetActive (false);
 				weaponMainR.gameObject.SetActive (false);
+				//SaveManager.instance.state.changeCharPlayer2 = new List<CointainData> ();
+				//SaveManager.instance.state.changeCharPlayer2.Add (ctData);
+				//SaveManager.instance.Save ();
 			}
 			chooseSymbol.SetActive (true);
 		} else
@@ -263,6 +269,8 @@ public class ChooseCharManager : MonoBehaviour {
 				if (ctData.dataItem.typeItem == TypeObject.hat) {
 					hatMainL.gameObject.SetActive (true);
 					hatMainL.sprite = ctData.dataItem.avatar;
+
+
 				}
 
 				if (ctData.dataItem.typeItem == TypeObject.tshirt) {
