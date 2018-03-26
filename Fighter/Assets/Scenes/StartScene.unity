@@ -45106,7 +45106,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fingerAction: 1
-  isUIAni: 1
   finger: {fileID: 740341248}
   fingerAtk: {fileID: 0}
   fingerDown: {fileID: 0}
@@ -58508,7 +58507,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fingerAction: 1
-  isUIAni: 1
   finger: {fileID: 993801295}
   fingerAtk: {fileID: 0}
   fingerDown: {fileID: 0}
@@ -60236,7 +60234,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fingerAction: 1
-  isUIAni: 1
   finger: {fileID: 1025194254}
   fingerAtk: {fileID: 0}
   fingerDown: {fileID: 0}
@@ -67616,7 +67613,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fingerAction: 1
-  isUIAni: 1
   finger: {fileID: 1118219378}
   fingerAtk: {fileID: 0}
   fingerDown: {fileID: 0}
@@ -79994,7 +79990,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fingerAction: 1
-  isUIAni: 1
   finger: {fileID: 1271464386}
   fingerAtk: {fileID: 0}
   fingerDown: {fileID: 0}
@@ -80758,7 +80753,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fingerAction: 1
-  isUIAni: 1
   finger: {fileID: 1295972551}
   fingerAtk: {fileID: 0}
   fingerDown: {fileID: 0}
@@ -81859,7 +81853,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fingerAction: 1
-  isUIAni: 1
   finger: {fileID: 1311053123}
   fingerAtk: {fileID: 0}
   fingerDown: {fileID: 0}
@@ -82923,7 +82916,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fingerAction: 1
-  isUIAni: 1
   finger: {fileID: 1332690251}
   fingerAtk: {fileID: 0}
   fingerDown: {fileID: 0}
@@ -90617,7 +90609,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fingerAction: 1
-  isUIAni: 1
   finger: {fileID: 1458444873}
   fingerAtk: {fileID: 0}
   fingerDown: {fileID: 0}
@@ -119695,7 +119686,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fingerAction: 1
-  isUIAni: 1
   finger: {fileID: 1933232387}
   fingerAtk: {fileID: 0}
   fingerDown: {fileID: 0}
@@ -120944,7 +120934,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fingerAction: 1
-  isUIAni: 1
   finger: {fileID: 1949988541}
   fingerAtk: {fileID: 0}
   fingerDown: {fileID: 0}

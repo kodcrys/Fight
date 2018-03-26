@@ -3790,7 +3790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24bb1861475ca4513864287b467312b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difLevel: 1
+  difLevel: 4
   left: 1
   right: 0
   finger: {fileID: 1169754930}
@@ -4878,7 +4878,6 @@ MonoBehaviour:
   staminaImage: {fileID: 1293532664}
   redHealth: {fileID: 1842487878}
   stunFinger: {fileID: 408478869}
-  isUIAni: 0
 --- !u!114 &1540023915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4890,7 +4889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24bb1861475ca4513864287b467312b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difLevel: 2
+  difLevel: 4
   left: 0
   right: 1
   finger: {fileID: 1540023910}
