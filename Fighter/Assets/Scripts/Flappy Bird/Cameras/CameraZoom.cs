@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraZoom : MonoBehaviour {
-	[SerializeField]
-	private float maxSizeCamera = 11f, minSizeCamera = 10f;
+	private float maxSizeCamera = 12.5f, minSizeCamera = 11.5f;
 	bool zoomIn;
 	float sizeCamera;
+	void Awake ()
+	{
+		
+	}
+
 	// Use this for initialization
 	void Start () {
 		zoomIn = true;

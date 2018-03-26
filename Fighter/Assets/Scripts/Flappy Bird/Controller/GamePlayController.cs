@@ -49,13 +49,13 @@ public class GamePlayController : MonoBehaviour {
 	/// Home button.
 	/// </summary>
 	public void _MenuButton(){
-		Application.LoadLevel ("MainMenu");
+		Application.LoadLevel ("StartScene");
 	}
 
 	/// <summary>
 	/// Restart button.
 	/// </summary>
 	public void _RestartGameButton(){
-		Application.LoadLevel ("FlappyThumb 1");
+		Application.LoadLevel ("FlappyThumb");
 	}
 }

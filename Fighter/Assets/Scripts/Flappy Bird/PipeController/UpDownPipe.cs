@@ -9,6 +9,8 @@ public class UpDownPipe : MonoBehaviour {
 	[SerializeField]
 	private bool MoveUp;
 
+	[SerializeField]
+	Vector3 startScale;
 
 	float randSpeed, randPos;
 	Vector3 startPos;
@@ -21,6 +23,7 @@ public class UpDownPipe : MonoBehaviour {
 		randSpeed = Random.Range (minSpeed, maxSpeed);
 		// Random range for the position which the pipe will move to.
 		randPos = Random.Range (minRange, MaxRange);
+		transform.localScale = startScale;
 		// Save the start position of the pipe.
 		startPos = transform.localScale;
 	}
