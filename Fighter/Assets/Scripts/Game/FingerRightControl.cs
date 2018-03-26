@@ -6,9 +6,6 @@ public class FingerRightControl : FingerBase {
 
 	public static FingerRightControl instance;
 
-	[SerializeField]
-	bool isUIAni;
-
 	void Awake(){
 		healthBar.Initialize ();
 		staminaBar.Initialize ();
@@ -57,54 +54,52 @@ public class FingerRightControl : FingerBase {
 			Dead ();
 			break;
 		}
+			
+		if (doingSomething) {
+			if (!enemyLeft.firstAtk && lastAtk) {
+				lastAtk = false;
+				fingerAction = FingerState.Atk;
+			}
+		} else {
+			if (!enemyLeft.lastAtk && !isAtk)
+				fingerAction = FingerState.Idel;
+		}
 
-		if (isUIAni == false) {
-			if (doingSomething) {
-				if (!enemyLeft.firstAtk && lastAtk) {
-					lastAtk = false;
-					fingerAction = FingerState.Atk;
-				}
+		if (AnimationText.canPlay) {
+			if (firstAtk && enemyLeft.lastAtk) {
+				isAtk = true;
+				takeDame = true;
 			} else {
-				if (!enemyLeft.lastAtk && !isAtk)
-					fingerAction = FingerState.Idel;
+				isAtk = false;
 			}
+		}
 
-			if (AnimationText.canPlay) {
-				if (firstAtk && enemyLeft.lastAtk) {
-					isAtk = true;
-					takeDame = true;
-				} else {
-					isAtk = false;
-				}
+		if (healthBar.CurrentVal <= 0 || enemyLeft.healthBar.CurrentVal <= 0) {
+			GameplayBase.instance.rightButton.SetActive (false);
+			AnimationText.canPlay = false;
+			if (stopTime) {
+				GameplayBase.instance.mainCamera.orthographicSize = 4;
+				fingerAction = FingerState.Doing;
+				StartCoroutine (WhoDeadWhoWin (1f));
 			}
-
-			if (healthBar.CurrentVal <= 0 || enemyLeft.healthBar.CurrentVal <= 0) {
-				GameplayBase.instance.rightButton.SetActive (false);
-				AnimationText.canPlay = false;
-				if (stopTime) {
-					GameplayBase.instance.mainCamera.orthographicSize = 4;
-					fingerAction = FingerState.Doing;
-					StartCoroutine (WhoDeadWhoWin (1f));
-				}
-			}
+		}
 		
 			
-			if (changeColor) {
-				finger.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
-				fingerAtk.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
-				fingerDown.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
-				hand.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
-				StartCoroutine (WaitChangeColor (0.001f));
-			} else {
-				finger.GetComponent<SpriteRenderer> ().color = new Color32 (255, 212, 179, 255);
-				fingerAtk.GetComponent<SpriteRenderer> ().color = new Color32 (255, 212, 179, 255);
-				fingerDown.GetComponent<SpriteRenderer> ().color = new Color32 (255, 212, 179, 255);
-				hand.GetComponent<SpriteRenderer> ().color = new Color32 (255, 212, 179, 255);
-			}
-
-			if (takeDame)
-				StartCoroutine (WaitRedBlood (0.5f));
+		if (changeColor) {
+			finger.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
+			fingerAtk.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
+			fingerDown.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
+			hand.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
+			StartCoroutine (WaitChangeColor (0.001f));
+		} else {
+			finger.GetComponent<SpriteRenderer> ().color = new Color32 (255, 212, 179, 255);
+			fingerAtk.GetComponent<SpriteRenderer> ().color = new Color32 (255, 212, 179, 255);
+			fingerDown.GetComponent<SpriteRenderer> ().color = new Color32 (255, 212, 179, 255);
+			hand.GetComponent<SpriteRenderer> ().color = new Color32 (255, 212, 179, 255);
 		}
+
+		if (takeDame)
+			StartCoroutine (WaitRedBlood (0.5f));
 	}
 
 /*	public override void HanderHealth(){
@@ -125,7 +120,7 @@ public class FingerRightControl : FingerBase {
 	}*/
 
 	public override void DoIdel(){
-		if(finger != null)
+		if (finger != null)
 			finger.SetActive (true);
 		if (fingerDown != null)
 			fingerDown.SetActive (false);
@@ -138,14 +133,12 @@ public class FingerRightControl : FingerBase {
 		lastAtk = false;
 		changeColor = false;
 
-		if (isUIAni == false) {
 
-			if (!enemyLeft.firstAtk) {
-				if (staminaBar.CurrentVal < staminaBar.MaxVal) {
-					staminaBar.CurrentVal += 2;
-				} else if (staminaBar.CurrentVal >= staminaBar.MaxVal){
-					staminaBar.CurrentVal = staminaBar.MaxVal;
-				}
+		if (!enemyLeft.firstAtk) {
+			if (staminaBar.CurrentVal < staminaBar.MaxVal) {
+				staminaBar.CurrentVal += 2;
+			} else if (staminaBar.CurrentVal >= staminaBar.MaxVal) {
+				staminaBar.CurrentVal = staminaBar.MaxVal;
 			}
 		}
 
