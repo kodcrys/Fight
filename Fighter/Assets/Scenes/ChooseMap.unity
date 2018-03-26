@@ -187,6 +187,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 21300000, guid: 2eda684dfd7844306b55e75069127db9, type: 3}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -872,6 +873,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 21300000, guid: bce4564794e284eaa961c6e139705c0b, type: 3}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -1155,7 +1157,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 330814041}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2069318602}
+        m_MethodName: PlayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &336821656
@@ -1235,6 +1248,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 21300000, guid: 24474047f6e6c4aff9e87a151fdb88bf, type: 3}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -1554,6 +1568,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 21300000, guid: ac4df387b34ad4d8c98068cc292d9261, type: 3}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -1915,6 +1930,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 21300000, guid: 10f7e93af34244682aeed8b250d483f7, type: 3}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -2323,6 +2339,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 21300000, guid: a4d5dbbd95c5c44c4a289a31089dea61, type: 3}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -2925,6 +2942,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 21300000, guid: 1995962f5d9714ac0a1564d42b09bf94, type: 3}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -3632,6 +3650,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 21300000, guid: 73988fc82ba9c474db685300c7738507, type: 3}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -3885,6 +3904,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 21300000, guid: 2ef9bc08b8df54593ad9149519f6397e, type: 3}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -4322,6 +4342,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 21300000, guid: 6381d7009c78e46d6b55b062c00190ff, type: 3}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -4581,6 +4602,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 21300000, guid: abdc81c81fbc946608503424bf3ca899, type: 3}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -5046,6 +5068,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 21300000, guid: 26c168e949287445a9112a0b6af09d9b, type: 3}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}

@@ -166,11 +166,13 @@ public class ChooseCharManager : MonoBehaviour {
 
 		// p1 zs p2
 		if (contentBtn.text == playMode [0]) {
-			
+			SaveManager.instance.state.player1AI = false;
+			SaveManager.instance.state.player2AI = false;
 		}
 		// zs AI
 		if (contentBtn.text == playMode [1]) {
-			
+			SaveManager.instance.state.player1AI = false;
+			SaveManager.instance.state.player2AI = true;
 		}
 		// tour
 		if (contentBtn.text == playMode [2]) {
@@ -602,6 +604,7 @@ public class ChooseCharManager : MonoBehaviour {
 		// bien danh dau tu map ze choose char
 		FadeAni.isRunMapToChooseChar = true;
 		FadeAni.isRunMapToHome = false;
+		FadeAni.isRunPlayGame = false;
 	}
 
 	public void Home() {
@@ -609,6 +612,15 @@ public class ChooseCharManager : MonoBehaviour {
 		aniFade.isChangeChooseChar = true;
 		FadeAni.isRunMapToChooseChar = true;
 		FadeAni.isRunMapToHome = true;
+		FadeAni.isRunPlayGame = false;
 		//UnityEngine.SceneManagement.SceneManager.LoadScene ("StartScene");
+	}
+
+	public void PlayGame() {
+		aniFade.stateFade = FadeAni.State.Show;
+		aniFade.isChangeChooseChar = true;
+		FadeAni.isRunMapToChooseChar = false;
+		FadeAni.isRunMapToHome = false;
+		FadeAni.isRunPlayGame = true;
 	}
 }

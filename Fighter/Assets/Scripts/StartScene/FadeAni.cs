@@ -13,6 +13,7 @@ public class FadeAni : MonoBehaviour {
 
 	public static bool isRunMapToChooseChar;
 	public static bool isRunMapToHome;
+	public static bool isRunPlayGame;
 
 	public enum State {none, Show, Hide, Show1, Show2}
 	[Header("State machine")]
@@ -129,6 +130,9 @@ public class FadeAni : MonoBehaviour {
 
 					if (isChangeChooseChar)
 						UnityEngine.SceneManagement.SceneManager.LoadScene ("StartScene");
+
+					if(isRunPlayGame)
+						UnityEngine.SceneManagement.SceneManager.LoadScene ("MainGameScene");
 				}
 				break;
 			case State.Hide:
