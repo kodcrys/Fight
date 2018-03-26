@@ -20,6 +20,12 @@ public class FingerBase : MonoBehaviour {
 	[Header("Finger Status")]
 	public int health, defend, atk, stamina, maxHealth;
 
+	public Star healthBar;
+
+	public Star staminaBar;
+
+	public Star redHealthBar;
+
 	public bool changeColor, oneShotColor;
 
 	public int changeScale = 0;
@@ -43,6 +49,8 @@ public class FingerBase : MonoBehaviour {
 	public bool takeDame;
 
 	public int winCount;
+
+	public bool fuckingMode;
 
 	public float time, timeInter;
 

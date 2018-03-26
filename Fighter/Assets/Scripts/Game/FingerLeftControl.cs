@@ -9,12 +9,22 @@ public class FingerLeftControl : FingerBase {
 	[SerializeField]
 	bool isUIAni;
 
+	void Awake(){
+		healthBar.Initialize ();
+		staminaBar.Initialize ();
+		redHealthBar.Initialize ();
+	}
+
 	// Use this for initialization
 	void Start () {
 		instance = this;
 		touch = true;
-		stamina = 100;
-		health = maxHealth;
+		staminaBar.MaxVal = 100;
+		staminaBar.CurrentVal = 100;
+		healthBar.MaxVal = maxHealth;
+		healthBar.CurrentVal = maxHealth;
+		redHealthBar.MaxVal = maxHealth;
+		redHealthBar.CurrentVal = maxHealth;
 		changeColor = false;
 		oneShotColor = false;
 		stopTime = true;
@@ -22,16 +32,10 @@ public class FingerLeftControl : FingerBase {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
-		if (staminaImage != null)
-			HanderStamina ();
-		if (healthImage != null)
-			HanderHealth ();
-		if (redHealth != null) {
-			if (takeDame)
-				StartCoroutine (WaitRedBlood (0.5f));
-		}
-
+	void Update () {
+		if (fuckingMode)
+			atk = enemyRight.maxHealth;
+		
 		switch (fingerAction) {
 		case FingerState.none:
 			fingerAction = FingerState.Idel;
@@ -73,7 +77,7 @@ public class FingerLeftControl : FingerBase {
 			}
 		}
 
-		if (health <= 0 || enemyRight.health <= 0) {
+		if (healthBar.CurrentVal <= 0 || enemyRight.healthBar.CurrentVal <= 0) {
 			GameplayBase.instance.leftButton.SetActive (false);
 			AnimationText.canPlay = false;
 			if (stopTime) {
@@ -89,7 +93,7 @@ public class FingerLeftControl : FingerBase {
 			fingerAtk.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
 			fingerDown.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
 			hand.GetComponent<SpriteRenderer> ().color = new Color32 (255, 255, 255, 255);
-			StartCoroutine (WaitChangeColor (0.0001f));
+			StartCoroutine (WaitChangeColor (0.001f));
 		} else {
 			finger.GetComponent<SpriteRenderer> ().color = new Color32 (255, 207, 179, 255);
 			fingerAtk.GetComponent<SpriteRenderer> ().color = new Color32 (255, 207, 179, 255);
@@ -97,9 +101,11 @@ public class FingerLeftControl : FingerBase {
 			hand.GetComponent<SpriteRenderer> ().color = new Color32 (255, 207, 179, 255);
 		}
 
+		if (takeDame)
+			StartCoroutine (WaitRedBlood (0.5f));
 	}
 
-	public override void HanderHealth(){
+/*	public override void HanderHealth(){
 		healthImage.fillAmount = Map (health, 0, maxHealth, 0, 1);
 	}
 
@@ -113,7 +119,7 @@ public class FingerLeftControl : FingerBase {
 
 	public float Map(float value, float inMin, float inMax, float outMin, float outMax){
 		return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
-	}
+	}*/
 
 	public override void DoIdel(){
 		if (finger != null)
@@ -127,13 +133,14 @@ public class FingerLeftControl : FingerBase {
 		isAtk = false;
 		firstAtk = false;
 		lastAtk = false;
+		changeColor = false;
 
 		if (isUIAni == false) {
 			if (!enemyRight.firstAtk) {
-				if (stamina < 100) {
-					stamina += 2;
-				} else if (stamina >= 100) {
-					stamina = 100;
+				if (staminaBar.CurrentVal < staminaBar.MaxVal) {
+					staminaBar.CurrentVal += 2;
+				} else if (staminaBar.CurrentVal >= staminaBar.MaxVal) {
+					staminaBar.CurrentVal = staminaBar.MaxVal;
 				}
 			}
 		}
@@ -184,19 +191,19 @@ public class FingerLeftControl : FingerBase {
 	}
 
 	public override void DoingAtk(){
-		if (health > 0) {
+		if (healthBar.CurrentVal > 0) {
 			if (firstAtk) {
 				if (!enemyRight.lastAtk) {
-					if (enemyRight.stamina > 0) {
-						enemyRight.stamina -= 2;
-					} else if (enemyRight.stamina <= 0) {
-						enemyRight.stamina = 0;
+					if (enemyRight.staminaBar.CurrentVal > 0) {
+						enemyRight.staminaBar.CurrentVal -= 2;
+					} else if (enemyRight.staminaBar.CurrentVal <= 0) {
+						enemyRight.staminaBar.CurrentVal = 0;
 					}
 
-					if (stamina < 100) {
-						stamina += 2;
-					} else if (stamina >= 100) {
-						stamina = 100;
+					if (staminaBar.CurrentVal < staminaBar.MaxVal) {
+						staminaBar.CurrentVal += 2;
+					} else if (staminaBar.CurrentVal >= staminaBar.MaxVal) {
+						staminaBar.CurrentVal = staminaBar.MaxVal;
 					}
 				}
 
@@ -209,34 +216,39 @@ public class FingerLeftControl : FingerBase {
 				}
 			} else if (lastAtk) {
 				enemyRight.isAtk = true;
-				if (enemyRight.health > 0)
-					enemyRight.health -= atk;
-				if (!enemyRight.oneShotColor) {
+				if (enemyRight.healthBar.CurrentVal > 0) {
 					CameraShake.instance.Shake ();
-					enemyRight.changeColor = true;
-					enemyRight.oneShotColor = true;
+					enemyRight.healthBar.CurrentVal -= atk;
+					if (enemyRight.changeColor == false)
+						enemyRight.changeColor = true;
 				}
 				if (doingSomething) {
-					if (stamina > 0) {
-						stamina -= 8;
+					if (staminaBar.CurrentVal > 0) {
+						staminaBar.CurrentVal -= 8;
 						if (SaveManager.instance.state.isOnRing)
 							Handheld.Vibrate ();
-					} else if (stamina <= 0) {
-						stamina = 0;
+					} else if (staminaBar.CurrentVal <= 0) {
+						staminaBar.CurrentVal = 0;
 						enemyRight.touch = false;
 						enemyRight.isAtk = false;
 						fingerAction = FingerState.Atk;
 						isAtk = false;
-						if (enemyRight.health > 1)
+						if (enemyRight.healthBar.CurrentVal > 1) {
+							touch = true;
+							isAtk = false;
+							firstAtk = false;
+							lastAtk = false;
+							changeColor = false;
 							enemyRight.fingerAction = FingerState.Idel;
+						}
 					}
 				}
 			}
-		} else if (health <= 0) {
+		} else if (healthBar.CurrentVal <= 0) {
 			finger.SetActive (false);
 			fingerDown.SetActive (true);
 			fingerAtk.SetActive (false);
-		} else if (enemyRight.health <= 0) {
+		} else if (enemyRight.healthBar.CurrentVal <= 0) {
 			finger.SetActive (false);
 			fingerDown.SetActive (false);
 			fingerAtk.SetActive (true);
@@ -332,10 +344,10 @@ public class FingerLeftControl : FingerBase {
 		yield return new WaitForSeconds (time);
 		stopTime = false;
 		GameplayBase.instance.zoomCamera = true;
-		if (health <= 0) {
-			health = 0;
+		if (healthBar.CurrentVal <= 0) {
+			healthBar.CurrentVal = 0;
 			fingerAction = FingerState.Death;
-		} else if (enemyRight.health <= 0) {
+		} else if (enemyRight.healthBar.CurrentVal <= 0) {
 			fingerAction = FingerState.Win;
 		}
 	}
@@ -353,7 +365,7 @@ public class FingerLeftControl : FingerBase {
 			} else {
 				if (!AnimationText.endRound) {
 					AnimationText.endRound = true;
-					GameplayBase.instance.gameoverPanel.SetActive (true);
+					GameplayBase.instance.gameoverP1Panel.SetActive (true);
 				}
 			}
 			SaveManager.instance.Save ();
@@ -368,7 +380,7 @@ public class FingerLeftControl : FingerBase {
 
 	IEnumerator WaitRedBlood(float time){
 		yield return new WaitForSeconds (time);
-		HanderRedHealth ();
+		redHealthBar.CurrentVal = healthBar.CurrentVal;
 		takeDame = false;
 	}
 }

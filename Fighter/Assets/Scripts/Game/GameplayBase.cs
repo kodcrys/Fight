@@ -29,7 +29,7 @@ public class GameplayBase : MonoBehaviour {
 	[SerializeField]
 	GameObject player1, player2;
 
-	public GameObject pausePanel, gameoverPanel;
+	public GameObject pausePanel, gameoverP1Panel, gameoverP2Panel;
 
 	public void Start(){
 		instance = this;

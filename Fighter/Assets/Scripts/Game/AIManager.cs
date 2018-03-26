@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AIManager : MonoBehaviour {
 
-	public enum DifficultLevel {none, Easy, Normal, Hard}
+	public enum DifficultLevel {none, Easy, Normal, Hard, WhatTheFuckIamPlaying}
 
 	public DifficultLevel difLevel = DifficultLevel.none;
 
@@ -26,13 +26,23 @@ public class AIManager : MonoBehaviour {
 	[SerializeField]
 	float time, timeInter;
 
-	// Use this for initialization
-	void Start () {
+	void Awake(){
 		// chon do kho code o day
 		if (left)
 			fingerAILeft = finger.GetComponent<FingerLeftControl> ();
 		else if (right)
 			fingerAIRight = finger.GetComponent<FingerRightControl> ();
+	}
+
+	// Use this for initialization
+	void Start () {
+		if (difLevel == DifficultLevel.WhatTheFuckIamPlaying) {
+			if (left)
+				fingerAILeft.fuckingMode = true;
+			else if (right)
+				fingerAIRight.fuckingMode = true;
+		}
+
 	}
 	
 	// Update is called once per frame
@@ -49,6 +59,9 @@ public class AIManager : MonoBehaviour {
 					break;
 				case DifficultLevel.Hard:
 					HardMode ();
+					break;
+				case DifficultLevel.WhatTheFuckIamPlaying:
+					FuckingMode ();
 					break;
 				}
 			}
@@ -166,13 +179,104 @@ public class AIManager : MonoBehaviour {
 		if (right) {
 			if (!fingerAIRight.isAtk) {
 				if (fingerAIRight.enemyLeft.fingerAction == FingerBase.FingerState.Idel) {
-					AIClick ();
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 10);
+						if (ranMove > 2) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
 				} else {
-					AIUnClick ();
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 10);
+						if (ranMove > 2) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
 				}
 			}
 		} else if (left) {
-			
+			if (!fingerAILeft.isAtk) {
+				if (fingerAILeft.enemyRight.fingerAction == FingerBase.FingerState.Idel) {
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 10);
+						if (ranMove > 2) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
+				} else {
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 10);
+						if (ranMove > 2) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
+				}
+			}
+		}
+	}
+
+	void FuckingMode(){
+		timeInter = 0.1f;
+		if (right) {
+			if (!fingerAIRight.isAtk) {
+				if (fingerAIRight.enemyLeft.fingerAction == FingerBase.FingerState.Idel) {
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 10);
+						if (ranMove > 2) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
+				} else {
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 10);
+						if (ranMove > 2) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
+				}
+			}
+		} else if (left) {
+			if (!fingerAILeft.isAtk) {
+				if (fingerAILeft.enemyRight.fingerAction == FingerBase.FingerState.Idel) {
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 10);
+						if (ranMove > 2) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
+				} else {
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 10);
+						if (ranMove > 2) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
+				}
+			}
 		}
 	}
 
