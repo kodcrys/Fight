@@ -5,7 +5,7 @@ public enum TypeObject {hat, weapon, tshirt}
 [CreateAssetMenu(fileName = "New Equipment", menuName = "Data/Equipment")]
 public class DataItems : ScriptableObject {
 	
-	public string name;
+	public new string name;
 
 	public TypeObject typeItem;
 

@@ -98,7 +98,8 @@ public class StartSceneManager : MonoBehaviour {
 		DisplayClaimRewardDaily ();
 
 		if (FadeAni.isRunMapToChooseChar) {
-			ChooseCharManager.instance.AniChangeScene ();
+			if(FadeAni.isRunMapToHome == false)
+				ChooseCharManager.instance.AniChangeScene ();
 			fadeAni.OffFade ();
 			fadeAni.stateFade = FadeAni.State.Hide;
 			FadeAni.isRunMapToChooseChar = false;

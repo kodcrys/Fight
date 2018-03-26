@@ -29,21 +29,22 @@ public class DailyReward : MonoBehaviour {
 		case DataRewardsDaily.TypeReward.gold:
 			SaveManager.instance.state.TotalGold += data.reward;
 			SaveManager.instance.Save ();
-			RewardManager.instance.OpenRewardDailyOrQuest (RewardManager.TypeRewardDailyOrQuest.gold, 10);
+			RewardManager.instance.OpenRewardDailyOrQuest (RewardManager.TypeRewardDailyOrQuest.gold, data.reward);
 			break;
 		case DataRewardsDaily.TypeReward.exp:
 			SaveManager.instance.state.CurExp += data.reward;
 			SaveManager.instance.Save ();
-			RewardManager.instance.OpenRewardDailyOrQuest (RewardManager.TypeRewardDailyOrQuest.exp, 50);
+			RewardManager.instance.OpenRewardDailyOrQuest (RewardManager.TypeRewardDailyOrQuest.exp, data.reward);
 			break;
 		case DataRewardsDaily.TypeReward.diamond:
 			SaveManager.instance.state.TotalDiamond += data.reward;
 			SaveManager.instance.Save ();
-			RewardManager.instance.OpenRewardDailyOrQuest (RewardManager.TypeRewardDailyOrQuest.diamond, 10);
+			RewardManager.instance.OpenRewardDailyOrQuest (RewardManager.TypeRewardDailyOrQuest.diamond, data.reward);
 			break;
 		case DataRewardsDaily.TypeReward.cardRandomCharacter:
 			SaveManager.instance.state.TotalCardChar += data.reward;
 			SaveManager.instance.Save ();
+			CointainData.isRewardDailyQuest = true;
 			RewardManager.instance.OpenReward (true);
 			break;
 		}

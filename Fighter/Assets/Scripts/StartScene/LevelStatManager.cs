@@ -111,4 +111,8 @@ public class LevelStatManager : MonoBehaviour {
 		if (SaveManager.instance.state.CurExp < dataLevelStat.expLevelUp [lvCur])
 			UpdateExp ();
 	}
+
+	public void CloseDialog() {
+		dialogStatLvUp.SetActive(false);
+	}
 }

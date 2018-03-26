@@ -3,7 +3,7 @@
 [CreateAssetMenu(fileName = "New Character", menuName = "Data/Character")]
 public class DataCharacter : ScriptableObject {
 
-	public string name;
+	public new string name;
 	public Sprite equipmentOfChar;
 	public Sprite equipmentWP;
 	public Sprite equipmetnTShirt;

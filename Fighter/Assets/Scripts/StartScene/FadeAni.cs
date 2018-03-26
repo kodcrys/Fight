@@ -12,6 +12,7 @@ public class FadeAni : MonoBehaviour {
 	public bool isChangeChooseChar;
 
 	public static bool isRunMapToChooseChar;
+	public static bool isRunMapToHome;
 
 	public enum State {none, Show, Hide, Show1, Show2}
 	[Header("State machine")]
@@ -61,10 +62,18 @@ public class FadeAni : MonoBehaviour {
 	[SerializeField]
 	GameObject botBar;
 
+	[Header("Hide First")]
+	[SerializeField]
+	bool isRunHideFirst;
+	float timeDelayHideFirst;
+
+	bool isRunFadeHide;
+
 	float timeDelay = 0;
 
 	// Use this for initialization
 	void Start () {
+		isRunFadeHide = false;
 		isChangeMap = false;
 		isChangeChooseChar = false;
 		timeDelay = 0;
@@ -123,12 +132,24 @@ public class FadeAni : MonoBehaviour {
 				}
 				break;
 			case State.Hide:
-				speed = 15;
-				fade1.position = Vector3.MoveTowards (fade1.position, hidePosFade1.position, speed * Time.deltaTime);
-				fade2.position = Vector3.MoveTowards (fade2.position, hidePosFade2.position, speed * Time.deltaTime);
-				if (fade1.position == hidePosFade1.position && fade2.position == hidePosFade2.position) {
-					fade.enabled = false;
-					stateFade = State.none;
+				if (isRunHideFirst) {
+					if (timeDelayHideFirst < 0.5f)
+						timeDelayHideFirst += Time.deltaTime;
+					if (timeDelayHideFirst >= 0.5f) {
+						timeDelayHideFirst = 0;
+						isRunFadeHide = true;
+					}
+				} else
+					isRunFadeHide = true;
+
+				if (isRunFadeHide) {
+					speed = 15;
+					fade1.position = Vector3.MoveTowards (fade1.position, hidePosFade1.position, speed * Time.deltaTime);
+					fade2.position = Vector3.MoveTowards (fade2.position, hidePosFade2.position, speed * Time.deltaTime);
+					if (fade1.position == hidePosFade1.position && fade2.position == hidePosFade2.position) {
+						fade.enabled = false;
+						stateFade = State.none;
+					}
 				}
 				break;
 		}

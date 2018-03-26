@@ -7,6 +7,8 @@ public class CointainData : MonoBehaviour {
 	public DataItems dataItem;
 	public Sprite dataMap;
 
+	public DataQuests quest;
+
 	[SerializeField]
 	bool isX1Gatcha;
 	[SerializeField]
@@ -15,6 +17,8 @@ public class CointainData : MonoBehaviour {
 	CharacterEquipmentManager charEquipManager;
 
 	SmokeEffectOff smokeEffectOff;
+
+	public static bool isRewardDailyQuest;
 
 	bool isCheck;
 	//changeChar
@@ -38,7 +42,8 @@ public class CointainData : MonoBehaviour {
 						charEquipManager.ChangeRewardX1 ();
 						smokeEffectOff.data = this;
 					} else {
-						RewardManager.instance.ShowBtnGold (true);
+						if(isRewardDailyQuest == false)
+							RewardManager.instance.ShowBtnGold (true);
 						dataChar.isOwned = true;
 					}
 					isCheck = false;

@@ -448,6 +448,7 @@ MonoBehaviour:
   panel_Character: {fileID: 0}
   midBar: {fileID: 0}
   botBar: {fileID: 0}
+  isRunHideFirst: 1
 --- !u!1 &98192395
 GameObject:
   m_ObjectHideFlags: 0

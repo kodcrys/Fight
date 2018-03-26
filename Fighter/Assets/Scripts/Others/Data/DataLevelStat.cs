@@ -3,7 +3,7 @@
 [CreateAssetMenu(fileName = "New Level Stat", menuName = "Data/LevelStat")]
 public class DataLevelStat : ScriptableObject {
 
-	new public int id = 0;
+	public new int id = 0;
 	public int level = 0;
 	public int[] expLevelUp;
 

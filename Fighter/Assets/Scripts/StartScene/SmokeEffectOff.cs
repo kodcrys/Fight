@@ -29,7 +29,8 @@ public class SmokeEffectOff : MonoBehaviour {
 			time = 0;
 			if (isSmokeLarge) {
 				if (data.dataChar != null)
-					RewardManager.instance.ShowBtnGold (true);
+					if(CointainData.isRewardDailyQuest == false)
+						RewardManager.instance.ShowBtnGold (true);
 				else if(data.dataItem != null)
 					RewardManager.instance.ShowBtnGold (false);
 			}

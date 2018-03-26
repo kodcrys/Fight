@@ -190,6 +190,20 @@ public class UIAnimations : MonoBehaviour {
 	[SerializeField]
 	GameObject [] typeChange;
 
+	[Header("Daily quest data")]
+	[SerializeField]
+	DataQuests Share;
+	[SerializeField]
+	DataQuests Rate;
+	[SerializeField]
+	DataQuests LikeFB;
+
+	void Awake() {
+		Share = GameObject.Find ("Share").GetComponent<CointainData> ().quest;
+		Rate = GameObject.Find ("Rate").GetComponent<CointainData> ().quest;
+		LikeFB = GameObject.Find ("LikeFacebook").GetComponent<CointainData> ().quest;
+	}
+
 	void OnEnable() {
 		if (contentTxt != null)
 			contentTxt.text = btnContent [indexMode];
@@ -371,14 +385,19 @@ public class UIAnimations : MonoBehaviour {
 
 	void HandleBotBar() {
 		if (isShop) {
+			CointainData.isRewardDailyQuest = false;
 			fadeShop.isRunHide = true;
 			fadeShop.stateFade = FadeAni.State.Show;
 			fadeShop.changeToShopScene = true;
 		}
-		if (isRate)
+		if (isRate) {
+			Rate.doing += 1;
 			Application.OpenURL (linkRate);
-		if (isShare)
+		}
+		if (isShare) {
+			Share.doing += 1;
 			Application.OpenURL (linkShare);
+		}
 		if (isLeaderboard) {
 		}
 	}
@@ -491,7 +510,7 @@ public class UIAnimations : MonoBehaviour {
 
 	void AniShake() {
 		if (timeShake >= timeInterShake) {
-			timeInterShake = 0.1f;
+			timeInterShake = 0.2f;
 			timeShake = 0;
 		} else
 			timeShake += Time.deltaTime;

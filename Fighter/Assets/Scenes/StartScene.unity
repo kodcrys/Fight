@@ -298,6 +298,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: df1202b5e427f4e9a80d72a072640ff7, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -656,6 +657,9 @@ MonoBehaviour:
   btnsChange: []
   btnChange: {fileID: 0}
   typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
   dontUseOffset: 0
   indexGatcha: 0
   AniGatchaCharacter: 0
@@ -684,7 +688,7 @@ RectTransform:
   m_GameObject: {fileID: 10662117}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 1742577917}
   - {fileID: 215493794}
@@ -693,8 +697,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -314, y: 118}
-  m_SizeDelta: {x: 576, y: 151.5}
+  m_AnchoredPosition: {x: -73.312, y: 93.399994}
+  m_SizeDelta: {x: 466.55, y: 151.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &10662119
 MonoBehaviour:
@@ -708,7 +712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -956,6 +960,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: ec1d4e20c92ee4d778838334738ae01b, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -1294,6 +1299,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: ac9a4e7efe7e8409185a9dbb89d30ca6, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -1668,6 +1674,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 66d7a536519c346f180bd49eb8350ff0, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -5354,8 +5361,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 788, y: 0.000015258789}
-  m_SizeDelta: {x: 576, y: 151.5}
+  m_AnchoredPosition: {x: 573.7501, y: -0.000015258789}
+  m_SizeDelta: {x: 568.3, y: 202.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &36527208
 MonoBehaviour:
@@ -5369,7 +5376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5378,11 +5385,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: e6aa3568bc7aa4f49913ae1944f875a2, type: 3}
-    m_FontSize: 100
+    m_FontSize: 130
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 100
+    m_MaxSize: 130
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -5584,6 +5591,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: abdc8f18e606f4041a742f6b3bdac173, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -5775,6 +5783,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 736084a933ce7429086d168f7d20ffc3, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -6445,6 +6454,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: f96eac1b7cc21411ebc994ccffc032ca, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -6708,6 +6718,80 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 72199021}
+--- !u!1 &73600229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 73600230}
+  - component: {fileID: 73600232}
+  - component: {fileID: 73600231}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &73600230
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 73600229}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.52631587, y: 0.52631587, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1489104332}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 9}
+  m_SizeDelta: {x: 984.6, y: 232.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &73600231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 73600229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.98039216, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: e6aa3568bc7aa4f49913ae1944f875a2, type: 3}
+    m_FontSize: 200
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 200
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: LEVEL UP
+--- !u!222 &73600232
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 73600229}
 --- !u!1 &78454361
 GameObject:
   m_ObjectHideFlags: 0
@@ -6807,15 +6891,15 @@ RectTransform:
   m_GameObject: {fileID: 79326283}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4999999, y: 1.4999999, z: 1}
   m_Children: []
   m_Father: {fileID: 1171930164}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 369, y: 0.000015258789}
-  m_SizeDelta: {x: 70, y: 50}
+  m_AnchoredPosition: {x: 248.7501, y: -0.000015258789}
+  m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &79326285
 MonoBehaviour:
@@ -6829,14 +6913,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 36c52c38d4ff84f78a45194b7ec66ce5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7186,6 +7270,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: e28b5d494a53c41429e984f994306aa2, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -11533,6 +11618,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 47760e31fc27b45dc88bf8aa9f37e1c9, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -11592,6 +11678,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -11984,6 +12071,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 33f424c238f0f4d48ae25bb39d2d8fc4, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -12175,6 +12263,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: d3922bf0a90de4082825d2d0bbb2bfe2, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -12514,6 +12603,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 67000ae8a802f443b95591eebc6dc648, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -13093,6 +13183,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 65ffb04eb1b704948a17bd890191cabb, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -13284,6 +13375,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 42a791a1aa8b74af1a8bd70e852570d1, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -14157,6 +14249,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 49f3b717ca8a94146807c5d4a5abc9b0, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -14648,6 +14741,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: a7795814e5e8c489688cd5fbc2590f97, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -14893,6 +14987,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -15117,6 +15212,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 43f1062df47a64ee78c4a7cb5bc42765, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -15308,6 +15404,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 581393f5d62f540a7993688f9d38fad4, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -19424,6 +19521,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -19527,8 +19625,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 788, y: 0.000015258789}
-  m_SizeDelta: {x: 576, y: 151.5}
+  m_AnchoredPosition: {x: 473.2, y: 0}
+  m_SizeDelta: {x: 322.6, y: 151.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &215493795
 MonoBehaviour:
@@ -19542,7 +19640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -19694,6 +19792,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -19885,6 +19984,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: f0386fa85f6c540959c5628098e167b4, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -20109,6 +20209,7 @@ MonoBehaviour:
   panel_Character: {fileID: 986974423}
   midBar: {fileID: 318307172}
   botBar: {fileID: 1517057294}
+  isRunHideFirst: 0
 --- !u!222 &227191918
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20378,6 +20479,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 2a02238fc2c1d41d69965cd48681c95d, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -20781,6 +20883,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 597bd36995cf8444eb851fa48cae74ab, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -21292,6 +21395,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 0146f6485527e491aa3a63458af66f70, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -21551,6 +21655,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -22025,6 +22130,9 @@ MonoBehaviour:
   btnsChange: []
   btnChange: {fileID: 0}
   typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
   dontUseOffset: 0
   indexGatcha: 0
   AniGatchaCharacter: 0
@@ -22551,6 +22659,9 @@ MonoBehaviour:
   btnsChange: []
   btnChange: {fileID: 0}
   typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
   dontUseOffset: 0
   indexGatcha: 0
   AniGatchaCharacter: 0
@@ -22747,6 +22858,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: cba7752062e0d4020863327cfa2ea880, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -22953,6 +23065,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -23212,6 +23325,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: fe63e1772110d4e01a24a6c6b495aba2, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -23616,6 +23730,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -23885,6 +24000,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 8825f0171208a420e991c01128237c5d, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -24091,6 +24207,9 @@ MonoBehaviour:
   btnsChange: []
   btnChange: {fileID: 0}
   typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
   dontUseOffset: 0
   indexGatcha: 0
   AniGatchaCharacter: 0
@@ -24424,6 +24543,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 497d06af3ea824e1c9acbdea21485e3f, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -24552,6 +24672,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 1
   smokeEffect: {fileID: 34235793}
   charEquipManager: {fileID: 526309196}
@@ -25055,6 +25176,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 375477e50a831466ab1a69ba729cb4ce, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -25185,6 +25307,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 1
   smokeEffect: {fileID: 34235793}
   charEquipManager: {fileID: 526309196}
@@ -25961,6 +26084,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 923c9a8aced2e464da393d537739ec7d, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -26968,6 +27092,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 0c37b8210e4f943ca9b01e20e9b55197, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -27295,6 +27420,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 4a8adb80936364b418a700fe80ca5123, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -27523,6 +27649,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -29046,6 +29173,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: cfdfbafd6501c4b13a0cbc6785de33fd, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -29242,6 +29370,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 430b19510f41248fcb2934ca56c902c4, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -29433,6 +29562,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 6718b3698d7d3460e9ecd7b0e1348df3, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -29469,7 +29599,7 @@ MonoBehaviour:
     currentVal: 0
   dataLevelStat: {fileID: 11400000, guid: 9d5ee45de97434f86be46a6bb15b04c3, type: 2}
   levelDisplay: {fileID: 1092474883}
-  dialogStatLvUp: {fileID: 1120352332}
+  dialogStatLvUp: {fileID: 2141597735}
   oldLv: {fileID: 1171930165}
   oldHp: {fileID: 10662119}
   oldAtk: {fileID: 522800967}
@@ -31199,6 +31329,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: d079f2c7d268249b9b78b5e68293e2a4, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -31729,6 +31860,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 9c29a3557321846918a4805b006e4b10, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -31987,6 +32119,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!1 &481078246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 481078247}
+  - component: {fileID: 481078248}
+  m_Layer: 0
+  m_Name: Rate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &481078247
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 481078246}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &481078248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 481078246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataChar: {fileID: 0}
+  dataItem: {fileID: 0}
+  dataMap: {fileID: 0}
+  quest: {fileID: 11400000, guid: 32e680f7a6ca64735a9e86ce8fc8a737, type: 2}
+  isX1Gatcha: 0
+  smokeEffect: {fileID: 0}
+  charEquipManager: {fileID: 0}
 --- !u!114 &482563266 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114755141947389340, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
@@ -32415,6 +32594,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 3946755e7bd684b9084cc756a34d3f75, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -32794,6 +32974,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 1154ec320f2ff4e07aa2704831d8a021, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -33127,6 +33308,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 504dc7509759d4049950866b39a1ca67, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -33294,6 +33476,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -33485,6 +33668,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 748f99467b99f47bbb23a437b77e33e6, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -33960,7 +34144,7 @@ RectTransform:
   m_GameObject: {fileID: 522800965}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 1831084874}
   - {fileID: 1038020813}
@@ -33969,8 +34153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -314, y: -106}
-  m_SizeDelta: {x: 576, y: 151.5}
+  m_AnchoredPosition: {x: -73.312, y: 31}
+  m_SizeDelta: {x: 466.55, y: 151.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &522800967
 MonoBehaviour:
@@ -33984,7 +34168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -34199,6 +34383,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 9da18d5de0d3f40f4a35ba1be089e644, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -34390,6 +34575,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: cc709b21c232e49e99b2343ab237dc85, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -35056,6 +35242,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 9ddf6da0f0f904284835d8ee55e46cfc, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -36036,6 +36223,9 @@ MonoBehaviour:
   btnsChange: []
   btnChange: {fileID: 0}
   typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
   dontUseOffset: 0
   indexGatcha: 0
   AniGatchaCharacter: 0
@@ -36253,7 +36443,7 @@ Prefab:
     - target: {fileID: 224911057623571120, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 224911057623571120, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37093,7 +37283,7 @@ Prefab:
     - target: {fileID: 224281580043419946, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224792978871952784, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37113,7 +37303,7 @@ Prefab:
     - target: {fileID: 224792978871952784, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224470216305086028, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37133,7 +37323,7 @@ Prefab:
     - target: {fileID: 224470216305086028, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224531946373979032, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37153,7 +37343,7 @@ Prefab:
     - target: {fileID: 224531946373979032, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224490071059695152, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37173,7 +37363,7 @@ Prefab:
     - target: {fileID: 224490071059695152, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224675272582509548, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37193,7 +37383,7 @@ Prefab:
     - target: {fileID: 224675272582509548, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224888261963773692, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37213,7 +37403,7 @@ Prefab:
     - target: {fileID: 224888261963773692, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224860145015859788, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37233,7 +37423,7 @@ Prefab:
     - target: {fileID: 224860145015859788, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224002350366587180, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37253,7 +37443,7 @@ Prefab:
     - target: {fileID: 224002350366587180, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224430919454221820, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37273,7 +37463,7 @@ Prefab:
     - target: {fileID: 224430919454221820, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224747178331378668, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37293,7 +37483,7 @@ Prefab:
     - target: {fileID: 224747178331378668, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224404244249574368, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37313,7 +37503,7 @@ Prefab:
     - target: {fileID: 224404244249574368, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224378370229603276, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37333,7 +37523,7 @@ Prefab:
     - target: {fileID: 224378370229603276, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224290075878225306, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37353,7 +37543,7 @@ Prefab:
     - target: {fileID: 224290075878225306, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224888434292898826, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37373,7 +37563,7 @@ Prefab:
     - target: {fileID: 224888434292898826, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224290696993945250, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37393,7 +37583,7 @@ Prefab:
     - target: {fileID: 224290696993945250, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224704680817887680, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37413,7 +37603,7 @@ Prefab:
     - target: {fileID: 224704680817887680, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224584984851482166, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37433,7 +37623,7 @@ Prefab:
     - target: {fileID: 224584984851482166, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224382903760660458, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37453,7 +37643,7 @@ Prefab:
     - target: {fileID: 224382903760660458, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224568513512562650, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37473,7 +37663,7 @@ Prefab:
     - target: {fileID: 224568513512562650, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224153463651645398, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37493,7 +37683,7 @@ Prefab:
     - target: {fileID: 224153463651645398, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224252315675870456, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37513,7 +37703,7 @@ Prefab:
     - target: {fileID: 224252315675870456, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224144928109417964, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37533,7 +37723,7 @@ Prefab:
     - target: {fileID: 224144928109417964, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224345087602751150, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37553,7 +37743,7 @@ Prefab:
     - target: {fileID: 224345087602751150, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224225069501899310, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37573,7 +37763,7 @@ Prefab:
     - target: {fileID: 224225069501899310, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224361958410871682, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37593,7 +37783,7 @@ Prefab:
     - target: {fileID: 224361958410871682, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224312773154396422, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37613,7 +37803,7 @@ Prefab:
     - target: {fileID: 224312773154396422, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224838065254745146, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37633,7 +37823,7 @@ Prefab:
     - target: {fileID: 224838065254745146, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224019394619378198, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37653,7 +37843,7 @@ Prefab:
     - target: {fileID: 224019394619378198, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224139143388824278, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37673,7 +37863,7 @@ Prefab:
     - target: {fileID: 224139143388824278, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224598827513570516, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37693,7 +37883,7 @@ Prefab:
     - target: {fileID: 224598827513570516, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224399297355156554, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37713,7 +37903,7 @@ Prefab:
     - target: {fileID: 224399297355156554, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224408459646567244, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37733,7 +37923,7 @@ Prefab:
     - target: {fileID: 224408459646567244, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224226966728999052, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37753,7 +37943,7 @@ Prefab:
     - target: {fileID: 224226966728999052, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224649851801794684, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37773,7 +37963,7 @@ Prefab:
     - target: {fileID: 224649851801794684, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224910260093531690, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37793,7 +37983,7 @@ Prefab:
     - target: {fileID: 224910260093531690, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224502531709790124, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37813,7 +38003,7 @@ Prefab:
     - target: {fileID: 224502531709790124, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224413781514112502, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37833,7 +38023,7 @@ Prefab:
     - target: {fileID: 224413781514112502, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224272002929217826, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37853,7 +38043,7 @@ Prefab:
     - target: {fileID: 224272002929217826, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224828160815636438, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37873,7 +38063,7 @@ Prefab:
     - target: {fileID: 224828160815636438, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224283166455162570, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37893,7 +38083,7 @@ Prefab:
     - target: {fileID: 224283166455162570, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224353598080619108, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37913,7 +38103,7 @@ Prefab:
     - target: {fileID: 224353598080619108, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224890209757943710, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37933,7 +38123,7 @@ Prefab:
     - target: {fileID: 224890209757943710, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224646422635216620, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37953,7 +38143,7 @@ Prefab:
     - target: {fileID: 224646422635216620, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224368882994456112, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37973,7 +38163,7 @@ Prefab:
     - target: {fileID: 224368882994456112, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224715598488041748, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -37993,7 +38183,7 @@ Prefab:
     - target: {fileID: 224715598488041748, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224873984021962142, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -38013,7 +38203,7 @@ Prefab:
     - target: {fileID: 224873984021962142, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224099381182374390, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -38033,7 +38223,7 @@ Prefab:
     - target: {fileID: 224099381182374390, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224030519811054516, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -38053,7 +38243,7 @@ Prefab:
     - target: {fileID: 224030519811054516, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224127213706625230, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -38073,12 +38263,12 @@ Prefab:
     - target: {fileID: 224127213706625230, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -258.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224187997064233400, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 23377.9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114428109400607470, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
         type: 2}
@@ -38254,6 +38444,10 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1590901844191818, guid: a3ced2aad3dad4fc3b51f56f1b679f4f, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3ced2aad3dad4fc3b51f56f1b679f4f, type: 2}
@@ -38536,6 +38730,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 7d89877c3f416468fb4d6d7a684eb8c9, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -38795,6 +38990,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 7751a766267ed414587ab63a23a21f4c, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -39892,6 +40088,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 4476e0e40a00d4d64b4728dd80366f91, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -40160,6 +40357,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -40419,6 +40617,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 05456915b4062475dbfaaf017fb250d9, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -40610,6 +40809,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: c04dbf2aac899431d9d94c0821536a20, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -40977,6 +41177,9 @@ MonoBehaviour:
   btnsChange: []
   btnChange: {fileID: 0}
   typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
   dontUseOffset: 0
   indexGatcha: 0
   AniGatchaCharacter: 0
@@ -41584,6 +41787,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: b18a005405b6e496a9463f16049bf008, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -41774,6 +41978,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -42422,6 +42627,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -42510,6 +42716,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -42572,15 +42779,15 @@ RectTransform:
   m_GameObject: {fileID: 675731313}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1813532811}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 369.00003, y: -0.000015258789}
-  m_SizeDelta: {x: 70, y: 50}
+  m_AnchoredPosition: {x: 260, y: 0}
+  m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &675731315
 MonoBehaviour:
@@ -42594,14 +42801,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 36c52c38d4ff84f78a45194b7ec66ce5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -42797,7 +43004,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 290, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 201, y: 136}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &685461792
@@ -42976,6 +43183,9 @@ MonoBehaviour:
   btnsChange: []
   btnChange: {fileID: 0}
   typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
   dontUseOffset: 0
   indexGatcha: 0
   AniGatchaCharacter: 0
@@ -43320,6 +43530,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 79492e57044904593812a851326bbeda, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -43511,6 +43722,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: f620bdf8222134ce0bdaef1942a19cde, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -44097,6 +44309,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 448b1e2027ed4445188034f1734bc1ac, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -45985,6 +46198,9 @@ MonoBehaviour:
   btnsChange: []
   btnChange: {fileID: 0}
   typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
   dontUseOffset: 0
   indexGatcha: 0
   AniGatchaCharacter: 0
@@ -45993,6 +46209,225 @@ GameObject:
   m_PrefabParentObject: {fileID: 1370939985483418, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
     type: 2}
   m_PrefabInternal: {fileID: 566351363}
+--- !u!1 &771193511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 771193512}
+  - component: {fileID: 771193516}
+  - component: {fileID: 771193515}
+  - component: {fileID: 771193514}
+  - component: {fileID: 771193513}
+  m_Layer: 5
+  m_Name: Btn_Facebook
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &771193512
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 771193511}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1517057295}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 580, y: 0}
+  m_SizeDelta: {x: 201, y: 136}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &771193513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 771193511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77dbd7f7cc8304301a9815a07ac07c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 771193512}
+  speed: 5
+  isRunScaleAni: 0
+  isScaleAni: 0
+  isUIBotBar: 1
+  maxScale: {x: 2.3, y: 2.3, z: 1}
+  originScale: {x: 2, y: 2, z: 1}
+  minScale: {x: 0, y: 0, z: 0}
+  isShop: 0
+  isRate: 0
+  isShare: 1
+  isLeaderboard: 0
+  linkRate: 
+  linkShare: 
+  sprChangeFrame1: {fileID: 0}
+  sprChangeFrame2: {fileID: 0}
+  isRunChangeColorAni: 0
+  color1:
+    serializedVersion: 2
+    rgba: 0
+  color2:
+    serializedVersion: 2
+    rgba: 0
+  isRunMoveAni: 0
+  isMoveAni: 0
+  pos1: {fileID: 0}
+  pos2: {fileID: 0}
+  pos3: {fileID: 0}
+  offsetMoveY: 0
+  isRunBtnPlayAni: 0
+  btnContent:
+  - P1 VS P2
+  - P1 VS CPU
+  - TOURNAMENT
+  - MINI GAME
+  playBtn: {fileID: 0}
+  contentTxt: {fileID: 0}
+  nextBtn: {fileID: 0}
+  preBtn: {fileID: 0}
+  isRunSeqAni: 0
+  isSequence: 0
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
+  obj3: {fileID: 0}
+  pos1Seq: {fileID: 0}
+  pos2Seq: {fileID: 0}
+  pos3Seq: {fileID: 0}
+  progressBar: {fileID: 0}
+  isRunShakeAni: 0
+  isShakeAni: 0
+  timeInterShake: 0
+  isRunRotateAni: 0
+  panel_Shop: {fileID: 0}
+  fadeShop: {fileID: 0}
+  isRunRewardAni: 0
+  rewardImg: {fileID: 0}
+  rewardSpr: []
+  lightReward: {fileID: 0}
+  canvasReward: {fileID: 0}
+  fadeOpenReward: {fileID: 0}
+  isFinishFadeRewardAni: 0
+  isRunAniGatcha: 0
+  objectsRunAniGatcha: []
+  posAni: []
+  closeReward: {fileID: 0}
+  lightX1Gatcha: {fileID: 0}
+  lightX10Gatcha: []
+  effectSmoke: []
+  charEquipManager: {fileID: 0}
+  isRunEffX10Ani: 0
+  effectGlowStar: []
+  isLibraryScene: 0
+  backLibrarybtn: {fileID: 0}
+  isRunAniBtnChange: 0
+  isRunAniFrameChange: 0
+  changeImgBtn: []
+  posBtn: []
+  btnsChange: []
+  btnChange: {fileID: 0}
+  typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
+  dontUseOffset: 0
+  indexGatcha: 0
+  AniGatchaCharacter: 0
+--- !u!114 &771193514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 771193511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 771193515}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 771193513}
+        m_MethodName: AllowScaleAni
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &771193515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 771193511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 44271e05b94bf43a7b42c58b540041b3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &771193516
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 771193511}
 --- !u!1 &775746649
 GameObject:
   m_ObjectHideFlags: 0
@@ -46128,9 +46563,59 @@ MonoBehaviour:
   btnsChange: []
   btnChange: {fileID: 0}
   typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
   dontUseOffset: 0
   indexGatcha: 0
   AniGatchaCharacter: 0
+--- !u!1 &778783734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 778783735}
+  - component: {fileID: 778783736}
+  m_Layer: 0
+  m_Name: Share
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &778783735
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 778783734}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &778783736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 778783734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataChar: {fileID: 0}
+  dataItem: {fileID: 0}
+  dataMap: {fileID: 0}
+  quest: {fileID: 11400000, guid: f5ba36572635043448bab0a8cb9e233f, type: 2}
+  isX1Gatcha: 0
+  smokeEffect: {fileID: 0}
+  charEquipManager: {fileID: 0}
 --- !u!1 &782459053
 GameObject:
   m_ObjectHideFlags: 0
@@ -46449,6 +46934,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 4c7334083e14f4820ac98d07e0be6a5f, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -47582,6 +48068,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 9a87d8aec92174696bb2c18c1f23367b, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -48067,6 +48554,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 30a4dc0a537a04709bf537b67deb9bab, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -48396,6 +48884,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 486bfd9b376574b6ebaf913f7cbc6153, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -49142,6 +49631,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 987bc75047eef4636a2b10b765a953d9, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -49922,6 +50412,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 2a78f64f9fdfb4b5bbf2a10d44d7de16, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -50821,6 +51312,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 49eac8389bae74ae397159be736fece8, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -51701,6 +52193,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 21299ec74fd7a4b1ab5aedc091b3b453, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -55398,6 +55891,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 36d08b3fb7a764ffd87a49daad1a8363, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -55710,6 +56204,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 7b5b8a35da59b4fa1a3c5cda62ef3009, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -56306,6 +56801,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: f42345240bc5e489584eea32bea194f9, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -56592,6 +57088,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 0103b5b6e59194383b8249ca5dd139fe, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -56851,6 +57348,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 4d18c1529633648a9ba65cb30bac1be4, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -57560,6 +58058,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: b6f6d89b6eb2a4c4da6bc35c4b10781d, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -58686,6 +59185,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 990261ec1c7144bc2944316b737b6163, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -59367,6 +59867,9 @@ MonoBehaviour:
   btnsChange: []
   btnChange: {fileID: 0}
   typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
   dontUseOffset: 0
   indexGatcha: 0
   AniGatchaCharacter: 0
@@ -59947,6 +60450,9 @@ MonoBehaviour:
   btnsChange: []
   btnChange: {fileID: 0}
   typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
   dontUseOffset: 0
   indexGatcha: 0
   AniGatchaCharacter: 0
@@ -60018,6 +60524,53 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1027639462}
+--- !u!1 &1027720849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1027720851}
+  - component: {fileID: 1027720850}
+  m_Layer: 0
+  m_Name: LikeFacebook
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1027720850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1027720849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9bc0245a03ba4ae79dadc884abb1fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataChar: {fileID: 0}
+  dataItem: {fileID: 0}
+  dataMap: {fileID: 0}
+  quest: {fileID: 11400000, guid: fafed9258b107404a8f5e7630c32a8d8, type: 2}
+  isX1Gatcha: 0
+  smokeEffect: {fileID: 0}
+  charEquipManager: {fileID: 0}
+--- !u!4 &1027720851
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1027720849}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1031600687 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114447171136087596, guid: a3ced2aad3dad4fc3b51f56f1b679f4f,
@@ -60218,6 +60771,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 975e18e5065434168b470af9d21572d3, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -60625,6 +61179,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 191cdd5a148f84d7f80672b75da80f01, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -60734,8 +61289,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 788, y: 0}
-  m_SizeDelta: {x: 576, y: 151.5}
+  m_AnchoredPosition: {x: 473.2, y: 0}
+  m_SizeDelta: {x: 322.6, y: 151.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1038020814
 MonoBehaviour:
@@ -60749,7 +61304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -61246,6 +61801,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 5ad615f3285724a1e8a7db228a0a4046, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -61437,6 +61993,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: b80ba56a107f54ffaa47b23d4b8c77e4, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -65299,6 +65856,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 5200406d7b6604162a98dbf704e873fc, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -65734,6 +66292,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: b312739e1694e4ce6b9abe2f9564dfd6, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -67188,21 +67747,22 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1120352332}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children:
   - {fileID: 1171930164}
   - {fileID: 10662118}
   - {fileID: 522800966}
   - {fileID: 1813532811}
-  m_Father: {fileID: 1633792830}
-  m_RootOrder: 11
+  - {fileID: 1489104332}
+  m_Father: {fileID: 2141597736}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0080566, y: 75.7}
-  m_SizeDelta: {x: 1324, y: 893.4}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 403, y: 512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1120352334
 MonoBehaviour:
@@ -67223,7 +67783,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: e76e3c540b88b4384bafdb2442d2b0c4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -67498,6 +68058,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: cfd63bedd4ad34506b59bdccbc6ecc89, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -67757,6 +68318,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 1821774e5838d4d7b84a48b66cb9a91c, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -68396,6 +68958,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: e31ea6af3bb91465c90b8c23751f330e, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -68667,6 +69230,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 29f11ae5e765a4bcd93e027b94d261fa, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -69167,6 +69731,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: d0238b17c42a44501b5d471b5092dacf, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -69432,6 +69997,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 728d217b628a44240bf4d1e85926d0d8, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -70659,6 +71225,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 5e46a5a19844d46a180d939ed98610e3, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -70918,6 +71485,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: ceb0e5e35b33847e99f4e355f32b4e9d, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -71229,7 +71797,7 @@ RectTransform:
   m_GameObject: {fileID: 1171930163}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0011959, y: 1.0011959, z: 1.0011959}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 79326284}
   - {fileID: 36527207}
@@ -71238,8 +71806,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -314.00134, y: 325}
-  m_SizeDelta: {x: 576, y: 151.5}
+  m_AnchoredPosition: {x: -59.199997, y: 178}
+  m_SizeDelta: {x: 568.3, y: 202.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1171930165
 MonoBehaviour:
@@ -71253,7 +71821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -71262,18 +71830,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: e6aa3568bc7aa4f49913ae1944f875a2, type: 3}
-    m_FontSize: 100
+    m_FontSize: 130
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 100
+    m_MaxSize: 150
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'LV: 100'
+  m_Text: 'LV: 10(+11)'
 --- !u!222 &1171930166
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -71691,6 +72259,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 6991a82a7cab940f297c16230dfa4632, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -71966,6 +72535,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 56fd4d62e24484257999af49e1806a01, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -72295,6 +72865,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: fa8ff23997c1f4705ac4f11f681c0b13, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -72680,6 +73251,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 10c4552076ee64b1397a6742d627a188, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -72871,6 +73443,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 3daf8e3d93519413eaa6e84fe4f64d1f, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -73251,6 +73824,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: f010f3813f28f43c6b5f41df3fd82b4a, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -73747,6 +74321,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 7f6eb5a27a99a4761b73b4708006f5d4, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -74333,6 +74908,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 94b1a3b3dbe14454ca67248e098a7d5e, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -74628,6 +75204,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 738abb866975d40219c67d7a53800da9, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -74984,6 +75561,9 @@ MonoBehaviour:
   btnsChange: []
   btnChange: {fileID: 0}
   typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
   dontUseOffset: 0
   indexGatcha: 0
   AniGatchaCharacter: 0
@@ -79154,6 +79734,9 @@ MonoBehaviour:
   btnsChange: []
   btnChange: {fileID: 0}
   typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
   dontUseOffset: 0
   indexGatcha: 0
   AniGatchaCharacter: 0
@@ -79779,6 +80362,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: aa6447de039a84889ab1f1e8e25447b8, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -79878,7 +80462,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1633792830}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -80416,6 +81000,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 35f4c460885534f989b6400752ea7edf, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -80910,6 +81495,9 @@ MonoBehaviour:
   btnsChange: []
   btnChange: {fileID: 0}
   typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
   dontUseOffset: 0
   indexGatcha: 0
   AniGatchaCharacter: 0
@@ -81106,6 +81694,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 6bca548db8f3040f48e6d27d9ded149f, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -81720,6 +82309,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 36125bb9d448b42188133762506095d3, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -81911,6 +82501,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 3f19ae595035746f180ae8bf1863f2f8, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -82107,6 +82698,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 0967bd70f65d74af0bafb469008e7dbd, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -82364,6 +82956,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -82535,8 +83128,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 788, y: -0.000015258789}
-  m_SizeDelta: {x: 576, y: 151.5}
+  m_AnchoredPosition: {x: 473.2, y: 0}
+  m_SizeDelta: {x: 322.6, y: 151.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1341440775
 MonoBehaviour:
@@ -82550,7 +83143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -83299,6 +83892,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 7547730b7a9da44a0bb91419862f104c, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -83723,6 +84317,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 95788b23aadc8491dbee22999d5f6dae, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -84179,6 +84774,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 800df7f5f61cb4264925a64ebabad637, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -84874,6 +85470,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 542220bb18653426dbd89d2a38458a87, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -88681,6 +89278,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 84bb6b69314d4444e9c8e10b4032f25d, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -89154,6 +89752,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -89496,6 +90095,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 37bb149ae1cb9412795c7b7d99c64808, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -90527,6 +91127,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: dfe0db07dc3e245fc9652c93609e70d4, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -90925,6 +91526,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: c091a08b617c04608863d75fde9e99e3, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -91122,6 +91724,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 4cd15149164dc40a58926bc6cac5a691, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -91578,6 +92181,9 @@ MonoBehaviour:
   btnsChange: []
   btnChange: {fileID: 0}
   typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
   dontUseOffset: 0
   indexGatcha: 0
   AniGatchaCharacter: 0
@@ -91745,6 +92351,75 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1488514621}
+--- !u!1 &1489104331
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1489104332}
+  - component: {fileID: 1489104334}
+  - component: {fileID: 1489104333}
+  m_Layer: 5
+  m_Name: Frame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1489104332
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1489104331}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.76, y: 0.76, z: 1}
+  m_Children:
+  - {fileID: 73600230}
+  m_Father: {fileID: 1120352333}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -148}
+  m_SizeDelta: {x: 792, y: 173}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1489104333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1489104331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 5c6adec22f2d14740a002cfd08e0a6bd, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1489104334
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1489104331}
 --- !u!1 &1490647569
 GameObject:
   m_ObjectHideFlags: 0
@@ -91933,6 +92608,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 0560e4b726bfc44f685d119bb770c604, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -92124,6 +92800,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 9ea7beff7b131408d93c0f84bcc9be3f, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -92748,6 +93425,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 831eb18744bbc4b5fbb0eefd2f480f43, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -93260,9 +93938,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2097522597}
-  - {fileID: 1608651202}
-  - {fileID: 685461791}
   - {fileID: 1669498501}
+  - {fileID: 685461791}
+  - {fileID: 771193512}
+  - {fileID: 1608651202}
   m_Father: {fileID: 357992399}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -93362,6 +94041,9 @@ MonoBehaviour:
   btnsChange: []
   btnChange: {fileID: 0}
   typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
   dontUseOffset: 0
   indexGatcha: 0
   AniGatchaCharacter: 0
@@ -93701,6 +94383,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: ee04964b7dd6f49d3b416e6f6ed36a72, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -94512,6 +95195,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: b42af102cb61b4096a072d63d424fd58, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -94703,6 +95387,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: b72c7f91754454a54aa40be8f34b8a88, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -94894,6 +95579,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 09f14da74025144688ef15db7a0fa577, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -95085,6 +95771,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: eda6e249e68444841847eddb9d40182d, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -95329,6 +96016,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 71d968809a9f44ab6b2d0641217d5c06, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -95593,6 +96281,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 8369e40f7a6444ee59f86c112e26c462, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -99566,6 +100255,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 2dfc2942fe5d7427abf3ad05e3894042, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -99899,6 +100589,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 4b3993cb8794c4ce3afc1da87927c45f, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -100095,6 +100786,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: c3d0af84d1f8b4c19907fe990491caf1, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -100362,6 +101054,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: be2c2ec2cf2d545ed9c0d7756f0c30de, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -100691,6 +101384,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 6cae1e97f4ec840edba8e53eee839e8b, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -101490,6 +102184,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 0be5952631b8540d8b6942b89aa5255c, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -101749,6 +102444,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 0c73701d3ad964148a2a4d4fd3d2401c, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -101782,12 +102478,12 @@ RectTransform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1517057295}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 870, y: 0}
-  m_SizeDelta: {x: 201, y: 136}
+  m_AnchoredPosition: {x: 1160, y: 0}
+  m_SizeDelta: {x: 201, y: 135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1608651203
 MonoBehaviour:
@@ -101860,7 +102556,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 2bdaa3facd4e34351a1e52ba032b4e8a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4fc65b60a8e664e6faef38a2b327b0ba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -101965,6 +102661,9 @@ MonoBehaviour:
   btnsChange: []
   btnChange: {fileID: 0}
   typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
   dontUseOffset: 0
   indexGatcha: 0
   AniGatchaCharacter: 0
@@ -102156,6 +102855,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: d7dd903e25d714c749c181d0e29de00a, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -102475,6 +103175,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: fe3261d3b486f4c3db3bf2ae79bc90c1, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -102675,6 +103376,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -103337,13 +104039,13 @@ RectTransform:
   - {fileID: 1926439174}
   - {fileID: 1202855576}
   - {fileID: 2064552724}
-  - {fileID: 1120352333}
+  - {fileID: 2141597736}
   - {fileID: 1799583235}
   - {fileID: 2107663855}
   - {fileID: 1014496541}
   - {fileID: 1515018975}
-  - {fileID: 939820986}
   - {fileID: 1288805274}
+  - {fileID: 939820986}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -12.036}
@@ -104681,11 +105383,11 @@ RectTransform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1517057295}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -290, y: 0}
+  m_AnchoredPosition: {x: -580, y: 0}
   m_SizeDelta: {x: 201, y: 136}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1669498502
@@ -104864,6 +105566,9 @@ MonoBehaviour:
   btnsChange: []
   btnChange: {fileID: 0}
   typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
   dontUseOffset: 0
   indexGatcha: 0
   AniGatchaCharacter: 0
@@ -105055,6 +105760,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 160b98e45bc4840669c5570d5f24c5a9, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -105508,6 +106214,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: ebfb77de69daf461cbcb75b6cba551c0, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -105773,6 +106480,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 7ba32c49838e846bdbb66e9e401bb665, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -105970,6 +106678,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: f90a4a45487cd458bb6c2e69ea4f59c0, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -106173,6 +106882,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 8e4174bb9c1374145975646725107ba0, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -107310,6 +108020,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 7bbded4c78e3347e1a5a1f0eb6eca9d8, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -107501,6 +108212,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 5f1fa6526d40142efa19f8c8c2b2e017, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -107830,6 +108542,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: d33e0784c0f414de08c9566466205268, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -107999,6 +108712,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -108258,6 +108972,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: d6ce1cbae16cd411dafbdab0c7e1a39f, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -108292,15 +109007,15 @@ RectTransform:
   m_GameObject: {fileID: 1742577916}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 10662118}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 369, y: 0.000015258789}
-  m_SizeDelta: {x: 70, y: 50}
+  m_AnchoredPosition: {x: 260, y: 0}
+  m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1742577918
 MonoBehaviour:
@@ -108314,14 +109029,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 36c52c38d4ff84f78a45194b7ec66ce5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -108606,6 +109321,9 @@ MonoBehaviour:
   btnsChange: []
   btnChange: {fileID: 0}
   typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
   dontUseOffset: 0
   indexGatcha: 0
   AniGatchaCharacter: 0
@@ -108923,6 +109641,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: ea3079022dbf045389e9077f004f548b, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -109410,6 +110129,9 @@ MonoBehaviour:
   btnsChange: []
   btnChange: {fileID: 0}
   typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
   dontUseOffset: 0
   indexGatcha: 0
   AniGatchaCharacter: 0
@@ -109719,6 +110441,9 @@ MonoBehaviour:
   btnsChange: []
   btnChange: {fileID: 0}
   typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
   dontUseOffset: 0
   indexGatcha: 0
   AniGatchaCharacter: 1
@@ -110757,7 +111482,7 @@ RectTransform:
   m_GameObject: {fileID: 1813532810}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 675731314}
   - {fileID: 1341440774}
@@ -110766,8 +111491,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -314, y: -330}
-  m_SizeDelta: {x: 576, y: 151.5}
+  m_AnchoredPosition: {x: -73.312, y: -32.199997}
+  m_SizeDelta: {x: 466.55, y: 151.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1813532812
 MonoBehaviour:
@@ -110781,7 +111506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -111277,15 +112002,15 @@ RectTransform:
   m_GameObject: {fileID: 1831084873}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 522800966}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 369.00003, y: 0}
-  m_SizeDelta: {x: 70, y: 50}
+  m_AnchoredPosition: {x: 260, y: 0}
+  m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1831084875
 MonoBehaviour:
@@ -111299,14 +112024,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 36c52c38d4ff84f78a45194b7ec66ce5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -111756,6 +112481,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: e8c1b192dc4b9412abf57f2d76876b97, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -112021,6 +112747,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: b22d0e761fc8746378b1c36275c46c05, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -112790,6 +113517,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 9693a3ac6e71e4b13ad60a81a30ae6b1, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -113162,6 +113890,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: e51cd1026b36c4ffea7301d00d8931ed, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -113517,6 +114246,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: a59be5f726ddf4429bd2ce29b9b972f7, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -114069,6 +114799,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 5b173178c19654c40964db8b18cfe829, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -114128,6 +114859,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -118266,6 +118998,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 39123d79d50bd4df19c43b8e7b5f98a4, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -119386,6 +120119,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: bf49c02acc21e4999a1bc9b05b3083a2, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -119440,6 +120174,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -119631,6 +120366,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: be7ced61b27664cfd8e59bc45b34dc7d, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -121044,6 +121780,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 507504acc781244c498ec50975d82eb7, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -122275,6 +123012,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 507405bf7ec164b5c89581eed4bc6cfb, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -123478,6 +124216,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: a53975ddb96d94566a575f8f2564006d, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -123890,6 +124629,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: a64d1b943b6744b1982679e24ace8fb9, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -127512,6 +128252,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -127703,6 +128444,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 4923358e7caf843c99f060ff1623aeb5, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -128106,6 +128848,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: 30ba58cecab404d298eb63c6c339fcee, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -128382,7 +129125,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -870, y: 0}
+  m_AnchoredPosition: {x: -1160, y: 0}
   m_SizeDelta: {x: 201, y: 136}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2097522598
@@ -128561,6 +129304,9 @@ MonoBehaviour:
   btnsChange: []
   btnChange: {fileID: 0}
   typeChange: []
+  Share: {fileID: 0}
+  Rate: {fileID: 0}
+  LikeFB: {fileID: 0}
   dontUseOffset: 0
   indexGatcha: 0
   AniGatchaCharacter: 0
@@ -129033,6 +129779,7 @@ MonoBehaviour:
   dataChar: {fileID: 0}
   dataItem: {fileID: 11400000, guid: d37021878f99a4a50939e2429dc8aea1, type: 2}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -129878,6 +130625,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 92e4afe98d55e4818b9117b6bb2da750, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -133507,6 +134255,7 @@ MonoBehaviour:
   dataChar: {fileID: 11400000, guid: 6217f203d77004985aad47881a09ae6f, type: 2}
   dataItem: {fileID: 0}
   dataMap: {fileID: 0}
+  quest: {fileID: 0}
   isX1Gatcha: 0
   smokeEffect: {fileID: 0}
   charEquipManager: {fileID: 0}
@@ -133646,6 +134395,128 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2136721741}
+--- !u!1 &2141597735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2141597736}
+  - component: {fileID: 2141597738}
+  - component: {fileID: 2141597737}
+  - component: {fileID: 2141597739}
+  m_Layer: 5
+  m_Name: PanelDialog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &2141597736
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2141597735}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1120352333}
+  m_Father: {fileID: 1633792830}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2141597737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2141597735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.88235295}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &2141597738
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2141597735}
+--- !u!114 &2141597739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2141597735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2141597737}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 425774551}
+        m_MethodName: CloseDialog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &2141843789
 GameObject:
   m_ObjectHideFlags: 0

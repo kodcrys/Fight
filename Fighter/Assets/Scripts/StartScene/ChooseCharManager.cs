@@ -601,9 +601,14 @@ public class ChooseCharManager : MonoBehaviour {
 
 		// bien danh dau tu map ze choose char
 		FadeAni.isRunMapToChooseChar = true;
+		FadeAni.isRunMapToHome = false;
 	}
 
 	public void Home() {
-		UnityEngine.SceneManagement.SceneManager.LoadScene ("StartScene");
+		aniFade.stateFade = FadeAni.State.Show;
+		aniFade.isChangeChooseChar = true;
+		FadeAni.isRunMapToChooseChar = true;
+		FadeAni.isRunMapToHome = true;
+		//UnityEngine.SceneManagement.SceneManager.LoadScene ("StartScene");
 	}
 }
