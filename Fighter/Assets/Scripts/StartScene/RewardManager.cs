@@ -8,6 +8,11 @@ public class RewardManager : MonoBehaviour {
 	[HideInInspector]
 	public bool isX1;
 
+	public enum TypeRewardDailyOrQuest{gold, diamond, exp}
+	[Header("Reward daily")]
+	[SerializeField]
+	GameObject goldReward, diaReward, expReward;
+
 	[Header("UI Button Handle")]
 	[SerializeField]
 	GameObject btnBuyGold;
@@ -92,10 +97,34 @@ public class RewardManager : MonoBehaviour {
 		}
 	}*/
 
-	public void OpenRewardDailyOrQuest() {
+	public void OpenRewardDailyOrQuest(TypeRewardDailyOrQuest typeReward, int value) {
+		isX1 = true;
+
+		if (typeReward == TypeRewardDailyOrQuest.gold) {
+			goldReward.SetActive (true);
+			diaReward.SetActive (false);
+			expReward.SetActive (false);
+		}
+
+		if (typeReward == TypeRewardDailyOrQuest.diamond) {
+			goldReward.SetActive (false);
+			diaReward.SetActive (true);
+			expReward.SetActive (false);
+		}
+
+		if (typeReward == TypeRewardDailyOrQuest.exp) {
+			goldReward.SetActive (false);
+			diaReward.SetActive (false);
+			expReward.SetActive (true);
+		}
+
+		charEqManager.ChangeValueDailyReward (value);
+
 		panelOfCv_X1Reward.SetActive (false);
 		panelOfCv_X10Reward.SetActive (false);
 		panelOfCv_DailyOrQuest.SetActive (true);
+
+		panel_Reward.SetActive (true);
 	}
 
 	public void OpenReward(bool isShopGold) {
@@ -253,6 +282,17 @@ public class RewardManager : MonoBehaviour {
 			btnBuyGoldX10.SetActive (false);
 			btnBuyDiamondX10.SetActive (true);
 		}
+	}
+
+	public void CloseDailyOrQuestReward() {
+		panel_Reward.SetActive (false);
+		canvas_Reward.SetActive (false);
+
+		// close light in scene reward and set origin scale
+		lightReward.transform.localScale = new Vector3 (2, 2, 1);
+		lightReward.SetActive (false);
+
+		rewardObj.SetActive (true);
 	}
 
 	public void CloseReward() {

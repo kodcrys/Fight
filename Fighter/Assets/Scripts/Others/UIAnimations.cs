@@ -491,7 +491,7 @@ public class UIAnimations : MonoBehaviour {
 
 	void AniShake() {
 		if (timeShake >= timeInterShake) {
-			timeInterShake = 0.2f;
+			timeInterShake = 0.1f;
 			timeShake = 0;
 		} else
 			timeShake += Time.deltaTime;

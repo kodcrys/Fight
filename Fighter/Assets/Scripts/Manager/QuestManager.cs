@@ -300,6 +300,10 @@ public class QuestManager : MonoBehaviour {
 			imgEffectReward.sprite = sprEffectReward [1];
 			effectReward.SetActive (false);
 			aniRewardBonus.isRunShakeAni = false;
+
+			RewardManager.instance.OpenRewardDailyOrQuest (RewardManager.TypeRewardDailyOrQuest.diamond, 2);
+			SaveManager.instance.state.TotalDiamond += 2;
+			SaveManager.instance.Save ();
 		}
 	}
 
@@ -310,8 +314,10 @@ public class QuestManager : MonoBehaviour {
 
 	// For test
 	public void AutoDone(List<DataQuests> lstStoreQuest){
-		for (int i = 0; i < lstStoreQuest.Count; i++)
+		for (int i = 0; i < lstStoreQuest.Count; i++) {
 			lstStoreQuest [i].doing = lstStoreQuest [i].requirement;
+			lstStoreQuest [i].isDone = true;
+		}
 	}
 
 	void RefreshDoingAllQuest() {

@@ -5329,6 +5329,8 @@ MonoBehaviour:
   map: {fileID: 998052365}
   aniFade: {fileID: 47878426}
   cointainSave: {fileID: 0}
+  ready1: {fileID: 0}
+  ready2: {fileID: 0}
   isPlayAI: 0
 --- !u!4 &2069318603
 Transform:

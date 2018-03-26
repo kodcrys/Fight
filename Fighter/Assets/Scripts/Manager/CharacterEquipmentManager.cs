@@ -72,6 +72,9 @@ public class CharacterEquipmentManager : MonoBehaviour {
 	[SerializeField]
 	GameObject[] equipmentSymbols;
 
+	[Header("Daily Reward")]
+	[SerializeField]
+	UnityEngine.UI.Text valueDailyReward;
 
 	[Header("Data Equipment")]
 	[SerializeField]
@@ -261,5 +264,9 @@ public class CharacterEquipmentManager : MonoBehaviour {
 		nameOfX10Equipment[i].text = "+25";
 		SaveManager.instance.state.TotalDiamond += 25;
 		SaveManager.instance.Save ();
+	}
+
+	public void ChangeValueDailyReward(int value) {
+		valueDailyReward.text = "+" + value;
 	}
 }

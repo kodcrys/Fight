@@ -39,6 +39,8 @@ public class StartSceneManager : MonoBehaviour {
 	GameObject dailyRewardObj;
 	[SerializeField]
 	GameObject EffDailyReward;
+	[SerializeField]
+	Transform rewardSymbol;
 
 	// part library
 	[Header("Scroll view")]
@@ -138,6 +140,7 @@ public class StartSceneManager : MonoBehaviour {
 			midBar.isRunScaleAni = true;
 			isShowDailyQuest = !isShowDailyQuest;
 			aniOfDailyQuest.isRunSeqAni = false;
+			rewardSymbol.eulerAngles = new Vector3 (0, 0, 0);
 		} else {
 			botBar.isRunMoveAni = false;
 			midBar.isRunScaleAni = false;
