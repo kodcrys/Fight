@@ -87,6 +87,13 @@ public class ChooseCharManager : MonoBehaviour {
 	[SerializeField]
 	UnityEngine.UI.Text contentBtn;
 	string[] playMode = { "P1 VS P2", "P1 VS CPU", "TOURNAMENT", "MINI GAME" };
+	[SerializeField]
+	UnityEngine.UI.Text modeAIText;
+	[SerializeField]
+	GameObject play2Btn;
+	[SerializeField]
+	GameObject aiBtn;
+	string[] modeAI = {"EASY", "NORMAL", "HARD", "VERY HARD"};
 
 	[Header("Screen Map")]
 	[SerializeField]
@@ -168,11 +175,56 @@ public class ChooseCharManager : MonoBehaviour {
 		if (contentBtn.text == playMode [0]) {
 			SaveManager.instance.state.player1AI = false;
 			SaveManager.instance.state.player2AI = false;
+			play2Btn.SetActive (true);
+			aiBtn.SetActive (false);
+
+			isTurnPlayer1 = true;
+
+			ready1.sprite = readySpr;
+			ready2.sprite = readySpr;
+
+			preBtn.GetComponent<UnityEngine.UI.Button> ().interactable = true;
+			nextBtn.GetComponent<UnityEngine.UI.Button> ().interactable = false;
+
+			EnDisableLibraryCell ();
+
+			topBar.isRunMoveAni = false;
+			midBar.isRunScaleAni = false;
+			botBar.isRunMoveAni = false;
+
+			showTop.isRunMoveAni = true;
+			vsImage.isRunScaleAni = true;
+			moveChooseFrame.isRunMoveAni = true;
+			nextBtn.isRunMoveAni = true;
+			preBtn.isRunMoveAni = true;
 		}
 		// zs AI
 		if (contentBtn.text == playMode [1]) {
 			SaveManager.instance.state.player1AI = false;
 			SaveManager.instance.state.player2AI = true;
+
+			play2Btn.SetActive (false);
+			aiBtn.SetActive (true);
+
+			isTurnPlayer1 = true;
+
+			ready1.sprite = readySpr;
+			preBtn.GetComponent<UnityEngine.UI.Button> ().interactable = true;
+			EnDisableLibraryCell ();
+
+			topBar.isRunMoveAni = false;
+			midBar.isRunScaleAni = false;
+			botBar.isRunMoveAni = false;
+
+			showTop.isRunMoveAni = true;
+			vsImage.isRunScaleAni = true;
+			moveChooseFrame.isRunMoveAni = true;
+			preBtn.isRunMoveAni = true;
+
+			//Change mode ai text
+			modeAIText.text = modeAI[0].ToString();
+
+			aiBtn.GetComponent<UIAnimations> ().isRunMoveAni = true;
 		}
 		// tour
 		if (contentBtn.text == playMode [2]) {
@@ -183,25 +235,7 @@ public class ChooseCharManager : MonoBehaviour {
 			
 		}
 
-		isTurnPlayer1 = true;
 
-		ready1.sprite = readySpr;
-		ready2.sprite = readySpr;
-
-		preBtn.GetComponent<UnityEngine.UI.Button> ().interactable = true;
-		nextBtn.GetComponent<UnityEngine.UI.Button> ().interactable = false;
-
-		EnDisableLibraryCell ();
-
-		topBar.isRunMoveAni = false;
-		midBar.isRunScaleAni = false;
-		botBar.isRunMoveAni = false;
-
-		showTop.isRunMoveAni = true;
-		vsImage.isRunScaleAni = true;
-		moveChooseFrame.isRunMoveAni = true;
-		nextBtn.isRunMoveAni = true;
-		preBtn.isRunMoveAni = true;
 	}
 
 	// run ani change scene when click back
@@ -217,6 +251,8 @@ public class ChooseCharManager : MonoBehaviour {
 		moveChooseFrame.isRunMoveAni = false;
 		nextBtn.isRunMoveAni = false;
 		preBtn.isRunMoveAni = false;
+
+		aiBtn.GetComponent<UIAnimations> ().isRunMoveAni = false;
 	}
 
 	//
@@ -225,10 +261,20 @@ public class ChooseCharManager : MonoBehaviour {
 			nextBtn.GetComponent<UnityEngine.UI.Button> ().interactable = true;
 			ready1.sprite = lockSpr;
 			isTurnPlayer1 = false;
+
+			if (contentBtn.text == playMode [1]) {
+				aniFade.stateFade = FadeAni.State.Show;
+				aniFade.isChangeMap = true;
+				// Change mode AI afer play
+				PlayModeAI ();
+			}
+
 		} else {
-			ready2.sprite = lockSpr;
-			aniFade.stateFade = FadeAni.State.Show;
-			aniFade.isChangeMap = true;
+			if (contentBtn.text == playMode [0]) {
+				ready2.sprite = lockSpr;
+				aniFade.stateFade = FadeAni.State.Show;
+				aniFade.isChangeMap = true;
+			}
 			//UnityEngine.SceneManagement.SceneManager.LoadScene ("ChooseMap");
 		}
 	}
@@ -620,7 +666,45 @@ public class ChooseCharManager : MonoBehaviour {
 		aniFade.stateFade = FadeAni.State.Show;
 		aniFade.isChangeChooseChar = true;
 		FadeAni.isRunMapToChooseChar = false;
-		FadeAni.isRunMapToHome = false;
+		FadeAni.isRunMapToHome = false ;
 		FadeAni.isRunPlayGame = true;
+	}
+
+	int countModeAI = 0;
+	public void TopModeAI() {
+		countModeAI++;
+		if (countModeAI < playMode.Length)
+			modeAIText.text = modeAI [countModeAI].ToString ();
+		else {
+			countModeAI = 0;
+			modeAIText.text = modeAI [countModeAI].ToString ();
+		}
+		//Debug.Log (countModeAI);
+	}
+
+	public void DownModeAI() {
+		countModeAI--;
+		if (countModeAI >= 0)
+			modeAIText.text = modeAI [countModeAI].ToString ();
+		else {
+			countModeAI = playMode.Length - 1;
+			modeAIText.text = modeAI [countModeAI].ToString ();
+		}
+		Debug.Log (countModeAI);
+	}
+
+	void PlayModeAI() {
+		if (modeAIText.text == modeAI [0].ToString ()) {
+			// easy
+		}
+		if (modeAIText.text == modeAI [1].ToString ()) {
+			// normal
+		}
+		if (modeAIText.text == modeAI [2].ToString ()) {
+			// hard
+		}
+		if (modeAIText.text == modeAI [3].ToString ()) {
+			// very hard
+		}
 	}
 }
