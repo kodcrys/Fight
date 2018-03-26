@@ -199,9 +199,9 @@ public class UIAnimations : MonoBehaviour {
 	DataQuests LikeFB;
 
 	void Awake() {
-		Share = GameObject.Find ("Share").GetComponent<CointainData> ().quest;
+/*		Share = GameObject.Find ("Share").GetComponent<CointainData> ().quest;
 		Rate = GameObject.Find ("Rate").GetComponent<CointainData> ().quest;
-		LikeFB = GameObject.Find ("LikeFacebook").GetComponent<CointainData> ().quest;
+		LikeFB = GameObject.Find ("LikeFacebook").GetComponent<CointainData> ().quest;*/
 	}
 
 	void OnEnable() {
