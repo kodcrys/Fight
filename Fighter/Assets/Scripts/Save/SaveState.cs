@@ -44,4 +44,6 @@ public class SaveState {
 	public bool player1AI = true;
 
 	public bool player2AI = true;
+
+	public int levelAI;
 }
