@@ -10,6 +10,9 @@ public class FingerLeftControl : FingerBase {
 	bool isUIAni;
 
 	void Awake(){
+		if (instance == null)
+			instance = this;
+
 		healthBar.Initialize ();
 		staminaBar.Initialize ();
 		redHealthBar.Initialize ();
@@ -18,7 +21,6 @@ public class FingerLeftControl : FingerBase {
 
 	// Use this for initialization
 	void Start () {
-		instance = this;
 		touch = true;
 		changeColor = false;
 		oneShotColor = false;

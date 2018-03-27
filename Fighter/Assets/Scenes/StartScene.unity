@@ -21819,7 +21819,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 496734911}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.40726247
+  m_Size: 0.4072625
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -44987,67 +44987,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 740341248}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f397e48c656594c2eaca06507d887190, type: 3}
+  m_Script: {fileID: 11500000, guid: 32a5428d0846f4d228028ec4630925e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerAction: 1
   finger: {fileID: 740341248}
-  fingerAtk: {fileID: 0}
-  fingerDown: {fileID: 0}
-  hand: {fileID: 0}
-  enemyLeft: {fileID: 0}
-  enemyRight: {fileID: 0}
-  health: 0
-  defend: 0
-  atk: 0
-  stamina: 0
-  maxHealth: 0
-  healthBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  staminaBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  redHealthBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  shieldBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  isShield: 0
-  changeColor: 0
-  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 2
   scale2: 1.95
-  rot1: -0.2
-  rot2: 0.2
+  rot1: -0.1
+  rot2: 0.1
   pos1: 0.005
   pos2: 0.005
-  firstAtk: 0
-  lastAtk: 0
-  doingSomething: 0
-  isAtk: 0
-  touch: 0
-  stopTime: 0
-  takeDame: 0
-  winCount: 0
-  fuckingMode: 0
   time: 0
   timeInter: 0.45
-  a: 0
-  fingerAminChanger: 0
-  atkText: {fileID: 0}
-  healthText: {fileID: 0}
-  healthImage: {fileID: 0}
-  staminaImage: {fileID: 0}
-  redHealth: {fileID: 0}
-  stunFinger: {fileID: 0}
 --- !u!114 &740341251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58393,67 +58346,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 993801295}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f397e48c656594c2eaca06507d887190, type: 3}
+  m_Script: {fileID: 11500000, guid: 32a5428d0846f4d228028ec4630925e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerAction: 1
   finger: {fileID: 993801295}
-  fingerAtk: {fileID: 0}
-  fingerDown: {fileID: 0}
-  hand: {fileID: 0}
-  enemyLeft: {fileID: 0}
-  enemyRight: {fileID: 0}
-  health: 0
-  defend: 0
-  atk: 0
-  stamina: 0
-  maxHealth: 0
-  healthBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  staminaBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  redHealthBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  shieldBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  isShield: 0
-  changeColor: 0
-  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 2
   scale2: 1.95
-  rot1: -0.2
-  rot2: 0.2
+  rot1: -0.1
+  rot2: 0.1
   pos1: 0.005
   pos2: 0.005
-  firstAtk: 0
-  lastAtk: 0
-  doingSomething: 0
-  isAtk: 0
-  touch: 0
-  stopTime: 0
-  takeDame: 0
-  winCount: 0
-  fuckingMode: 0
   time: 0
   timeInter: 0.45
-  a: 0
-  fingerAminChanger: 0
-  atkText: {fileID: 0}
-  healthText: {fileID: 0}
-  healthImage: {fileID: 0}
-  staminaImage: {fileID: 0}
-  redHealth: {fileID: 0}
-  stunFinger: {fileID: 0}
 --- !u!114 &993801298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60125,67 +60031,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1025194254}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f397e48c656594c2eaca06507d887190, type: 3}
+  m_Script: {fileID: 11500000, guid: 32a5428d0846f4d228028ec4630925e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerAction: 1
   finger: {fileID: 1025194254}
-  fingerAtk: {fileID: 0}
-  fingerDown: {fileID: 0}
-  hand: {fileID: 0}
-  enemyLeft: {fileID: 0}
-  enemyRight: {fileID: 0}
-  health: 0
-  defend: 0
-  atk: 0
-  stamina: 0
-  maxHealth: 0
-  healthBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  staminaBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  redHealthBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  shieldBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  isShield: 0
-  changeColor: 0
-  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 2
   scale2: 1.95
-  rot1: -0.2
-  rot2: 0.2
+  rot1: -0.1
+  rot2: 0.1
   pos1: 0.005
   pos2: 0.005
-  firstAtk: 0
-  lastAtk: 0
-  doingSomething: 0
-  isAtk: 0
-  touch: 0
-  stopTime: 0
-  takeDame: 0
-  winCount: 0
-  fuckingMode: 0
   time: 0
   timeInter: 0.45
-  a: 0
-  fingerAminChanger: 0
-  atkText: {fileID: 0}
-  healthText: {fileID: 0}
-  healthImage: {fileID: 0}
-  staminaImage: {fileID: 0}
-  redHealth: {fileID: 0}
-  stunFinger: {fileID: 0}
 --- !u!114 &1025194257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67509,67 +67368,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1118219378}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f397e48c656594c2eaca06507d887190, type: 3}
+  m_Script: {fileID: 11500000, guid: 32a5428d0846f4d228028ec4630925e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerAction: 1
   finger: {fileID: 1118219378}
-  fingerAtk: {fileID: 0}
-  fingerDown: {fileID: 0}
-  hand: {fileID: 0}
-  enemyLeft: {fileID: 0}
-  enemyRight: {fileID: 0}
-  health: 0
-  defend: 0
-  atk: 0
-  stamina: 0
-  maxHealth: 0
-  healthBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  staminaBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  redHealthBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  shieldBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  isShield: 0
-  changeColor: 0
-  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 2
   scale2: 1.95
-  rot1: -0.2
-  rot2: 0.2
+  rot1: -0.1
+  rot2: 0.1
   pos1: 0.005
   pos2: 0.005
-  firstAtk: 0
-  lastAtk: 0
-  doingSomething: 0
-  isAtk: 0
-  touch: 0
-  stopTime: 0
-  takeDame: 0
-  winCount: 0
-  fuckingMode: 0
   time: 0
   timeInter: 0.45
-  a: 0
-  fingerAminChanger: 0
-  atkText: {fileID: 0}
-  healthText: {fileID: 0}
-  healthImage: {fileID: 0}
-  staminaImage: {fileID: 0}
-  redHealth: {fileID: 0}
-  stunFinger: {fileID: 0}
 --- !u!114 &1118219381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80012,67 +79824,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1271464386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f397e48c656594c2eaca06507d887190, type: 3}
+  m_Script: {fileID: 11500000, guid: 32a5428d0846f4d228028ec4630925e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerAction: 1
   finger: {fileID: 1271464386}
-  fingerAtk: {fileID: 0}
-  fingerDown: {fileID: 0}
-  hand: {fileID: 0}
-  enemyLeft: {fileID: 0}
-  enemyRight: {fileID: 0}
-  health: 0
-  defend: 0
-  atk: 0
-  stamina: 0
-  maxHealth: 0
-  healthBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  staminaBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  redHealthBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  shieldBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  isShield: 0
-  changeColor: 0
-  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 2
   scale2: 1.95
-  rot1: -0.2
-  rot2: 0.2
+  rot1: -0.1
+  rot2: 0.1
   pos1: 0.005
   pos2: 0.005
-  firstAtk: 0
-  lastAtk: 0
-  doingSomething: 0
-  isAtk: 0
-  touch: 0
-  stopTime: 0
-  takeDame: 0
-  winCount: 0
-  fuckingMode: 0
   time: 0
   timeInter: 0.45
-  a: 0
-  fingerAminChanger: 0
-  atkText: {fileID: 0}
-  healthText: {fileID: 0}
-  healthImage: {fileID: 0}
-  staminaImage: {fileID: 0}
-  redHealth: {fileID: 0}
-  stunFinger: {fileID: 0}
 --- !u!114 &1271464389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80780,67 +80545,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1295972551}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f397e48c656594c2eaca06507d887190, type: 3}
+  m_Script: {fileID: 11500000, guid: 32a5428d0846f4d228028ec4630925e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerAction: 1
   finger: {fileID: 1295972551}
-  fingerAtk: {fileID: 0}
-  fingerDown: {fileID: 0}
-  hand: {fileID: 0}
-  enemyLeft: {fileID: 0}
-  enemyRight: {fileID: 0}
-  health: 0
-  defend: 0
-  atk: 0
-  stamina: 0
-  maxHealth: 0
-  healthBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  staminaBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  redHealthBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  shieldBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  isShield: 0
-  changeColor: 0
-  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 2
   scale2: 1.95
-  rot1: -0.2
-  rot2: 0.2
+  rot1: -0.1
+  rot2: 0.1
   pos1: 0.005
   pos2: 0.005
-  firstAtk: 0
-  lastAtk: 0
-  doingSomething: 0
-  isAtk: 0
-  touch: 0
-  stopTime: 0
-  takeDame: 0
-  winCount: 0
-  fuckingMode: 0
   time: 0
   timeInter: 0.45
-  a: 0
-  fingerAminChanger: 0
-  atkText: {fileID: 0}
-  healthText: {fileID: 0}
-  healthImage: {fileID: 0}
-  staminaImage: {fileID: 0}
-  redHealth: {fileID: 0}
-  stunFinger: {fileID: 0}
 --- !u!114 &1295972554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81885,67 +81603,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1311053123}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f397e48c656594c2eaca06507d887190, type: 3}
+  m_Script: {fileID: 11500000, guid: 32a5428d0846f4d228028ec4630925e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerAction: 1
   finger: {fileID: 1311053123}
-  fingerAtk: {fileID: 0}
-  fingerDown: {fileID: 0}
-  hand: {fileID: 0}
-  enemyLeft: {fileID: 0}
-  enemyRight: {fileID: 0}
-  health: 0
-  defend: 0
-  atk: 0
-  stamina: 0
-  maxHealth: 0
-  healthBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  staminaBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  redHealthBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  shieldBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  isShield: 0
-  changeColor: 0
-  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 2
   scale2: 1.95
-  rot1: -0.2
-  rot2: 0.2
+  rot1: -0.1
+  rot2: 0.1
   pos1: 0.005
   pos2: 0.005
-  firstAtk: 0
-  lastAtk: 0
-  doingSomething: 0
-  isAtk: 0
-  touch: 0
-  stopTime: 0
-  takeDame: 0
-  winCount: 0
-  fuckingMode: 0
   time: 0
   timeInter: 0.45
-  a: 0
-  fingerAminChanger: 0
-  atkText: {fileID: 0}
-  healthText: {fileID: 0}
-  healthImage: {fileID: 0}
-  staminaImage: {fileID: 0}
-  redHealth: {fileID: 0}
-  stunFinger: {fileID: 0}
 --- !u!1 &1312353988
 GameObject:
   m_ObjectHideFlags: 0
@@ -82953,67 +82624,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1332690251}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f397e48c656594c2eaca06507d887190, type: 3}
+  m_Script: {fileID: 11500000, guid: 32a5428d0846f4d228028ec4630925e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerAction: 1
   finger: {fileID: 1332690251}
-  fingerAtk: {fileID: 0}
-  fingerDown: {fileID: 0}
-  hand: {fileID: 0}
-  enemyLeft: {fileID: 0}
-  enemyRight: {fileID: 0}
-  health: 0
-  defend: 0
-  atk: 0
-  stamina: 0
-  maxHealth: 0
-  healthBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  staminaBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  redHealthBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  shieldBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  isShield: 0
-  changeColor: 0
-  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 2
   scale2: 1.95
-  rot1: -0.2
-  rot2: 0.2
+  rot1: -0.1
+  rot2: 0.1
   pos1: 0.005
   pos2: 0.005
-  firstAtk: 0
-  lastAtk: 0
-  doingSomething: 0
-  isAtk: 0
-  touch: 0
-  stopTime: 0
-  takeDame: 0
-  winCount: 0
-  fuckingMode: 0
   time: 0
   timeInter: 0.45
-  a: 0
-  fingerAminChanger: 0
-  atkText: {fileID: 0}
-  healthText: {fileID: 0}
-  healthImage: {fileID: 0}
-  staminaImage: {fileID: 0}
-  redHealth: {fileID: 0}
-  stunFinger: {fileID: 0}
 --- !u!114 &1332690254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90772,67 +90396,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1458444873}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f397e48c656594c2eaca06507d887190, type: 3}
+  m_Script: {fileID: 11500000, guid: 32a5428d0846f4d228028ec4630925e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerAction: 1
   finger: {fileID: 1458444873}
-  fingerAtk: {fileID: 0}
-  fingerDown: {fileID: 0}
-  hand: {fileID: 0}
-  enemyLeft: {fileID: 0}
-  enemyRight: {fileID: 0}
-  health: 0
-  defend: 0
-  atk: 0
-  stamina: 0
-  maxHealth: 0
-  healthBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  staminaBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  redHealthBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  shieldBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  isShield: 0
-  changeColor: 0
-  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 2
   scale2: 1.95
-  rot1: -0.2
-  rot2: 0.2
+  rot1: -0.1
+  rot2: 0.1
   pos1: 0.005
   pos2: 0.005
-  firstAtk: 0
-  lastAtk: 0
-  doingSomething: 0
-  isAtk: 0
-  touch: 0
-  stopTime: 0
-  takeDame: 0
-  winCount: 0
-  fuckingMode: 0
   time: 0
   timeInter: 0.45
-  a: 0
-  fingerAminChanger: 0
-  atkText: {fileID: 0}
-  healthText: {fileID: 0}
-  healthImage: {fileID: 0}
-  staminaImage: {fileID: 0}
-  redHealth: {fileID: 0}
-  stunFinger: {fileID: 0}
 --- !u!114 &1458444876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119344,7 +118921,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 878.6001}
+  m_AnchoredPosition: {x: 0, y: 878.6}
   m_SizeDelta: {x: 352, y: 539.19995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1928617230
@@ -119854,67 +119431,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1933232387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f397e48c656594c2eaca06507d887190, type: 3}
+  m_Script: {fileID: 11500000, guid: 32a5428d0846f4d228028ec4630925e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerAction: 1
   finger: {fileID: 1933232387}
-  fingerAtk: {fileID: 0}
-  fingerDown: {fileID: 0}
-  hand: {fileID: 0}
-  enemyLeft: {fileID: 0}
-  enemyRight: {fileID: 0}
-  health: 0
-  defend: 0
-  atk: 0
-  stamina: 0
-  maxHealth: 0
-  healthBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  staminaBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  redHealthBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  shieldBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  isShield: 0
-  changeColor: 0
-  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 2
   scale2: 1.95
-  rot1: -0.2
-  rot2: 0.2
+  rot1: -0.1
+  rot2: 0.1
   pos1: 0.005
   pos2: 0.005
-  firstAtk: 0
-  lastAtk: 0
-  doingSomething: 0
-  isAtk: 0
-  touch: 0
-  stopTime: 0
-  takeDame: 0
-  winCount: 0
-  fuckingMode: 0
   time: 0
   timeInter: 0.45
-  a: 0
-  fingerAminChanger: 0
-  atkText: {fileID: 0}
-  healthText: {fileID: 0}
-  healthImage: {fileID: 0}
-  staminaImage: {fileID: 0}
-  redHealth: {fileID: 0}
-  stunFinger: {fileID: 0}
 --- !u!114 &1933232390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121107,67 +120637,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1949988541}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f397e48c656594c2eaca06507d887190, type: 3}
+  m_Script: {fileID: 11500000, guid: 32a5428d0846f4d228028ec4630925e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerAction: 1
   finger: {fileID: 1949988541}
-  fingerAtk: {fileID: 0}
-  fingerDown: {fileID: 0}
-  hand: {fileID: 0}
-  enemyLeft: {fileID: 0}
-  enemyRight: {fileID: 0}
-  health: 0
-  defend: 0
-  atk: 0
-  stamina: 0
-  maxHealth: 0
-  healthBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  staminaBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  redHealthBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  shieldBar:
-    bar: {fileID: 0}
-    maxValue: 0
-    currentVal: 0
-  isShield: 0
-  changeColor: 0
-  oneShotColor: 0
   changeScale: 0
   speedScale: 0.2
   scale1: 2
   scale2: 1.95
-  rot1: -0.2
-  rot2: 0.2
+  rot1: -0.1
+  rot2: 0.1
   pos1: 0.005
   pos2: 0.005
-  firstAtk: 0
-  lastAtk: 0
-  doingSomething: 0
-  isAtk: 0
-  touch: 0
-  stopTime: 0
-  takeDame: 0
-  winCount: 0
-  fuckingMode: 0
   time: 0
   timeInter: 0.45
-  a: 0
-  fingerAminChanger: 0
-  atkText: {fileID: 0}
-  healthText: {fileID: 0}
-  healthImage: {fileID: 0}
-  staminaImage: {fileID: 0}
-  redHealth: {fileID: 0}
-  stunFinger: {fileID: 0}
 --- !u!114 &1949988544
 MonoBehaviour:
   m_ObjectHideFlags: 0

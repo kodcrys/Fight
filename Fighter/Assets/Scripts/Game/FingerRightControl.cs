@@ -11,11 +11,13 @@ public class FingerRightControl : FingerBase {
 		staminaBar.Initialize ();
 		redHealthBar.Initialize ();
 		shieldBar.Initialize ();
+
+		if (instance == null)
+			instance = this;
 	}
 
 	// Use this for initialization
 	void Start () {
-		instance = this;
 		touch = true;
 		changeColor = false;
 		oneShotColor = false;

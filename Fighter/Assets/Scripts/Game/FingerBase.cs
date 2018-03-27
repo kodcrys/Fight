@@ -8,6 +8,12 @@ public class FingerBase : MonoBehaviour {
 
 	public FingerState fingerAction = FingerState.none;
 
+	[Header("Skins & Items")]
+	public SpriteRenderer skin;
+	public SpriteRenderer hat;
+	public SpriteRenderer amor;
+	public SpriteRenderer weapon;
+
 	[Header("GameObject")]
 	public GameObject finger, fingerAtk, fingerDown, hand;
 
