@@ -290,6 +290,7 @@ public class ChooseCharManager : MonoBehaviour {
 			chooseSymbol.transform.SetParent (maskFrameChooseEquip);
 		
 		CointainData ctData = gob.GetComponent<CointainData> ();
+		Debug.Log(gob.name + " " + ctData.dataChar + " " + ctData.dataItem);
 
 		if (ctData.dataChar != null && ctData.dataChar.isOwned) {
 			if (isTurnPlayer1) {
@@ -300,9 +301,9 @@ public class ChooseCharManager : MonoBehaviour {
 				weaponMainL.gameObject.SetActive (false);
 
 				cointainSave.characterPlayer1 = ctData.dataChar;
-				cointainSave.hatPlayer1 = null;
-				cointainSave.amorPlayer1 = null;
-				cointainSave.weaponPlayer1 = null;
+				//cointainSave.hatPlayer1 = null;
+				//cointainSave.amorPlayer1 = null;
+				//cointainSave.weaponPlayer1 = null;
 
 			} else {
 				hatSymbol.gameObject.SetActive (false);
@@ -312,9 +313,9 @@ public class ChooseCharManager : MonoBehaviour {
 				weaponMainR.gameObject.SetActive (false);
 
 				cointainSave.characterPlayer2 = ctData.dataChar;
-				cointainSave.hatPlayer2 = null;
-				cointainSave.amorPlayer2 = null;
-				cointainSave.weaponPlayer2 = null;
+				//cointainSave.hatPlayer2 = null;
+				//cointainSave.amorPlayer2 = null;
+				//cointainSave.weaponPlayer2 = null;
 			}
 			chooseSymbol.SetActive (true);
 		} else
@@ -324,7 +325,7 @@ public class ChooseCharManager : MonoBehaviour {
 		if (ctData.dataItem != null && ctData.dataItem.isOwned) {
 			if (isTurnPlayer1) {
 
-				cointainSave.characterPlayer1 = null;
+				//cointainSave.characterPlayer1 = null;
 
 				hatSymbol2.gameObject.SetActive (false);
 
@@ -351,7 +352,7 @@ public class ChooseCharManager : MonoBehaviour {
 
 			} else {
 
-				cointainSave.characterPlayer2 = null;
+				//cointainSave.characterPlayer2 = null;
 
 				hatSymbol.gameObject.SetActive (false);
 
@@ -414,9 +415,9 @@ public class ChooseCharManager : MonoBehaviour {
 
 				cointainSave.characterPlayer1 = ctData.dataChar;
 
-				cointainSave.hatPlayer1 = null;
-				cointainSave.amorPlayer1 = null;
-				cointainSave.weaponPlayer1 = null;
+				//cointainSave.hatPlayer1 = null;
+				//cointainSave.amorPlayer1 = null;
+				//cointainSave.weaponPlayer1 = null;
 
 			} else {
 				hatSymbol.gameObject.SetActive (false);
@@ -427,9 +428,9 @@ public class ChooseCharManager : MonoBehaviour {
 
 				cointainSave.characterPlayer2 = ctData.dataChar;
 
-				cointainSave.hatPlayer2 = null;
-				cointainSave.amorPlayer2 = null;
-				cointainSave.weaponPlayer2 = null;
+				//cointainSave.hatPlayer2 = null;
+				//cointainSave.amorPlayer2 = null;
+				//cointainSave.weaponPlayer2 = null;
 
 			}
 		}
@@ -455,7 +456,7 @@ public class ChooseCharManager : MonoBehaviour {
 
 			if (isTurnPlayer1) {
 				
-				cointainSave.characterPlayer1 = null;
+				//cointainSave.characterPlayer1 = null;
 
 				hatSymbol2.gameObject.SetActive (false);
 				hatMainL.gameObject.SetActive (true);
@@ -464,7 +465,7 @@ public class ChooseCharManager : MonoBehaviour {
 				cointainSave.hatPlayer1 = ctData.dataItem;
 			} else {
 
-				cointainSave.characterPlayer2 = null;
+				//cointainSave.characterPlayer2 = null;
 
 				hatSymbol.gameObject.SetActive (false);
 				hatMainR.gameObject.SetActive (true);
@@ -495,7 +496,7 @@ public class ChooseCharManager : MonoBehaviour {
 
 			if (isTurnPlayer1) {
 
-				cointainSave.characterPlayer1 = null;
+				//cointainSave.characterPlayer1 = null;
 
 				hatSymbol2.gameObject.SetActive (false);
 				amorMainL.gameObject.SetActive (true);
@@ -504,7 +505,7 @@ public class ChooseCharManager : MonoBehaviour {
 				cointainSave.amorPlayer1 = ctData.dataItem;
 			} else {
 
-				cointainSave.characterPlayer2 = null;
+				//cointainSave.characterPlayer2 = null;
 
 				hatSymbol.gameObject.SetActive (false);
 				amorMainR.gameObject.SetActive (true);
@@ -535,7 +536,7 @@ public class ChooseCharManager : MonoBehaviour {
 
 			if (isTurnPlayer1) {
 
-				cointainSave.characterPlayer1 = null;
+				//cointainSave.characterPlayer1 = null;
 
 				hatSymbol2.gameObject.SetActive (false);
 				weaponMainL.gameObject.SetActive (true);
@@ -544,7 +545,7 @@ public class ChooseCharManager : MonoBehaviour {
 				cointainSave.weaponPlayer1 = ctData.dataItem;
 			} else {
 
-				cointainSave.characterPlayer2 = null;
+				//cointainSave.characterPlayer2 = null;
 
 				hatSymbol.gameObject.SetActive (false);
 				weaponMainR.gameObject.SetActive (true);

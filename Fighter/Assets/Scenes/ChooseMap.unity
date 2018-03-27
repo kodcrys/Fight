@@ -5350,6 +5350,9 @@ MonoBehaviour:
   lockSpr: {fileID: 21300000, guid: bfe690521f93a48cdb4a1a16e45de830, type: 3}
   readySpr: {fileID: 21300000, guid: 5b3ff7783a155416c90e3070b32b5c03, type: 3}
   contentBtn: {fileID: 0}
+  modeAIText: {fileID: 0}
+  play2Btn: {fileID: 0}
+  aiBtn: {fileID: 0}
   map: {fileID: 998052365}
   aniFade: {fileID: 47878426}
   cointainSave: {fileID: 0}

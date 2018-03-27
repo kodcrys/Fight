@@ -36,6 +36,9 @@ public class GameplayBase : MonoBehaviour {
 	public GameObject pausePanel, gameoverP1Panel, gameoverP2Panel;
 
 	public void Start(){
+
+		Debug.Log (data.characterPlayer1 + " & " + data.characterPlayer2 + " & " + data.hatPlayer1 + " & " + data.hatPlayer2);
+
 		instance = this;
 		gamePause = false;
 		CheckAI ();
