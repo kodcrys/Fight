@@ -19,6 +19,9 @@ public class GameplayBase : MonoBehaviour {
 	public Camera mainCamera;
 
 	[SerializeField]
+	GameObject shieldLeft, shieldRight;
+
+	[SerializeField]
 	UnityEngine.UI.Image roundNumImg;
 
 	[SerializeField]
@@ -47,6 +50,18 @@ public class GameplayBase : MonoBehaviour {
 			roundNumImg.sprite = numRound [0];
 		else if(SaveManager.instance.state.roundCount == 2)
 			roundNumImg.sprite = numRound [1];
+
+		if (!SaveManager.instance.state.isShieldLeft) {
+			shieldLeft.SetActive (false);
+		} else {
+			shieldLeft.SetActive (true);
+		}
+
+		if (!SaveManager.instance.state.isShieldRight) {
+			shieldRight.SetActive (false);
+		} else {
+			shieldRight.SetActive (true);
+		}
 
 		// Skin
 		if (data.characterPlayer1 != null) {
