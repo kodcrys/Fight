@@ -26,6 +26,8 @@ public class BirdController : MonoBehaviour {
 
 	public static bool touchOnScreen;
 
+	public GameObject gameOverImg;
+
 	// Use this for initialization
 	void Awake () 
 	{
@@ -47,6 +49,7 @@ public class BirdController : MonoBehaviour {
 	void Start ()
 	{
 		touchOnScreen = false;
+		gameOverImg.SetActive (false);
 	}
 
 	void Update ()
@@ -151,6 +154,7 @@ public class BirdController : MonoBehaviour {
 				audioSource.PlayOneShot (diedClip);
 				anim.SetBool ("Flap", false);
 				anim.SetTrigger ("Died");
+				gameOverImg.SetActive (true);
 				myBody.velocity = Vector2.zero;
 			}
 
