@@ -27,7 +27,16 @@ public class AIManager : MonoBehaviour {
 	float time, timeInter;
 
 	void Awake(){
-		// chon do kho code o day
+		if (SaveManager.instance.state.levelAI == 0) {
+			difLevel = DifficultLevel.Easy;
+		} else if (SaveManager.instance.state.levelAI == 1) {
+			difLevel = DifficultLevel.Normal;
+		} else if (SaveManager.instance.state.levelAI == 2) {
+			difLevel = DifficultLevel.Hard;
+		} else if (SaveManager.instance.state.levelAI == 3) {
+			difLevel = DifficultLevel.WhatTheFuckIamPlaying;
+		}
+
 		if (left)
 			fingerAILeft = finger.GetComponent<FingerLeftControl> ();
 		else if (right)
