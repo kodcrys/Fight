@@ -258,6 +258,7 @@ public class ChooseCharManager : MonoBehaviour {
 	//
 	public void LockWhenFinishChoose() {
 		if (isTurnPlayer1) {
+			preBtn.GetComponent<UnityEngine.UI.Button> ().interactable = false;
 			nextBtn.GetComponent<UnityEngine.UI.Button> ().interactable = true;
 			ready1.sprite = lockSpr;
 			isTurnPlayer1 = false;
@@ -270,7 +271,9 @@ public class ChooseCharManager : MonoBehaviour {
 			}
 
 		} else {
+			
 			if (contentBtn.text == playMode [0]) {
+				nextBtn.GetComponent<UnityEngine.UI.Button> ().interactable = false;
 				ready2.sprite = lockSpr;
 				aniFade.stateFade = FadeAni.State.Show;
 				aniFade.isChangeMap = true;
