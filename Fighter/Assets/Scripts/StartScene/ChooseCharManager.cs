@@ -696,15 +696,21 @@ public class ChooseCharManager : MonoBehaviour {
 	void PlayModeAI() {
 		if (modeAIText.text == modeAI [0].ToString ()) {
 			// easy
+			SaveManager.instance.state.levelAI = 0;
 		}
 		if (modeAIText.text == modeAI [1].ToString ()) {
 			// normal
+			SaveManager.instance.state.levelAI = 1;
 		}
 		if (modeAIText.text == modeAI [2].ToString ()) {
 			// hard
+			SaveManager.instance.state.levelAI = 2;
 		}
 		if (modeAIText.text == modeAI [3].ToString ()) {
 			// very hard
+			SaveManager.instance.state.levelAI = 3;
 		}
+
+		SaveManager.instance.Save ();
 	}
 }
