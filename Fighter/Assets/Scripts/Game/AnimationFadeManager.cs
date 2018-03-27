@@ -17,21 +17,23 @@ public class AnimationFadeManager : MonoBehaviour {
 	void Update () {
 		if (fadeOption.leftControl != null) {
 			if (fadeOption.leftControl.fingerAction == FingerBase.FingerState.Idel) {
-				fadeOption.time += Time.deltaTime;
-				if (fadeOption.time >= fadeOption.timeInter) {
-					fadeOption.time = 0;
-					if (fadeOption.i == 0) {
-						fadeOption.i = 1;
-						fadeOption.timeInter = 0.1f;
-					} else {
-						fadeOption.i = 0;
-						fadeOption.timeInter = 3.5f;
+				if (!fadeOption.isEmojiLeft) {
+					fadeOption.time += Time.deltaTime;
+					if (fadeOption.time >= fadeOption.timeInter) {
+						fadeOption.time = 0;
+						if (fadeOption.i == 0) {
+							fadeOption.i = 1;
+							fadeOption.timeInter = 0.1f;
+						} else {
+							fadeOption.i = 0;
+							fadeOption.timeInter = 3.5f;
+						}
 					}
+					if (fadeOption.isUI == false)
+						fadeOption.fadeLocation [0].sprite = fadeOption.fadeAnimOption [fadeOption.i];
+					else
+						fadeOption.faceList [0].sprite = fadeOption.fadeAnimOption [fadeOption.i];
 				}
-				if(fadeOption.isUI == false)
-					fadeOption.fadeLocation [0].sprite = fadeOption.fadeAnimOption [fadeOption.i];
-				else
-					fadeOption.faceList[0].sprite = fadeOption.fadeAnimOption [fadeOption.i];
 			} else if (fadeOption.leftControl.fingerAction == FingerBase.FingerState.Doing) {
 				if (fadeOption.leftControl.firstAtk) {
 					fadeOption.fadeLocation [1].sprite = fadeOption.fadeAnimOption [2];
@@ -49,21 +51,23 @@ public class AnimationFadeManager : MonoBehaviour {
 			}
 		}else if (fadeOption.rightControl != null) {
 			if (fadeOption.rightControl.fingerAction == FingerBase.FingerState.Idel) {
-				fadeOption.time += Time.deltaTime;
-				if (fadeOption.time >= fadeOption.timeInter) {
-					fadeOption.time = 0;
-					if (fadeOption.i == 0) {
-						fadeOption.i = 1;
-						fadeOption.timeInter = 0.1f;
-					} else {
-						fadeOption.i = 0;
-						fadeOption.timeInter = 3.5f;
+				if (!fadeOption.isEmojiRight) {
+					fadeOption.time += Time.deltaTime;
+					if (fadeOption.time >= fadeOption.timeInter) {
+						fadeOption.time = 0;
+						if (fadeOption.i == 0) {
+							fadeOption.i = 1;
+							fadeOption.timeInter = 0.1f;
+						} else {
+							fadeOption.i = 0;
+							fadeOption.timeInter = 3.5f;
+						}
 					}
+					if (fadeOption.isUI == false)
+						fadeOption.fadeLocation [0].sprite = fadeOption.fadeAnimOption [fadeOption.i];
+					else
+						fadeOption.faceList [0].sprite = fadeOption.fadeAnimOption [fadeOption.i];
 				}
-				if(fadeOption.isUI == false)
-					fadeOption.fadeLocation [0].sprite = fadeOption.fadeAnimOption [fadeOption.i];
-				else
-					fadeOption.faceList[0].sprite = fadeOption.fadeAnimOption [fadeOption.i];
 			} else if (fadeOption.rightControl.fingerAction == FingerBase.FingerState.Doing) {
 				if (fadeOption.rightControl.firstAtk) {
 					fadeOption.fadeLocation [1].sprite = fadeOption.fadeAnimOption [2];
@@ -81,6 +85,42 @@ public class AnimationFadeManager : MonoBehaviour {
 			}
 		}
 	}
+
+	void DoEmoji(){
+		if (fadeOption.leftControl != null) {
+			if (!fadeOption.leftControl.doingSomething) {
+				StartCoroutine (NoMoveLeft (2f));
+			} else {
+				StopCoroutine (NoMoveLeft (2f));
+				fadeOption.isEmojiLeft = false;
+			}
+		} else if (fadeOption.rightControl != null) {
+			if (!fadeOption.rightControl.doingSomething) {
+				StartCoroutine (NoMoveRight (2f));
+			} else {
+				StopCoroutine (NoMoveRight (2f));
+				fadeOption.isEmojiRight = false;
+			}
+		}
+
+		if (fadeOption.isEmojiLeft) {
+			fadeOption.fadeLocation [0].sprite = fadeOption.fadeAnimOption [6];
+		} else if (fadeOption.isEmojiRight) {
+			fadeOption.fadeLocation [0].sprite = fadeOption.fadeAnimOption [6];
+		}
+	}
+
+	IEnumerator NoMoveLeft(float time){
+		yield return WaitForSeconds (time);
+		fadeOption.isEmojiLeft = true;
+		yield return null;
+	}
+
+	IEnumerator NoMoveRight(float time){
+		yield return WaitForSeconds (time);
+		fadeOption.isEmojiRight = true;
+		yield return null;
+	}
 }
 
 [Serializable]
@@ -94,4 +134,5 @@ public class FadeAnimOption{
 	public float time, timeInter;
 	public int i;
 	public GameObject starDead;
+	public bool isEmojiLeft, isEmojiRight;
 }
