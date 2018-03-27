@@ -26,6 +26,10 @@ public class FingerBase : MonoBehaviour {
 
 	public Star redHealthBar;
 
+	public Star shieldBar;
+
+	public bool isShield;
+
 	public bool changeColor, oneShotColor;
 
 	public int changeScale = 0;

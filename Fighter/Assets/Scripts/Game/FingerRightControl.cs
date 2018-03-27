@@ -10,22 +10,27 @@ public class FingerRightControl : FingerBase {
 		healthBar.Initialize ();
 		staminaBar.Initialize ();
 		redHealthBar.Initialize ();
+		shieldBar.Initialize ();
 	}
 
 	// Use this for initialization
 	void Start () {
 		instance = this;
 		touch = true;
+		changeColor = false;
+		oneShotColor = false;
+		stopTime = true;
+		a = 0;
 		staminaBar.MaxVal = 100;
 		staminaBar.CurrentVal = 100;
 		healthBar.MaxVal = maxHealth;
 		healthBar.CurrentVal = maxHealth;
 		redHealthBar.MaxVal = maxHealth;
 		redHealthBar.CurrentVal = maxHealth;
-		changeColor = false;
-		oneShotColor = false;
-		stopTime = true;
-		a = 0;
+		if (isShield) {
+			shieldBar.MaxVal = 100;
+			shieldBar.CurrentVal = 100;
+		}
 	}
 	
 	// Update is called once per frame
@@ -221,7 +226,14 @@ public class FingerRightControl : FingerBase {
 				enemyLeft.isAtk = true;
 				if (enemyLeft.healthBar.CurrentVal > 0) {
 					CameraShake.instance.Shake ();
-					enemyLeft.healthBar.CurrentVal -= atk;
+					if (!enemyLeft.isShield)
+						enemyLeft.healthBar.CurrentVal -= atk;
+					else {
+						if (enemyLeft.shieldBar.CurrentVal > 0)
+							enemyLeft.shieldBar.CurrentVal -= atk;
+						else
+							enemyLeft.healthBar.CurrentVal -= atk;
+					}
 					if (enemyLeft.changeColor == false)
 						enemyLeft.changeColor = true;
 				}
