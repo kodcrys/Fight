@@ -25,7 +25,7 @@ public class CameraZoom : MonoBehaviour {
 			device = "iphone";
 		}
 
-		//device = "ipad";
+		//device = "iphone";
 
 		if (device == "iphone") 
 		{
@@ -49,7 +49,6 @@ public class CameraZoom : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log (device);
 		zoomIn = true;
 		sizeCamera = transform.GetComponent<Camera> ().orthographicSize;
 	}
