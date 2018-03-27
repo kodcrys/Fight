@@ -27,7 +27,7 @@ public class FingerRightControl : FingerBase {
 		healthBar.CurrentVal = maxHealth;
 		redHealthBar.MaxVal = maxHealth;
 		redHealthBar.CurrentVal = maxHealth;
-		if (isShield) {
+		if (SaveManager.instance.state.isShieldRight) {
 			shieldBar.MaxVal = 100;
 			shieldBar.CurrentVal = 100;
 		}
@@ -226,7 +226,7 @@ public class FingerRightControl : FingerBase {
 				enemyLeft.isAtk = true;
 				if (enemyLeft.healthBar.CurrentVal > 0) {
 					CameraShake.instance.Shake ();
-					if (!enemyLeft.isShield)
+					if (!SaveManager.instance.state.isShieldLeft)
 						enemyLeft.healthBar.CurrentVal -= atk;
 					else {
 						if (enemyLeft.shieldBar.CurrentVal > 0)
