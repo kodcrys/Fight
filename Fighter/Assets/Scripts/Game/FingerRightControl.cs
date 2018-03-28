@@ -42,11 +42,8 @@ public class FingerRightControl : FingerBase {
 		else
 			atk = 2;
 		switch (fingerAction) {
-		case FingerState.none:
-			ChangeStateAni (FingerState.Idel);
-			fingerAction = FingerState.Idel;
-			break;
 		case FingerState.Idel:
+			ChangeStateAni (FingerState.Idel);
 			DoIdel ();
 			break;
 		case FingerState.Atk:
@@ -71,7 +68,7 @@ public class FingerRightControl : FingerBase {
 			}
 		} else {
 			if (!enemyLeft.lastAtk && !isAtk)
-				fingerAction = FingerState.none;
+				fingerAction = FingerState.Idel;
 		}
 
 		if (AnimationText.canPlay) {
@@ -110,23 +107,7 @@ public class FingerRightControl : FingerBase {
 		if (takeDame)
 			StartCoroutine (WaitRedBlood (0.5f));
 	}
-
-/*	public override void HanderHealth(){
-		healthImage.fillAmount = Map (health, 0, maxHealth, 0, 1);
-	}
-
-	public override void HanderRedHealth(){
-		redHealth.fillAmount = Map (health, 0, maxHealth, 0, 1);
-	}
-
-	public override void HanderStamina(){
-		staminaImage.fillAmount = Map (stamina, 0, 100, 0, 1);
-	}
-
-
-	private float Map(float value, float inMin, float inMax, float outMin, float outMax){
-		return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
-	}*/
+		
 
 	public override void DoIdel(){
 		if (finger != null)
@@ -223,7 +204,7 @@ public class FingerRightControl : FingerBase {
 					if (!enemyLeft.doingSomething) {
 						isAtk = false;
 						touch = false;
-						fingerAction = FingerState.none;
+						fingerAction = FingerState.Idel;
 					}
 				}
 			} else if (lastAtk) {
@@ -259,7 +240,7 @@ public class FingerRightControl : FingerBase {
 							firstAtk = false;
 							lastAtk = false;
 							changeColor = false;
-							enemyLeft.fingerAction = FingerState.none;
+							enemyLeft.fingerAction = FingerState.Idel;
 						}
 					}
 				} 
@@ -356,7 +337,7 @@ public class FingerRightControl : FingerBase {
 		doingSomething = false;
 		enemyLeft.fingerAminChanger = 0;
 		if (!isAtk)
-			fingerAction = FingerState.none;
+			fingerAction = FingerState.Idel;
 		enemyLeft.oneShotColor = false;
 	}
 

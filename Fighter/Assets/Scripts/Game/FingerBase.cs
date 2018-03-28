@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class FingerBase : MonoBehaviour {
 
-	public enum FingerState {none, Idel, Atk, Doing, Win, Death}
+	public enum FingerState {Idel, Atk, Doing, Win, Death}
 
-	public FingerState fingerAction = FingerState.none;
+	public FingerState fingerAction = FingerState.Idel;
 
 	[Header("Skins & Items Idle")]
 	public SpriteRenderer skin;

@@ -44,12 +44,10 @@ public class FingerLeftControl : FingerBase {
 			atk = enemyRight.maxHealth;
 		else
 			atk = 2;
+		
 		switch (fingerAction) {
-		case FingerState.none:
-			ChangeStateAni (FingerState.Idel);
-			fingerAction = FingerState.Idel;
-			break;
 		case FingerState.Idel:
+			ChangeStateAni (FingerState.Idel);
 			DoIdel ();
 			break;
 		case FingerState.Atk:
@@ -75,7 +73,7 @@ public class FingerLeftControl : FingerBase {
 			}
 		} else {
 			if (!enemyRight.lastAtk && !isAtk)
-				fingerAction = FingerState.none;
+				fingerAction = FingerState.Idel;
 		}
 
 		if (AnimationText.canPlay) {
@@ -114,22 +112,6 @@ public class FingerLeftControl : FingerBase {
 		if (takeDame)
 			StartCoroutine (WaitRedBlood (0.5f));
 	}
-
-/*	public override void HanderHealth(){
-		healthImage.fillAmount = Map (health, 0, maxHealth, 0, 1);
-	}
-
-	public override void HanderRedHealth(){
-		redHealth.fillAmount = Map (health, 0, maxHealth, 0, 1);
-	}
-
-	public override void HanderStamina(){
-		staminaImage.fillAmount = Map (stamina, 0, 100, 0, 1);
-	}
-
-	public float Map(float value, float inMin, float inMax, float outMin, float outMax){
-		return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
-	}*/
 
 	public override void DoIdel(){
 		if (finger != null)
@@ -221,7 +203,7 @@ public class FingerLeftControl : FingerBase {
 					if (!enemyRight.doingSomething) {
 						isAtk = false;
 						touch = false;
-						fingerAction = FingerState.none;
+						fingerAction = FingerState.Idel;
 					}
 				}
 			} else if (lastAtk) {
@@ -256,7 +238,7 @@ public class FingerLeftControl : FingerBase {
 							firstAtk = false;
 							lastAtk = false;
 							changeColor = false;
-							enemyRight.fingerAction = FingerState.none;
+							enemyRight.fingerAction = FingerState.Idel;
 						}
 					}
 				}
@@ -353,7 +335,7 @@ public class FingerLeftControl : FingerBase {
 		doingSomething = false;
 		enemyRight.fingerAminChanger = 0;
 		if (!isAtk)
-			fingerAction = FingerState.none;
+			fingerAction = FingerState.Idel;
 		enemyRight.oneShotColor = false;
 	}
 

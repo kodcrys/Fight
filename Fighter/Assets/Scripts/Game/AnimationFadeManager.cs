@@ -15,7 +15,8 @@ public class AnimationFadeManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		DoEmoji ();
+		if (AnimationText.canPlay)
+			DoEmoji ();
 
 		if (fadeOption.leftControl != null) {
 			if (fadeOption.leftControl.fingerAction == FingerBase.FingerState.Idel) {
@@ -91,44 +92,46 @@ public class AnimationFadeManager : MonoBehaviour {
 	void DoEmoji(){
 		if (fadeOption.leftControl != null) {
 			if (!fadeOption.leftControl.doingSomething && !fadeOption.leftControl.enemyRight.firstAtk) {
-				StartCoroutine (NoMoveLeft (2f));
+				fadeOption.timeEmoji += Time.deltaTime;
+				if (fadeOption.timeEmoji >= fadeOption.timeInterEmoji) {
+					fadeOption.timeEmoji = fadeOption.timeInterEmoji;
+					if (!fadeOption.isEmojiLeft)
+						fadeOption.randomCount = UnityEngine.Random.Range (0, fadeOption.ranEmoji.Count - 1);
+					fadeOption.isEmojiLeft = true;
+				}
 			} else {
-				StopCoroutine (NoMoveLeft (0f));
+				fadeOption.timeEmoji = 0;
 				fadeOption.isEmojiLeft = false;
 			}
 		} else if (fadeOption.rightControl != null) {
 			if (!fadeOption.rightControl.doingSomething && !fadeOption.rightControl.enemyLeft.firstAtk) {
-				StartCoroutine (NoMoveRight (2f));
+				fadeOption.timeEmoji += Time.deltaTime;
+				if (fadeOption.timeEmoji >= fadeOption.timeInterEmoji) {
+					fadeOption.timeEmoji = fadeOption.timeInterEmoji;
+					if (!fadeOption.isEmojiRight)
+						fadeOption.randomCount = UnityEngine.Random.Range (0, fadeOption.ranEmoji.Count - 1);
+					fadeOption.isEmojiRight = true;
+				}
 			} else {
-				StopCoroutine (NoMoveRight (0f));
+				fadeOption.timeEmoji = 0;
 				fadeOption.isEmojiRight = false;
 			}
 		}
 
 		if (fadeOption.isEmojiLeft || fadeOption.isEmojiRight) {
-			fadeOption.fadeLocation [0].sprite = fadeOption.fadeAnimOption [6];
-			if (fadeOption.leftControl != null) {
-				fadeOption.emoji.SetActive (true);
-				fadeOption.ranEmoji [fadeOption.randomCount].SetActive (true);
+			if (fadeOption.leftControl) {
+				fadeOption.fadeLocation [0].transform.localRotation = new Quaternion (0, -180, 0, 0);
 			}
+			fadeOption.fadeLocation [0].sprite = fadeOption.fadeAnimOption [6];
+			fadeOption.emoji.SetActive (true);
+			fadeOption.ranEmoji [fadeOption.randomCount].SetActive (true);
 		} else {
+			if (fadeOption.leftControl) {
+				fadeOption.fadeLocation [0].transform.localRotation = new Quaternion (0, 0, 0, 0);
+			}
 			fadeOption.emoji.SetActive (false);
 			fadeOption.ranEmoji [fadeOption.randomCount].SetActive (false);
 		}
-	}
-
-	IEnumerator NoMoveLeft(float time){
-		yield return new WaitForSeconds (time);
-		fadeOption.randomCount = UnityEngine.Random.Range (0, fadeOption.ranEmoji.Count - 1);
-		fadeOption.isEmojiLeft = true;
-		yield return null;
-	}
-
-	IEnumerator NoMoveRight(float time){
-		yield return new WaitForSeconds (time);
-		fadeOption.randomCount = UnityEngine.Random.Range (0, fadeOption.ranEmoji.Count - 1);
-		fadeOption.isEmojiRight = true;
-		yield return null;
 	}
 }
 
@@ -141,6 +144,7 @@ public class FadeAnimOption{
 	public FingerLeftControl leftControl;
 	public FingerRightControl rightControl;
 	public float time, timeInter;
+	public float timeEmoji, timeInterEmoji;
 	public int i;
 	public GameObject starDead;
 	public bool isEmojiLeft, isEmojiRight;
