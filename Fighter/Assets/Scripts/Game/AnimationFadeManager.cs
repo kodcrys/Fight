@@ -15,6 +15,8 @@ public class AnimationFadeManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		DoEmoji ();
+
 		if (fadeOption.leftControl != null) {
 			if (fadeOption.leftControl.fingerAction == FingerBase.FingerState.Idel) {
 				if (!fadeOption.isEmojiLeft) {
@@ -88,36 +90,43 @@ public class AnimationFadeManager : MonoBehaviour {
 
 	void DoEmoji(){
 		if (fadeOption.leftControl != null) {
-			if (!fadeOption.leftControl.doingSomething) {
+			if (!fadeOption.leftControl.doingSomething && !fadeOption.leftControl.enemyRight.firstAtk) {
 				StartCoroutine (NoMoveLeft (2f));
 			} else {
-				StopCoroutine (NoMoveLeft (2f));
+				StopCoroutine (NoMoveLeft (0f));
 				fadeOption.isEmojiLeft = false;
 			}
 		} else if (fadeOption.rightControl != null) {
-			if (!fadeOption.rightControl.doingSomething) {
+			if (!fadeOption.rightControl.doingSomething && !fadeOption.rightControl.enemyLeft.firstAtk) {
 				StartCoroutine (NoMoveRight (2f));
 			} else {
-				StopCoroutine (NoMoveRight (2f));
+				StopCoroutine (NoMoveRight (0f));
 				fadeOption.isEmojiRight = false;
 			}
 		}
 
-		if (fadeOption.isEmojiLeft) {
+		if (fadeOption.isEmojiLeft || fadeOption.isEmojiRight) {
 			fadeOption.fadeLocation [0].sprite = fadeOption.fadeAnimOption [6];
-		} else if (fadeOption.isEmojiRight) {
-			fadeOption.fadeLocation [0].sprite = fadeOption.fadeAnimOption [6];
+			if (fadeOption.leftControl != null) {
+				fadeOption.emoji.SetActive (true);
+				fadeOption.ranEmoji [fadeOption.randomCount].SetActive (true);
+			}
+		} else {
+			fadeOption.emoji.SetActive (false);
+			fadeOption.ranEmoji [fadeOption.randomCount].SetActive (false);
 		}
 	}
 
 	IEnumerator NoMoveLeft(float time){
 		yield return new WaitForSeconds (time);
+		fadeOption.randomCount = UnityEngine.Random.Range (0, fadeOption.ranEmoji.Count - 1);
 		fadeOption.isEmojiLeft = true;
 		yield return null;
 	}
 
 	IEnumerator NoMoveRight(float time){
 		yield return new WaitForSeconds (time);
+		fadeOption.randomCount = UnityEngine.Random.Range (0, fadeOption.ranEmoji.Count - 1);
 		fadeOption.isEmojiRight = true;
 		yield return null;
 	}
@@ -135,4 +144,7 @@ public class FadeAnimOption{
 	public int i;
 	public GameObject starDead;
 	public bool isEmojiLeft, isEmojiRight;
+	public GameObject emoji;
+	public List<GameObject> ranEmoji;
+	public int randomCount;
 }
