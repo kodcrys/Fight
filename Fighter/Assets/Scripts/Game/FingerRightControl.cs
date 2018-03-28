@@ -71,7 +71,7 @@ public class FingerRightControl : FingerBase {
 			}
 		} else {
 			if (!enemyLeft.lastAtk && !isAtk)
-				fingerAction = FingerState.Idel;
+				fingerAction = FingerState.none;
 		}
 
 		if (AnimationText.canPlay) {
@@ -223,7 +223,7 @@ public class FingerRightControl : FingerBase {
 					if (!enemyLeft.doingSomething) {
 						isAtk = false;
 						touch = false;
-						fingerAction = FingerState.Idel;
+						fingerAction = FingerState.none;
 					}
 				}
 			} else if (lastAtk) {
@@ -259,7 +259,7 @@ public class FingerRightControl : FingerBase {
 							firstAtk = false;
 							lastAtk = false;
 							changeColor = false;
-							enemyLeft.fingerAction = FingerState.Idel;
+							enemyLeft.fingerAction = FingerState.none;
 						}
 					}
 				} 
@@ -356,7 +356,7 @@ public class FingerRightControl : FingerBase {
 		doingSomething = false;
 		enemyLeft.fingerAminChanger = 0;
 		if (!isAtk)
-			fingerAction = FingerState.Idel;
+			fingerAction = FingerState.none;
 		enemyLeft.oneShotColor = false;
 	}
 
