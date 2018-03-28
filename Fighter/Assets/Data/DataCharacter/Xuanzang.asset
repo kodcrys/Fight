@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fdba199229be4291be402dd4cf74685, type: 3}
   m_Name: Xuanzang
   m_EditorClassIdentifier: 
+  id: 43
   name: XUANZANG
   equipmentOfChar: {fileID: 21300000, guid: 94a7d176e93f049c3a4693112528dbd6, type: 3}
   equipmentWP: {fileID: 0}

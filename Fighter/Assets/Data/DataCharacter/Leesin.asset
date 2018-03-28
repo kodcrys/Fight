@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fdba199229be4291be402dd4cf74685, type: 3}
   m_Name: Leesin
   m_EditorClassIdentifier: 
+  id: 19
   name: LEESIN
   equipmentOfChar: {fileID: 21300000, guid: ea74883e686674fc89c193d881209b06, type: 3}
   equipmentWP: {fileID: 0}

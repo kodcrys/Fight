@@ -43,12 +43,14 @@ public class FingerRightControl : FingerBase {
 			atk = 2;
 		switch (fingerAction) {
 		case FingerState.none:
+			ChangeStateAni (FingerState.Idel);
 			fingerAction = FingerState.Idel;
 			break;
 		case FingerState.Idel:
 			DoIdel ();
 			break;
 		case FingerState.Atk:
+			ChangeStateAni (FingerState.Atk);
 			DoAtk ();
 			break;
 		case FingerState.Doing:
@@ -400,5 +402,91 @@ public class FingerRightControl : FingerBase {
 		yield return new WaitForSeconds (time);
 		redHealthBar.CurrentVal = healthBar.CurrentVal;
 		takeDame = false;
+	}
+
+	public void ChangeCharPlayer() {
+		
+		if (GameplayBase.dataPlayer2 != null) {
+			// skin Idle
+			skin.sprite = GameplayBase.dataPlayer2.equipmentOfChar;
+			skin.gameObject.SetActive (true);
+			Debug.Log (skin.gameObject);
+
+			// skin AtkTop
+			skinAtkTopSpr.sprite = GameplayBase.dataPlayer2.equipmentOfChar;
+			skinAtkTopSpr.gameObject.SetActive (true);
+
+			// skin AtkDown
+			skinAtkDownSpr.sprite = GameplayBase.dataPlayer2.equipmentOfChar;
+			skinAtkDownSpr.gameObject.SetActive (true);
+
+			HideItems ();
+		}
+	}
+
+	void HideItems() {
+		hat.gameObject.SetActive (false);
+		amor.gameObject.SetActive (false);
+		weapon.gameObject.SetActive (false);
+	}
+
+	void HideSkin() {
+		skin.gameObject.SetActive (false);
+		skinAtkTopSpr.gameObject.SetActive (false);
+		skinAtkDownSpr.gameObject.SetActive (false);
+	}
+
+	public void ChangeItemsPlayer() {
+		
+		if (GameplayBase.hatPlayer2 != null) {
+			// hat idle
+			hat.sprite = GameplayBase.hatPlayer2.avatar;
+			hat.gameObject.SetActive (true);
+
+			// hat AtkTop
+			hatAtkTopSpr.sprite = GameplayBase.hatPlayer2.avatar;
+			hatAtkTopSpr.gameObject.SetActive (true);
+
+			// hat AtkDown
+			hatAtkDownSpr.sprite = GameplayBase.hatPlayer2.avatar;
+			hatAtkDownSpr.gameObject.SetActive (true);
+
+			HideSkin ();
+		}
+
+		if (GameplayBase.amorPlayer2 != null) {
+			FingerLeftControl.instance.amor.sprite = GameplayBase.amorPlayer2.avatar;
+			FingerLeftControl.instance.amor.gameObject.SetActive (true);
+
+			HideSkin ();
+		}
+
+		if (GameplayBase.wpPlayer2 != null) {
+			FingerLeftControl.instance.weapon.sprite = GameplayBase.wpPlayer2.avatar;
+			FingerLeftControl.instance.weapon.gameObject.SetActive (true);
+
+			HideSkin ();
+		}
+	}
+
+	void ChangeStateAni (FingerState state) {
+		switch (state) {
+		case FingerState.Idel:
+			skinIdle.SetActive (true);
+			skinAtkTop.SetActive (false);
+			skinAtkDown.SetActive (false);
+			break;
+		case FingerState.Atk:
+			if (firstAtk) {
+				skinIdle.SetActive (false);
+				skinAtkTop.SetActive (true);
+				skinAtkDown.SetActive (false);
+			} else {
+				skinIdle.SetActive (false);
+				skinAtkTop.SetActive (false);
+				skinAtkDown.SetActive (true);
+			}
+			break;
+		}
 	}
 }

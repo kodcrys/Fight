@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fdba199229be4291be402dd4cf74685, type: 3}
   m_Name: Gambit
   m_EditorClassIdentifier: 
+  id: 12
   name: GAMBIT
   equipmentOfChar: {fileID: 21300000, guid: 0f10f0e96a49c4d6b9c4127c7b868982, type: 3}
   equipmentWP: {fileID: 0}

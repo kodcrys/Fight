@@ -111,13 +111,13 @@ public class AnimationFadeManager : MonoBehaviour {
 	}
 
 	IEnumerator NoMoveLeft(float time){
-		yield return WaitForSeconds (time);
+		yield return new WaitForSeconds (time);
 		fadeOption.isEmojiLeft = true;
 		yield return null;
 	}
 
 	IEnumerator NoMoveRight(float time){
-		yield return WaitForSeconds (time);
+		yield return new WaitForSeconds (time);
 		fadeOption.isEmojiRight = true;
 		yield return null;
 	}

@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fdba199229be4291be402dd4cf74685, type: 3}
   m_Name: Joker
   m_EditorClassIdentifier: 
+  id: 15
   name: JOKER
   equipmentOfChar: {fileID: 21300000, guid: 617a931921b2c4e9d906ab2cf5563b95, type: 3}
   equipmentWP: {fileID: 0}

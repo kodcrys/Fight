@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fdba199229be4291be402dd4cf74685, type: 3}
   m_Name: Zombie
   m_EditorClassIdentifier: 
+  id: 47
   name: ZOMBIE
   equipmentOfChar: {fileID: 21300000, guid: 263c18e8c0ed140c7b04082a7725fa3d, type: 3}
   equipmentWP: {fileID: 0}

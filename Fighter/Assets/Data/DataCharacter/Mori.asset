@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fdba199229be4291be402dd4cf74685, type: 3}
   m_Name: Mori
   m_EditorClassIdentifier: 
+  id: 23
   name: MORI
   equipmentOfChar: {fileID: 21300000, guid: 6da664ddceec944679b0e04fa0d3cc60, type: 3}
   equipmentWP: {fileID: 0}

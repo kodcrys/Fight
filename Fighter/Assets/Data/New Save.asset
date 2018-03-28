@@ -9,6 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba6e0495594374ab08a52a268e887582, type: 3}
-  m_Name: EquipeSave
+  m_Name: New Save
   m_EditorClassIdentifier: 
-  containChangeEquip: []
+  characterPlayer1: {fileID: 0}
+  characterPlayer2: {fileID: 0}
+  hatPlayer1: {fileID: 0}
+  hatPlayer2: {fileID: 0}
+  amorPlayer1: {fileID: 0}
+  amorPlayer2: {fileID: 0}
+  weaponPlayer1: {fileID: 0}
+  weaponPlayer2: {fileID: 0}

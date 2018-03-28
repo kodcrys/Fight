@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class GameplayBase : MonoBehaviour {
 
-	[Header("Save Data Character")]
-	[SerializeField]
-	SaveDataCharacter data;
-
 	public static GameplayBase instance;
 
 	public GameObject rightButton, leftButton;
@@ -38,9 +34,14 @@ public class GameplayBase : MonoBehaviour {
 
 	public GameObject pausePanel, gameoverP1Panel, gameoverP2Panel;
 
+	public static DataCharacter dataPlayer1;
+	public static DataCharacter dataPlayer2;
+
+	public static DataItems hatPlayer1, hatPlayer2, amorPlayer1, amorPlayer2, wpPlayer1, wpPlayer2;
+
 	public void Start(){
 
-		Debug.Log (data.characterPlayer1 + " & " + data.characterPlayer2 + " & " + data.hatPlayer1 + " & " + data.hatPlayer2);
+		//Debug.Log (data.characterPlayer1 + " & " + data.characterPlayer2 + " & " + data.hatPlayer1 + " & " + data.hatPlayer2);
 
 		instance = this;
 		gamePause = false;
@@ -63,57 +64,11 @@ public class GameplayBase : MonoBehaviour {
 			shieldRight.SetActive (true);
 		}
 
-		// Skin
-		if (data.characterPlayer1 != null) {
-			FingerLeftControl.instance.skin.sprite = data.characterPlayer1.equipmentOfChar;
-			FingerLeftControl.instance.skin.gameObject.SetActive (true);
-			FingerLeftControl.instance.hat.gameObject.SetActive (false);
-			FingerLeftControl.instance.amor.gameObject.SetActive (false);
-			FingerLeftControl.instance.weapon.gameObject.SetActive (false);
-		}
-		if (data.characterPlayer2 != null) {
-			FingerRightControl.instance.skin.sprite = data.characterPlayer2.equipmentOfChar;
-			FingerRightControl.instance.skin.gameObject.SetActive (true);
-			FingerRightControl.instance.hat.gameObject.SetActive (false);
-			FingerRightControl.instance.amor.gameObject.SetActive (false);
-			FingerRightControl.instance.weapon.gameObject.SetActive (false);
-		}
+		FingerRightControl.instance.ChangeCharPlayer();
+		FingerRightControl.instance.ChangeItemsPlayer ();
 
-		// Hat
-		if (data.hatPlayer1 != null) {
-			FingerLeftControl.instance.skin.gameObject.SetActive (false);
-			FingerLeftControl.instance.hat.sprite = data.hatPlayer1.avatar;
-			FingerLeftControl.instance.hat.gameObject.SetActive (true);
-		}
-		if (data.hatPlayer2 != null) {
-			FingerRightControl.instance.skin.gameObject.SetActive (false);
-			FingerRightControl.instance.hat.sprite = data.hatPlayer2.avatar;
-			FingerRightControl.instance.hat.gameObject.SetActive (true);
-		}
-
-		// Amor
-		if (data.amorPlayer1 != null) {
-			FingerLeftControl.instance.skin.gameObject.SetActive (false);
-			FingerLeftControl.instance.amor.sprite = data.amorPlayer1.avatar;
-			FingerLeftControl.instance.amor.gameObject.SetActive (true);
-		}
-		if (data.amorPlayer2 != null) {
-			FingerRightControl.instance.skin.gameObject.SetActive (false);
-			FingerRightControl.instance.amor.sprite = data.amorPlayer2.avatar;
-			FingerRightControl.instance.amor.gameObject.SetActive (true);
-		}
-
-		// Weapon
-		if (data.weaponPlayer1 != null) {
-			FingerLeftControl.instance.skin.gameObject.SetActive (false);
-			FingerLeftControl.instance.weapon.sprite = data.weaponPlayer1.avatar;
-			FingerLeftControl.instance.weapon.gameObject.SetActive (true);
-		}
-		if (data.weaponPlayer2 != null) {
-			FingerRightControl.instance.skin.gameObject.SetActive (false);
-			FingerRightControl.instance.weapon.sprite = data.weaponPlayer2.avatar;
-			FingerRightControl.instance.weapon.gameObject.SetActive (true);
-		}
+		FingerLeftControl.instance.ChangeCharPlayer ();
+		FingerLeftControl.instance.ChangeItemsPlayer ();
 	}
 
 	public void Update(){
