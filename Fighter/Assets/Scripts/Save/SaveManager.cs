@@ -6,10 +6,11 @@ public class SaveManager : MonoBehaviour {
 
 	public static SaveManager instance{ get; set;}
 	public SaveState state;
-
+	public bool isResetSave;
 	// Use this for initialization
 	void Awake () {
-		ResetSave ();
+		if (isResetSave)
+			ResetSave ();
 		_MakeSingleInstance ();
 		Load ();
 	}
