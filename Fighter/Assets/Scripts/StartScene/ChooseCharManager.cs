@@ -269,12 +269,33 @@ public class ChooseCharManager : MonoBehaviour {
 			ready1.sprite = lockSpr;
 			isTurnPlayer1 = false;
 
+			// AI
 			if (contentBtn.text == playMode [1]) {
 				aniFade.stateFade = FadeAni.State.Show;
 				aniFade.isChangeMap = true;
 				// Change mode AI afer play
 				PlayModeAI ();
 			}
+
+			if (SaveManager.instance.state.idChar1 != -1)
+				GameplayBase.dataPlayer1 = lstCharacters [SaveManager.instance.state.idChar1];
+			else
+				GameplayBase.dataPlayer1 = null;
+
+			if (SaveManager.instance.state.idHat1 != -1)
+				GameplayBase.hatPlayer1 = lstItems [SaveManager.instance.state.idHat1];
+			else
+				GameplayBase.hatPlayer1 = null;
+
+			if (SaveManager.instance.state.idAmor1 != -1)
+				GameplayBase.amorPlayer1 = lstItems [SaveManager.instance.state.idAmor1];
+			else
+				GameplayBase.amorPlayer1 = null;
+
+			if (SaveManager.instance.state.idWp1 != -1)
+				GameplayBase.wpPlayer1 = lstItems [SaveManager.instance.state.idWp1];
+			else
+				GameplayBase.wpPlayer1 = null;
 
 		} else {
 			
@@ -283,6 +304,26 @@ public class ChooseCharManager : MonoBehaviour {
 				ready2.sprite = lockSpr;
 				aniFade.stateFade = FadeAni.State.Show;
 				aniFade.isChangeMap = true;
+
+				if (SaveManager.instance.state.idChar2 != -1)
+					GameplayBase.dataPlayer2 = lstCharacters [SaveManager.instance.state.idChar2];
+				else
+					GameplayBase.dataPlayer2 = null;
+
+				if (SaveManager.instance.state.idHat2 != -1)
+					GameplayBase.hatPlayer2 = lstItems [SaveManager.instance.state.idHat2];
+				else
+					GameplayBase.hatPlayer2 = null;
+
+				if (SaveManager.instance.state.idAmor2 != -1)
+					GameplayBase.amorPlayer2 = lstItems [SaveManager.instance.state.idAmor2];
+				else
+					GameplayBase.amorPlayer2 = null;
+
+				if (SaveManager.instance.state.idWp1 != -1)
+					GameplayBase.wpPlayer2 = lstItems [SaveManager.instance.state.idWp2];
+				else
+					GameplayBase.wpPlayer2 = null;
 			}
 			//UnityEngine.SceneManagement.SceneManager.LoadScene ("ChooseMap");
 		}
