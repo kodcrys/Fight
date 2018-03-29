@@ -913,8 +913,6 @@ public class ChooseCharManager : MonoBehaviour {
 
 			// Close data items
 			GameplayBase.hatAI = lstItems[SaveManager.instance.state.idHatAI];
-			GameplayBase.amorAI = null;
-			GameplayBase.wpAI = null;
 		}
 
 		if (SaveManager.instance.state.idAmor1 != -1) {
@@ -925,9 +923,7 @@ public class ChooseCharManager : MonoBehaviour {
 			GameplayBase.dataAI = null;
 
 			// Close data items
-			GameplayBase.hatAI = null;
 			GameplayBase.amorAI = lstItems[SaveManager.instance.state.idAmorAI];
-			GameplayBase.wpAI = null;
 		}
 
 		if (SaveManager.instance.state.idWp1 != -1) {
@@ -938,8 +934,6 @@ public class ChooseCharManager : MonoBehaviour {
 			GameplayBase.dataAI = null;
 
 			// Close data items
-			GameplayBase.hatAI = null;
-			GameplayBase.amorAI = null;
 			GameplayBase.wpAI = lstItems[SaveManager.instance.state.idWpAI];
 		}
 
