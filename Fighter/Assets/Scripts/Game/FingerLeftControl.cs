@@ -51,7 +51,6 @@ public class FingerLeftControl : FingerBase {
 			DoIdel ();
 			break;
 		case FingerState.Atk:
-			ChangeStateAni (FingerState.Atk);
 			DoAtk ();
 			break;
 		case FingerState.Doing:
@@ -166,6 +165,7 @@ public class FingerLeftControl : FingerBase {
 	}
 
 	public override void DoAtk(){
+		ChangeStateAni (FingerState.Atk);
 		if (!enemyRight.firstAtk && !firstAtk) {
 			firstAtk = true;
 			enemyRight.fingerAminChanger = 1;
@@ -183,6 +183,7 @@ public class FingerLeftControl : FingerBase {
 	}
 
 	public override void DoingAtk(){
+		ChangeStateAni (FingerState.Doing);
 		if (healthBar.CurrentVal > 0) {
 			if (firstAtk) {
 				if (!enemyRight.lastAtk) {
@@ -456,6 +457,17 @@ public class FingerLeftControl : FingerBase {
 			skinAtkDown.SetActive (false);
 			break;
 		case FingerState.Atk:
+			if (firstAtk) {
+				skinIdle.SetActive (false);
+				skinAtkTop.SetActive (false);
+				skinAtkDown.SetActive (true);
+			} else {
+				skinIdle.SetActive (false);
+				skinAtkTop.SetActive (true);
+				skinAtkDown.SetActive (false);
+			}
+			break;
+		case FingerState.Doing:
 			if (firstAtk) {
 				skinIdle.SetActive (false);
 				skinAtkTop.SetActive (false);
