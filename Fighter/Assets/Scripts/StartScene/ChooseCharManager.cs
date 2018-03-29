@@ -889,13 +889,11 @@ public class ChooseCharManager : MonoBehaviour {
 			countModeAI = playMode.Length - 1;
 			modeAIText.text = modeAI [countModeAI].ToString ();
 		}
-		Debug.Log (countModeAI);
 	}
 
 	void PlayModeAI() {
 
 		if (SaveManager.instance.state.idChar1 != -1) {
-			Debug.Log ("Co character");
 			SaveManager.instance.state.idCharAI = Random.Range (0, lstCharacters.Length);
 			SaveManager.instance.Save ();
 
