@@ -513,12 +513,12 @@ public class FingerRightControl : FingerBase {
 		case FingerState.Atk:
 			if (firstAtk) {
 				skinIdle.SetActive (false);
-				skinAtkTop.SetActive (true);
-				skinAtkDown.SetActive (false);
-			} else if(lastAtk) {
-				skinIdle.SetActive (false);
 				skinAtkTop.SetActive (false);
 				skinAtkDown.SetActive (true);
+			} else if(lastAtk) {
+				skinIdle.SetActive (false);
+				skinAtkTop.SetActive (true);
+				skinAtkDown.SetActive (false);
 			}
 			break;
 		}

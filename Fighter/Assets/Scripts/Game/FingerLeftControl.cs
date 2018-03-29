@@ -458,12 +458,12 @@ public class FingerLeftControl : FingerBase {
 		case FingerState.Atk:
 			if (firstAtk) {
 				skinIdle.SetActive (false);
-				skinAtkTop.SetActive (true);
-				skinAtkDown.SetActive (false);
-			} else {
-				skinIdle.SetActive (false);
 				skinAtkTop.SetActive (false);
 				skinAtkDown.SetActive (true);
+			} else {
+				skinIdle.SetActive (false);
+				skinAtkTop.SetActive (true);
+				skinAtkDown.SetActive (false);
 			}
 			break;
 		}
