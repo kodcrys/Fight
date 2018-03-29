@@ -55,7 +55,6 @@ public class FingerLeftControl : FingerBase {
 			DoAtk ();
 			break;
 		case FingerState.Doing:
-			ChangeStateAni (FingerState.Doing);
 			DoingAtk ();
 			break;
 		case FingerState.Win:
@@ -462,17 +461,6 @@ public class FingerLeftControl : FingerBase {
 				skinAtkTop.SetActive (true);
 				skinAtkDown.SetActive (false);
 			} else {
-				skinIdle.SetActive (false);
-				skinAtkTop.SetActive (false);
-				skinAtkDown.SetActive (true);
-			}
-			break;
-		case FingerState.Doing:
-			if (firstAtk) {
-				skinIdle.SetActive (false);
-				skinAtkTop.SetActive (true);
-				skinAtkDown.SetActive (false);
-			} else if(lastAtk) {
 				skinIdle.SetActive (false);
 				skinAtkTop.SetActive (false);
 				skinAtkDown.SetActive (true);
