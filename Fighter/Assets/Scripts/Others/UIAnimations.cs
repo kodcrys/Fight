@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using AppAdvisory.social;
 
 public class UIAnimations : MonoBehaviour {
 
@@ -399,6 +400,7 @@ public class UIAnimations : MonoBehaviour {
 			Application.OpenURL (linkShare);
 		}
 		if (isLeaderboard) {
+			LeaderboardManager.ShowLeaderboardUI();
 		}
 	}
 

@@ -503,7 +503,8 @@ PlayerSettings:
   webGLUseEmbeddedResources: 0
   webGLUseWasm: 0
   webGLCompressionFormat: 1
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    4: VSLEADERBOARD_ENABLE_IOS;APPADVISORY_LEADERBOARD
   platformArchitecture: {}
   scriptingBackend: {}
   incrementalIl2cppBuild: {}
