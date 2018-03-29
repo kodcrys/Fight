@@ -91,7 +91,7 @@ public class AnimationFadeManager : MonoBehaviour {
 
 	void DoEmoji(){
 		if (fadeOption.leftControl != null) {
-			if (!fadeOption.leftControl.doingSomething && !fadeOption.leftControl.enemyRight.firstAtk) {
+			if (!fadeOption.leftControl.doingSomething) {
 				fadeOption.timeEmoji += Time.deltaTime;
 				if (fadeOption.timeEmoji >= fadeOption.timeInterEmoji) {
 					fadeOption.timeEmoji = fadeOption.timeInterEmoji;
@@ -104,7 +104,7 @@ public class AnimationFadeManager : MonoBehaviour {
 				fadeOption.isEmojiLeft = false;
 			}
 		} else if (fadeOption.rightControl != null) {
-			if (!fadeOption.rightControl.doingSomething && !fadeOption.rightControl.enemyLeft.firstAtk) {
+			if (!fadeOption.rightControl.doingSomething) {
 				fadeOption.timeEmoji += Time.deltaTime;
 				if (fadeOption.timeEmoji >= fadeOption.timeInterEmoji) {
 					fadeOption.timeEmoji = fadeOption.timeInterEmoji;
