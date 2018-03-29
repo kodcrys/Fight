@@ -906,7 +906,6 @@ public class ChooseCharManager : MonoBehaviour {
 		}
 
 		if (SaveManager.instance.state.idHat1 != -1) {
-			Debug.Log ("Co hat");
 			SaveManager.instance.state.idHatAI = Random.Range (44, 94);
 			SaveManager.instance.Save ();
 
@@ -918,7 +917,6 @@ public class ChooseCharManager : MonoBehaviour {
 		}
 
 		if (SaveManager.instance.state.idAmor1 != -1) {
-			Debug.Log ("Co amor");
 			SaveManager.instance.state.idAmorAI = Random.Range (0, 44);
 			SaveManager.instance.Save ();
 
@@ -930,7 +928,6 @@ public class ChooseCharManager : MonoBehaviour {
 		}
 
 		if (SaveManager.instance.state.idWp1 != -1) {
-			Debug.Log ("Co weapon");
 			SaveManager.instance.state.idWpAI = Random.Range (94, lstItems.Length);
 			SaveManager.instance.Save ();
 
