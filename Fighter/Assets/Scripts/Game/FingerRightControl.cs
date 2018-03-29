@@ -515,7 +515,7 @@ public class FingerRightControl : FingerBase {
 				skinIdle.SetActive (false);
 				skinAtkTop.SetActive (false);
 				skinAtkDown.SetActive (true);
-			} else if(lastAtk) {
+			} else {
 				skinIdle.SetActive (false);
 				skinAtkTop.SetActive (true);
 				skinAtkDown.SetActive (false);
