@@ -47,7 +47,7 @@ public class FingerRightControl : FingerBase {
 			DoIdel ();
 			break;
 		case FingerState.Atk:
-			ChangeStateAni (FingerState.Atk);
+			
 			DoAtk ();
 			break;
 		case FingerState.Doing:
@@ -161,6 +161,7 @@ public class FingerRightControl : FingerBase {
 	}
 
 	public override void DoAtk(){
+		ChangeStateAni (FingerState.Atk);
 		if (!firstAtk && !enemyLeft.firstAtk) {
 			firstAtk = true;
 			enemyLeft.fingerAminChanger = 1;
@@ -405,6 +406,26 @@ public class FingerRightControl : FingerBase {
 		}
 	}
 
+	public void ChangeCharAI() {
+
+		if (GameplayBase.dataAI != null) {
+			// skin Idle
+			skin.sprite = GameplayBase.dataAI.equipmentOfChar;
+			skin.gameObject.SetActive (true);
+			Debug.Log (skin.gameObject);
+
+			// skin AtkTop
+			skinAtkTopSpr.sprite = GameplayBase.dataAI.equipmentOfChar;
+			skinAtkTopSpr.gameObject.SetActive (true);
+
+			// skin AtkDown
+			skinAtkDownSpr.sprite = GameplayBase.dataAI.equipmentOfChar;
+			skinAtkDownSpr.gameObject.SetActive (true);
+
+			HideItems ();
+		}
+	}
+
 	void HideItems() {
 		hat.gameObject.SetActive (false);
 		amor.gameObject.SetActive (false);
@@ -444,6 +465,39 @@ public class FingerRightControl : FingerBase {
 
 		if (GameplayBase.wpPlayer2 != null) {
 			FingerLeftControl.instance.weapon.sprite = GameplayBase.wpPlayer2.avatar;
+			FingerLeftControl.instance.weapon.gameObject.SetActive (true);
+
+			HideSkin ();
+		}
+	}
+
+	public void ChangeItemsAI() {
+
+		if (GameplayBase.hatAI != null) {
+			// hat idle
+			hat.sprite = GameplayBase.hatAI.avatar;
+			hat.gameObject.SetActive (true);
+
+			// hat AtkTop
+			hatAtkTopSpr.sprite = GameplayBase.hatAI.avatar;
+			hatAtkTopSpr.gameObject.SetActive (true);
+
+			// hat AtkDown
+			hatAtkDownSpr.sprite = GameplayBase.hatAI.avatar;
+			hatAtkDownSpr.gameObject.SetActive (true);
+
+			HideSkin ();
+		}
+
+		if (GameplayBase.amorAI != null) {
+			FingerLeftControl.instance.amor.sprite = GameplayBase.amorAI.avatar;
+			FingerLeftControl.instance.amor.gameObject.SetActive (true);
+
+			HideSkin ();
+		}
+
+		if (GameplayBase.wpAI != null) {
+			FingerLeftControl.instance.weapon.sprite = GameplayBase.wpAI.avatar;
 			FingerLeftControl.instance.weapon.gameObject.SetActive (true);
 
 			HideSkin ();

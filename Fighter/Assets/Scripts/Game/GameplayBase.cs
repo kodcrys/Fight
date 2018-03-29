@@ -36,8 +36,10 @@ public class GameplayBase : MonoBehaviour {
 
 	public static DataCharacter dataPlayer1;
 	public static DataCharacter dataPlayer2;
+	public static DataCharacter dataAI;
 
 	public static DataItems hatPlayer1, hatPlayer2, amorPlayer1, amorPlayer2, wpPlayer1, wpPlayer2;
+	public static DataItems hatAI, amorAI, wpAI;
 
 	public void Start(){
 
@@ -64,8 +66,13 @@ public class GameplayBase : MonoBehaviour {
 			shieldRight.SetActive (true);
 		}
 
-		FingerRightControl.instance.ChangeCharPlayer();
-		FingerRightControl.instance.ChangeItemsPlayer ();
+		if (!SaveManager.instance.state.player2AI) {
+			FingerRightControl.instance.ChangeCharPlayer ();
+			FingerRightControl.instance.ChangeItemsPlayer ();
+		} else if (SaveManager.instance.state.player2AI) {
+			FingerRightControl.instance.ChangeCharAI ();
+			FingerRightControl.instance.ChangeItemsAI ();
+		}
 
 		FingerLeftControl.instance.ChangeCharPlayer ();
 		FingerLeftControl.instance.ChangeItemsPlayer ();
@@ -102,6 +109,7 @@ public class GameplayBase : MonoBehaviour {
 		if (!SaveManager.instance.state.player2AI) {
 			player2.GetComponent<AIManager> ().enabled = false;
 		} else if (SaveManager.instance.state.player2AI) {
+			
 			player2.GetComponent<AIManager> ().enabled = true;
 		}
 	}

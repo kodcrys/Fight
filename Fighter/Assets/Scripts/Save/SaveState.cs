@@ -52,4 +52,6 @@ public class SaveState {
 	public bool isShieldRight = false;
 
 	public int idChar1 = -1, idChar2 = -1, idHat1 = -1, idHat2 = -1, idAmor1 = -1, idAmor2 = -1, idWp1 = -1, idWp2 = -1;
+
+	public int idCharAI = -1, idHatAI = -1, idAmorAI = -1, idWpAI = -1;
 }

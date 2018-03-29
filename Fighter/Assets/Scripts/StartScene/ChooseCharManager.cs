@@ -103,10 +103,6 @@ public class ChooseCharManager : MonoBehaviour {
 	[SerializeField]
 	FadeAni aniFade;
 
-	[Header("Save")]
-	[SerializeField]
-	CointainData cointainSave;
-
 	[Header("Load Data")]
 	[SerializeField]
 	DataCharacter[] lstCharacters;
@@ -121,6 +117,12 @@ public class ChooseCharManager : MonoBehaviour {
 	UnityEngine.UI.Image ready1, ready2;
 	[HideInInspector]
 	public bool isPlayAI;
+
+	[Header("Hand right")]
+	[SerializeField]
+	Transform handRight;
+	[SerializeField]
+	Color32 colorShow;
 
 	void Awake() {
 		if (instance == null)
@@ -203,6 +205,9 @@ public class ChooseCharManager : MonoBehaviour {
 			moveChooseFrame.isRunMoveAni = true;
 			nextBtn.isRunMoveAni = true;
 			preBtn.isRunMoveAni = true;
+
+			ReadSave ();
+			ShowColor ();
 		}
 		// zs AI
 		if (contentBtn.text == playMode [1]) {
@@ -231,6 +236,8 @@ public class ChooseCharManager : MonoBehaviour {
 			modeAIText.text = modeAI[0].ToString();
 
 			aiBtn.GetComponent<UIAnimations> ().isRunMoveAni = true;
+
+			HideColor ();
 		}
 		// tour
 		if (contentBtn.text == playMode [2]) {
@@ -882,6 +889,60 @@ public class ChooseCharManager : MonoBehaviour {
 	}
 
 	void PlayModeAI() {
+
+		if (SaveManager.instance.state.idChar1 != -1) {
+			SaveManager.instance.state.idCharAI = Random.Range (0, lstCharacters.Length);
+			SaveManager.instance.Save ();
+
+			// Open data char
+			GameplayBase.dataAI = lstCharacters[SaveManager.instance.state.idCharAI];
+
+			// Close data items
+			GameplayBase.hatAI = null;
+			GameplayBase.amorAI = null;
+			GameplayBase.hatAI = null;
+
+		}
+
+		if (SaveManager.instance.state.idHat1 != -1) {
+			SaveManager.instance.state.idHatAI = Random.Range (44, 94);
+			SaveManager.instance.Save ();
+
+			// Open data char
+			GameplayBase.dataAI = null;
+
+			// Close data items
+			GameplayBase.hatAI = lstItems[SaveManager.instance.state.idHatAI];
+			GameplayBase.amorAI = null;
+			GameplayBase.hatAI = null;
+		}
+
+		if (SaveManager.instance.state.idAmor1 != -1) {
+			SaveManager.instance.state.idAmorAI = Random.Range (0, 44);
+			SaveManager.instance.Save ();
+
+			// Open data char
+			GameplayBase.dataAI = null;
+
+			// Close data items
+			GameplayBase.hatAI = null;
+			GameplayBase.amorAI = lstItems[SaveManager.instance.state.idAmorAI];
+			GameplayBase.hatAI = null;
+		}
+
+		if (SaveManager.instance.state.idWp1 != -1) {
+			SaveManager.instance.state.idWpAI = Random.Range (94, lstItems.Length);
+			SaveManager.instance.Save ();
+
+			// Open data char
+			GameplayBase.dataAI = null;
+
+			// Close data items
+			GameplayBase.hatAI = null;
+			GameplayBase.amorAI = null;
+			GameplayBase.hatAI = lstItems[SaveManager.instance.state.idWpAI];
+		}
+
 		if (modeAIText.text == modeAI [0].ToString ()) {
 			// easy
 			SaveManager.instance.state.levelAI = 0;
@@ -900,5 +961,29 @@ public class ChooseCharManager : MonoBehaviour {
 		}
 
 		SaveManager.instance.Save ();
+	}
+
+	void HideColor() {
+		Color32 hideColor = new Color32 (0, 0, 0, 255);
+
+		handRight.GetComponent<UnityEngine.UI.Image> ().color = hideColor;
+
+		foreach (Transform t in handRight) {
+			t.GetComponent<UnityEngine.UI.Image> ().color = hideColor;
+			t.GetChild (0).GetComponent<UnityEngine.UI.Image> ().color = hideColor;
+		}
+
+		hatSymbol.gameObject.SetActive (true);
+		hatMainR.gameObject.SetActive (false);
+	}
+
+	void ShowColor() {
+		handRight.GetComponent<UnityEngine.UI.Image> ().color = colorShow;
+
+		foreach (Transform t in handRight) {
+			Color32 showColor = new Color32 (255, 255, 255, 255);
+			t.GetComponent<UnityEngine.UI.Image> ().color = colorShow;
+			t.GetChild (0).GetComponent<UnityEngine.UI.Image> ().color = showColor;
+		}
 	}
 }
