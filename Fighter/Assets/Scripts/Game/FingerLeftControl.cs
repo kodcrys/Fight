@@ -256,6 +256,8 @@ public class FingerLeftControl : FingerBase {
 	}
 
 	public override void Win(){
+		ChangeStateAni (FingerState.Idel);
+
 		finger.SetActive (true);
 		fingerDown.SetActive (false);
 		fingerAtk.SetActive (false);
@@ -291,6 +293,8 @@ public class FingerLeftControl : FingerBase {
 	}
 
 	public override void Dead(){
+		ChangeStateAni (FingerState.Death);
+
 		finger.SetActive (false);
 		fingerDown.SetActive (true);
 		fingerAtk.SetActive (false);
@@ -477,6 +481,11 @@ public class FingerLeftControl : FingerBase {
 				skinAtkTop.SetActive (true);
 				skinAtkDown.SetActive (false);
 			}
+			break;
+		case FingerState.Death:
+			skinIdle.SetActive (false);
+			skinAtkTop.SetActive (false);
+			skinAtkDown.SetActive (true);
 			break;
 		}
 	}
