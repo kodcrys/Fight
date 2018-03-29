@@ -47,7 +47,6 @@ public class FingerRightControl : FingerBase {
 			DoIdel ();
 			break;
 		case FingerState.Atk:
-			
 			DoAtk ();
 			break;
 		case FingerState.Doing:
