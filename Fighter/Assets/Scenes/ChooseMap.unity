@@ -4753,7 +4753,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1590.4498, y: 0}
+  m_AnchoredPosition: {x: 1590.4493, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1791815098
@@ -5355,10 +5355,15 @@ MonoBehaviour:
   aiBtn: {fileID: 0}
   map: {fileID: 998052365}
   aniFade: {fileID: 47878426}
-  cointainSave: {fileID: 0}
+  lstCharacters: []
+  lstItems: []
   ready1: {fileID: 0}
   ready2: {fileID: 0}
   isPlayAI: 0
+  handRight: {fileID: 0}
+  colorShow:
+    serializedVersion: 2
+    rgba: 0
 --- !u!4 &2069318603
 Transform:
   m_ObjectHideFlags: 0

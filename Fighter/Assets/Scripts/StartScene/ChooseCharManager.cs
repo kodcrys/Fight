@@ -863,6 +863,10 @@ public class ChooseCharManager : MonoBehaviour {
 		FadeAni.isRunMapToChooseChar = false;
 		FadeAni.isRunMapToHome = false ;
 		FadeAni.isRunPlayGame = true;
+		SaveManager.instance.state.winCountLeft = 0;
+		SaveManager.instance.state.winCountRight = 0;
+		SaveManager.instance.state.roundCount = 1;
+		SaveManager.instance.Save ();
 	}
 
 	int countModeAI = 0;
