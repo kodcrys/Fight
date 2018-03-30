@@ -14,8 +14,10 @@ public class MagnetField : MonoBehaviour {
 
 	float speed;
 
+	public string namePos = "Pos";
+
 	void Awake() {
-		magnet = GameObject.Find ("Pos");
+		magnet = GameObject.Find (namePos);
 		effectParent = GameObject.Find ("Effect");
 	}
 

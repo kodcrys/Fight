@@ -4,10 +4,18 @@ public class InappManager : MonoBehaviour {
 
 	[SerializeField]
 	UnityEngine.UI.Text[] labelPrice;
+
 	[SerializeField]
 	GameObject btnOfTopBar;
+
 	[SerializeField]
 	GameObject ExpFrame;
+
+	[SerializeField]
+	GameObject coinEffect;
+
+	[SerializeField]
+	Transform canvas;
 
 	// Use this for initialization
 	void OnEnable () {
@@ -29,6 +37,7 @@ public class InappManager : MonoBehaviour {
 		if (SaveManager.instance.state.TotalDiamond >= price) {
 			SaveManager.instance.state.TotalDiamond -= price;
 			SaveManager.instance.Save ();
+			//GameObject coinEff = Instantiate (coinEffect, goldText.transform.position, Quaternion.identity, canvas) as GameObject;
 		}
 	}
 
