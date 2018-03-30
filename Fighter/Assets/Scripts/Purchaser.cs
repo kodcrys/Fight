@@ -35,16 +35,24 @@ public class Purchaser : MonoBehaviour, IStoreListener {
 	int coinConsumable100;
 
 	[Header("Id product consumable")]
-	public string kProductIDConsumable1;
-	public string kProductIDConsumable5;
-	public string kProductIDConsumable10;
-	public string kProductIDConsumable15;
-	public string kProductIDConsumable30;
-	public string kProductIDConsumable50;
-	public string kProductIDConsumable100;
+	[HideInInspector]
+	public string kProductIDConsumable1 = "com.tranphuocnhan.TestFingerWar.pack1";
+	[HideInInspector]
+	public string kProductIDConsumable5 = "com.tranphuocnhan.TestFingerWar.pack2";
+	[HideInInspector]
+	public string kProductIDConsumable10 = "com.tranphuocnhan.TestFingerWar.pack3";
+	[HideInInspector]
+	public string kProductIDConsumable15 = "com.tranphuocnhan.TestFingerWar.pack4";
+	[HideInInspector]
+	public string kProductIDConsumable30 = "com.tranphuocnhan.TestFingerWar.pack5";
+	[HideInInspector]
+	public string kProductIDConsumable50 = "com.tranphuocnhan.TestFingerWar.pack6";
+	[HideInInspector]
+	public string kProductIDConsumable100 = "com.tranphuocnhan.TestFingerWar.pack7";
 
 	[Header("Id product non consumable")]
-	public string kProductIDNonConsumable;
+	[HideInInspector]
+	public string kProductIDNonConsumable = "com.tranphuocnhan.TestFingerWar.removeads";
 	//public static string kProductIDSubscription =  "subscription"; 
 
 	// Apple App Store-specific product identifier for the subscription product.
@@ -404,5 +412,9 @@ public class Purchaser : MonoBehaviour, IStoreListener {
 		// A product purchase attempt did not succeed. Check failureReason for more detail. Consider sharing 
 		// this reason with the user to guide their troubleshooting actions.
 		Debug.Log(string.Format("OnPurchaseFailed: FAIL. Product: '{0}', PurchaseFailureReason: {1}", product.definition.storeSpecificId, failureReason));
+	}
+
+	public string GetPrice(string productID) {
+		return m_StoreController.products.WithID(productID).metadata.localizedPrice.ToString();
 	}
 }

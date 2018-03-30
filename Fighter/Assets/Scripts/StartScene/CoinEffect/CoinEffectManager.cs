@@ -10,7 +10,7 @@ public class CoinEffectManager : MonoBehaviour {
 
 	int count = 0;
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		questManager = GameObject.Find ("QuestManager").GetComponent<QuestManager> ();
 		count = 0;
 	}

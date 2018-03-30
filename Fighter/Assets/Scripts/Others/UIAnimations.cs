@@ -392,7 +392,7 @@ public class UIAnimations : MonoBehaviour {
 			fadeShop.changeToShopScene = true;
 		}
 		if (isRate) {
-			Rate.doing += 1;
+			//Rate.doing += 1;
 			Application.OpenURL (linkRate);
 		}
 		if (isShare) {
