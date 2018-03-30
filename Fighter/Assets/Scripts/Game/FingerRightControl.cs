@@ -372,7 +372,11 @@ public class FingerRightControl : FingerBase {
 			} else {
 				if (!AnimationText.endRound) {
 					AnimationText.endRound = true;
-					GameplayBase.instance.gameoverP2Panel.SetActive (true);
+					if (SaveManager.instance.state.whatMode == 1) {
+						GameplayBase.instance.gameoverP2Panel.SetActive (true);
+					} else if (SaveManager.instance.state.whatMode == 2) {
+						
+					}
 				}
 			}
 			SaveManager.instance.Save ();
