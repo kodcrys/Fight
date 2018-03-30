@@ -866,6 +866,7 @@ public class ChooseCharManager : MonoBehaviour {
 		SaveManager.instance.state.winCountLeft = 0;
 		SaveManager.instance.state.winCountRight = 0;
 		SaveManager.instance.state.roundCount = 1;
+		SaveManager.instance.state.whatMode = 1;
 		SaveManager.instance.Save ();
 	}
 
