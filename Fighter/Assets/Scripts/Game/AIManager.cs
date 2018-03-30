@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AIManager : MonoBehaviour {
 
-	public enum DifficultLevel {none, Easy, Normal, Hard, WhatTheFuckIamPlaying}
+	public enum DifficultLevel {none, Easy, Normal, Hard, WhatTheFuckIamPlaying, Tor1, Tor2, Tor3, Tor4}
 
 	public DifficultLevel difLevel = DifficultLevel.none;
 
@@ -35,6 +35,14 @@ public class AIManager : MonoBehaviour {
 			difLevel = DifficultLevel.Hard;
 		} else if (SaveManager.instance.state.levelAI == 3) {
 			difLevel = DifficultLevel.WhatTheFuckIamPlaying;
+		} else if (SaveManager.instance.state.levelAI == 4) {
+			difLevel = DifficultLevel.Tor1;
+		} else if (SaveManager.instance.state.levelAI == 5) {
+			difLevel = DifficultLevel.Tor2;
+		} else if (SaveManager.instance.state.levelAI == 6) {
+			difLevel = DifficultLevel.Tor3;
+		} else if (SaveManager.instance.state.levelAI == 7) {
+			difLevel = DifficultLevel.Tor4;
 		}
 
 		if (left)
@@ -71,6 +79,18 @@ public class AIManager : MonoBehaviour {
 					break;
 				case DifficultLevel.WhatTheFuckIamPlaying:
 					FuckingMode ();
+					break;
+				case DifficultLevel.Tor1:
+					Tor1Mode ();
+					break;
+				case DifficultLevel.Tor2:
+					Tor2Mode ();
+					break;
+				case DifficultLevel.Tor3:
+					Tor3Mode ();
+					break;
+				case DifficultLevel.Tor4:
+					Tor4Mode ();
 					break;
 				}
 			}
@@ -278,6 +298,218 @@ public class AIManager : MonoBehaviour {
 					if (time >= timeInter) {
 						ranMove = Random.Range (0, 10);
 						if (ranMove > 2) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
+				}
+			}
+		}
+	}
+
+	void Tor1Mode(){
+		timeInter = 0.35f;
+		if (right) {
+			if (!fingerAIRight.isAtk) {
+				if (fingerAIRight.enemyLeft.fingerAction == FingerBase.FingerState.Idel) {
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 100);
+						if (ranMove > 50) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
+				} else {
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 100);
+						if (ranMove > 50) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
+				}
+			}
+		} else if (left) {
+			if (!fingerAILeft.isAtk) {
+				if (fingerAILeft.enemyRight.fingerAction == FingerBase.FingerState.Idel) {
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 100);
+						if (ranMove > 50) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
+				} else {
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 100);
+						if (ranMove > 50) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
+				}
+			}
+		}
+	}
+
+	void Tor2Mode(){
+		timeInter = 0.3f;
+		if (right) {
+			if (!fingerAIRight.isAtk) {
+				if (fingerAIRight.enemyLeft.fingerAction == FingerBase.FingerState.Idel) {
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 100);
+						if (ranMove > 50) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
+				} else {
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 100);
+						if (ranMove > 50) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
+				}
+			}
+		} else if (left) {
+			if (!fingerAILeft.isAtk) {
+				if (fingerAILeft.enemyRight.fingerAction == FingerBase.FingerState.Idel) {
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 100);
+						if (ranMove > 50) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
+				} else {
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 100);
+						if (ranMove > 50) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
+				}
+			}
+		}
+	}
+
+	void Tor3Mode(){
+		timeInter = 0.25f;
+		if (right) {
+			if (!fingerAIRight.isAtk) {
+				if (fingerAIRight.enemyLeft.fingerAction == FingerBase.FingerState.Idel) {
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 100);
+						if (ranMove > 50) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
+				} else {
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 100);
+						if (ranMove > 50) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
+				}
+			}
+		} else if (left) {
+			if (!fingerAILeft.isAtk) {
+				if (fingerAILeft.enemyRight.fingerAction == FingerBase.FingerState.Idel) {
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 100);
+						if (ranMove > 50) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
+				} else {
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 100);
+						if (ranMove > 50) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
+				}
+			}
+		}
+	}
+
+	void Tor4Mode(){
+		timeInter = 0.2f;
+		if (right) {
+			if (!fingerAIRight.isAtk) {
+				if (fingerAIRight.enemyLeft.fingerAction == FingerBase.FingerState.Idel) {
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 100);
+						if (ranMove > 50) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
+				} else {
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 100);
+						if (ranMove > 50) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
+				}
+			}
+		} else if (left) {
+			if (!fingerAILeft.isAtk) {
+				if (fingerAILeft.enemyRight.fingerAction == FingerBase.FingerState.Idel) {
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 100);
+						if (ranMove > 50) {
+							AIClick ();
+						} else {
+							AIUnClick ();
+						}
+						time = 0;
+					}
+				} else {
+					if (time >= timeInter) {
+						ranMove = Random.Range (0, 100);
+						if (ranMove > 50) {
 							AIClick ();
 						} else {
 							AIUnClick ();
