@@ -6,6 +6,8 @@ using GoogleMobileAds.Api;
 // Example script showing how to invoke the Google Mobile Ads Unity plugin.
 public class GoogleMobileAdsDemoScript : MonoBehaviour
 {
+
+	public static GoogleMobileAdsDemoScript instance;
     private BannerView bannerView;
     private InterstitialAd interstitial;
 
@@ -22,6 +24,7 @@ public class GoogleMobileAdsDemoScript : MonoBehaviour
 
     public void Start()
     {
+		instance = this;
         // Get singleton reward based video ad reference.
         rewardBasedVideo = RewardBasedVideoAd.Instance;
 

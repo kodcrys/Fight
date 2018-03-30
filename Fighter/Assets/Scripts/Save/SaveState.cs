@@ -54,4 +54,8 @@ public class SaveState {
 	public int idChar1 = -1, idChar2 = -1, idHat1 = -1, idHat2 = -1, idAmor1 = -1, idAmor2 = -1, idWp1 = -1, idWp2 = -1;
 
 	public int idCharAI = -1, idHatAI = -1, idAmorAI = -1, idWpAI = -1;
+
+	public bool isPurchaseRemoveAds = false;
+
+	public bool isX2pack1, isX2pack5, isX2pack10, isX2pack15, isX2pack30, isX2pack50, isX2pack100 = true;
 }
