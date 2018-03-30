@@ -396,7 +396,7 @@ public class UIAnimations : MonoBehaviour {
 			Application.OpenURL (linkRate);
 		}
 		if (isShare) {
-			Share.doing += 1;
+			//Share.doing += 1;
 			Application.OpenURL (linkShare);
 		}
 		if (isLeaderboard) {
