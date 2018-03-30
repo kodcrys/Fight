@@ -45,6 +45,10 @@ public class SaveState {
 
 	public bool player2AI = true;
 
+	public int whatMode = 0;
+
+	public int whoWin = 0;
+
 	public int levelAI = 0;
 
 	public bool isShieldLeft = false;

@@ -372,6 +372,7 @@ public class FingerRightControl : FingerBase {
 			} else {
 				if (!AnimationText.endRound) {
 					AnimationText.endRound = true;
+					//them dieu kien de ket thuc tor tai day
 					GameplayBase.instance.gameoverP2Panel.SetActive (true);
 				}
 			}
